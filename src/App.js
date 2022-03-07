@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const routes = [
   ...localRoutes
 ];
-
+  
 function App() {
   return (
     <Router>
