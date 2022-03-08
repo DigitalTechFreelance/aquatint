@@ -5,6 +5,7 @@ import TileGrid from '../components/home/TileGrid';
 import WorkSlider from '../components/home/WorkSlider';
 import Infogarphy from '../components/common/Infogarphy';
 import TestimonialSlider from '../components/home/TestimonialSlider';
+import HomeBanner from '../components/home/HomeBanner';
 
 
 function Home() {
@@ -13,7 +14,7 @@ function Home() {
 			<Header/>
 			<main>
 				<div className="lyt-content">
-					<div className="bs-banner"></div>
+					<HomeBanner/>
 					<section>
 						<div className="bs-section">
 							<div className="sec-cont">
