@@ -3,7 +3,7 @@ import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import TileGrid from '../components/home/TileGrid';
 import WorkSlider from '../components/home/WorkSlider';
-import Infogarphy from '../components/common/Infogarphy';
+import Infogarphy from '../components/home/Infogarphy';
 import TestimonialSlider from '../components/home/TestimonialSlider';
 import HomeBanner from '../components/home/HomeBanner';
 
@@ -18,8 +18,8 @@ function Home() {
 					<section>
 						<div className="bs-section">
 							<div className="sec-cont">
-								<div className="bs-info typ-band">
-									<div className="desc">
+								<div className="bs-band typ-gradiant">
+									<div className="text-wrap">
 										<p>What was called cosmetics at that time is today called detailing. Aquatint Detailing We are investment protection specialists offer the full spectrum of detailing treatments like ceramic coating, paint protection films, spray on PPF, body shop repairs, wraps &amp; premium washing services.</p>
 										<p>Our state of the art facilities studio has some of the most skilled detailers, in-house paint protection film installers, &amp; integrated training centre. This environment, coupled with our expertise, allows us to offer our clients the highest possible quality.</p>
 									</div>

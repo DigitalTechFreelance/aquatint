@@ -24,6 +24,12 @@ function IndexList() {
                                     <a href="/home">Home Page</a>
                                 </div>
                             </li>
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/about-us">About Us</a>
+                                </div>
+                            </li>
+                            
                         </ul>
                     </div>
                     <div className="flex-item">
