@@ -37,7 +37,7 @@ function IndexList() {
                             
                         </ul>
                     </div>
-                    <div className="flex-item">
+                    {/* <div className="flex-item">
                         <h1 className="title">Account Pages</h1>
                         <ul className="custAcc">
                             <li className="opn">
@@ -46,7 +46,7 @@ function IndexList() {
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>
