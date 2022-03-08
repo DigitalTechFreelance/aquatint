@@ -1,0 +1,118 @@
+//transition
+@mixin transition($property, $duration, $easing: linear) {
+    transition: $property $duration $easing;
+    -webkit-transition: $property $duration $easing;
+    -moz-transition: $property $duration $easing;
+}
+
+//border-radius
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
+
+
+//opacity
+@mixin opacity($value) {
+    $IEValue: $value*100;
+    opacity: $value;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+    filter: alpha(opacity=$IEValue);
+}
+
+//input-placeholder 
+@mixin input-placeholder {
+    &.placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+//media query
+@mixin mq-below($breakpoint){
+    @media only screen and (max-width:$breakpoint){
+        @content;
+    }
+}
+
+@mixin mq-between($lower,$upper){
+    @media only screen and (min-width:$lower) and (max-width:$upper){
+        @content;
+    }
+}
+
+@mixin mq-above($breakpoint){
+    @media only screen and (min-width:$breakpoint){
+        @content;
+    }
+}
+
+//vw calculator
+@function get-vw($target) {
+    $vw-context: (1280*.01) * 1px;
+    $test: ($target/$vw-context) * 1vw;
+    @return $test;
+}
+
+//font styles
+@mixin font-source-sans($size: false, $lh: false, $family:false, $weight: false,  $colour: false, $tt:false) {
+    @if $family {
+        font-family: $family;
+    }
+    @if $size {
+        font-size: $size;
+    }
+    @if $colour {
+        color: $colour;
+    }
+    @if $weight {
+        font-weight: $weight;
+    }
+    @if $lh {
+        line-height: $lh;
+    }
+    @if $tt {
+        text-transform: $tt;
+    }
+}
+
+
+//background Opacity
+@mixin background-opacity($color,
+$opacity) {
+    background: rgba($color, $opacity);
+}
+
+// Scroll bar - Custom 
+@mixin scrollbars($size,
+$foreground-color,
+$background-color: mix($foreground-color, white, 50%)) {
+    // For Google Chrome
+    &::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+    }
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+    // For Internet Explorer
+    & {
+        scrollbar-face-color: $foreground-color;
+        scrollbar-track-color: $background-color;
+    }
+}

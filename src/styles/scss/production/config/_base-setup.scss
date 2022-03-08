@@ -1,0 +1,84 @@
+@include mq-above($md){
+    html {
+        font-size: 7px;
+    }
+}
+
+@include mq-between($lg, $xl){
+    html {
+        font-size: 8.5px;
+    }
+}
+
+@include mq-between($xl, $xxl){
+    html {
+        font-size: 9px;
+    }
+}
+
+@include mq-above($xxl){
+    html {
+        font-size: 10px;
+    }
+}
+
+body {
+    @include font-source-sans(2.4rem,3.2rem, $font2, $font-regular, $clr-base, initial);
+    background: $clr-root;
+    width: 100%;
+    overflow-x: hidden !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $clr-base;
+    cursor: pointer;
+    &:hover {
+        text-decoration: none;
+        color: $clr-base;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    background: transparent;
+    cursor: pointer;
+    &:focus {
+        outline: none !important;
+    }
+}
+
+.cm-line-break {
+    display: block;
+}
+
+
+
+  
