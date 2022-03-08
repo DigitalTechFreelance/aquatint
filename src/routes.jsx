@@ -2,6 +2,7 @@ import React from 'react';
 
 const Home = React.lazy(() => import('./pages/Home'));
 const AboutUs = React.lazy(() => import('./pages/AboutUs'));
+const Services = React.lazy(() => import('./pages/Services'));
 const IndexList = React.lazy(() => import('./temp/IndexList'));
 
 const routes = [
@@ -23,6 +24,11 @@ const routes = [
   {
     path: '/about-us',
     component: <AboutUs />,
+    exact: true,
+  },
+  {
+    path: '/services',
+    component: <Services />,
     exact: true,
   }
 ];

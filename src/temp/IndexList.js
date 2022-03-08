@@ -29,6 +29,11 @@ function IndexList() {
                                     <a href="/about-us">About Us</a>
                                 </div>
                             </li>
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/services">Services</a>
+                                </div>
+                            </li>
                             
                         </ul>
                     </div>
