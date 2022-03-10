@@ -1,21 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logoImg from '../../assets/images/logo.png';
 
 function Header() {
+
+    const [menuOpen, setMenuOpen] = useState(false);
+    const handleMenuOpen = () => {
+        setMenuOpen(true);
+    }
+    const handleMenuClose = () => {
+        setMenuOpen(false);
+    }
+
   return (
     <header className="bs-header">
         <div className="cm-container">
             <a href="#" className="logo">
                 <img src={logoImg} alt="Company Logo" title="Company Logo" />
             </a>
-            <button className="menu-btn">
+            <button className="menu-btn" onClick={handleMenuOpen}>
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </div>
-        <div className="bs-menu">
-            <button type="button" className="icon icon-close"></button>
+        <div className={`bs-menu ${menuOpen ? "active" : ""}`}>
+            <button type="button" className="icon icon-close" onClick={handleMenuClose}>xasd</button>
             <ul className="menu-wrap">
                 <li className="menu-link">
                     <a href="#" className="menu-link">About Us</a>

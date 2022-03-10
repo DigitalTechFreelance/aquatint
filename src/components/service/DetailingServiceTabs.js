@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ExteriorDetailingService from './ExteriorDetailingService';
 import InteriorDetailingService from './InteriorDetailingService';
 import ExteriorDetailingServiceCompareList from './ExteriorDetailingServiceCompareList';
@@ -45,7 +45,7 @@ function a11yProps(index) {
 }
 
 function DetailingServiceTabs() {
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = useState(0);
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
