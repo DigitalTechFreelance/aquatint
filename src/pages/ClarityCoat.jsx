@@ -1,8 +1,85 @@
-import React from 'react'
+import React from 'react';
+import Header from '../components/common/Header';
+import Footer from '../components/common/Footer';
+import ClarityCoatingInfogarphy from '../components/service/ClarityCoatingInfogarphy';
 
 function ClarityCoat() {
   return (
-    <div>ClarityCoat</div>
+    <>
+        <Header/>
+        <main>
+            <div className="lyt-content">
+                <div className="lyt-single-page">
+                    <div className="sp-head">
+                        <h2 className="sp-title">clarity coat</h2>
+                    </div>
+                    <div className="sp-cont">
+                        <section>
+                            <div className="bs-section typ-center">
+                                <div className="sec-head">
+                                    <div className="sec-desc">
+                                        <p>It's a Sprayable paint protection system that not only looks and feels like regular automotive paint but one that provides unrivalled protection from everyday road debris we're used to. With the highedt grade materials and years of testing, we have developed this best in class product that is successfully being used Globally.</p>
+                                    </div>
+                                </div>
+                                <div className="sec-cont">
+                                    <ClarityCoatingInfogarphy/>
+                                </div>
+                            </div>
+                        </section>
+                        <div className="cm-container">
+                            <section>
+                                <div className="bs-section typ-center">
+                                    <div className="sec-head">
+                                        <h2 className="sec-title">BENEFITS OF PPF</h2>
+                                    </div>
+                                    <div className="sec-cont">
+                                        <div className="mod-benefits">
+                                            <ul className="list-wrap">
+                                                <li className="item">
+                                                    <p className="text">protection upto 350 microns</p>
+                                                </li>
+                                                <li className="item">
+                                                    <p className="text">can be sanded and polished to a fine finish</p>
+                                                </li>
+                                                <li className="item">
+                                                    <p className="text">has no hidden knife cuts</p>
+                                                </li>
+                                                <li className="item">
+                                                    <p className="text">no glue residue after removal</p>
+                                                </li>
+                                                <li className="item">
+                                                    <p className="text">show zero edges or lines</p>
+                                                </li>
+                                                <li className="item">
+                                                    <p className="text">customizable in any colour available</p>
+                                                </li>
+                                                <li className="item">
+                                                    <p className="text">won;t yellow after certain period of time</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <div className="bs-section">
+                                    <div className="sec-cont">
+                                        <div className="mod-video typ-lg">
+                                            <div className="media-wrap">
+                                                <div className="video"></div>
+                                                <button className='btn'><span className="icon icn-play"></span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <Footer/>
+    </>
   )
 }
 
