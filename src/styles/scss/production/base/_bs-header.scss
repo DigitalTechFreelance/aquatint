@@ -1,0 +1,36 @@
+//bs-header
+.bs-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem 10rem;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: $clr-root;
+    transition: all 0.3s ease;
+    .logo{
+        max-width: 18rem;
+        transition: all 0.3s ease;
+    }
+    .menu-btn{
+        span{
+            display: block;
+            width: 3.6rem;
+            height: 2px;
+            background-color: $clr-primary;
+            margin-bottom: 1.2rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &.sticky{
+        padding: 3rem 10rem;
+        .logo{
+            max-width: 13rem;
+        }
+    }
+}

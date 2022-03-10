@@ -1,0 +1,13 @@
+//bs-menu
+.bs-menu{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $clr-primary;
+    transform: translateX(200%);
+    transition: all 0.3s ease;
+    &.active{
+        transform: translateX(0);
+    }
+}
