@@ -44,6 +44,21 @@ function IndexList() {
                                     <a href="/detailing-services">Detailing Services</a>
                                 </div>
                             </li>
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/ceramic-coating">Ceramic Coating</a>
+                                </div>
+                            </li>
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/paint-protection-film">Paint Protection Film</a>
+                                </div>
+                            </li>
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/clarity-coat">Clarity Coat</a>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>

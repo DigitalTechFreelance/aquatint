@@ -1,21 +1,22 @@
 //bs-header
 .bs-header{
-    
-    padding: 6rem 0;
+    padding: 3.5rem 0;
     position: fixed;
     top:0;
     left: 0;
     right: 0;
     z-index: 10;
-    background-color: $clr-root;
     transition: all 0.3s ease;
+    background: rgba( 0, 0, 0, 0.5);
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
     .cm-container{
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
     .logo{
-        max-width: 18rem;
+        max-width: 15rem;
         transition: all 0.3s ease;
     }
     .menu-btn{
@@ -31,7 +32,7 @@
         }
     }
     &.sticky{
-        padding: 3rem 10rem;
+        padding: 3rem 0;
         .logo{
             max-width: 13rem;
         }
