@@ -18,10 +18,12 @@ function Home() {
 					<section>
 						<div className="bs-section">
 							<div className="sec-cont">
-								<div className="bs-band typ-gradiant">
-									<div className="text-wrap">
-										<p>What was called cosmetics at that time is today called detailing. Aquatint Detailing We are investment protection specialists offer the full spectrum of detailing treatments like ceramic coating, paint protection films, spray on PPF, body shop repairs, wraps &amp; premium washing services.</p>
-										<p>Our state of the art facilities studio has some of the most skilled detailers, in-house paint protection film installers, &amp; integrated training centre. This environment, coupled with our expertise, allows us to offer our clients the highest possible quality.</p>
+								<div className="cm-container">
+									<div className="bs-band typ-gradiant">
+										<div className="text-wrap">
+											<p>What was called cosmetics at that time is today called detailing. Aquatint Detailing We are investment protection specialists offer the full spectrum of detailing treatments like ceramic coating, paint protection films, spray on PPF, body shop repairs, wraps &amp; premium washing services.</p>
+											<p>Our state of the art facilities studio has some of the most skilled detailers, in-house paint protection film installers, &amp; integrated training centre. This environment, coupled with our expertise, allows us to offer our clients the highest possible quality.</p>
+										</div>
 									</div>
 								</div>
 							</div>

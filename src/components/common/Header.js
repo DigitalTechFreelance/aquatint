@@ -4,14 +4,16 @@ import logoImg from '../../assets/images/logo.png';
 function Header() {
   return (
     <header className="bs-header">
-        <a href="#" className="logo">
-            <img src={logoImg} alt="Company Logo" title="Company Logo" />
-        </a>
-        <button className="menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <div className="cm-container">
+            <a href="#" className="logo">
+                <img src={logoImg} alt="Company Logo" title="Company Logo" />
+            </a>
+            <button className="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
         <div className="bs-menu">
             <button type="button" className="icon icon-close"></button>
             <ul className="menu-wrap">

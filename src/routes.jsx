@@ -4,6 +4,7 @@ const Home = React.lazy(() => import('./pages/Home'));
 const AboutUs = React.lazy(() => import('./pages/AboutUs'));
 const Services = React.lazy(() => import('./pages/Services'));
 const WashingServices = React.lazy(() => import('./pages/WashingServices'));
+const DetailingServices = React.lazy(() => import('./pages/DetailingServices'));
 const IndexList = React.lazy(() => import('./temp/IndexList'));
 
 const routes = [
@@ -35,6 +36,11 @@ const routes = [
   {
     path: '/washing-services',
     component: <WashingServices />,
+    exact: true,
+  },
+  {
+    path: '/detailing-services',
+    component: <DetailingServices />,
     exact: true,
   }
 ];

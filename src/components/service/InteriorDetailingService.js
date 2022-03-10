@@ -1,6 +1,6 @@
 import React from 'react'
 
-function WashingService() {
+function InteriorDetailingService() {
   return (
     <div className="lyt-features-list">
         <ul className="list-wrap">
@@ -145,4 +145,4 @@ function WashingService() {
   )
 }
 
-export default WashingService
+export default InteriorDetailingService

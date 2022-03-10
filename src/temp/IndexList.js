@@ -39,19 +39,13 @@ function IndexList() {
                                     <a href="/washing-services">Washing Services</a>
                                 </div>
                             </li>
-                            
-                        </ul>
-                    </div>
-                    {/* <div className="flex-item">
-                        <h1 className="title">Account Pages</h1>
-                        <ul className="custAcc">
                             <li className="opn">
                                 <div className="lbl">
-                                    <a href="/my-account">My Account (Landing page)</a>
+                                    <a href="/detailing-services">Detailing Services</a>
                                 </div>
                             </li>
                         </ul>
-                    </div> */}
+                    </div>
                 </div>
             </div>
         </>
