@@ -1,6 +1,6 @@
 import React from 'react'
 
-function DetailingServiceCompareList() {
+function ExteriorDetailingServiceCompareList() {
   return (
     <div className="bs-compare">
         <ul className="comapre-list-wrap">
@@ -86,4 +86,4 @@ function DetailingServiceCompareList() {
   )
 }
 
-export default DetailingServiceCompareList
+export default ExteriorDetailingServiceCompareList

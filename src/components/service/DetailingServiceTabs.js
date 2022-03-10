@@ -1,6 +1,10 @@
 import React from 'react';
 import ExteriorDetailingService from './ExteriorDetailingService';
 import InteriorDetailingService from './InteriorDetailingService';
+import ExteriorDetailingServiceCompareList from './ExteriorDetailingServiceCompareList';
+import InteriorDetailingServiceCompareList from './InteriorDetailingServiceCompareList';
+
+/* tab imports */
 import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -57,9 +61,29 @@ function DetailingServiceTabs() {
             <div className="tab-content">
                 <TabPanel value={value} index={0}>
                     <ExteriorDetailingService/>
+                    <section>
+                        <div className="bs-section typ-center">
+                            <div className="sec-head">
+                                <h2 className="sec-title">Compare Services</h2>
+                            </div>
+                            <div className="sec-cont">
+                                <ExteriorDetailingServiceCompareList/>
+                            </div>
+                        </div>
+                    </section>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
                     <InteriorDetailingService/>
+                    <section>
+                        <div className="bs-section typ-center">
+                            <div className="sec-head">
+                                <h2 className="sec-title">Compare Services</h2>
+                            </div>
+                            <div className="sec-cont">
+                                <InteriorDetailingServiceCompareList/>
+                            </div>
+                        </div>
+                    </section>
                 </TabPanel>
             </div>
         </div>

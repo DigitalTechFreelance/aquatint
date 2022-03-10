@@ -7,36 +7,24 @@ function InteriorDetailingService() {
             <li className="item typ-odd">
                 <div className="bs-features">
                     <div className="info-wrap">
-                    <h3 className="title">Insta Gloss</h3>
-                    <p className="desc">Get your car cleaned inside-out with this premium steam-wash service</p>
+                    <h3 className="title">EXPRESS INTERIOR CLEANING</h3>
+                    <p className="desc">A maintenance interior cleaning package to keep your car spotless, fresh & new from inside!</p>
                         <div className="mod-list">
                         <ul className="details-list">
                             <li className="item">
-                            High Pressure Foam/Steam Wash
-                            <ul className='sub-list-wrap'>
-                                <li className="sub-item">Engine bay steam clean</li>
-                                <li className="sub-item">Door jambs cleaning</li>
-                                <li className="sub-item">Wheel cleaning</li>
-                                <li className="sub-item">Floor mat cleaning</li>
-                            </ul>
+                            Car interior dry vaccumed
                             </li>
                             <li className="item">
-                            Spray on wax application
-                            </li>
-                        </ul>
-                        <ul className="details-list">
-                            <li className="item">
-                            Dressing 
-                            <ul className="sub-list-wrap">
-                                <li className="item">Plastic trim dressing</li>
-                                <li className="item">Tyre dressing</li>
-                            </ul>
+                            Antibacterial Foam cleaning of the complete Interior
                             </li>
                             <li className="item">
-                            Interior vacuum &amp; wet wipe
+                            Carpet cleaning with shampoo
                             </li>
                             <li className="item">
-                            Glass Cleaning
+                            Dashboard & plastic rejuvenating with plastic sealant
+                            </li>
+                            <li className="item">
+                            Windows cleaning inside & out
                             </li>
                         </ul>
                         </div>
@@ -52,83 +40,31 @@ function InteriorDetailingService() {
             <li className="item typ-even">
                 <div className="bs-features">
                     <div className="info-wrap">
-                    <h3 className="title">PRO WASH</h3>
-                    <p className="desc">A Premium steam wash topped with tar-mark removal &amp; added protection for Interiors of your car.</p>
+                    <h3 className="title">INTERIOR DETAILING ADVANCE</h3>
+                    <p className="desc">Get spotless and hygienic car interiors!</p>
                         <div className="mod-list">
                         <ul className="details-list">
                             <li className="item">
-                            All Services of INSTA-GLOSS
+                                All services of EXPRESS INTERIOR 
                             </li>
                             <li className="item">
-                            Tar Marks removal from body &amp; alloys
-                            </li>
-                            <li className="item">Bug stains removal</li>
-                            <li className="item">Claying on painted surface to reduce roughness</li>
-                        </ul>
-                        <ul className="details-list">
-                            <li className="item">
-                            Premium Carnauba Wax application
+                                Steam Cleaning of-
+                                <ul className="sub-list-wrap">
+                                    <li className="item">All human-contact points for 99% germ cleaning</li>
+                                    <li className="item">A/C Duct with Disinfectant treatment</li>
+                                    <li className="item">Door Jambs with degreasing</li>
+                                </ul>
                             </li>
                             <li className="item">
-                            Interior Plastic &amp; Dashboard premium dressing
-                            </li>
-                        </ul>
-                        </div>
-                    </div>
-                    <div className="mod-video">
-                    <div className="media-wrap">
-                        <div className="video"></div>
-                        <button className='btn'><span className="icon icn-play"></span></button>
-                    </div>
-                    </div>
-                </div>
-            </li>
-            <li className="item typ-odd">
-                <div className="bs-features">
-                    <div className="info-wrap">
-                    <h3 className="title">CERAMIC WASH</h3>
-                    <p className="desc">After a ceramic coating is done, you still have to take care of your vehicle. A regular Ceramic Wash prevents contamination build up, maximises gloss levels of the paint and maintains the existing coat</p>
-                        <div className="mod-list">
-                        <ul className="details-list">
-                            <li className="item">
-                            All services of PRO-WASH
+                                Deep Cleaning of-
+                                <ul className="sub-list-wrap">
+                                    <li className="item">The boot area & Spare Wheel</li>
+                                    <li className="item">Seat cracks & other crevices with brushes</li>
+                                </ul>
                             </li>
                             <li className="item">
-                            Alkaline pre wash
-                            <ul className="sub-list">
-                                <li className="item">Removes organic dirt</li>
-                            </ul>
+                            Conditioning leather seats & trims with Leather Cream
                             </li>
-                            <li className="item">
-                            Acidic foam wash
-                            <ul className="sub-list-wrap">
-                                <li className="item">Removes lime scale</li>
-                            </ul>
-                            </li>
-                            <li className="item">
-                            Iron decontamination
-                            <ul className="sub-list-wrap">
-                                <li className="item"> Removes metal oxides,brake dust etc</li>
-                            </ul>
-                            </li>
-                        </ul>
-                        <ul className="details-list">
-                            <li className="item">
-                            Tar and Bug stains removal
-                            </li>
-                            <li className="item">
-                            Neutralized foam wash
-                            <ul className="sub-list-wrap">
-                                <li className="item">Neutral maintenance wash with high lubrication action</li>
-                            </ul>
-                            </li>
-                            <li className="item">
-                            Application of Nano Ceramic Sealant
-                            <ul className="sub-list-wrap">
-                                <li className="item">for uv protection and high gloss finish</li>
-                            </ul>
-                            </li>
-                            <li className="item">Gloss enhancer application</li>
                         </ul>
                         </div>
                     </div>
