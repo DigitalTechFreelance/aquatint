@@ -1,5 +1,6 @@
 import React from "react";
 import "./demo.css";
+import logoImg from '../assets/images/logo.png';
 
 function IndexList() {
     return (
@@ -9,7 +10,7 @@ function IndexList() {
             <div className="header-logo-wrap">
                 <img
                     className="logo"
-                    src=""
+                    src={logoImg}
                     alt="Aquatint Application"
                 />
             </div>
@@ -57,6 +58,21 @@ function IndexList() {
                             <li className="opn">
                                 <div className="lbl">
                                     <a href="/clarity-coat">Clarity Coat</a>
+                                </div>
+                            </li>
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/customisation-service">Customisation Services</a>
+                                </div>
+                            </li>
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/franchise-with-us">Franchise With Us</a>
+                                </div>
+                            </li>
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/contact-us">Contact Us</a>
                                 </div>
                             </li>
                         </ul>

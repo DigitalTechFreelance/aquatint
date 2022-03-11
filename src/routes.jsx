@@ -8,6 +8,9 @@ const DetailingServices = React.lazy(() => import('./pages/DetailingServices'));
 const CeramicCoating = React.lazy(() => import('./pages/CeramicCoating'));
 const PaintProtectionFilm = React.lazy(() => import('./pages/PaintProtectionFilm'));
 const ClarityCoat = React.lazy(() => import('./pages/ClarityCoat'));
+const CustomisationService = React.lazy(() => import('./pages/CustomisationService'));
+const FranchiseWithUs = React.lazy(() => import('./pages/FranchiseWithUs'));
+const ContactUs = React.lazy(() => import('./pages/ContactUs'));
 
 
 const IndexList = React.lazy(() => import('./temp/IndexList'));
@@ -61,6 +64,21 @@ const routes = [
   {
     path: '/clarity-coat',
     component: <ClarityCoat />,
+    exact: true,
+  },
+  {
+    path: '/customisation-service',
+    component: <CustomisationService />,
+    exact: true,
+  },
+  {
+    path: '/franchise-with-us',
+    component: <FranchiseWithUs />,
+    exact: true,
+  },
+  {
+    path: '/contact-us',
+    component: <ContactUs />,
     exact: true,
   }
   
