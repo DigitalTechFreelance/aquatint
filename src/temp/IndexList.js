@@ -75,6 +75,21 @@ function IndexList() {
                                     <a href="/contact-us">Contact Us</a>
                                 </div>
                             </li>
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/comprehensive-package">Comprehensive Package</a>
+                                </div>
+                            </li>
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/signature-package">Signature Package</a>
+                                </div>
+                            </li>
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/essential-package">Essential Package</a>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>

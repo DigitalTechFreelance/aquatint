@@ -1,0 +1,32 @@
+//bs-section
+.bs-section{
+    padding: 8rem 0;
+    position: relative;
+
+    &.sec-first{
+        padding-top: 0
+    }
+    &.sec-last{
+        padding-bottom: 0
+    }
+
+    .sec-title{
+        @include font-source-sans(4.8rem,5.2rem, $font1, $font-smbold, $clr-base, uppercase);
+        letter-spacing: 0.4rem;
+    }
+
+    .sec-head{
+        margin-bottom: 8rem;
+    }
+
+    &.typ-infography{
+
+        .bs-infography{
+            .img-wrap{
+                position: absolute;
+                right: 0;
+            }
+        }
+
+    }
+}

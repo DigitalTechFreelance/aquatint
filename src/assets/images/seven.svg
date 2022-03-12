@@ -1,0 +1,25 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362 500" width="362" height="500">
+	<title>Group 2357-svg</title>
+	<style>
+		tspan { white-space:pre } 
+		.s0 { fill: #ffffff;stroke: #707070;stroke-linejoin: bevel } 
+		.s1 { fill: none;stroke: #ffffff;stroke-width: 2 } 
+		.s2 { fill: none;stroke: #ffffff;stroke-linejoin: bevel;stroke-width: 2 } 
+	</style>
+	<g id="Group 2357">
+		<g id="Group 2356">
+			<g id="Group 2355">
+				<g id="Group 2354">
+					<path id="Path 2525" class="s0" d="m337.7 16.6l-29.7 140.8l-176.6 272.7h-109.6l218.5-335.5h-138.1l-14 67.3h-87.7l29.8-145.3z"/>
+				</g>
+			</g>
+			<g id="Layer">
+				<path id="Line 32" class="s1" d="m263.9 276.2l-47.5 223.3"/>
+			</g>
+			<path id="Path 2526" class="s2" d="m337.7 16.6l-28.7 135.7l-29.4 137.9l-26.1 122.1"/>
+			<g id="Layer">
+				<path id="Line 33" class="s1" d="m360.7 0.1l-65.8 308.7"/>
+			</g>
+		</g>
+	</g>
+</svg>

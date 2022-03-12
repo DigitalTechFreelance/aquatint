@@ -1,0 +1,45 @@
+//bs-banner
+.bs-banner{
+    height: 84vh;
+    position: relative;
+
+    .setBgSrc{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+    }
+
+    .banner-image-wrap{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .banner-info{
+        text-align: center;
+        position: absolute;
+        bottom: 7rem;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+
+    .banner-title{
+        @include font-source-sans(5.6rem,6rem, $font1, $font-medium, $clr-base, uppercase);
+        letter-spacing: 1rem;
+    }
+
+    &:before{
+        content:'';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('../../../../assets/images/pattern-blue.svg') no-repeat 0 0 transparent;
+    }
+
+}

@@ -6,6 +6,7 @@ import WorkSlider from '../components/home/WorkSlider';
 import Infogarphy from '../components/home/Infogarphy';
 import TestimonialSlider from '../components/home/TestimonialSlider';
 import HomeBanner from '../components/home/HomeBanner';
+import premiumPackageImg from '../assets/images/premium-package.webp';
 
 
 function Home() {
@@ -16,14 +17,12 @@ function Home() {
 				<div className="lyt-content">
 					<HomeBanner/>
 					<section>
-						<div className="bs-section">
+						<div className="bs-section sec-first sec-last">
 							<div className="sec-cont">
-								<div className="cm-container">
-									<div className="bs-band typ-gradiant">
-										<div className="text-wrap">
-											<p>What was called cosmetics at that time is today called detailing. Aquatint Detailing We are investment protection specialists offer the full spectrum of detailing treatments like ceramic coating, paint protection films, spray on PPF, body shop repairs, wraps &amp; premium washing services.</p>
-											<p>Our state of the art facilities studio has some of the most skilled detailers, in-house paint protection film installers, &amp; integrated training centre. This environment, coupled with our expertise, allows us to offer our clients the highest possible quality.</p>
-										</div>
+								<div className="bs-band typ-gradiant">
+									<div className="text-wrap">
+										<p>What was called cosmetics at that time is today called detailing. Aquatint Detailing We are investment protection specialists offer the full spectrum of detailing treatments like ceramic coating, paint protection films, spray on PPF, body shop repairs, wraps &amp; premium washing services.</p>
+										<p>Our state of the art facilities studio has some of the most skilled detailers, in-house paint protection film installers, &amp; integrated training centre. This environment, coupled with our expertise, allows us to offer our clients the highest possible quality.</p>
 									</div>
 								</div>
 							</div>
@@ -31,29 +30,59 @@ function Home() {
 					</section>
 					<section>
 						<div className="bs-section">
-							<div className="sec-head">
-								<h2 className="sec-title">Services We Offer</h2>
-							</div>
-							<div className="sec-cont">
-								<TileGrid/>
+							<div className="cm-container">
+								<div className="sec-head">
+									<h2 className="sec-title">Services We Offer</h2>
+								</div>
+								<div className="sec-cont">
+									<TileGrid/>
+								</div>
 							</div>
 						</div>
 					</section>
 					<section>
 							<div className="bs-section">
-								<div className="sec-head">
-									<h2 className="sec-title">Our Recent Work</h2>
-								</div>
 								<div className="sec-cont">
-									<WorkSlider/>
+									<div className="bs-infography typ-reverse typ-explore">
+										<div className="info-wrap">
+											<h3 className="title">
+												<span className="text-sm text-pos-1">explore our</span>
+												<span className="text-lg text-pos-2">premium</span>
+												<span className="text-lg text-pos-3">packages</span>
+											</h3>
+											<ul className="feature-list">
+												<li>COMPREHENSIVE PACKAGE</li>
+												<li>SIGNATURE PACKAGE</li>
+												<li>ESSENTIAL PACKAGE</li>
+											</ul>
+											<button className="btn btn-default"><span>explore</span></button>
+										</div>
+										<div className="img-wrap">
+											<img src={premiumPackageImg} alt="Coating Car" title="Coating Car" />
+										</div>
+									</div>
 								</div>
 							</div>
 					</section>
-					{/* franchise with us */}
 					<section>
 						<div className="bs-section">
+							<div className="cm-container">
+								<div className="sec-head">
+									<h2 className="sec-title">Our Recent Work</h2>
+								</div>
+							</div>
 							<div className="sec-cont">
-								<Infogarphy/>
+								<WorkSlider/>
+							</div>
+						</div>
+					</section>
+					{/* franchise with us */}
+					<section>
+						<div className="bs-section typ-infography cm-paddtop-30 bs-pattern pattern-orange patter-pos-1">
+							<div className="cm-container">
+								<div className="sec-cont">
+									<Infogarphy/>
+								</div>
 							</div>
 						</div>
 					</section>

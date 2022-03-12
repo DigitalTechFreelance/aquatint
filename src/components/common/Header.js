@@ -12,19 +12,21 @@ function Header() {
     }
 
   return (
+      <>
     <header className="bs-header">
         <div className="cm-container">
             <a href="#" className="logo">
                 <img src={logoImg} alt="Company Logo" title="Company Logo" />
             </a>
             <button className="menu-btn" onClick={handleMenuOpen}>
-                <span></span>
-                <span></span>
-                <span></span>
+                <span className="bar1"></span>
+                <span className="bar2"></span>
+                <span className="bar3"></span>
             </button>
         </div>
+        </header>
         <div className={`bs-menu ${menuOpen ? "active" : ""}`}>
-            <button type="button" className="icon icon-close" onClick={handleMenuClose}>xasd</button>
+            <button type="button" className="icon icon-close menu-close" onClick={handleMenuClose}>x</button>
             <ul className="menu-wrap">
                 <li className="menu-link">
                     <a href="#" className="menu-link">About Us</a>
@@ -68,7 +70,7 @@ function Header() {
                 </li>
             </ul>
         </div>
-    </header>
+    </>
   )
 }
 

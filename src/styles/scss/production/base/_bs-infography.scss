@@ -1,0 +1,105 @@
+//bs-infography
+.bs-infography{
+    display: flex;
+
+    .info-wrap{
+        max-width: 60rem;
+        position: relative;
+    }
+
+    .img-wrap{
+        max-width: 80rem;
+    }
+
+    .title{
+        @include font-source-sans(4.8rem,5.2rem, $font1, $font-smbold, $clr-base, uppercase);
+        letter-spacing: 0.4rem;
+        margin-bottom: 8rem;
+
+        
+        .text-sm{
+            @include font-source-sans(3.2rem,3.6rem, $font1, $font-medium, $clr-base, uppercase);
+            display: block
+        }
+        .text-lg{
+            @include font-source-sans(12rem,12.6rem, $font1, $font-bold, $clr-base, uppercase);
+            font-style: italic;
+            display: block
+        }
+    }
+
+    .desc{
+        margin-bottom: 6rem;
+
+        p{
+            @include font-source-sans(2.4rem,3.2rem, $font2, $font-regular, $clr-base, initial);
+            margin-bottom: 3rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+
+
+    .feature-list{
+        
+        li{
+            display: inline-block;
+            @include font-source-sans(2.8rem,3.4rem, $font1, $font-smbold, $clr-base, uppercase);
+            font-style: italic;
+            padding-left: 2rem;
+            margin-right: 2rem;
+            position: relative;
+            margin-bottom: 1rem;
+            &:before{
+                content:'';
+                width: 0.7rem;
+                height: 0.7rem;
+                background-color: $clr-base;
+                border-radius: 100%;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &.typ-reverse{
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+
+    &.typ-explore{
+        padding-top: 10rem;
+
+        .img-wrap{
+            max-width: 104rem;
+        }
+
+        .title{
+            margin-bottom: 4rem;
+            span{
+                &.text-pos-1{
+                    margin-left: -28rem;
+                }
+                &.text-pos-2{
+                    margin-left: -30rem;
+                }
+                &.text-pos-3{
+                    margin-left: -6rem;
+                }
+            }
+
+        }
+
+        .feature-list{
+            margin-bottom: 6rem;
+        }
+
+    }
+
+
+}

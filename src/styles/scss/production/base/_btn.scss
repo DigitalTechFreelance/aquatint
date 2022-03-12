@@ -1,0 +1,41 @@
+//btn
+.btn{
+    overflow: hidden;
+    position: relative;
+    span{
+        @include font-source-sans(2.4rem,3rem, $font1, $font-medium, $clr-primary, uppercase);
+        position: relative;
+        mix-blend-mode: difference;
+    }
+    &.btn-default{
+        padding: 2.5rem 6rem;
+        border: 1px solid $clr-primary;    
+        border-radius: 5rem;
+        &:before{
+            content: '';
+            background-color: $clr-primary;
+            transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translate3d(0,100%,0);
+            
+        }
+        &:hover{
+            &:before{
+                transform: translate3d(0,0,0);
+            }
+        }
+        &.btn-secondary{
+            border-color: $clr-secondary;
+            &:before{
+                background-color: $clr-secondary;
+            }
+            span{
+                color: $clr-secondary;
+            }
+        }
+    }
+}

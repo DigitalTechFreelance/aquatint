@@ -11,8 +11,9 @@ const ClarityCoat = React.lazy(() => import('./pages/ClarityCoat'));
 const CustomisationService = React.lazy(() => import('./pages/CustomisationService'));
 const FranchiseWithUs = React.lazy(() => import('./pages/FranchiseWithUs'));
 const ContactUs = React.lazy(() => import('./pages/ContactUs'));
-
-
+const ComprehensizePackage = React.lazy(() => import('./pages/ComprehensizePackage'));
+const SignaturePackage = React.lazy(() => import('./pages/SignaturePackage'));
+const EssentialPackage = React.lazy(() => import('./pages/EssentialPackage'));
 const IndexList = React.lazy(() => import('./temp/IndexList'));
 
 const routes = [
@@ -80,8 +81,22 @@ const routes = [
     path: '/contact-us',
     component: <ContactUs />,
     exact: true,
+  },
+  {
+    path: '/comprehensive-package',
+    component: <ComprehensizePackage />,
+    exact: true,
+  },
+  {
+    path: '/signature-package',
+    component: <SignaturePackage />,
+    exact: true,
+  },
+  {
+    path: '/essential-package',
+    component: <EssentialPackage />,
+    exact: true,
   }
-  
 ];
 
 export default routes;

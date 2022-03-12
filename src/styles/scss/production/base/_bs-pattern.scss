@@ -1,0 +1,25 @@
+//bs-pattern
+.bs-pattern{
+    position: relative;
+
+    &.pattern-orange{
+        &:before{
+            content:'';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: url('../../../../assets/images/pattern-orange.svg') no-repeat 0 0 transparent;
+            opacity: 0.5;
+        }
+
+        &.patter-pos-1{
+            &:before{
+                background-size: 165%;
+                background-position: 55% 30%;
+            }
+        }
+    }
+
+}
