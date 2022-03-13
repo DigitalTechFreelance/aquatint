@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './assets/css/icons.css';
 import './styles/scss/production/style.scss';
 import localRoutes from './routes';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';

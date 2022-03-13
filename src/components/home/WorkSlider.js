@@ -26,7 +26,22 @@ function WorkSlider() {
                     <img />
                 </div>
                 <div className="action-wrap">
-                    <a href="#" type="button" className="link" data-video-src="">1</a>
+                    <a href="#" type="button" className="link" data-video-src="">
+                        <span className="icon icon-play2"></span>
+                    </a>
+                </div>
+                
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div className="bs-tile typ-video">
+                <div className="img-wrap">
+                    <img />
+                </div>
+                <div className="action-wrap">
+                    <a href="#" type="button" className="link" data-video-src="">
+                    <span className="icon icon-play2"></span>
+                    </a>
                 </div>
             </div>
         </SwiperSlide>
@@ -36,17 +51,9 @@ function WorkSlider() {
                     <img />
                 </div>
                 <div className="action-wrap">
-                    <a href="#" type="button" className="link" data-video-src="">2</a>
-                </div>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className="bs-tile typ-video">
-                <div className="img-wrap">
-                    <img />
-                </div>
-                <div className="action-wrap">
-                    <a href="#" type="button" className="link" data-video-src="">3</a>
+                    <a href="#" type="button" className="link" data-video-src="">
+                    <span className="icon icon-play2"></span>
+                    </a>
                 </div>
             </div>
         </SwiperSlide>

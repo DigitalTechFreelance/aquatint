@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?dpgu0z');
+  src:  url('../fonts/icomoon.eot?dpgu0z#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?dpgu0z') format('truetype'),
+    url('../fonts/icomoon.woff?dpgu0z') format('woff'),
+    url('../fonts/icomoon.svg?dpgu0z#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-hammer:before {
+  content: "\e904";
+}
+.icon-arrow-back:before {
+  content: "\e905";
+}
+.icon-bullet:before {
+  content: "\e906";
+}
+.icon-ceramic-protection:before {
+  content: "\e907";
+}
+.icon-quotes-close:before {
+  content: "\e908";
+}
+.icon-close:before {
+  content: "\e909";
+}
+.icon-down:before {
+  content: "\e90a";
+}
+.icon-sponge:before {
+  content: "\e90b";
+}
+.icon-mail:before {
+  content: "\e90c";
+}
+.icon-facebook:before {
+  content: "\e90d";
+}
+.icon-arrow-front:before {
+  content: "\e90e";
+}
+.icon-gloss:before {
+  content: "\e90f";
+}
+.icon-instagram:before {
+  content: "\e910";
+}
+.icon-linkedin:before {
+  content: "\e911";
+}
+.icon-play1:before {
+  content: "\e912";
+}
+.icon-chemical-resistance:before {
+  content: "\e913";
+}
+.icon-paint:before {
+  content: "\e914";
+}
+.icon-super-hydrophobic:before {
+  content: "\e915";
+}
+.icon-twitter:before {
+  content: "\e916";
+}
+.icon-shield:before {
+  content: "\e917";
+}
+.icon-play2:before {
+  content: "\e903";
+}
+.icon-resale-value:before {
+  content: "\e902";
+}
+.icon-durability:before {
+  content: "\e900";
+}
+.icon-Open-quotes-01:before {
+  content: "\e901";
+}
