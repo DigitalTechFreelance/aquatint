@@ -27,7 +27,7 @@ body {
     background: $clr-root;
     width: 100%;
     overflow-x: hidden !important;
-    @include scrollbars(2px, $clr-primary, $clr-root);
+    @include scrollbars(2px, $clr-primary-shade, $clr-root);
 }
 
 h1,
@@ -87,6 +87,14 @@ button {
 
 .cm-paddtop-30{
     padding-top: 30rem !important;
+}
+
+.cm-no-pad-top{
+    padding-top: 0 !important;
+}
+
+.cm-no-pad-bottom{
+    padding-bottom: 0 !important;
 }
 
 

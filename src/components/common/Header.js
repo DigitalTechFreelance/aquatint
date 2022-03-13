@@ -26,7 +26,7 @@ function Header() {
         </div>
         </header>
         <div className={`bs-menu ${menuOpen ? "active" : ""}`}>
-            <button type="button" className="icon icon-close menu-close" onClick={handleMenuClose}>x</button>
+            <button type="button" className="icon icon-close menu-close" onClick={handleMenuClose}></button>
             <ul className="menu-wrap">
                 <li className="menu-link">
                     <a href="#" className="menu-link">About Us</a>

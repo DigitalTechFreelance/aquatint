@@ -1,0 +1,43 @@
+//mod-testimonial
+.mod-testimonial{
+    padding: 7rem 9rem 7rem 19.4rem;
+    max-width: 74.4rem;
+    border: 1px solid $clr-primary;
+    margin: 0 auto;
+    position: relative;
+
+    .title{
+        @include font-source-sans(4.8rem,5.4rem, $font1, $font-smbold, $clr-base, capitalize);
+        margin-bottom: 2rem;
+    }
+
+    .place{
+        @include font-source-sans(3.6rem,4rem, $font1, $font-medium, $clr-base, capitalize);
+        margin-bottom: 2rem;
+        display: block;
+    }
+
+    .desc{
+        p{
+            @include font-source-sans(2.4rem,3.2rem, $font2, $font-regular, $clr-base, initial);
+        }
+    }
+
+    .info-wrap{
+        max-width: 46rem;
+    }
+
+    .img-wrap{
+        width: 20.9rem;
+        height: 28.5rem;
+        display: block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+        left: -15%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+}

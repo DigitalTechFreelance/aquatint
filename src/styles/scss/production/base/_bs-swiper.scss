@@ -1,0 +1,66 @@
+//bs-swiper
+.bs-swiper{
+
+    .swiper-button-prev,.swiper-button-next{
+        &:after{
+            font-family: 'icomoon' !important;
+            font-size: 5rem;
+            color: $clr-primary;
+        }
+    }
+
+    .swiper-button-prev{
+        &:after{
+            content: "\e905";
+        }
+    }
+
+    .swiper-button-next{
+        &:after{
+            content: "\e90e";
+        }
+    }
+    
+
+    &.typ-tile{
+        padding: 0 6rem !important;
+
+        &:before,&:after{
+            content:'';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 6rem;
+            z-index: 2;
+            background-color: $clr-root;
+        }
+    
+        &::before{
+            left: 0;
+        }
+    
+        &::after{
+            right: 0;
+        }
+
+    }
+
+    &.typ-testimonials{
+
+        .swiper-button-prev,.swiper-button-next{
+            &:after{
+                font-size: 7rem;
+            }
+        }
+    
+        .swiper-button-prev{
+            left: 25rem;
+        }
+    
+        .swiper-button-next{
+            right: 25rem;
+        }
+
+    }
+
+}

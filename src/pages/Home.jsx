@@ -17,7 +17,7 @@ function Home() {
 				<div className="lyt-content">
 					<HomeBanner/>
 					<section>
-						<div className="bs-section sec-first sec-last">
+						<div className="bs-section cm-no-pad-top cm-no-pad-bottom">
 							<div className="sec-cont">
 								<div className="bs-band typ-gradiant">
 									<div className="text-wrap">
@@ -88,7 +88,7 @@ function Home() {
 					</section>
 					{/* testimonial section	*/}
 					<section>
-						<div className="bs-section">
+						<div className="bs-section sec-last">
 							<div className="sec-cont">
 								<TestimonialSlider/>
 							</div>

@@ -20,8 +20,11 @@
 @import "base/bs-infography";
 @import "base/btn";
 @import "base/bs-pattern";
+@import "base/bs-swiper";
+@import "base/bs-footer";
 
 /* module */
+@import "module/mod-testimonial";
 
 /* layout */
 @import "layout/lyt-content";

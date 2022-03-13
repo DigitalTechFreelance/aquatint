@@ -55,4 +55,27 @@
 
         }
     }
+
+    .sub-menu{
+        >.menu-link{
+            position: relative;
+            padding-right: 3.5rem;
+            &:after{
+                content: "\e90a";
+                font-family: 'icomoon' !important;
+                font-size: 1.5rem;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) rotate(180deg);
+                right: 0;
+                transform: all 0.3s ease;
+            }
+            &.active{
+                &:after{
+                    transform: translateY(-50%) rotate(0);
+                }
+            }
+        }
+    }
+
 }
