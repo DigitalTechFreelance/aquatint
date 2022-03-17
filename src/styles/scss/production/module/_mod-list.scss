@@ -54,5 +54,67 @@
 
     }
 
+    &.typ-italic{
+
+        .list-item{
+
+            >p{
+                @include font-source-sans(3.6rem,3.8rem, $font1, $font-bold, $clr-primary, uppercase);
+                font-style: italic;
+                letter-spacing: 0.03rem;
+                margin-bottom: 6rem;
+            }
+
+        }
+
+        .mod-list{
+            &.typ-disc{
+                padding-left: 2.4rem;
+                .item{
+                    margin-bottom: 2rem;
+                    &:last-child{
+                        margin-bottom: 0
+                    }
+                }
+                
+            }
+        }
+
+
+    }
+
+    &.typ-bold{
+
+        >.item{
+            >p{
+                @include font-source-sans(2.4rem,3.2rem, $font2, $font-regular, $clr-base, initial);
+                margin-bottom: 4rem;
+                &.title{
+                    @include font-source-sans(3.2rem,4rem, $font1, $font-smbold, $clr-base, uppercase);
+                    font-style: italic;
+                    letter-spacing: 0.03rem;
+                    margin-bottom: 3rem;
+    
+                }
+            }
+            
+
+        }
+
+    }
+
+    &.typ-grid{
+        width: 106.9rem;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+
+        >.item{
+            width: 50%;
+            margin-bottom: 6rem;
+        }
+
+    }
+
 
 }

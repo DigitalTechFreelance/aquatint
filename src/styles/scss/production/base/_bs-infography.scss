@@ -118,5 +118,46 @@
         }
     }
 
+    &.typ-grid-left{
+        justify-content: space-between;
+        position: relative;
+
+        .img-wrap{
+            width: 115rem;
+            position: absolute;
+            right: -27%;
+            top: -25rem;
+            transform: scale(2);
+        }
+
+        &.typ-vertical-center{
+
+            .img-wrap{
+                right: -5%;
+                top: 50%;
+                transform: translateY(-50%) scale(1.5);
+            }
+
+        }
+
+    }
+
+    &.typ-vertical-center{
+
+        .info-wrap{
+            max-width: initial;
+            width: 78rem;
+        }
+
+        .mod-list{
+            &.typ-bold{
+                >.item{
+                    margin-bottom: 8rem;
+                }
+            }
+        } 
+
+    }
+
 
 }
