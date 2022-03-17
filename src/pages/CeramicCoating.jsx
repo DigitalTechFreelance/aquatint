@@ -12,16 +12,14 @@ function CeramicCoating() {
                 <div className="lyt-single-page">
                     <div className="sp-head">
                         <h2 className="sp-title">CERAMIC COATING</h2>
+                        <div className="sp-desc">
+                            <p>Gloss-Coat is the latest generation, semi-permanent coating that will provide the user with an amazing level of gloss and slickness from the paint work and durability of 3-4 years. It is topped up with a polymer-based sealant which helps with the quick curing of the Gloss Coat.</p>
+                            <p>The ceramic coating is resistant to detergents and harsh chemicals and produces a surface that is less prone to swirl marks and scratches.</p>
+                        </div>
                     </div>
                     <div className="sp-cont">
                         <section>
-                            <div className="bs-section typ-center">
-                                <div className="sec-head">
-                                    <div className="sec-desc">
-                                        <p>Gloss-Coat is the latest generation, semi-permanent coating that will provide the user with an amazing level of gloss and slickness from the paint work and durability of 3-4 years. It is topped up with a polymer-based sealant which helps with the quick curing of the Gloss Coat.</p>
-                                        <p>The ceramic coating is resistant to detergents and harsh chemicals and produces a surface that is less prone to swirl marks and scratches.</p>
-                                    </div>
-                                </div>
+                            <div className="bs-section cm-no-pad-top">
                                 <div className="sec-cont">
                                     <CeramicCoatingInfogarphy/>
                                 </div>
@@ -68,7 +66,7 @@ function CeramicCoating() {
                                     </div>
                                     <div className="sec-cont">
                                         <ul className="lyt-info">
-                                        <li className="info-item">
+                                            <li className="info-item">
                                                 <div className="mod-info typ-bg">
                                                     <div className="info-wrap">
                                                         <h3 className="title">COMPREHENSIVE PACKAGE</h3>

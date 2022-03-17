@@ -33,7 +33,7 @@ function Header() {
                 </li>
                 <li className="menu-link sub-menu">
                     <a href="#" className="menu-link">Services</a>
-                    <ul className="sub-menu-wrap">
+                    {/* <ul className="sub-menu-wrap">
                         <li className="menu-item">
                             <a href="#" className="menu-link">About Us</a>
                         </li>
@@ -43,11 +43,11 @@ function Header() {
                         <li className="menu-item">
                             <a href="#" className="menu-link">About Us</a>
                         </li>
-                    </ul>
+                    </ul> */}
                 </li>
                 <li className="menu-link sub-menu">
                     <a href="#" className="menu-link">Ceramic Coating</a>
-                    <ul className="sub-menu-wrap">
+                    {/* <ul className="sub-menu-wrap">
                         <li className="menu-item">
                             <a href="#" className="menu-link">About Us</a>
                         </li>
@@ -57,7 +57,7 @@ function Header() {
                         <li className="menu-item">
                             <a href="#" className="menu-link">About Us</a>
                         </li>
-                    </ul>
+                    </ul> */}
                 </li>
                 <li className="menu-link">
                     <a href="#" className="menu-link">PPF</a>

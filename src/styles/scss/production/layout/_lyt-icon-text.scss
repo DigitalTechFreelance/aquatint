@@ -1,0 +1,23 @@
+//lyt-icon-text
+.lyt-icon-text{
+    &.typ-secondary{
+        .mod-icon-text{
+            .icon{
+                color: $clr-secondary;
+            }
+        }
+    }
+
+    .list-wrap{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-flow: row wrap;
+
+        .list-item{
+            width: 33.33%;
+        }
+
+    }
+
+}

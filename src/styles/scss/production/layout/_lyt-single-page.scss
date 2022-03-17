@@ -11,4 +11,18 @@
         text-align: center;
     }
 
+    .sp-desc{
+        max-width: 92.4rem;
+        text-align: left;
+        margin: 8rem auto 0;
+        
+        p{
+            @include font-source-sans(2.4rem,3.2rem, $font2, $font-regular, $clr-base, initial);
+            margin-bottom: 3rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
 }

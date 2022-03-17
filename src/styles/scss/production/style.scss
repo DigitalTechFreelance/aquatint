@@ -26,8 +26,13 @@
 
 /* module */
 @import "module/mod-testimonial";
+@import "module/mod-icon-text";
+@import "module/mod-info";
+@import "module/mod-list";
 
 /* layout */
 @import "layout/lyt-content";
 @import "layout/lyt-single-page";
 @import "layout/lyt-service";
+@import "layout/lyt-icon-text";
+@import "layout/lyt-info";

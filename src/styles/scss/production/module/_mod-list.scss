@@ -1,0 +1,58 @@
+//mod-list
+.mod-list{
+
+    &.typ-number{
+        counter-reset: section;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        width: 146rem;
+        margin: 0 auto;
+
+        .list-item{
+            width: 50%;
+            counter-increment: section;
+            padding-left: 5rem;
+            position: relative;
+            margin-bottom: 10rem;
+            &:before{
+                content: counter(section) ". ";
+                @include font-source-sans(3.6rem,3.8rem, $font1, $font-smbold, $clr-primary, uppercase);
+                position: absolute;
+                left: 0;
+            }
+            >p{
+                @include font-source-sans(3.6rem,3.8rem, $font1, $font-smbold, $clr-primary, uppercase);
+                letter-spacing: 0.03rem;
+                margin-bottom: 4rem;
+            }
+        }
+
+        .mod-list{
+            &.typ-disc{
+                margin-left: -2.8rem;
+                .item{
+                    max-width: 58rem;
+                }
+            }
+        }
+
+    }
+
+    &.typ-disc{
+
+        .item{
+            list-style-type: disc;
+            margin-bottom: 4rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            >p{
+                @include font-source-sans(2.4rem,3.2rem, $font1, $font-light, $clr-base, initial);
+            }
+        }
+
+    }
+
+
+}

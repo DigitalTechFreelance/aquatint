@@ -1,0 +1,12 @@
+//lyt-info
+.lyt-info{
+
+    .info-item{
+        
+        margin-bottom: 6rem;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+}

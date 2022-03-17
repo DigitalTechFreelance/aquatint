@@ -1,0 +1,19 @@
+//mod-icon-text
+.mod-icon-text{
+    text-align: center;
+
+    .icon-wrap{
+        margin: 0 auto 2.4rem;
+    }
+
+    .icon{
+        font-size: 6rem;
+        color: $clr-primary;
+    }
+
+    .title{
+        @include font-source-sans(1.8rem,2.2rem, $font1, $font-light, $clr-base, uppercase);
+        letter-spacing: 0.1rem;
+    }
+
+}

@@ -101,5 +101,22 @@
 
     }
 
+    &.typ-icon{
+        justify-content: space-around;
+        align-items: center;
+        .info-wrap{
+            width: 68rem;
+            max-width: initial;
+            margin-left: 5rem;
+        }
+        .img-wrap{
+            max-width: 110rem;
+            margin-left: auto;
+            img{
+                width: 150%;
+            }
+        }
+    }
+
 
 }
