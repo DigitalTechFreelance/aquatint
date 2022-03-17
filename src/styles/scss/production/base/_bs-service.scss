@@ -1,9 +1,15 @@
 //bs-service
 .bs-service{
+    display: flex;
+    align-items: center;
+    position: relative;
+
 
     .title{
         @include font-source-sans(8rem,8.4rem, $font1, $font-bold, $clr-base, uppercase);
         margin-bottom: 8rem;
+        position: relative;
+        z-index: 2;
     }
 
     .feature-item{
@@ -11,12 +17,19 @@
         letter-spacing: 0.3rem;
     }
 
+    .water-mark{
+        @include font-source-sans(28rem,35rem, $font1, $font-xbold, $clr-primary, uppercase);
+        font-style: italic;
+        opacity: 0.2;
+    }
+
+    .img-wrap{
+        max-width: 80rem;
+    }
+
     .feature-list{
         margin-bottom: 5rem;
         position: relative;
-        display: flex;
-        align-items: center;
-        
         .feature-item{
             display: inline-flex;
             align-items: center;
@@ -34,6 +47,14 @@
                     display: none;
                 }
             }
+        }
+    }
+
+    .info-wrap{
+        position: relative;
+        .water-mark{
+            position: absolute;
+            z-index: 1;
         }
     }
 

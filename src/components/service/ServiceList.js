@@ -22,8 +22,8 @@ function ServiceList() {
                             <li className="feature-item">ceramic wash</li>
                         </ul>
                         <button type="button" className="btn btn-default"><span>see more</span></button>
+                        <span className="water-mark">wash</span>
                     </div>
-                    <span className="water-mark">wash</span>
                 </div>
             </li>
             <li className="list-item">
@@ -38,8 +38,8 @@ function ServiceList() {
                             <li className="feature-item">interior detailing</li>
                         </ul>
                         <button type="button" className="btn btn-default"><span>see more</span></button>
+                        <span className="water-mark">detail</span>
                     </div>
-                    <span className="water-mark">detail</span>
                 </div>
             </li>
             <li className="list-item">
@@ -55,8 +55,8 @@ function ServiceList() {
                             <li className="feature-item">premium packages</li>
                         </ul>
                         <button type="button" className="btn btn-default"><span>see more</span></button>
+                        <span className="water-mark">protect</span>
                     </div>
-                    <span className="water-mark">protect</span>
                 </div>
             </li>
             <li className="list-item">
@@ -72,8 +72,8 @@ function ServiceList() {
                             <li className="feature-item">premium packages</li>
                         </ul>
                         <button type="button" className="btn btn-default"><span>see more</span></button>
+                        <span className="water-mark">protect</span>
                     </div>
-                    <span className="water-mark">protect</span>
                 </div>
             </li>
             <li className="list-item">
@@ -89,8 +89,8 @@ function ServiceList() {
                             <li className="feature-item">clarity coat</li>
                         </ul>
                         <button type="button" className="btn btn-default"><span>see more</span></button>
+                        <span className="water-mark">customise</span>
                     </div>
-                    <span className="water-mark">customise</span>
                 </div>
             </li>
         </ul>
