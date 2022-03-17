@@ -1,0 +1,40 @@
+//bs-service
+.bs-service{
+
+    .title{
+        @include font-source-sans(8rem,8.4rem, $font1, $font-bold, $clr-base, uppercase);
+        margin-bottom: 8rem;
+    }
+
+    .feature-item{
+        @include font-source-sans(2.8rem,3.2rem, $font1, $font-smbold, $clr-primary, uppercase);
+        letter-spacing: 0.3rem;
+    }
+
+    .feature-list{
+        margin-bottom: 5rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        
+        .feature-item{
+            display: inline-flex;
+            align-items: center;
+            &:after{
+                content:'';
+                width: 1rem;
+                height: 1rem;
+                border-radius: 100%;
+                background-color: $clr-primary;
+                margin: 0 1.5rem;
+                
+            }
+            &:last-child{
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+
+}

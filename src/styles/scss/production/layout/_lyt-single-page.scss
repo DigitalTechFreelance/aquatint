@@ -1,0 +1,14 @@
+//lyt-single-page
+.lyt-single-page{
+
+    .sp-title{
+        @include font-source-sans(7.2rem,7.8rem, $font1, $font-medium, $clr-base, uppercase);
+        letter-spacing: 1.4rem;
+    }
+
+    .sp-head{
+        margin-bottom: 17.2rem;
+        text-align: center;
+    }
+
+}

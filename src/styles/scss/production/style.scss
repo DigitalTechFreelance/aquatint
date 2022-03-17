@@ -22,9 +22,11 @@
 @import "base/bs-pattern";
 @import "base/bs-swiper";
 @import "base/bs-footer";
+@import "base/bs-service";
 
 /* module */
 @import "module/mod-testimonial";
 
 /* layout */
 @import "layout/lyt-content";
+@import "layout/lyt-single-page";
