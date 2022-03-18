@@ -12,15 +12,13 @@ function EssentialPackage() {
                 <div className="lyt-single-page">
                     <div className="sp-head">
                         <h2 className="sp-title">ESSENTIAL PACKAGE</h2>
+                        <div className="sp-desc">
+                            <p>The Essential package combines ceramic coating with the scratch proof Paint Protection Film (PPF). The most scratch prone areas like the bumpers, bonnet, mirrors, door edges and door handle cups are covered with PPF. The complete body is coated with the Gloss Coat.</p>
+                        </div>
                     </div>
                     <div className="sp-cont">
                         <section>
                             <div className="bs-section typ-center">
-                                <div className="sec-head">
-                                    <div className="sec-desc">
-                                        <p>The Essential package combines ceramic coating with the scratch proof Paint Protection Film (PPF). The most scratch prone areas like the bumpers, bonnet, mirrors, door edges and door handle cups are covered with PPF. The complete body is coated with the Gloss Coat.</p>
-                                    </div>
-                                </div>
                                 <div className="sec-cont">
                                     <EssentialInfogarphy />
                                 </div>
@@ -29,7 +27,7 @@ function EssentialPackage() {
                         <section>
                             <div className="bs-section">
                                 <div className="sec-cont">
-                                    <div className="bs-band typ-gradiant">
+                                    <div className="bs-band typ-warranty">
                                         <div className="mod-warranty">
                                             <span className="count">3</span>
                                             <span className="text">years warranty</span>
@@ -52,8 +50,8 @@ function EssentialPackage() {
                                         <div className="action-wrap">
                                             <p>For more information, kindly download our Service Catalogue</p>
                                             <button type="button" className="btn btn-default">
-                                                <span className="icon icon-dowload"></span>
-                                                catalogue
+                                                <span className="icon icon-download"></span>
+                                                <span>catalogue</span>
                                             </button>
                                         </div>
                                     </div>

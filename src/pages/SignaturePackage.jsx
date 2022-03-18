@@ -12,16 +12,14 @@ function SignaturePackage() {
                 <div className="lyt-single-page">
                     <div className="sp-head">
                         <h2 className="sp-title">SIGNATURE PACKAGE</h2>
+                        <div className="sp-desc">
+                            <p>The Signature Package is the best your car can ask for. All the exterior and interior surfaces of your car are coated and protected in this package.</p>
+                            <p>The Signature Package will leave no stone unturned. You can retain that brand new finish of your car forever.</p>
+                        </div>
                     </div>
                     <div className="sp-cont">
                         <section>
                             <div className="bs-section typ-center">
-                                <div className="sec-head">
-                                    <div className="sec-desc">
-                                        <p>The Signature Package is the best your car can ask for. All the exterior and interior surfaces of your car are coated and protected in this package.</p>
-                                        <p>The Signature Package will leave no stone unturned. You can retain that brand new finish of your car forever.</p>
-                                    </div>
-                                </div>
                                 <div className="sec-cont">
                                     <CoatingInfogarphy2 />
                                 </div>
@@ -30,7 +28,7 @@ function SignaturePackage() {
                         <section>
                             <div className="bs-section">
                                 <div className="sec-cont">
-                                    <div className="bs-band typ-gradiant">
+                                    <div className="bs-band typ-warranty">
                                         <div className="mod-warranty">
                                             <span className="count">5</span>
                                             <span className="text">years warranty</span>
@@ -53,8 +51,8 @@ function SignaturePackage() {
                                         <div className="action-wrap">
                                             <p>For more information, kindly download our Service Catalogue</p>
                                             <button type="button" className="btn btn-default">
-                                                <span className="icon icon-dowload"></span>
-                                                catalogue
+                                                <span className="icon icon-download"></span>
+                                                <span>catalogue</span>
                                             </button>
                                         </div>
                                     </div>

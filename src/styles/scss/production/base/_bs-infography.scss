@@ -26,6 +26,17 @@
             font-style: italic;
             display: block
         }
+
+        .text-md{
+            @include font-source-sans(8rem,8.6rem, $font1, $font-bold, $clr-base, uppercase);
+            font-style: italic;
+            display: block
+        }
+        .text-xl{
+            @include font-source-sans(10rem,10.6rem, $font1, $font-bold, $clr-base, uppercase);
+            font-style: italic;
+            display: block
+        }
     }
 
     .desc{
@@ -218,6 +229,60 @@
 
         }
 
+    }
+
+    &.typ-7coatings{
+
+        .info-wrap{
+            margin-left: -8rem;
+            z-index: -1;
+        }
+
+        .img-wrap{
+            img{
+                width: 110%;
+            }
+        }
+
+    }
+
+    &.typ-essential{
+        align-items: center;
+
+        .img-wrap{
+            max-width: 115rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-wrap{
+            margin-top: -16rem;
+            position: relative;
+
+            &:before{
+                content:'+';
+                @include font-source-sans(45rem,1, $font2, $font-bold, $clr-primary, initial);
+                font-style: italic;
+                position: absolute;
+                top: -12rem;
+                right: 14rem;
+            }
+
+        }
+
+        .title{
+
+            .text-md{
+                margin-left: -35rem;
+            }
+            .text-xl{
+                margin-left: -13rem;
+            }
+            .text-sm{
+                margin-left: -11rem;
+            }
+
+        }
     }
 
 

@@ -4,7 +4,7 @@ import infoImg from '../../assets/images/comprehensive-package.webp';
 
 function CoatingInfogarphy() {
   return (
-    <div className="bs-infography typ-reverse">
+    <div className="bs-infography typ-reverse typ-7coatings">
       <div className="info-wrap">
         <div className="bs-list">
           <h4 className="title">coatings</h4>

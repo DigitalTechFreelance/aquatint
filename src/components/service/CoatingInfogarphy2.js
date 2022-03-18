@@ -4,7 +4,7 @@ import infoImg from '../../assets/images/signature-package.webp';
 
 function CoatingInfogarphy2() {
   return (
-    <div className="bs-infography typ-reverse">
+    <div className="bs-infography typ-reverse typ-7coatings">
       <div className="info-wrap">
         <div className="bs-list">
           <h4 className="title">coatings</h4>

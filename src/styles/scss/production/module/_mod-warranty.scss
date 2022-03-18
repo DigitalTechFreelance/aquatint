@@ -1,0 +1,18 @@
+//mod-warranty
+.mod-warranty{
+    display: flex;
+    align-items: center;
+
+    .count{
+        @include font-source-sans(9.2rem,11rem, $font2, $font-smbold, $clr-primary, uppercase);
+        margin-right: 2rem;
+    }
+
+    .text{
+        @include font-source-sans(2.8rem,3.4rem, $font2, $font-smbold, $clr-primary, uppercase);
+        padding: 1rem;
+        border-top: 1px solid $clr-primary;
+        border-bottom: 1px solid $clr-primary;
+    }
+
+}

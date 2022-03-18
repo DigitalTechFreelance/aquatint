@@ -23,6 +23,9 @@
             transform: translate3d(0,100%,0);
             
         }
+        .icon{
+            margin-right: 1rem;
+        }
         &:hover{
             &:before{
                 transform: translate3d(0,0,0);
