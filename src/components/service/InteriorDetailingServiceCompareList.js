@@ -2,17 +2,17 @@ import React from 'react'
 
 function InteriorDetailingServiceCompareList() {
   return (
-    <div className="bs-compare">
+    <div className="bs-compare typ-orange">
         <ul className="comapre-list-wrap">
             <li className="item">
                 <h4 className="title">EXPRESS INTERIOR CLEANING</h4>
                 <div className="mod-list">
                     <ul className="details-list">
-                        <li className="item">Car interior dry vaccumed</li>
-                        <li className="item">Antibacterial Foam cleaning of the complete Interior</li>
-                        <li className="item">Carpet cleaning with shampoo</li>
-                        <li className="item">Dashboard & plastic rejuvenating with plastic sealant</li>
-                        <li className="item">Windows cleaning inside & out</li>
+                        <li className="item"><p>Car interior dry vaccumed</p></li>
+                        <li className="item"><p>Antibacterial Foam cleaning of the complete Interior</p></li>
+                        <li className="item"><p>Carpet cleaning with shampoo</p></li>
+                        <li className="item"><p>Dashboard &amp; plastic rejuvenating with plastic sealant</p></li>
+                        <li className="item"><p>Windows cleaning inside &amp; out</p></li>
                     </ul>
                 </div>
             </li>
@@ -20,23 +20,23 @@ function InteriorDetailingServiceCompareList() {
                 <h4 className="title">INTERIOR DETAILING ADVANCE</h4>
                 <div className="mod-list">
                     <ul className="details-list">
-                        <li className="item">All services of EXPRESS INTERIOR </li>
+                        <li className="item"><p>All services of EXPRESS INTERIOR</p></li>
                         <li className="item">
-                            Steam Cleaning of-
+                            <p>Steam Cleaning of-</p>
                             <ul className="sub-list-wrap">
-                                <li className="item">All human-contact points for 99% germ cleaning</li>
-                                <li className="item">A/C Duct with Disinfectant treatment</li>
-                                <li className="item">Door Jambs with degreasing</li>
+                                <li className="sub-item">All human-contact points for 99% germ cleaning</li>
+                                <li className="sub-item">A/C Duct with Disinfectant treatment</li>
+                                <li className="sub-item">Door Jambs with degreasing</li>
                             </ul>
                         </li>
                         <li className="item">
-                            Deep Cleaning of-
+                            <p>Deep Cleaning of-</p>
                             <ul className="sub-list-wrap">
-                                <li className="item">The boot area & Spare Wheel</li>
-                                <li className="item">Seat cracks & other crevices with brushes</li>
+                                <li className="sub-item">The boot area &amp; Spare Wheel</li>
+                                <li className="sub-item">Seat cracks &amp; other crevices with brushes</li>
                             </ul>
                         </li>
-                        <li className="item">Conditioning leather seats & trims with Leather Cream</li>
+                        <li className="item"><p>Conditioning leather seats &amp; trims with Leather Cream</p></li>
                     </ul>
                 </div>
             </li>

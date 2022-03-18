@@ -26,6 +26,11 @@
 @import "base/bs-contact";
 @import "base/bs-form";
 @import "base/bs-list";
+@import "base/bs-features";
+@import "base/bs-modal";
+@import "base/bs-compare";
+@import "base/bs-tabs";
+
 
 /* module */
 @import "module/mod-testimonial";
@@ -35,6 +40,7 @@
 @import "module/mod-team";
 @import "module/mod-benefits";
 @import "module/mod-warranty";
+@import "module/mod-video";
 
 /* layout */
 @import "layout/lyt-content";
@@ -43,6 +49,7 @@
 @import "layout/lyt-icon-text";
 @import "layout/lyt-info";
 @import "layout/lyt-team";
+@import "layout/lyt-features-list";
 
 /* page */
 @import "page/pg-about";

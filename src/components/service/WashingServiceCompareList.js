@@ -9,28 +9,30 @@ function WashingServiceCompareList() {
                 <div className="mod-list">
                     <ul className="details-list">
                         <li className="item">
-                        High Pressure Foam/Steam Wash
-                        <ul className="sub-list">
-                            <li className="item">Engine bay steam clean</li>
-                            <li className="item">Door jambs cleaning</li>
-                            <li className="item">Wheel cleaning</li>
-                            <li className="item">Floor mat cleaning</li>
-                        </ul>
+                            <p>High Pressure Foam/Steam Wash</p>
+                            <ul className="sub-list-wrap">
+                                <li className="sub-item">Engine bay steam clean</li>
+                                <li className="sub-item">Door jambs cleaning</li>
+                                <li className="sub-item">Wheel cleaning</li>
+                                <li className="sub-item">Floor mat cleaning</li>
+                            </ul>
                         </li>
                         <li className="item">
-                        Spray on wax application
+                            <p>Spray on wax application</p>
                         </li>
                         <li className="item">
-                        Dressing
-                        <ul className="sub-list-wrap">
-                            <li className="item">Plastic trim dressing</li>
-                            <li className="item">Tyre dressing</li>
-                        </ul>
+                            <p>Dressing</p>
+                            <ul className="sub-list-wrap">
+                                <li className="sub-item">Plastic trim dressing</li>
+                                <li className="sub-item">Tyre dressing</li>
+                            </ul>
                         </li>
                         <li className="item">
-                        Interior vacuum &amp; wet wipe
+                            <p>Interior vacuum &amp; wet wipe</p>
                         </li>
-                        <li className="item">Glass Cleaning</li>
+                        <li className="item">
+                            <p>Glass Cleaning</p>
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -39,21 +41,23 @@ function WashingServiceCompareList() {
                 <div className="mod-list">
                     <ul className="details-list">
                         <li className="item">
-                        All Services of INSTA-GLOSS
+                            <p>All Services of INSTA-GLOSS</p>
                         </li>
                         <li className="item">
-                        Tar Marks removal from body &amp; alloys
+                            <p>Tar Marks removal from body &amp; alloys</p>
                         </li>
                         <li className="item">
-                        Bug stains removal
+                            <p>Bug stains removal</p>
                         </li>
                         <li className="item">
-                        Claying on painted surface to reduce roughness
+                            <p>Claying on painted surface to reduce roughness</p>
                         </li>
                         <li className="item">
-                        Premium Carnauba Wax application
+                            <p>Premium Carnauba Wax application</p>
                         </li>
-                        <li className="item">Interior Plastic &amp; Dashboard premium dressing</li>
+                        <li className="item">
+                            <p>Interior Plastic &amp; Dashboard premium dressing</p>
+                        </li>
                     </ul>
                 </div>
             </li>
@@ -62,37 +66,41 @@ function WashingServiceCompareList() {
                 <div className="mod-list">
                     <ul className="details-list">
                         <li className="item">
-                        All services of PRO-WASH
+                            <p>All services of PRO-WASH</p>
                         </li>
                         <li className="item">
-                        Alkaline pre wash
-                        <ul className="sub-list-wrap">
-                            <li className="item">Removes organic dirt</li>
-                        </ul>
+                            <p>Alkaline pre wash</p>
+                            <ul className="sub-list-wrap">
+                                <li className="sub-item">Removes organic dirt</li>
+                            </ul>
                         </li>
                         <li className="item">
-                        Acidic foam wash
-                        <ul className="sub-list-wrap">
-                            <li className="item">Removes lime scale</li>
-                        </ul>
+                            <p>Acidic foam wash</p>
+                            <ul className="sub-list-wrap">
+                                <li className="sub-item">Removes lime scale</li>
+                            </ul>
                         </li>
                         <li className="item">
-                        Iron decontamination
-                        <ul className="sub-list-wrap">
-                            <li className="item">Removes metal oxides, brake dust etc.</li>
-                        </ul>
-                        </li>
-                        <li className="item">Tar and Bug stains removal</li>
-                        <li className="item">
-                        Neutralized foam wash
-                        <ul className="sub-list-wrap">
-                            <li className="item"> Neutral maintenance wash with high lubrication action</li>
-                        </ul>
+                            <p>Iron decontamination</p>
+                            <ul className="sub-list-wrap">
+                                <li className="sub-item">Removes metal oxides, brake dust etc.</li>
+                            </ul>
                         </li>
                         <li className="item">
-                        Application of Nano Ceramic Sealant for uv protection and high gloss finish
+                           <p>Tar and Bug stains removal</p>
                         </li>
-                        <li className="item">Gloss enhancer application</li>
+                        <li className="item">
+                            <p>Neutralized foam wash</p>
+                            <ul className="sub-list-wrap">
+                                <li className="sub-item"> Neutral maintenance wash with high lubrication action</li>
+                            </ul>
+                        </li>
+                        <li className="item">
+                            <p>Application of Nano Ceramic Sealant for uv protection and high gloss finish</p>
+                        </li>
+                        <li className="item">
+                            <p>Gloss enhancer application</p>
+                        </li>
                     </ul>
                 </div>
             </li>
