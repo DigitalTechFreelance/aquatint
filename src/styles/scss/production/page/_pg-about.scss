@@ -1,0 +1,15 @@
+//pg-about
+.pg-about{
+    position: relative;
+    &:before{
+        content: "";
+        left: -57rem;
+        right: -6rem;
+        height: 150rem;
+        background: url('../../../../assets/images/pattern-3.svg') no-repeat 0 0 transparent;
+        position: absolute;
+        top: -6rem;
+        background-size: 130%;
+    }
+
+}

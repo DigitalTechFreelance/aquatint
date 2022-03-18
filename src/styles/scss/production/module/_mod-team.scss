@@ -1,0 +1,26 @@
+//mod-team
+.mod-team{
+
+    .img-wrap{
+        width: 27.6rem;
+        height: 27.6rem;
+        background-color: $clr-base;
+        border-radius: 100%;
+        overflow: hidden;
+        margin: 0 auto 4rem;
+    }
+
+    .info-wrap{
+        text-align: center;
+    }
+
+    .title{
+        @include font-source-sans(3.2rem,3.8rem, $font1, $font-medium, $clr-base, capitalize);
+        margin-bottom: 1.3rem;
+    }
+
+    .designation{
+        @include font-source-sans(2.4rem,3.2rem, $font1, $font-light, $clr-base, capitalize);
+    }
+
+}

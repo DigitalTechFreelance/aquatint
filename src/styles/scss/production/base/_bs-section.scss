@@ -10,6 +10,11 @@
     .sec-title{
         @include font-source-sans(4.8rem,5.2rem, $font1, $font-smbold, $clr-base, uppercase);
         letter-spacing: 0.4rem;
+
+        &.typ-lg{
+            @include font-source-sans(8.4rem,8.8rem, $font1, $font-medium, $clr-base, uppercase);
+            letter-spacing: 1.6rem;
+        }
     }
 
     .sec-head{

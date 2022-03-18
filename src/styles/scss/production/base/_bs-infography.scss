@@ -159,5 +159,53 @@
 
     }
 
+    &.typ-about{
+        justify-content: space-between;
+        align-items: center;
+
+        .img-wrap{
+            img{
+                width: 155%;
+            }
+        }
+    }
+
+    &.typ-quotes{
+        margin: 0 auto;
+        max-width: 106rem;
+
+        .title{
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .info-wrap{
+            max-width: initial;
+        }
+
+        .desc{
+            position: relative;
+            &:before,&:after{
+                font-size: 4.5rem;
+                color: $clr-primary;
+                font-family: 'icomoon' !important;
+                position: absolute;
+            }
+
+            &:before{
+                content: "\e901";
+                left: -7rem;
+                top: -1rem;
+            }
+            &:after{
+                content: "\e908";
+                right: -7rem;
+                bottom: 1rem;
+            }
+
+        }
+
+    }
+
 
 }

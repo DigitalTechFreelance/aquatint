@@ -10,7 +10,7 @@ function AboutUs() {
     <>
         <Header/>
             <main>
-                <div className="lyt-content">
+                <div className="lyt-content pg-about">
                     <div className="lyt-single-page">
                       <div className="sp-head">
                           <h2 className="sp-title">who we are</h2>
@@ -20,7 +20,7 @@ function AboutUs() {
                       </div>
                       <div className="sp-cont cm-container">
                         <section>
-                          <div className="bs-section">
+                          <div className="bs-section typ-infography cm-paddtop-30">
                             <div className="sec-cont">
                               <Infogarphy/>
                             </div>
@@ -29,7 +29,7 @@ function AboutUs() {
                         <section>
                           <div className="bs-section typ-center">
                             <div className="sec-head">
-                              <h2 className="sec-title">our team</h2>
+                              <h2 className="sec-title typ-lg">our team</h2>
                             </div>
                             <div className="sec-cont">
                               <Team/>

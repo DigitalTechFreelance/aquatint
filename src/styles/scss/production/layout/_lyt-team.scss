@@ -1,0 +1,17 @@
+//lyt-team
+.lyt-team{
+    max-width: 117rem;
+    margin: 0 auto 10rem;
+
+    .team-wrap{
+        display: flex;
+        align-items: flex-start;
+        margin: 0 -4.3rem;
+        
+        .team-item{
+            width: 33.33%;
+            padding: 0 4.3rem;
+        }
+    }
+
+}

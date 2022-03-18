@@ -29,6 +29,7 @@
 @import "module/mod-icon-text";
 @import "module/mod-info";
 @import "module/mod-list";
+@import "module/mod-team";
 
 /* layout */
 @import "layout/lyt-content";
@@ -36,3 +37,7 @@
 @import "layout/lyt-service";
 @import "layout/lyt-icon-text";
 @import "layout/lyt-info";
+@import "layout/lyt-team";
+
+/* page */
+@import "page/pg-about";
