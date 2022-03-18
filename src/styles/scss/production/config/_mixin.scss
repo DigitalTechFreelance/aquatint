@@ -22,7 +22,7 @@
 }
 
 //input-placeholder 
-@mixin input-placeholder {
+@mixin placeholder {
     &.placeholder {
         @content;
     }

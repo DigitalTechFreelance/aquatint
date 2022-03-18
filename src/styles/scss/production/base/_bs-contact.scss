@@ -1,0 +1,49 @@
+//bs-contact
+.bs-contact{
+
+    .list-item{
+        >.title{
+            @include font-source-sans(3.6rem,4rem, $font1, $font-smbold, $clr-base, uppercase);
+            letter-spacing: 0.3rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    .list{
+        .title{
+            @include font-source-sans(2.4rem,3.2rem, $font1, $font-smbold, $clr-base, uppercase);
+            display: block;
+            margin-bottom: 2rem;
+        }
+        .item{
+            margin-bottom: 4rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .address,.link{
+        @include font-source-sans(2.4rem,3.2rem, $font1, $font-light, $clr-base, initial);
+    }
+
+    .link{
+        color: $clr-primary;
+    }
+
+    .list-wrap{
+        display: flex;
+        align-items: flex-start;
+
+        .list-item{
+            max-width: 69rem;
+            margin-right: 15.7rem;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+
+
+
+}

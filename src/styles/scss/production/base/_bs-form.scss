@@ -1,0 +1,51 @@
+//bs-form
+.bs-form{
+    max-width: 135rem;
+
+    .form-wrap{
+        display: flex;
+        align-items: flex-start;
+        margin: 0 -3rem 8rem -3rem;
+        flex-flow: row wrap;
+        box-sizing: border-box;
+
+        .form-group{
+            width: 33.33%;
+            padding: 0 3rem;
+            margin-bottom: 4rem;
+
+            &.typ-full{
+                width: 66.66%;
+            }
+        }
+    }
+
+    .form-control{
+        width: 100%;
+        background: transparent;
+        border-radius: 0;
+        border-bottom: 1px solid $clr-primary;
+        &:not(textarea){
+            height: 4rem;
+        }
+        @include font-source-sans(2.4rem,3.2rem, $font1, $font-regular, $clr-base, initial);
+        @include placeholder{
+            @include font-source-sans(2.4rem,3.2rem, $font1, $font-light, $clr-base, uppercase);
+        }
+
+        &.typ-readonly{
+            background-color: $clr-primary;
+            text-align: center;
+            opacity: 0.8;
+        }
+
+    }
+
+    textarea{
+        &.form-control{
+            border:1px solid $clr-primary;
+            padding: 3rem;
+        }
+    }
+
+}

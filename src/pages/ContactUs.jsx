@@ -14,7 +14,7 @@ function ContactUs() {
                     <div className="sp-head">
                         <h2 className="sp-title">CONTACT us</h2>
                     </div>
-                    <div className="sp-cont">
+                    <div className="sp-cont cm-container">
                         <section>
                             <div className="bs-section">
                                 <div className="sec-cont">
@@ -82,33 +82,29 @@ function ContactUs() {
                                     <form className="bs-form">
                                         <div className="form-wrap">
                                             <div className="form-group">
-                                                <TextField id="standard-basic" label="Name" variant="standard" />
+                                                <input type="text" className="form-control" placeholder="name" />
                                             </div>
                                             <div className="form-group">
-                                                <TextField id="standard-basic" label="E-Mail Id" variant="standard" />
+                                                <input type="text" className="form-control" placeholder="email-id" />
                                             </div>
                                             <div className="form-group">
-                                                <TextField id="standard-basic" label="Contact No." variant="standard" inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }} />
+                                                <input type="text" className="form-control" placeholder="contact no." />
                                             </div>
                                             <div className="form-group">
-                                                <TextField id="standard-basic" label="Vehicle" variant="standard" />
+                                                <input type="text" className="form-control" placeholder="vehicle" />
                                             </div>
                                             <div className="form-group">
-                                                <TextField id="standard-basic" label="Verify" variant="standard" />
+                                                <input type="text" className="form-control" placeholder="verify" />
                                             </div>
                                             <div className="form-group">
-                                                <span className="captcha"></span>
+                                                <input type="text" readonly className="form-control typ-readonly" value="294040"  />
                                             </div>
-                                            <div className="form-group">
-                                                <TextareaAutosize
-                                                    maxRows={4}
-                                                    aria-label="maximum height"
-                                                    placeholder="Message"
-                                                />
+                                            <div className="form-group typ-full">
+                                                <textarea rows="8" cols="50" className="form-control" placeholder="message"></textarea>
                                             </div>
                                         </div>
                                         <div className="form-action">
-                                            <button type="button" className="btn btn-default">submit</button>
+                                            <button type="button" className="btn btn-default"><span>submit</span></button>
                                         </div>
                                     </form>
                                 </div>
