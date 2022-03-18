@@ -116,6 +116,19 @@
                 width: 150%;
             }
         }
+
+        &.typ-2{
+            .img-wrap{
+                max-width: 100rem;
+                margin-left: -7%;
+                img{
+                    width: 100%;
+                }
+            }
+            .info-wrap{
+                width: 80rem;
+            }
+        }
     }
 
     &.typ-grid-left{

@@ -1,0 +1,37 @@
+//mod-benefits
+.mod-benefits{
+    max-width: 148rem;
+    display: flex;
+    margin: 0 auto;
+    align-items: flex-start;
+
+    .list-wrap{
+        padding: 0 6rem;
+        width: 33.33%;
+    }
+
+    .text{
+        @include font-source-sans(3.2rem,3.6rem, $font2, $font-bold, $clr-base, uppercase);
+        font-style: italic;
+
+        .light{
+            font-weight: $font-light;
+        }
+    }
+
+    .item{
+        margin-bottom: 2rem;
+        position: relative;
+        &:before{
+            content:'-';
+            @include font-source-sans(3.2rem,3.6rem, $font2, $font-bold, $clr-base, uppercase);
+            position: absolute;
+            left: -2rem;
+            top: -0.3rem;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+}

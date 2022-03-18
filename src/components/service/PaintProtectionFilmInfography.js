@@ -3,7 +3,7 @@ import infoImg from '../../assets/images/film-protection.webp';
 
 function PaintProtectionFilmInfography() {
   return (
-    <div className='bs-infography typ-reverse'>
+    <div className="bs-infography typ-reverse typ-icon typ-2">
       <div className="info-wrap">
         <div className="lyt-icon-text typ-secondary">
           <ul className="list-wrap">
