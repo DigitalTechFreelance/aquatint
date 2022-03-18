@@ -83,6 +83,9 @@ button {
 .cm-container{
     max-width: 172rem;
     margin: 0 auto;
+    @include mq-above ($lg) {
+        padding: 0 6rem;
+    }
 }
 
 .cm-paddtop-30{

@@ -149,4 +149,30 @@
         }
 
     }
+
+    &.typ-icon {
+        .list-item{
+            position: relative;
+            margin-bottom: 4rem;
+            padding-left: 5rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &:before {
+                content: '\e906';
+                font-family: 'icomoon' !important;
+                position: absolute;
+                font-size: 3rem;
+                color: $clr-primary;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+            >p{
+                @include font-source-sans(2.4rem,3.2rem, $font1, $font-smbold, $clr-base, initial);
+                opacity: 0.8;
+                font-style: italic;
+            }
+        }
+    }
 }
