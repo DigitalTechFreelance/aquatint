@@ -1,0 +1,53 @@
+.lyt-features-list {
+
+  .list-wrap {
+    >.item {
+      margin-bottom: 29rem;
+    }
+  }
+
+  .typ-even {
+    .bs-features {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .mod-list {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 5%;
+
+    .details-list {
+      flex: 1;
+    }
+  }
+
+  &.typ-orange {
+    .bs-features {
+      .desc {
+        color: $clr-secondary;
+      }
+    }
+
+    .mod-video{
+      .video {
+        .btn-play{
+          .icon {
+            color: $clr-secondary;
+          }
+        }
+      }
+    }
+
+    .mod-warranty {
+      .count {
+        color: $clr-secondary;
+      }
+
+      .text {
+        color: $clr-secondary;
+        border-color: $clr-secondary;
+      }
+    }
+  }
+}

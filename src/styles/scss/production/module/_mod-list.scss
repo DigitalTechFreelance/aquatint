@@ -1,6 +1,40 @@
 //mod-list
 .mod-list{
 
+    .details-list {
+        .item {
+            margin-bottom: 4rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            p {
+                font-family: $font1;
+                font-weight: $font-smbold;
+                padding-left: 1rem;
+                position: relative;
+                &:before {
+                    content:'';
+                    width: 0.6rem;
+                    height: 0.6rem;
+                    background-color: $clr-base;
+                    border-radius: 5rem;
+                    position: absolute;
+                    top: 1.2rem;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    .sub-list-wrap {
+        .sub-item {
+            @include font-source-sans(2.4rem, 1.33, $font1, $font-light, $clr-base, initial);
+            opacity: 0.8;
+            padding: 1rem 0;
+        }
+    }
+
     &.typ-number{
         counter-reset: section;
         display: flex;
@@ -116,5 +150,29 @@
 
     }
 
-
+    &.typ-icon {
+        .list-item{
+            position: relative;
+            margin-bottom: 4rem;
+            padding-left: 5rem;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &:before {
+                content: '\e906';
+                font-family: 'icomoon' !important;
+                position: absolute;
+                font-size: 3rem;
+                color: $clr-primary;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+            >p{
+                @include font-source-sans(2.4rem,3.2rem, $font1, $font-smbold, $clr-base, initial);
+                opacity: 0.8;
+                font-style: italic;
+            }
+        }
+    }
 }

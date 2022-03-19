@@ -24,7 +24,7 @@ const routes = [
   },
   {
     path: '/',
-    component: <Home />,
+    component: <IndexList />,
     exact: true,
   },
   {

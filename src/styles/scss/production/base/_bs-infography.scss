@@ -166,6 +166,23 @@
 
     }
 
+    &.typ-vertical {
+        flex-direction: column;
+
+        .info-wrap{
+            max-width: 82rem;
+        }
+
+        .desc{
+            p{
+                font-style: italic;
+                font-weight: 600;
+                opacity: 0.8;
+            }
+    
+        }
+    }
+
     &.typ-vertical-center{
 
         .info-wrap{
