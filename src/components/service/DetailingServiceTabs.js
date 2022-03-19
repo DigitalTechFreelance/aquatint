@@ -54,8 +54,8 @@ function DetailingServiceTabs() {
         <div className="bs-tabs">
             <div className="tab-nav">
                 <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                    <Tab label="Exterior Detailing" {...a11yProps(0)} />
-                    <Tab label="Interior Detailing" {...a11yProps(1)} />
+                    <Tab className='btn-tab' label="Exterior Detailing" {...a11yProps(0)} />
+                    <Tab className='btn-tab' label="Interior Detailing" {...a11yProps(1)} />
                 </Tabs>
             </div>
             <div className="tab-content">
