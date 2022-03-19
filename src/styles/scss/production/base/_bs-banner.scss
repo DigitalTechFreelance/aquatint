@@ -2,6 +2,7 @@
 .bs-banner{
     height: 84vh;
     position: relative;
+    overflow: hidden;
 
     .setBgSrc{
         background-repeat: no-repeat;
@@ -36,10 +37,22 @@
         content:'';
         position: absolute;
         top: 0;
-        left: 0;
+        left: -60rem;
         right: 0;
         bottom: 0;
         background: url('../../../../assets/images/pattern-blue.svg') no-repeat 0 0 transparent;
+        background-size: 135%;
+        animation: scale 1000s linear infinite;
     }
 
+}
+
+@keyframes scale {
+    100% {
+      -webkit-transform:scale(5) rotateX(360deg);
+      -moz-transform:scale(5) rotateX(360deg);
+      -ms-transform:scale(5) rotateX(360deg);
+      -o-transform:scale(5) rotateX(360deg);
+      transform:scale(5) rotateX(360deg);
+    }
 }
