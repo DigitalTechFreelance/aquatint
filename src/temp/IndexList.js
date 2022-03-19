@@ -5,7 +5,6 @@ import logoImg from '../assets/images/logo.png';
 function IndexList() {
     return (
         <>
-            <h1>Page Templates  | <a href="/components">Components</a></h1>
 
             <div className="header-logo-wrap">
                 <img
@@ -37,27 +36,7 @@ function IndexList() {
                             </li>
                             <li className="opn">
                                 <div className="lbl">
-                                    <a href="/washing-services">Washing Services</a>
-                                </div>
-                            </li>
-                            <li className="opn">
-                                <div className="lbl">
-                                    <a href="/detailing-services">Detailing Services</a>
-                                </div>
-                            </li>
-                            <li className="opn">
-                                <div className="lbl">
-                                    <a href="/ceramic-coating">Ceramic Coating</a>
-                                </div>
-                            </li>
-                            <li className="opn">
-                                <div className="lbl">
                                     <a href="/paint-protection-film">Paint Protection Film</a>
-                                </div>
-                            </li>
-                            <li className="opn">
-                                <div className="lbl">
-                                    <a href="/clarity-coat">Clarity Coat</a>
                                 </div>
                             </li>
                             <li className="opn">
@@ -75,6 +54,41 @@ function IndexList() {
                                     <a href="/contact-us">Contact Us</a>
                                 </div>
                             </li>
+                        </ul>
+                    </div>
+                    <div className="flex-item">
+                        <h1 className="title">Services</h1>
+                        <ul className="custAcc">
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/washing-services">Washing Services</a>
+                                </div>
+                            </li>
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/detailing-services">Detailing Services</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="flex-item">
+                        <h1 className="title">Coating</h1>
+                        <ul className="custAcc">
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/ceramic-coating">Ceramic Coating</a>
+                                </div>
+                            </li>
+                            <li className="opn">
+                                <div className="lbl">
+                                    <a href="/clarity-coat">Clarity Coating</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="flex-item">
+                        <h1 className="title">Packages</h1>
+                        <ul className="custAcc">
                             <li className="opn">
                                 <div className="lbl">
                                     <a href="/comprehensive-package">Comprehensive Package</a>
