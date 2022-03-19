@@ -3,25 +3,28 @@
     margin-bottom: 17rem;
   }
 
-  .css-heg063-MuiTabs-flexContainer {
+  .MuiTabs-flexContainer {
     justify-content: center;
     align-items: center;
   }
 
-  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+  .btn-tab {
     @include font-source-sans(3.2rem, normal, $font1, $font-smbold, $clr-hover, initial);
     padding: 1.2rem 4.5rem;
   }
 
-  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
-    color: $clr-secondary;
+  .btn-tab{
+    &.Mui-selected {
+      color: $clr-secondary;
+    }
+  }
+  
+
+  .MuiTabs-indicator {
+    background-color: $clr-secondary !important;
   }
 
-  .css-1aquho2-MuiTabs-indicator {
-    background-color: $clr-secondary ;
-  }
-
-  .css-ahj2mt-MuiTypography-root {
+  .MuiTypography-root {
     font-size: unset;
   }
 }
