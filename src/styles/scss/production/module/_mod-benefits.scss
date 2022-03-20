@@ -34,4 +34,13 @@
         }
     }
 
+    &.typ-clarity-benefits {
+        max-width: 100%;
+        margin: unset;
+
+        .list-wrap {
+            padding: 0 6rem 0 2rem;
+        }
+    }
+
 }

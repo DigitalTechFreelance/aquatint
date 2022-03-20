@@ -302,5 +302,33 @@
         }
     }
 
+    &.typ-clarity-futureof {
+        position: relative;
+        .info-wrap {
+            position: absolute;
+            max-width: 90rem;
+            padding-left: 10rem
+        }
+
+        .img-wrap {
+            max-width: 100rem;
+            margin-left: auto;
+            img {
+                width: 130%;
+            }
+        }
+
+        .title{
+            font-style: italic;
+            margin-bottom: 5rem;
+        }
+
+        .desc {
+            p {
+                opacity: 0.8;
+            }
+        }
+    }
+
 
 }
