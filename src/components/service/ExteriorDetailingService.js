@@ -4,11 +4,20 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import YoutubeEmbed from '../common/YoutubeEmbed';
+import Videoplayer from '../common/Videoplayer';
 
 function ExteriorDetailingService() {
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const [playState, setPlayState] = React.useState({
+        playing: false,
+        buttonClose: false,
+    });
+    
+    const handleVideoStatus = (videoPlayStatus) => {
+        setPlayState({...playState, playing: videoPlayStatus.playing, buttonClose: videoPlayStatus.buttonClose})
+    }
   return (
     <div className="lyt-features-list typ-orange">
         <ul className="list-wrap">
@@ -154,7 +163,8 @@ function ExteriorDetailingService() {
       >
         <Fade in={open}>
             <Box className='modal-body'>
-                <YoutubeEmbed embedId="35npVaFGHMY" />
+            <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={'https://www.youtube.com/embed/35npVaFGHMY'}/>
+                {/* <YoutubeEmbed embedId="35npVaFGHMY" /> */}
             </Box>
         </Fade>
       </Modal>
