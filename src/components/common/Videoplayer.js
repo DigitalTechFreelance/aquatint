@@ -87,7 +87,7 @@ function Videoplayer(props) {
   }, []);
   return (
     <>
-      <div className="videoPlayer">
+      <div className="bs-videoplayer">
         {/* {props.buttonClose && (
           <button onClick={handleClose} className="icon icon-close"></button>
         )} */}
@@ -107,22 +107,20 @@ function Videoplayer(props) {
             playing={playing}
             onProgress={handelProgress}
           />
-        </div>
-        <div className="controls">
           <button className="action-btn" onClick={playHandler}>
-            <span className={playing ? "hide" : ""}>
+            <span className={playing ? "cm-hide" : ""}>
               <span className="cm-btn-watch">
-                <span className="text">watch</span>
-                <span className="icon icon-Play-button"></span>
+                {/* <span className="text">play</span> */}
+                <span className="icon icon-play1"></span>
               </span>
             </span>
-            
-            <span className={!playing ? "hide" : ""}>
-              <span className="icon icon-pause"></span>
-            </span>
+            {/* <span className={!playing ? "cm-hide" : ""}>
+              <span className="icon icon-play2"></span>
+            </span> */}
           </button>
+        </div>
+        <div className="controls">
           <div className="timer-slider">
-            <span className="video_time">{format(currentTime)}</span>
             <Slider
               min={0}
               max={100}
@@ -132,7 +130,25 @@ function Videoplayer(props) {
               defaultValue={0}
               value={played * 100}
             />
-            <span className="video_length">{format(duration)}</span>
+          </div>
+          <div className="play-controls-wrap">
+            <div className="left-cont">
+              <button className="action-btn" onClick={playHandler}>
+                <span className={playing ? "cm-hide" : ""}>
+                  <span className="cm-btn-watch">
+                    {/* <span className="text">play</span> */}
+                    <span className="icon icon-play1"></span>
+                  </span>
+                </span>
+                <span className={!playing ? "cm-hide" : ""}>
+                  <span className="icon icon-play2"></span>
+                </span>
+              </button>
+              <span className="video_time">{format(currentTime)}</span>
+            </div>
+            <div className="right-cont">
+              <span className="video_length">{format(duration)}</span>
+            </div>
           </div>
         </div>
       </div>

@@ -163,8 +163,8 @@ function ExteriorDetailingService() {
       >
         <Fade in={open}>
             <Box className='modal-body'>
-            <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={'https://www.youtube.com/embed/35npVaFGHMY'}/>
-                {/* <YoutubeEmbed embedId="35npVaFGHMY" /> */}
+            {/* <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={'https://www.youtube.com/embed/35npVaFGHMY'}/> */}
+                <YoutubeEmbed embedId="35npVaFGHMY" />
             </Box>
         </Fade>
       </Modal>

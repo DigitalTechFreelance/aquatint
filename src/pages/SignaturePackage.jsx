@@ -2,8 +2,19 @@ import React from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import CoatingInfogarphy2 from '../components/service/CoatingInfogarphy2';
+import Videoplayer from '../components/common/Videoplayer';
+import videosrc from '../assets/video/dummy-video.mp4';
 
 function SignaturePackage() {
+    const [playState, setPlayState] = React.useState({
+        playing: false,
+        buttonClose: false,
+    });
+    
+    const handleVideoStatus = (videoPlayStatus) => {
+        setPlayState({...playState, playing: videoPlayStatus.playing, buttonClose: videoPlayStatus.buttonClose})
+    }
+
   return (
     <>
         <Header/>
@@ -45,8 +56,10 @@ function SignaturePackage() {
                                             <h4 className="title">COMPLETE CERAMIC PROTECTION</h4>
                                         </div>
                                         <div className="media-wrap">
-                                            <div className="video"></div>
-                                            <button className='btn'><span className="icon icn-play"></span></button>
+                                           <div className="video">
+                                                <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videosrc}/>
+                                            </div>
+                                            <button className='btn'><span className="icon icon-play"></span></button>
                                         </div>
                                         <div className="action-wrap">
                                             <p>For more information, kindly download our Service Catalogue</p>

@@ -14,4 +14,36 @@
       }
     }
   }
+
+  &.typ-lg {
+    .title-wrap {
+      text-align: center;
+      margin-bottom: 8rem;
+    }
+
+    .title {
+      @include font-source-sans(7.2rem, normal, $font1, $font-bold, $clr-primary, uppercase);
+      font-style: italic;
+      opacity: 0.8;
+
+      &.typ-white {
+        color: $clr-base;
+      }
+    }
+
+    .media-wrap {
+      width: 65%;
+      margin: 0 auto 14rem auto;
+      min-height: 72rem;
+    }
+
+    .action-wrap {
+      text-align: center;
+
+      p {
+        @include font-source-sans(3.2rem, normal, $font1, $font-medium, $clr-base, initial);
+        margin-bottom: 4rem;
+      }
+    }
+  }
 }
