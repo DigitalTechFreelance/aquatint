@@ -1,0 +1,56 @@
+.bs-action-fly {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translate(100%, -50%);
+  z-index: 1;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  background: $clr-primary;
+  max-width: 24rem;
+  width: 9%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .fly-icon-link-wrap {
+    display: flex;
+    align-items: center;
+
+    .action-link {
+      display: block;
+      padding: 0 2rem
+    }
+  }
+
+  .fly-trigger {
+    background: $clr-primary;
+    position: absolute;
+    top: 51%;
+    left: 0;
+    -webkit-transform: translate(-100%,-50%);
+    transform: translate(-100%,-50%);
+    padding: 1.1rem 1.1rem 1.1rem 2.5rem;
+    clip-path: polygon(20% 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .icon {
+    font-size: 3rem;
+  }
+
+  &.active {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    .fly-trigger {
+      .icon {
+        &:before {
+          content: '\e909';
+          font-family: icomoon!important;
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

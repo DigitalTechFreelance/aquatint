@@ -7,6 +7,7 @@ import Infogarphy from '../components/home/Infogarphy';
 import TestimonialSlider from '../components/home/TestimonialSlider';
 import HomeBanner from '../components/home/HomeBanner';
 import premiumPackageImg from '../assets/images/premium-package.webp';
+import Flybutton from '../components/common/Flybutton';
 
 
 function Home() {
@@ -97,6 +98,7 @@ function Home() {
 				</div>
 			</main>
 			<Footer/>
+			<Flybutton/>
 		</>
 	);
 }

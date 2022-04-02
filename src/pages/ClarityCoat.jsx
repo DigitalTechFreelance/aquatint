@@ -79,7 +79,7 @@ function ClarityCoat() {
                         <section>
                             <div className="bs-section">
                                 <div className="sec-cont">
-                                    <div className="mod-video typ-lg">
+                                    <div className="mod-video typ-lg typ-orange">
                                         <div className="media-wrap">
                                             <div className="video">
                                                 <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videosrc}/>

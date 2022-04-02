@@ -1,0 +1,10 @@
+.lyt-tile-grid {
+  &.typ-tileof3 {
+    .bs-tile {
+      .title {
+        @include font-source-sans(3.6rem, normal);
+        width: 20%;
+      }
+    }
+  }
+}

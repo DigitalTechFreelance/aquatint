@@ -4,6 +4,7 @@ import Footer from '../components/common/Footer';
 import CeramicCoatingInfogarphy from '../components/service/CeramicCoatingInfogarphy';
 import Videoplayer from '../components/common/Videoplayer';
 import videosrc from '../assets/video/dummy-video.mp4';
+import Flybutton from '../components/common/Flybutton';
 
 function CeramicCoating() {
     const [playState, setPlayState] = React.useState({
@@ -29,6 +30,20 @@ function CeramicCoating() {
                     </div>
                     <div className="sp-cont">
                         <section>
+                            <div className="bs-section">
+                                <div className="sec-cont">
+                                    <div className="mod-video typ-lg">
+                                        <div className="media-wrap">
+                                            <div className="video">
+                                                <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videosrc}/>
+                                            </div>
+                                            {/* <button className='btn'><span className="icon icon-play"></span></button> */}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
                             <div className="bs-section cm-no-pad-top">
                                 <div className="sec-cont">
                                     <CeramicCoatingInfogarphy/>
@@ -39,7 +54,7 @@ function CeramicCoating() {
                             <section>
                                 <div className="bs-section typ-center">
                                     <div className="sec-head">
-                                        <h2 className="sec-title">CERAMIC COATING SERVICES & PACKAGES</h2>
+                                        <h2 className="sec-title">CERAMIC COATING SERVICES &amp; PACKAGES</h2>
                                     </div>
                                     <div className="sec-cont">
                                         <ul className="lyt-info">
@@ -163,26 +178,13 @@ function CeramicCoating() {
                                     </div>
                                 </div>
                             </section>
-                            <section>
-                                <div className="bs-section">
-                                    <div className="sec-cont">
-                                        <div className="mod-video typ-lg">
-                                            <div className="media-wrap">
-                                                <div className="video">
-                                                    <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videosrc}/>
-                                                </div>
-                                                <button className='btn'><span className="icon icon-play"></span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
         <Footer/>
+        <Flybutton/>
     </>
   )
 }
