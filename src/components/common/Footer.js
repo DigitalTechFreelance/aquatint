@@ -1,6 +1,9 @@
 import React from 'react';
+import _ from 'lodash';
 
-function Footer() {
+function Footer({data}) {
+  console.log("data footer", data)
+  const {footerMenus, socialLinks, contacts, email, phoneNo}= data
   return (
     <div className="bs-footer">
       <div className="cm-container">
@@ -29,53 +32,37 @@ function Footer() {
           <div className="footer-item">
             <h4 className="title"><span>Contact</span></h4>
             <div className="address-list">
-              <ul className="footer-list">
-                <li className="footer-list-item">
-                  <p>
-                    <span className="address-title">Address : </span>
-                    <span className="address-desc">
-                      AquaTint Auto Detailing Studio, Sr. no. 237/2,New DP road, Near Medipoint Hospital, Aundh, Pune: 411045
-                    </span>
-                  </p>
-                </li>
-                <li className="footer-list-item">
-                  <p>
-                    <span className="address-title">Kharadi Studio : </span>
-                    <span className="address-desc">
-                      S.No. 52/A, Shree Ram Society, near Adi Corporation, near Chandan Nagar BRT stop, Nagar Road, Pune 411014.
-                    </span>
-                  </p>
-                </li>
-              </ul>
-              <ul className="footer-list">
-                <li className="footer-list-item">
-                  <p>
-                    <span className="address-title">Nashik Studio : </span>
-                    <span className="address-desc">
-                      Soham Enterprises, Plot no - 8 &amp; 11, Kale Nagar, Pipeline Road, Nashik - 422005
-                    </span>
-                  </p>
-                </li>
-                <li className="footer-list-item">
-                  <p>
-                    <span className="address-title">Baramati Studio : </span>
-                    <span className="address-desc">
-                      Malegaon Road, Near Pandit Automotive, Kasba, Baramati, Pune - 413102
-                    </span>
-                  </p>
-                </li>
-              </ul>
+                {_.chunk(contacts, 2).map((item, index)=>{
+                  return (
+                      <ul className="footer-list" key={index}>
+                        {item.map((ele, ind)=>{
+                          return(
+                            ele.isActive && (
+                            <li className="footer-list-item" key={ind}>
+                              <p>
+                                <span className="address-title">{ele.studioName} : </span>
+                                <span className="address-desc">
+                                  {ele.address}
+                                </span>
+                              </p>
+                            </li>
+                            )
+                          )
+                        })}
+                      </ul>
+                  )
+                })}
               <ul className="footer-list">
                 <li className="footer-list-item">
                   <p>
                     <span className="address-title">Email : </span>
-                    <a href="mailto:carcare@aquatintdetailing.com">carcare@aquatintdetailing.com</a>
+                    <a href={`mailto:${email}`}>{email}</a>
                   </p>
                 </li>
                 <li className="footer-list-item">
                   <p>
                     <span className="address-title">Phone : </span>
-                    <a href="tel:+91-7066457656">+91-7066457656</a>
+                    <a href={`tel:${phoneNo}`}>{phoneNo}</a>
                   </p>
                 </li>
                 <li className="footer-list-item">
@@ -84,26 +71,17 @@ function Footer() {
                     <span className="text">Connect With us</span>
                   </p>
                   <div className="social-icon-wrap">
-                    <div className="social-icon">
-                      <a href="#">
-                        <span className="icon icon-facebook"></span>
-                      </a>
-                    </div>
-                    <div className="social-icon">
-                      <a href="#">
-                        <span className="icon icon-twitter"></span>
-                      </a>
-                    </div>
-                    <div className="social-icon">
-                      <a href="#">
-                        <span className="icon icon-instagram"></span>
-                      </a>
-                    </div>
-                    <div className="social-icon">
-                      <a href="#">
-                        <span className="icon icon-linkedin"></span>
-                      </a>
-                    </div>
+                    {socialLinks.map((item, index)=>{
+                      return (
+                        item.isActive && (
+                          <div className="social-icon" key={index}>
+                            <a href={item.link}>
+                              <span className={`icon icon-${item.icon}`}></span>
+                            </a>
+                          </div>
+                        )
+                      )
+                    })}
                   </div>
                 </li>
               </ul>

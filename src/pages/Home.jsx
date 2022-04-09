@@ -20,7 +20,7 @@ function Home() {
 		})
 		.catch((error) => {
 			setError(error)
-			console.log("Room list error", error)
+			// console.log("home error", error)
 		})
 	}, [])
 	

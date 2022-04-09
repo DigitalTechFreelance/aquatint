@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
-import logoImg from '../../assets/images/logo.png';
 import useScrollPosition from '../../hooks/useScrollPosition';
 import useWindowSize from '../../hooks/useWindowSize';  
 
 
-function Header() {
+function Header({data}) {
     let size = useWindowSize();
     let scrollPosition = useScrollPosition();
 
@@ -15,30 +14,37 @@ function Header() {
     const handleMenuClose = () => {
         setMenuOpen(false);
     }
-
+    const {logo, headerMenus} = data
   return (
       <>
-    <header className={`bs-header ${(scrollPosition > 10 ) ? "header-blur header-scroll" : ""}`}>
-        <div className="cm-container">
-            <a href="/home" className="logo">
-                <img src={logoImg} alt="Company Logo" title="Company Logo" />
-            </a>
-            <button className="menu-btn" onClick={handleMenuOpen}>
-                <span className="bar1"></span>
-                <span className="bar2"></span>
-                <span className="bar3"></span>
-            </button>
-        </div>
+        <header className={`bs-header ${(scrollPosition > 10 ) ? "header-blur header-scroll" : ""}`}>
+            <div className="cm-container">
+                <a href="/home" className="logo">
+                    <img src={`http://localhost:1337${logo.data.attributes.url}`} alt="Company Logo" title="Company Logo" />
+                </a>
+                <button className="menu-btn" onClick={handleMenuOpen}>
+                    <span className="bar1"></span>
+                    <span className="bar2"></span>
+                    <span className="bar3"></span>
+                </button>
+            </div>
         </header>
         <div className={`bs-menu ${menuOpen ? "active" : ""}`}>
             <button type="button" className="icon icon-close menu-close" onClick={handleMenuClose}></button>
             <ul className="menu-wrap">
-                <li className="menu-link">
+                {headerMenus.map((item, index)=>{
+                    return(
+                        <li className="menu-link" key={index}>
+                            <a href={item.link} className="menu-link">{item.name}</a>
+                        </li>
+                    )
+                })}
+                {/* <li className="menu-link">
                     <a href="/about-us" className="menu-link">About Us</a>
                 </li>
                 <li className="menu-link sub-menu">
                     <a href="/services" className="menu-link">Services</a>
-                    {/* <ul className="sub-menu-wrap">
+                     <ul className="sub-menu-wrap">
                         <li className="menu-item">
                             <a href="#" className="menu-link">About Us</a>
                         </li>
@@ -48,11 +54,11 @@ function Header() {
                         <li className="menu-item">
                             <a href="#" className="menu-link">About Us</a>
                         </li>
-                    </ul> */}
+                    </ul>
                 </li>
                 <li className="menu-link sub-menu">
                     <a href="/ceramic-coating" className="menu-link">Ceramic Coating</a>
-                    {/* <ul className="sub-menu-wrap">
+                     <ul className="sub-menu-wrap">
                         <li className="menu-item">
                             <a href="#" className="menu-link">About Us</a>
                         </li>
@@ -62,7 +68,7 @@ function Header() {
                         <li className="menu-item">
                             <a href="#" className="menu-link">About Us</a>
                         </li>
-                    </ul> */}
+                    </ul>
                 </li>
                 <li className="menu-link">
                     <a href="/paint-protection-film" className="menu-link">PPF</a>
@@ -72,7 +78,7 @@ function Header() {
                 </li>
                 <li className="menu-link">
                     <a href="/contact-us" className="menu-link">Contact</a>
-                </li>
+                </li> */}
             </ul>
         </div>
     </>
