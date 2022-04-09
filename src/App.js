@@ -3,6 +3,9 @@ import './assets/css/icons.css';
 import './styles/scss/production/style.scss';
 import localRoutes from './routes';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/common/Header';
+import Footer from './components/common/Footer';
+import Flybutton from './components/common/Flybutton';
 
 const routes = [
   ...localRoutes
@@ -11,6 +14,7 @@ const routes = [
 function App() {
   return (
     <Router>
+      <Header/>
       <React.Suspense
         fallback={
           <div>
@@ -29,6 +33,8 @@ function App() {
           ))}
         </Routes>
       </React.Suspense>
+      <Footer/>
+			<Flybutton/>
     </Router>
   );
 }

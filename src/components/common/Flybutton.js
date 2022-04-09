@@ -6,10 +6,10 @@ function Flybutton() {
     <>
     <div className={`bs-action-fly ${isActive ? 'active' :''}`}>
       <div className="fly-icon-link-wrap">
-        <a href="#" class="action-link">
+        <a href="#" className="action-link">
           <span className="icon icon-email"></span>
         </a>
-        <a href="#" class="action-link">
+        <a href="#" className="action-link">
           <span className="icon icon-whatsapp"></span>
         </a>
       </div>

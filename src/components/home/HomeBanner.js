@@ -1,23 +1,20 @@
 import React from 'react';
-import ReactPlayer from "react-player";
-import bannerImgDesktop from '../../assets/images/home-banner.webp';
-import bannerImgTablet from '../../assets/images/home-banner.webp';
-import bannerImgMobile from '../../assets/images/home-banner.webp';
 import useSetBgImage from '../../hooks/useSetBgImage';
-// import Videoplayer from '../components/common/Videoplayer';
-import videosrc from '../../assets/video/dummy-video.mp4';
+// import Videoplayer from '../common/Videoplayer';
 
-function HomeBanner() {
+function HomeBanner({data}) {
 
   useSetBgImage(".setBgSrc", ".getBgSrc");
-  const [playState, setPlayState] = React.useState({
-    playing: false,
-    buttonClose: false,
-});
+  // const [playState, setPlayState] = React.useState({
+  //   playing: false,
+  //   buttonClose: false,
+  // });
 
-const handleVideoStatus = (videoPlayStatus) => {
-    setPlayState({...playState, playing: videoPlayStatus.playing, buttonClose: videoPlayStatus.buttonClose})
-}
+  // const handleVideoStatus = (videoPlayStatus) => {
+  //   setPlayState({...playState, playing: videoPlayStatus.playing, buttonClose: videoPlayStatus.buttonClose})
+  // }
+  const {title, homeVideoUpload} = data
+  const {url} = homeVideoUpload.data.attributes
 
   return (
     <div className="bs-banner">
@@ -32,17 +29,17 @@ const handleVideoStatus = (videoPlayStatus) => {
         </div> */}
         <div className="video-wrap">
           <video
-            src={videosrc}
+            src={`http://localhost:1337${url}`}
             controls
             muted
             autoPlay={"autoplay"}
-            preLoad="auto"
+            preload="auto"
             loop 
             className='video-player'
           > </video>
         </div>
         <div className="banner-info">
-            <h2 className="banner-title">welcome to aquatint auto detailing</h2>
+            <h2 className="banner-title">{title}</h2>
         </div>
     </div>
   )

@@ -13,7 +13,6 @@ function TileGrid() {
 
   return (
     <>
-        <Grid container spacing={2} className="lyt-tile-grid">
             <Grid item xs={12} md={6} className="grid-item">
                 <div className="bs-tile setBgSrc typ1">
                     <div className="img-wrap">
@@ -69,7 +68,6 @@ function TileGrid() {
                     <a href="/customisation-service" className="link"></a>
                 </div>
             </Grid>
-        </Grid>
     </>  
     
   )
