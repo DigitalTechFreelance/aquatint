@@ -25,8 +25,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-phone:before {
+  content: "\e91c";
+}
 .icon-download:before {
   content: "\e918";
+}
+.icon-chat:before {
+  content: "\e919";
+}
+.icon-email:before {
+  content: "\e91a";
+}
+.icon-whatsapp:before {
+  content: "\e91b";
 }
 .icon-hammer:before {
   content: "\e904";

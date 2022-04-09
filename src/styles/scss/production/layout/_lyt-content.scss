@@ -1,4 +1,7 @@
 //lyt-content
 .lyt-content{
     padding-top: 16rem;
+    &.typ-home{
+        padding-top: 0;
+    }
 }

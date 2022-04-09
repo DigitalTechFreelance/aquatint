@@ -32,4 +32,11 @@
         }
     }
 
+    &.patter-pos-2{
+        &:before{
+            background-size: 165%;
+            background-position: 55% 70%;
+        }
+    }
+
 }

@@ -42,3 +42,10 @@
         }
     }
 }
+
+a{
+    &.btn{
+        display: inline-block;
+        overflow: hidden;
+    }
+}

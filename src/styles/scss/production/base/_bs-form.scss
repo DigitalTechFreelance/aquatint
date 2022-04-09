@@ -20,11 +20,20 @@
         }
     }
 
+    .form-group{
+        &.error{
+            .form-control{
+                border-color: $clr-error;
+            }
+        }
+    }
+
     .form-control{
         width: 100%;
         background: transparent;
         border-radius: 0;
         border-bottom: 1px solid $clr-primary;
+        transition: all 0.3s ease;
         &:not(textarea){
             height: 4rem;
         }

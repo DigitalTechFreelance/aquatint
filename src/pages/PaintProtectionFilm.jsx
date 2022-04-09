@@ -4,6 +4,8 @@ import Footer from '../components/common/Footer';
 import PaintProtectionFilmInfography from '../components/service/PaintProtectionFilmInfography';
 import Videoplayer from '../components/common/Videoplayer';
 import videosrc from '../assets/video/dummy-video.mp4';
+import Flybutton from '../components/common/Flybutton';
+import TileGridPPF from '../components/service/TileGridPPF';
 
 function PaintProtectionFilm() {
     const [playState, setPlayState] = React.useState({
@@ -30,6 +32,20 @@ function PaintProtectionFilm() {
                     </div>
                     <div className="sp-cont">
                         <section>
+                            <div className="bs-section bs-pattern pattern-orange patter-pos-2">
+                                <div className="sec-cont">
+                                    <div className="mod-video typ-lg typ-orange">
+                                        <div className="media-wrap">
+                                            <div className="video">
+                                                <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videosrc}/>
+                                            </div>
+                                            {/* <button className='btn'><span className="icon icon-play"></span></button> */}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
                             <div className="bs-section typ-center">
                                 <div className="sec-cont cm-container">
                                     <PaintProtectionFilmInfography/>
@@ -37,71 +53,13 @@ function PaintProtectionFilm() {
                             </div>
                         </section>
                         <section>
-                            <div className="bs-section typ-center typ-gradiant-orange">
-                                <div className="sec-head">
-                                    <h2 className="sec-title">BENEFITS OF PPF</h2>
-                                </div>
-                                <div className="sec-cont">
-                                    <div className="mod-benefits">
-                                        <ul className="list-wrap">
-                                            <li className="item">
-                                                <p className="text">INVISIBLE PROTECTION</p>
-                                            </li>
-                                            <li className="item">
-                                                <p className="text">200 MICRON THICK 10-MICRON TOP COATED CERAMIC LAYER</p>
-                                            </li> 
-                                            <li className="item">
-                                                <p className="text">SELF-HEALING TECHNOLOGY</p>
-                                            </li>
-                                            <li className="item">
-                                                <p className="text">EXCELLENT DURABILITY</p>
-                                            </li>
-                                        </ul>
-                                        <ul className="list-wrap">
-                                            <li className="item">
-                                                <p className="text">ANTI-FOULING</p>
-                                            </li>
-                                            <li className="item">
-                                                <p className="text">NON-YELLOWING</p>
-                                            </li>
-                                            <li className="item">
-                                                <p className="text">HIGH GLOSS</p>
-                                            </li>
-                                            <li className="item">
-                                                <p className="text">WATER REPELLENT</p>
-                                            </li>
-                                            <li className="item">
-                                                <p className="text">UV RESISTANCE</p>
-                                            </li>
-                                        </ul>
-                                        <ul className="list-wrap">
-                                            <li className="item">
-                                                <p className="text">SOLVENT RESISTANCE</p>
-                                            </li>
-                                            <li className="item">
-                                                <p className="text">COMPLETELY REMOVABLE PSA</p>
-                                            </li>
-                                            <li className="item">
-                                                <p className="text">PRESSURE SENSITIVE ADHESIVE <span className="light">(PSA) (EASY INSTALLATION)</span></p>
-                                            </li>
-                                            <li className="item">
-                                                <p className="text">CUSTOM CUT</p>
-                                            </li>
-                                        </ul>
+                            <div className="bs-section typ-center">
+                                <div className="cm-container">
+                                    <div className="sec-head">
+                                        <h2 className="sec-title">BENEFITS OF PPF</h2>
                                     </div>
-                                </div>
-                            </div>
-                        </section>
-                        <section>
-                            <div className="bs-section">
-                                <div className="sec-cont">
-                                    <div className="mod-video typ-lg">
-                                        <div className="media-wrap">
-                                            <div className="video">
-                                                <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videosrc}/>
-                                            </div>
-                                            <button className='btn'><span className="icon icon-play"></span></button>
-                                        </div>
+                                    <div className="sec-cont">
+                                        <TileGridPPF/>
                                     </div>
                                 </div>
                             </div>
@@ -111,6 +69,7 @@ function PaintProtectionFilm() {
             </div>
         </main>
         <Footer/>
+        <Flybutton/>
     </>
   )
 }

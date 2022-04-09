@@ -7,6 +7,7 @@ import Infogarphy from '../components/home/Infogarphy';
 import TestimonialSlider from '../components/home/TestimonialSlider';
 import HomeBanner from '../components/home/HomeBanner';
 import premiumPackageImg from '../assets/images/premium-package.webp';
+import Flybutton from '../components/common/Flybutton';
 
 
 function Home() {
@@ -14,7 +15,7 @@ function Home() {
 		<>
 			<Header/>
 			<main>
-				<div className="lyt-content">
+				<div className="lyt-content typ-home">
 					<HomeBanner/>
 					<section>
 						<div className="bs-section cm-no-pad-top cm-no-pad-bottom">
@@ -55,7 +56,7 @@ function Home() {
 												<li>SIGNATURE PACKAGE</li>
 												<li>ESSENTIAL PACKAGE</li>
 											</ul>
-											<button className="btn btn-default"><span>explore</span></button>
+											<a href="/essential-package" className="btn btn-default"><span>explore</span></a>
 										</div>
 										<div className="img-wrap">
 											<img src={premiumPackageImg} alt="Coating Car" title="Coating Car" />
@@ -97,6 +98,7 @@ function Home() {
 				</div>
 			</main>
 			<Footer/>
+			<Flybutton/>
 		</>
 	);
 }

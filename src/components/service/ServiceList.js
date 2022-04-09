@@ -21,7 +21,7 @@ function ServiceList() {
                             <li className="feature-item">pro wash</li>
                             <li className="feature-item">ceramic wash</li>
                         </ul>
-                        <button type="button" className="btn btn-default"><span>see more</span></button>
+                        <a href="/washing-services" className="btn btn-default"><span>see more</span></a>
                         <span className="water-mark">wash</span>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ function ServiceList() {
                             <li className="feature-item">exterior detailing</li>
                             <li className="feature-item">interior detailing</li>
                         </ul>
-                        <button type="button" className="btn btn-default"><span>see more</span></button>
+                        <a href="/detailing-services" className="btn btn-default"><span>see more</span></a>
                         <span className="water-mark">detail</span>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ function ServiceList() {
                             <li className="feature-item">nano ceramic coating</li>
                             <li className="feature-item">premium packages</li>
                         </ul>
-                        <button type="button" className="btn btn-default"><span>see more</span></button>
+                        <a href="/ceramic-coating" className="btn btn-default"><span>see more</span></a>
                         <span className="water-mark">protect</span>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ function ServiceList() {
                             <li className="feature-item">nano ceramic coating</li>
                             <li className="feature-item">premium packages</li>
                         </ul>
-                        <button type="button" className="btn btn-default"><span>see more</span></button>
+                        <a href="/paint-protection-film" className="btn btn-default"><span>see more</span></a>
                         <span className="water-mark">protect</span>
                     </div>
                 </div>
@@ -88,7 +88,7 @@ function ServiceList() {
                             <li className="feature-item">sun films</li>
                             <li className="feature-item">clarity coat</li>
                         </ul>
-                        <button type="button" className="btn btn-default"><span>see more</span></button>
+                        <a href="/customisation-service" className="btn btn-default"><span>see more</span></a>
                         <span className="water-mark">customise</span>
                     </div>
                 </div>

@@ -8,22 +8,22 @@ function Footer() {
           <div className="footer-item">
             <h4 className="title"><span>Links</span></h4>
             <ul className="footer-list">
-              <li className="footer-list-item"><a href="#">About us</a></li>
-              <li className="footer-list-item"><a href="#">Services</a></li>
-              <li className="footer-list-item"><a href="#">Ceramic Coating</a></li>
-              <li className="footer-list-item"><a href="#">PPF</a></li>
-              <li className="footer-list-item"><a href="#">Franchise</a></li>
-              <li className="footer-list-item"><a href="#">Contact</a></li>
+              <li className="footer-list-item"><a href="/about-us">About us</a></li>
+              <li className="footer-list-item"><a href="/services">Services</a></li>
+              <li className="footer-list-item"><a href="/ceramic-coating">Ceramic Coating</a></li>
+              <li className="footer-list-item"><a href="/paint-protection-film">PPF</a></li>
+              <li className="footer-list-item"><a href="/franchise-with-us">Franchise</a></li>
+              <li className="footer-list-item"><a href="/contact-us">Contact</a></li>
             </ul>
           </div>
           <div className="footer-item">
             <h4 className="title"><span>Our Services</span></h4>
             <ul className="footer-list">
-              <li className="footer-list-item"><a href="#">Washing Services</a></li>
-              <li className="footer-list-item"><a href="#">Detailing Services</a></li>
-              <li className="footer-list-item"><a href="#">Ceramic Coatings</a></li>
-              <li className="footer-list-item"><a href="#">Paint Protection Flim</a></li>
-              <li className="footer-list-item"><a href="#">Customisation Services</a></li>
+              <li className="footer-list-item"><a href="/washing-services">Washing Services</a></li>
+              <li className="footer-list-item"><a href="/detailing-services">Detailing Services</a></li>
+              <li className="footer-list-item"><a href="/clarity-coat">Clarity Coatings</a></li>
+              <li className="footer-list-item"><a href="/paint-protection-film">Paint Protection Flim</a></li>
+              <li className="footer-list-item"><a href="/customisation-service">Customisation Services</a></li>
             </ul>
           </div>
           <div className="footer-item">

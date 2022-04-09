@@ -6,10 +6,15 @@
     left: 0;
     right: 0;
     z-index: 10;
-    transition: all 0.3s ease;
-    background: rgba( 0, 0, 0, 0.5);
-    backdrop-filter: blur( 12px );
-    -webkit-backdrop-filter: blur( 12px );
+    transition: all 0.5s ease;
+    
+    &.header-blur{
+        backdrop-filter: blur( 30px );
+        -webkit-backdrop-filter: blur( 30px );
+    }
+
+    
+
     .cm-container{
         display: flex;
         align-items: center;
@@ -17,7 +22,7 @@
     }
     .logo{
         max-width: 15rem;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
     }
     .menu-btn{
         span{
@@ -31,10 +36,11 @@
             }
         }
     }
-    &.sticky{
-        padding: 3rem 0;
+    &.header-scroll{
+        padding: 2rem 0;
+
         .logo{
-            max-width: 13rem;
+            max-width: 10rem;
         }
     }
 }

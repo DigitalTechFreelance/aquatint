@@ -7,35 +7,45 @@ import ppfImg from '../../assets/images/offering-ppf.webp';
 import customizeImg from '../../assets/images/offering-customize.webp'; 
 import useSetBgImage from '../../hooks/useSetBgImage';
 
-function TileGrid() {
+function TileGridPPF() {
 
     useSetBgImage(".setBgSrc", ".getBgSrc");
 
   return (
     <>
-        <Grid container spacing={2} className="lyt-tile-grid">
-            <Grid item xs={12} md={6} className="grid-item">
-                <div className="bs-tile setBgSrc typ1">
+        <Grid container spacing={2} className="lyt-tile-grid typ-tileof3">
+            <Grid item xs={12} md={4} className="grid-item">
+                <div className="bs-tile setBgSrc typ3">
                     <div className="img-wrap">
                         <img src={washImg} alt="Wash Service" title="wash Service" className="getBgSrc" />
                     </div>
                     <div className="text-wrap">
                         <h3 className="title">wash</h3>
                     </div>
-                    <a href="/washing-services" className="link"></a>
+                    <a href="#" className="link"></a>
                 </div>
             </Grid>
-            <Grid item xs={12} md={6} className="grid-item">
-                <div className="bs-tile setBgSrc typ2">
+            <Grid item xs={12} md={4} className="grid-item">
+                <div className="bs-tile setBgSrc typ4">
                     <div className="img-wrap">
                         <img src={detailImg} alt="Detail Service" title="Detail Service" className="getBgSrc"/>
                     </div>
                     <div className="text-wrap">
                         <h3 className="title">detail</h3>
                     </div>
-                    <a href="/detailing-services" className="link"></a>
+                    <a href="#" className="link"></a>
                 </div>
             </Grid>
+            <Grid item xs={12} md={4} className="grid-item">
+                <div className="bs-tile setBgSrc typ5">
+                    <div className="img-wrap">
+                        <img src={customizeImg} alt="Ceramic Coating" title="Ceramic Coating" className="getBgSrc"/>
+                    </div>
+                    <div className="text-wrap">
+                        <h3 className="title">ceramic coating</h3>
+                    </div>
+                </div>
+            </Grid> 
             <Grid item xs={12} md={4} className="grid-item">
                 <div className="bs-tile setBgSrc typ3">
                     <div className="img-wrap">
@@ -45,7 +55,7 @@ function TileGrid() {
                         <h3 className="title">ceramic coating</h3>
                     </div>
                 </div>
-                <a href="/ceramic-coating" className="link"></a>
+                
             </Grid>
             <Grid item xs={12} md={4} className="grid-item">
                 <div className="bs-tile setBgSrc typ4">
@@ -55,7 +65,7 @@ function TileGrid() {
                     <div className="text-wrap">
                         <h3 className="title">paint protection film</h3>
                     </div>
-                    <a href="/paint-protection-film" className="link"></a>
+                    <a href="#" className="link"></a>
                 </div>
             </Grid>
             <Grid item xs={12} md={4} className="grid-item">
@@ -66,7 +76,7 @@ function TileGrid() {
                     <div className="text-wrap">
                         <h3 className="title">cutomise</h3>
                     </div>
-                    <a href="/customisation-service" className="link"></a>
+                    <a href="#" className="link"></a>
                 </div>
             </Grid>
         </Grid>
@@ -75,4 +85,4 @@ function TileGrid() {
   )
 }
 
-export default TileGrid
+export default TileGridPPF

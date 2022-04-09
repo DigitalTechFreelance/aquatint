@@ -46,4 +46,14 @@
       }
     }
   }
+
+  &.typ-orange {
+    .playerWrapper{
+      .cm-btn-watch{
+        .icon {
+          color: $clr-secondary;
+        }
+      }
+    }
+  }
 }

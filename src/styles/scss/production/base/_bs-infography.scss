@@ -149,7 +149,7 @@
         .img-wrap{
             width: 115rem;
             position: absolute;
-            right: -27%;
+            right: -35%;
             top: -25rem;
             transform: scale(2);
         }
@@ -157,7 +157,7 @@
         &.typ-vertical-center{
 
             .img-wrap{
-                right: -5%;
+                right: -15%;
                 top: 50%;
                 transform: translateY(-50%) scale(1.5);
             }
