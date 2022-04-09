@@ -1,9 +1,10 @@
 .bs-videoplayer {
+  position: relative;
+  overflow: hidden;
   .playerWrapper {
-    margin-bottom: 2rem;
     position: relative;
     >div {
-      min-height: 72rem;
+      min-height: 52.8rem;
     }
 
     .action-btn {
@@ -19,6 +20,16 @@
     }
   }
 
+  .controls{
+    position: absolute;
+    left: 3rem;
+    right: 3rem;
+    bottom: 2rem;
+    z-index: 1;
+    transition: all 0.3s ease;
+    transform: translateY(150%);
+  }
+
   .play-controls-wrap {
     display: flex;
     align-items: center;
@@ -30,5 +41,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  &:hover{
+    .controls{
+      transform: translateY(0);
+    }
   }
 }

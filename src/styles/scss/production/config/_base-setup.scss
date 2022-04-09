@@ -27,7 +27,7 @@ body {
     background: $clr-root;
     width: 100%;
     overflow-x: hidden !important;
-    @include scrollbars(2px, $clr-primary-shade, $clr-root);
+    @include scrollbars(6px, $clr-primary-shade, $clr-root);
 }
 
 h1,

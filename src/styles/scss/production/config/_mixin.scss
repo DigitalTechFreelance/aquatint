@@ -103,12 +103,15 @@ $background-color: mix($foreground-color, white, 50%)) {
     &::-webkit-scrollbar {
         width: $size;
         height: $size;
+        cursor: grab;
     }
     &::-webkit-scrollbar-thumb {
         background: $foreground-color;
+        cursor: grab;
     }
     &::-webkit-scrollbar-track {
         background: $background-color;
+        cursor: grab;
     }
     // For Internet Explorer
     & {
