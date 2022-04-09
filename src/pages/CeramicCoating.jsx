@@ -1,10 +1,7 @@
 import React from 'react';
-import Header from '../components/common/Header';
-import Footer from '../components/common/Footer';
 import CeramicCoatingInfogarphy from '../components/service/CeramicCoatingInfogarphy';
 import Videoplayer from '../components/common/Videoplayer';
 import videosrc from '../assets/video/dummy-video.mp4';
-import Flybutton from '../components/common/Flybutton';
 
 function CeramicCoating() {
     const [playState, setPlayState] = React.useState({
@@ -17,7 +14,6 @@ function CeramicCoating() {
     }
   return (
     <>
-        <Header/>
         <main>
             <div className="lyt-content">
                 <div className="lyt-single-page">
@@ -183,8 +179,6 @@ function CeramicCoating() {
                 </div>
             </div>
         </main>
-        <Footer/>
-        <Flybutton/>
     </>
   )
 }

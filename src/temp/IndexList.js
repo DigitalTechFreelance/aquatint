@@ -6,15 +6,15 @@ function IndexList() {
     return (
         <>
 
-            <div className="header-logo-wrap">
+            {/* <div className="header-logo-wrap">
                 <img
                     className="logo"
                     src={logoImg}
                     alt="Aquatint Application"
                 />
-            </div>
+            </div> */}
 
-            <div className="siteContainer">
+            <div className="siteContainer" style={{marginTop: '10%'}}>
                 <div className="flex-cont">
                     <div className="flex-item">
                         <h1 className="title">Pages</h1>

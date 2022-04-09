@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../components/common/Header';
-import Footer from '../components/common/Footer';
 import Infogarphy from '../components/aboutUs/Infogarphy';
 import Team from '../components/aboutUs/Team';
 import OurVision from '../components/aboutUs/OurVision';
@@ -8,7 +6,6 @@ import OurVision from '../components/aboutUs/OurVision';
 function AboutUs() {
   return (
     <>
-        <Header/>
             <main>
                 <div className="lyt-content pg-about">
                     <div className="lyt-single-page">
@@ -47,7 +44,6 @@ function AboutUs() {
                     </div>
                 </div>
             </main>
-        <Footer/>
     </>
   )
 }

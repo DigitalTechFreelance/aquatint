@@ -1,10 +1,7 @@
 import React from 'react';
-import Header from '../components/common/Header';
-import Footer from '../components/common/Footer';
 import PaintProtectionFilmInfography from '../components/service/PaintProtectionFilmInfography';
 import Videoplayer from '../components/common/Videoplayer';
 import videosrc from '../assets/video/dummy-video.mp4';
-import Flybutton from '../components/common/Flybutton';
 import TileGridPPF from '../components/service/TileGridPPF';
 
 function PaintProtectionFilm() {
@@ -19,7 +16,6 @@ function PaintProtectionFilm() {
 
   return (
     <>
-        <Header/>
         <main>
             <div className="lyt-content">
                 <div className="lyt-single-page typ-2">
@@ -68,8 +64,6 @@ function PaintProtectionFilm() {
                 </div>
             </div>
         </main>
-        <Footer/>
-        <Flybutton/>
     </>
   )
 }

@@ -1,12 +1,9 @@
 import React from 'react';
-import Header from '../components/common/Header';
-import Footer from '../components/common/Footer';
 import DetailingServiceTabs from '../components/service/DetailingServiceTabs';
 
 function DetailingServices() {
   return (
     <>
-      <Header/>
         <main>
             <div className="lyt-content">
                 <div className="cm-container">
@@ -21,7 +18,6 @@ function DetailingServices() {
                 </div>
             </div>
         </main>
-      <Footer/>
     </>
   )
 }

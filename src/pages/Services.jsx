@@ -1,12 +1,9 @@
 import React from 'react';
-import Header from '../components/common/Header';
-import Footer from '../components/common/Footer';
 import ServiceList from '../components/service/ServiceList';
 
 function Services() {
   return (
     <>
-        <Header/>
             <main>
                 <div className="lyt-content">
                     <div className="lyt-single-page">
@@ -19,7 +16,6 @@ function Services() {
                     </div>
                 </div>
             </main>
-        <Footer/>
     </>
   )
 }

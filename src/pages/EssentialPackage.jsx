@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../components/common/Header';
-import Footer from '../components/common/Footer';
 import EssentialInfogarphy from '../components/service/EssentialInfogarphy';
 import Videoplayer from '../components/common/Videoplayer';
 import videosrc from '../assets/video/dummy-video.mp4';
@@ -16,7 +14,6 @@ function EssentialPackage() {
     }
   return (
     <>
-        <Header/>
         <main>
             <div className="lyt-content">
                 <div className="lyt-single-page">
@@ -74,7 +71,6 @@ function EssentialPackage() {
                 </div>
             </div>
         </main>
-        <Footer/>
     </>
   )
 }

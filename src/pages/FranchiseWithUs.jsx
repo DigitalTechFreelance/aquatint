@@ -1,14 +1,10 @@
 import React from 'react';
-import Header from '../components/common/Header';
-import Footer from '../components/common/Footer';
 import colab1Img from '../assets/images/colab1.webp';
 import colab2Img from '../assets/images/colab2.webp';
-import TextField from '@mui/material/TextField';
 
 function FranchiseWithUs() {
   return (
     <>
-        <Header/>
         <main>
             <div className="lyt-content">
                 <div className="lyt-single-page lyt-franchise">
@@ -105,7 +101,6 @@ function FranchiseWithUs() {
                 </div>
             </div>
         </main>
-        <Footer/>
     </>
   )
 }

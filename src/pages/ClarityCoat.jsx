@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../components/common/Header';
-import Footer from '../components/common/Footer';
 import ClarityCoatingInfogarphy from '../components/service/ClarityCoatingInfogarphy';
 import Videoplayer from '../components/common/Videoplayer';
 import videosrc from '../assets/video/dummy-video.mp4';
@@ -16,7 +14,6 @@ function ClarityCoat() {
     }
   return (
     <>
-        <Header/>
         <main>
             <div className="lyt-content">
                 <div className="lyt-single-page typ-2">
@@ -94,7 +91,6 @@ function ClarityCoat() {
                 </div>
             </div>
         </main>
-        <Footer/>
     </>
   )
 }

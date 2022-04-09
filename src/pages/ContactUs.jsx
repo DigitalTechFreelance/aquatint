@@ -1,13 +1,8 @@
 import React from 'react';
-import Header from '../components/common/Header';
-import Footer from '../components/common/Footer';
-import TextField from '@mui/material/TextField';
-import TextareaAutosize from '@mui/base/TextareaAutosize';
 
 function ContactUs() {
   return (
     <>
-        <Header/>
         <main>
             <div className="lyt-content">
                 <div className="lyt-single-page">
@@ -114,7 +109,6 @@ function ContactUs() {
                 </div>
             </div>
         </main>
-        <Footer/>
     </>
   )
 }

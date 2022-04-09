@@ -1,13 +1,10 @@
 import React from 'react';
-import Header from '../components/common/Header';
-import Footer from '../components/common/Footer';
 import WashingService from '../components/service/WashingService';
 import WashingServiceCompareList from '../components/service/WashingServiceCompareList';
 
 function WashingServices() {
   return (
     <>
-      <Header/>
         <main>
             <div className="lyt-content">
               <div className="cm-container">
@@ -32,7 +29,6 @@ function WashingServices() {
               </div>
             </div>
         </main>
-      <Footer/>
     </>
   )
 }

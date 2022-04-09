@@ -1,13 +1,10 @@
 import React from 'react';
-import Header from '../components/common/Header';
-import Footer from '../components/common/Footer';
 import dentingImg from '../assets/images/denting.webp';
 import sunFilmImg from '../assets/images/sun-film.webp';
 
 function CustomisationService() {
   return (
     <>
-        <Header/>
         <main>
             <div className="lyt-content">
                 <div className="lyt-single-page">
@@ -124,7 +121,6 @@ function CustomisationService() {
                 </div>
             </div>
         </main>
-        <Footer/>
     </>
   )
 }
