@@ -14,8 +14,16 @@
         align-items: flex-start;
         flex-flow: row wrap;
 
+        @include mq-below($xs){
+            flex-direction: column;
+        }
+
         .list-item{
             width: 33.33%;
+
+            @include mq-below($xs){
+                width: 100%;
+            }
         }
 
     }

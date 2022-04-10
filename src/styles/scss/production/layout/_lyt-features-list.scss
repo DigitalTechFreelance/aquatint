@@ -3,12 +3,26 @@
   .list-wrap {
     >.item {
       margin-bottom: 29rem;
+
+      @include mq-below($xs) {
+        margin-bottom: 4rem;
+      }
+
+      &:last-child {
+        @include mq-below($xs) {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
   .typ-even {
     .bs-features {
       flex-direction: row-reverse;
+
+      @include mq-below($xs) {
+        flex-direction: column;
+      }
     }
   }
 
@@ -16,6 +30,10 @@
     display: flex;
     align-items: flex-start;
     column-gap: 5%;
+
+    @include mq-below($xs) {
+      flex-direction: column;
+    } 
 
     .details-list {
       flex: 1;

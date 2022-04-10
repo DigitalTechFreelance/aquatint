@@ -28,6 +28,10 @@ body {
     width: 100%;
     overflow-x: hidden !important;
     @include scrollbars(6px, $clr-primary-shade, $clr-root);
+
+    @include mq-below($xs) {
+        @include font-source-sans(1.2rem, 1.6rem);
+    }
 }
 
 h1,

@@ -6,6 +6,11 @@
             @include font-source-sans(3.6rem,4rem, $font1, $font-smbold, $clr-base, uppercase);
             letter-spacing: 0.3rem;
             margin-bottom: 3rem;
+
+            @include mq-below($xs) {
+                @include font-source-sans(1.6rem, 2.5rem);
+                margin-bottom: 1rem;
+            }
         }
     }
 
@@ -14,30 +19,63 @@
             @include font-source-sans(2.4rem,3.2rem, $font1, $font-smbold, $clr-base, uppercase);
             display: block;
             margin-bottom: 2rem;
+
+            @include mq-below($xs) {
+                @include font-source-sans(1.2rem, 1.6rem);
+                margin-bottom: 0.5rem;
+            }
         }
         .item{
             margin-bottom: 4rem;
+
+            @include mq-below($xs) {
+                margin-bottom: 2rem;
+            }
+
             &:last-child{
                 margin-bottom: 0;
+
+                @include mq-below($xs) {
+                    margin-bottom: 2rem;
+                }
             }
         }
     }
 
     .address,.link{
         @include font-source-sans(2.4rem,3.2rem, $font1, $font-light, $clr-base, initial);
+
+        @include mq-below($xs) {
+            display: block;
+            @include font-source-sans(1.2rem, 1.6rem);
+        }
     }
 
     .link{
         color: $clr-primary;
+        
+        @include mq-below ($xs) {
+            font-size: 1rem;
+        }
     }
 
     .list-wrap{
         display: flex;
         align-items: flex-start;
 
+        @include mq-below($xs) {
+            flex-direction: column;
+        }
+
         .list-item{
             max-width: 69rem;
             margin-right: 15.7rem;
+
+            @include mq-below($xs) {
+                max-width: 100%;
+                margin-right: 0;
+            }
+
             &:last-child{
                 margin-right: 0;
             }

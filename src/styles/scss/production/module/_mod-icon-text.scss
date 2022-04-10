@@ -9,11 +9,19 @@
     .icon{
         font-size: 6rem;
         color: $clr-primary;
+
+        @include mq-below($xs){
+            font-size: 5rem;
+        }
     }
 
     .title{
         @include font-source-sans(1.8rem,2.2rem, $font1, $font-light, $clr-base, uppercase);
         letter-spacing: 0.1rem;
+
+        @include mq-below($xs){
+            @include font-source-sans(0.9rem, 1.1rem);
+        }
     }
 
 }
