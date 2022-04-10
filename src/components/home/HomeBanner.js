@@ -7,7 +7,7 @@ import bannerImgMobile from '../../assets/images/home-banner.webp';
 import useSetBgImage from '../../hooks/useSetBgImage';
 // import Videoplayer from '../components/common/Videoplayer';
 import videosrc from '../../assets/video/dummy-video.mp4';
-import videoSrcMobile from '../../assets/video/compressed.mp4';
+import videoSrcMobile from '../../assets/video/comp2.mp4';
 
 function HomeBanner() {
 

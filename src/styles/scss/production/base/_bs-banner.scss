@@ -61,8 +61,8 @@
     .video-wrap {
         position: relative;
         @include mq-below($xs){
-            height: 100%;
             width: 100%;
+            height: 100%;
         }
         &:after {
             content: '';
@@ -76,7 +76,7 @@
         }
         .video-player {
             width: 100%;
-            height: 100%
+            height: auto;
         }
     }
 
