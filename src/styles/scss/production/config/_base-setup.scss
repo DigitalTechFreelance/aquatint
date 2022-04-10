@@ -95,6 +95,9 @@ button {
 
 .cm-paddtop-30{
     padding-top: 30rem !important;
+    @include mq-below($xs){
+        padding-top: 3rem !important;
+    }
 }
 
 .cm-no-pad-top{

@@ -43,6 +43,9 @@ function Home() {
 					</section>
 					<section>
 							<div className="bs-section">
+								<div className="sec-head cm-visible-xs cm-container">
+									<h2 className="sec-title">explore our premium packages</h2>
+								</div>
 								<div className="sec-cont">
 									<div className="bs-infography typ-reverse typ-explore">
 										<div className="info-wrap">
@@ -80,6 +83,9 @@ function Home() {
 					{/* franchise with us */}
 					<section>
 						<div className="bs-section typ-infography cm-paddtop-30 bs-pattern pattern-orange patter-pos-1">
+							<div className="sec-head cm-visible-xs cm-container">
+								<h2 className="sec-title">Franchise With Us</h2>
+							</div>
 							<div className="cm-container">
 								<div className="sec-cont">
 									<Infogarphy/>

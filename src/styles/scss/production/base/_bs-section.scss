@@ -8,6 +8,9 @@
 
     &.sec-last{
         padding-bottom: 20rem;
+        @include mq-below($xs){
+            padding-bottom: 3rem;
+        }
     }
 
     .sec-title{
@@ -38,6 +41,10 @@
             .img-wrap{
                 position: absolute;
                 right: 0;
+                @include mq-below($xs){
+                    position: relative;
+                    right: -1.5rem;
+                }
             }
         }
 

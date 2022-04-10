@@ -29,6 +29,9 @@
         &:before{
             background-size: 165%;
             background-position: 55% 30%;
+            @include mq-below($xs){
+                background-size: 275%;
+            }
         }
     }
 

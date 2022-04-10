@@ -3,7 +3,7 @@ import franchiseImg from '../../assets/images/franchise.webp';
 
 function Infogarphy() {
   return (
-    <div className='bs-infography'>
+    <div className='bs-infography typ-franchise'>
         <div className="info-wrap">
           <h3 className="title">Franchise With Us</h3>
           <div className="desc">

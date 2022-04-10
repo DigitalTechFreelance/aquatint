@@ -14,11 +14,20 @@
   justify-content: flex-end;
   clip-path: polygon(7% 0, 100% 0, 100% 100%, 0% 100%);
   overflow: hidden;
+  @include mq-below($xs){
+    overflow: initial;
+    clip-path: none;
+    padding: 1rem;
+    transform: translateX(101%);
+    bottom: 40vh;
+  }
 
   .fly-icon-link-wrap {
     display: flex;
     align-items: center;
-
+    @include mq-below($xs){
+      display: block;
+    }
     
   }
 
@@ -26,6 +35,11 @@
     display: inline-flex;
     padding: 0 2rem;
     align-items: center;
+    @include mq-below($xs){
+      display: block;
+      padding: 1rem;
+      align-items: center;
+    }
   }
 
   .fly-trigger {
@@ -36,10 +50,19 @@
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     padding: 1.8rem 1.1rem 1.1rem 4.5rem;
+    @include mq-below($xs){
+      left: -4.5rem;
+      padding: 0.5rem 1rem 0.3rem 1.6rem;
+      -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    }
   }
 
   .icon {
     font-size: 3rem;
+    @include mq-below($xs){
+      font-size: 2rem;
+    }
   }
 
   &.active {

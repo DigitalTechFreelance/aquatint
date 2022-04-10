@@ -9,6 +9,11 @@
 
     .img-wrap{
         max-width: 80rem;
+        img{
+            @include mq-below($xs){
+                display: block;
+            }
+        }
     }
 
     .title{
@@ -19,23 +24,39 @@
         
         .text-sm{
             @include font-source-sans(3.2rem,3.6rem, $font1, $font-medium, $clr-base, uppercase);
-            display: block
+            display: block;
+            @include mq-below($xs){
+                font-size: 1.6rem;
+                line-height: 1.8rem;
+            }
         }
         .text-lg{
             @include font-source-sans(12rem,12.6rem, $font1, $font-bold, $clr-base, uppercase);
             font-style: italic;
-            display: block
+            display: block;
+            @include mq-below($xs){
+                font-size: 4rem;
+                line-height: 4.2rem;
+            }
         }
 
         .text-md{
             @include font-source-sans(8rem,8.6rem, $font1, $font-bold, $clr-base, uppercase);
             font-style: italic;
-            display: block
+            display: block;
+            @include mq-below($xs){
+                font-size: 2rem;
+                line-height: 2.4rem;
+            }
         }
         .text-xl{
             @include font-source-sans(10rem,10.6rem, $font1, $font-bold, $clr-base, uppercase);
             font-style: italic;
-            display: block
+            display: block;
+            @include mq-below($xs){
+                font-size: 3rem;
+                line-height: 3.2rem;
+            }
         }
     }
 
@@ -52,8 +73,6 @@
 
     }
 
-
-
     .feature-list{
         
         li{
@@ -64,6 +83,12 @@
             margin-right: 2rem;
             position: relative;
             margin-bottom: 1rem;
+            @include mq-below($xs){
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                margin-right: 0;
+                margin-bottom: 0.7rem;
+            }
             &:before{
                 content:'';
                 width: 0.7rem;
@@ -81,10 +106,17 @@
     &.typ-reverse{
         flex-direction: row-reverse;
         justify-content: flex-end;
+        @include mq-below($xs){
+            flex-direction: column-reverse;
+        }
     }
 
     &.typ-explore{
         padding-top: 10rem;
+        @include mq-below($xs){
+            padding: 0 1.5rem;
+            position: relative;
+        }
 
         .img-wrap{
             max-width: 104rem;
@@ -92,6 +124,9 @@
 
         .title{
             margin-bottom: 4rem;
+            @include mq-below($xs){
+                display: none;
+            }
             span{
                 &.text-pos-1{
                     margin-left: -28rem;
@@ -108,6 +143,9 @@
 
         .feature-list{
             margin-bottom: 6rem;
+            @include mq-below($xs){
+                margin: 3rem 0;
+            }
         }
 
     }
@@ -326,6 +364,31 @@
         .desc {
             p {
                 opacity: 0.8;
+            }
+        }
+    }
+
+    &.typ-franchise{
+        @include mq-below($xs){
+            flex-direction: column-reverse;
+            .img-wrap{
+                margin-bottom: 3rem;
+            }
+            .info-wrap{
+                .title{
+                    display: none;
+                }
+            }
+            .desc{
+                margin-bottom: 3rem;
+                p{
+                    font-size: 1.4rem;
+                    line-height: 1.8rem;
+                    margin-bottom: 2rem;
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
             }
         }
     }
