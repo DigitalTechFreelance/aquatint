@@ -33,44 +33,34 @@ function Header() {
         <div className={`bs-menu ${menuOpen ? "active" : ""}`}>
             <button type="button" className="icon icon-close menu-close" onClick={handleMenuClose}></button>
             <ul className="menu-wrap">
-                <li className="menu-link">
+                <li className="menu-item">
                     <a href="/about-us" className="menu-link">About Us</a>
                 </li>
-                <li className="menu-link sub-menu">
-                    <a href="/services" className="menu-link">Services</a>
-                    {/* <ul className="sub-menu-wrap">
-                        <li className="menu-item">
-                            <a href="#" className="menu-link">About Us</a>
-                        </li>
-                        <li className="menu-item">
-                            <a href="#" className="menu-link">About Us</a>
-                        </li>
-                        <li className="menu-item">
-                            <a href="#" className="menu-link">About Us</a>
-                        </li>
-                    </ul> */}
+                <li className="menu-item">
+                    <a href="/services" className="menu-link">All Services</a>
                 </li>
-                <li className="menu-link sub-menu">
-                    <a href="/ceramic-coating" className="menu-link">Ceramic Coating</a>
-                    {/* <ul className="sub-menu-wrap">
-                        <li className="menu-item">
-                            <a href="#" className="menu-link">About Us</a>
-                        </li>
-                        <li className="menu-item">
-                            <a href="#" className="menu-link">About Us</a>
-                        </li>
-                        <li className="menu-item">
-                            <a href="#" className="menu-link">About Us</a>
-                        </li>
-                    </ul> */}
+                <li className="menu-item">
+                    <a href="#" className="menu-link typ-sm">Wash</a>
                 </li>
-                <li className="menu-link">
-                    <a href="/paint-protection-film" className="menu-link">PPF</a>
+                <li className="menu-item">
+                    <a href="#" className="menu-link typ-sm">Interior Detailing</a>
                 </li>
-                <li className="menu-link">
+                <li className="menu-item">
+                    <a href="#" className="menu-link typ-sm">Exterior Detailing</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#" className="menu-link typ-sm cm-highlight highlight-primary">Ceramic Coating</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#" className="menu-link typ-sm cm-highlight highlight-secondary">PPF</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#" className="menu-link typ-sm">Customisation</a>
+                </li>
+                <li className="menu-item">
                     <a href="/franchise-with-us" className="menu-link">Franchise</a>
                 </li>
-                <li className="menu-link">
+                <li className="menu-item">
                     <a href="/contact-us" className="menu-link">Contact</a>
                 </li>
             </ul>

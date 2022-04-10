@@ -5,12 +5,11 @@
     bottom: 0;
     right: 0;
     z-index: 15;
-    background-color: $clr-primary;
+    background-color: $clr-turnary;
     transform: translateX(200%);
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    padding: 0 8rem;
     width: 40rem;
     overflow-y: auto;
 
@@ -18,7 +17,36 @@
         transform: translateX(0);
     }
     .menu-link{
+        position: relative;
+        display: block;
         @include font-source-sans(3.6rem,4rem, $font1, $font-smbold, $clr-base, capitalize);
+        padding: 0.6rem 8rem;
+        &.typ-sm{
+            font-size: 2.4rem;
+            line-height: 2.8rem;
+            font-weight: $font-medium;
+        }
+
+        
+
+        &:before{
+            content:'';
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            position: absolute;
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+
+        &:hover{
+            &:before{
+                width: 100%;
+            }
+        }
+
     }
 
     .menu-close{
@@ -31,50 +59,42 @@
         height: 3rem;
     }
 
-    .menu-wrap{
-        >.menu-link{
-            margin-bottom: 4.5rem;
-            &:last-child{
-                margin-bottom: 0;
-            }
-
-            .sub-menu-wrap{
-                padding-left: 2rem;
-                margin-top: 2rem;
-                .menu-item{
-                    margin-bottom: 2rem;
-                    &:last-child{
-                        margin-bottom: 0;
-                    }
-                }
-                .menu-lnk{
-                    font-size: 2.8rem;
-                    line-height: 3.2rem;
-                }
-            }
-
+    .menu-item{
+        margin-bottom: 3rem;
+        display: block;
+        &:last-child{
+            margin-bottom: 0;
         }
-    }
-
-    .sub-menu{
-        >.menu-link{
-            position: relative;
-            padding-right: 3.5rem;
-            &:after{
-                content: "\e90a";
-                font-family: 'icomoon' !important;
-                font-size: 1.5rem;
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%) rotate(180deg);
-                right: 0;
-                transform: all 0.3s ease;
-            }
-            &.active{
-                &:after{
-                    transform: translateY(-50%) rotate(0);
+        &:nth-child(even){
+            .menu-link{
+                &:before{
+                    background: rgba(64,196,226,1);
+                    background: -moz-linear-gradient(left, rgba(64,196,226,1) 0%, rgba(64,198,231,0.5) 54%, rgba(64,198,231,0) 100%);
+                    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(64,196,226,1)), color-stop(54%, rgba(64,198,231,0.5)), color-stop(100%, rgba(64,198,231,0)));
+                    background: -webkit-linear-gradient(left, rgba(64,196,226,1) 0%, rgba(64,198,231,0.5) 54%, rgba(64,198,231,0) 100%);
+                    background: -o-linear-gradient(left, rgba(64,196,226,1) 0%, rgba(64,198,231,0.5) 54%, rgba(64,198,231,0) 100%);
+                    background: -ms-linear-gradient(left, rgba(64,196,226,1) 0%, rgba(64,198,231,0.5) 54%, rgba(64,198,231,0) 100%);
+                    background: linear-gradient(to right, rgba(64,196,226,1) 0%, rgba(64,198,231,0.5) 54%, rgba(64,198,231,0) 100%);
+                    filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#40c4e2', endColorstr='#40c6e7', GradientType=1 )";
                 }
             }
+            
+        }
+
+        &:nth-child(odd){
+            .menu-link{
+                &:before{
+                    background: rgba(243,145,32,1);
+                    background: -moz-linear-gradient(left, rgba(243,145,32,1) 0%, rgba(243,145,32,0.5) 54%, rgba(243,145,32,0) 100%);
+                    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243,145,32,1)), color-stop(54%, rgba(243,145,32,0.5)), color-stop(100%, rgba(243,145,32,0)));
+                    background: -webkit-linear-gradient(left, rgba(243,145,32,1) 0%, rgba(243,145,32,0.5) 54%, rgba(243,145,32,0) 100%);
+                    background: -o-linear-gradient(left, rgba(243,145,32,1) 0%, rgba(243,145,32,0.5) 54%, rgba(243,145,32,0) 100%);
+                    background: -ms-linear-gradient(left, rgba(243,145,32,1) 0%, rgba(243,145,32,0.5) 54%, rgba(243,145,32,0) 100%);
+                    background: linear-gradient(to right, rgba(243,145,32,1) 0%, rgba(243,145,32,0.5) 54%, rgba(243,145,32,0) 100%);
+                    filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#f39120', endColorstr='#f39120', GradientType=1 )";
+                }
+            }
+            
         }
     }
 
