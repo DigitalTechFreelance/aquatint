@@ -7,6 +7,9 @@
     right: 0;
     z-index: 10;
     transition: all 0.5s ease;
+    @include mq-below($xs){
+        padding: 0.5rem 0;
+    }
     
     &.header-blur{
         backdrop-filter: blur( 30px );
@@ -23,6 +26,9 @@
     .logo{
         max-width: 15rem;
         transition: all 0.5s ease;
+        @include mq-below($xs){
+            max-width: 4rem;
+        }
     }
 
     .menu-btn{
@@ -32,6 +38,10 @@
             height: 2px;
             background-color: $clr-primary;
             margin-bottom: 1.2rem;
+            @include mq-below($xs){
+                width: 2rem;
+                margin-bottom: 0.5rem;
+            }
             &:last-child{
                 margin-bottom: 0;
             }
@@ -40,9 +50,15 @@
 
     &.header-scroll{
         padding: 2rem 0;
+        @include mq-below($xs){
+            padding: 0.5rem 0;
+        }
 
         .logo{
             max-width: 10rem;
+            @include mq-below($xs){
+                max-width: 4rem;
+            }
         }
     }
 }

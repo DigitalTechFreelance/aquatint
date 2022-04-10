@@ -85,17 +85,17 @@ function Footer() {
                   </p>
                   <div className="social-icon-wrap">
                     <div className="social-icon">
-                      <a href="#">
+                      <a href="https://www.facebook.com/AquaTint-Auto-Detailing-146759499028902/?fref=ts" target="_blank">
                         <span className="icon icon-facebook"></span>
                       </a>
                     </div>
                     <div className="social-icon">
-                      <a href="#">
+                      <a href="https://twitter.com/aquatintstudio" target="_blank">
                         <span className="icon icon-twitter"></span>
                       </a>
                     </div>
                     <div className="social-icon">
-                      <a href="#">
+                      <a href="https://www.instagram.com/aquatint_detailing/?utm_source=ig_profile_share&amp;igshid=vbrmw51kw0wp" target="_blank">
                         <span className="icon icon-instagram"></span>
                       </a>
                     </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import useWindowSize from '../../hooks/useWindowSize';  
 import ReactPlayer from "react-player";
 import bannerImgDesktop from '../../assets/images/home-banner.webp';
 import bannerImgTablet from '../../assets/images/home-banner.webp';
@@ -6,8 +7,11 @@ import bannerImgMobile from '../../assets/images/home-banner.webp';
 import useSetBgImage from '../../hooks/useSetBgImage';
 // import Videoplayer from '../components/common/Videoplayer';
 import videosrc from '../../assets/video/dummy-video.mp4';
+import videoSrcMobile from '../../assets/video/compressed.mp4';
 
 function HomeBanner() {
+
+  let size = useWindowSize();
 
   useSetBgImage(".setBgSrc", ".getBgSrc");
   const [playState, setPlayState] = React.useState({
@@ -32,11 +36,11 @@ const handleVideoStatus = (videoPlayStatus) => {
         </div> */}
         <div className="video-wrap">
           <video
-            src={videosrc}
+            src={size.width > 768 ? videosrc : videoSrcMobile}
             controls
             muted
             autoPlay={"autoplay"}
-            preLoad="auto"
+            preload="auto"
             loop 
             className='video-player'
           > </video>

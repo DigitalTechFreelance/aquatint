@@ -3,6 +3,9 @@
     height: 100vh;
     position: relative;
     overflow: hidden;
+    @include mq-below($xs){
+        height: 82vh;
+    }
 
     .setBgSrc{
         background-repeat: no-repeat;
@@ -26,11 +29,21 @@
         left: 0;
         right: 0;
         z-index: 2;
+        @include mq-below($xs){
+            padding: 0 1.5rem;
+            bottom: 1.5rem;
+        }
     }
 
     .banner-title{
         @include font-source-sans(5.6rem,6rem, $font1, $font-medium, $clr-base, uppercase);
         letter-spacing: 1rem;
+        @include mq-below($xs){
+            letter-spacing: 0.1rem;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            text-align: center;
+        }
     }
 
     &:before{
@@ -47,6 +60,10 @@
 
     .video-wrap {
         position: relative;
+        @include mq-below($xs){
+            height: 100%;
+            width: 100%;
+        }
         &:after {
             content: '';
             position: absolute;

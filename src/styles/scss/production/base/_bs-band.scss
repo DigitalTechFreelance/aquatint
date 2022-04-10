@@ -9,8 +9,15 @@
         @include font-source-sans(2.8rem,3.2rem, $font2, $font-smbold, $clr-base, initial);
         font-style: italic;
         margin-bottom: 4rem;
+        @include mq-below($xs){
+            margin-bottom: 3rem;
+        }
         &:last-child{
             margin-bottom: 0;
+        }
+        @include mq-below($xs){
+            font-size: 1.4rem;
+            line-height: 2rem;
         }
     }
 
@@ -27,6 +34,12 @@
         .text-wrap{
             max-width: 98rem;
             margin: 0 auto;
+            @include mq-below($xs){
+                padding: 0 1.5rem;
+            }
+        }
+        @include mq-below($xs){
+            padding: 3rem 0;
         }
 
     }

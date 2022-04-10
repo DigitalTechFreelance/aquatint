@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import logoImg from '../../assets/images/logo.png';
 import useScrollPosition from '../../hooks/useScrollPosition';
-import useWindowSize from '../../hooks/useWindowSize';  
+
 
 
 function Header() {
-    let size = useWindowSize();
+    
     let scrollPosition = useScrollPosition();
 
     const [menuOpen, setMenuOpen] = useState(false);

@@ -2,15 +2,31 @@
 .bs-footer{
     background-color: $clr-turnary;
     padding: 8rem 0;
+    @include mq-below($xs){
+        padding: 3rem 0 0 0;
+    }
 
     .footer-item-wrap{
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        @include mq-below($xs){
+            flex-direction: column;
+        }
     }
 
     .footer-item {
         padding: 0 2rem;
+        @include mq-below($xs){
+            width: 100%;
+            margin-bottom: 2rem;
+            padding: 0;
+        }
+        &:last-child{
+            @include mq-below($xs){
+                margin-bottom: 0;
+            }
+        }
         &:nth-child(1) {
             flex: 1;
         }
@@ -24,6 +40,11 @@
         .title {
             @include font-source-sans(2.4rem, 1.8, $font1, $font-medium, $clr-base, initial);
             margin-bottom: 2rem;
+            @include mq-below($xs){
+                font-size: 1.4rem;
+                line-height: 1.6rem;
+                margin-bottom: 1.5rem;
+            }
             span{
                 position: relative;
                 padding-bottom: 0.5rem;
@@ -42,6 +63,9 @@
         .address-list {
             display: flex;
             align-items: flex-start;
+            @include mq-below($xs){
+                flex-direction: column;
+            }
 
             .footer-list {
                 flex: 1;
@@ -58,6 +82,11 @@
         .footer-list-item {
             @include font-source-sans(2rem, normal, $font1, $font-regular, $clr-base, initial);
             padding: 1rem 0;
+            @include mq-below($xs){
+                font-size: 1.1rem;
+                line-height: 1.4rem;
+                padding: 0.7rem 0;
+            }
 
             a {
                 &:hover {
@@ -72,14 +101,25 @@
 
         .icon-text-wrap {
             margin-bottom: 2rem;
+            @include mq-below($xs){
+                margin-bottom: 0.5rem;
+            }
             .icon {
                 font-size: 3rem;
                 vertical-align: middle;
                 margin-right: 1.5rem;
+                @include mq-below($xs){
+                    font-size: 2rem;
+                    margin-right: 1rem;
+                }
             }
             .text {
                 @include font-source-sans(2.4rem, 2, $font2, $font-medium, $clr-base, initial);
                 vertical-align: middle;
+                @include mq-below($xs){
+                    font-size: 1.4rem;
+                    line-height: 1.6rem;
+                }
             }
         }
 
@@ -96,6 +136,12 @@
                 }
                 .icon {
                     font-size: 3.6rem;
+                    @include mq-below($xs){
+                        font-size: 2.5rem;
+                    }
+                }
+                a{
+                    display: inline-block;
                 }
             }
         }
