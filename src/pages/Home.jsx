@@ -25,7 +25,7 @@ function Home() {
 	}, [])
 	
 // const {description,desktopBannerImage, homeVideoUpload, mobileBannerImage, premiumPackages, recentWorkSection, seo, services, tabletBannerImage, testimonialsSection, title,withUsSection}= data!==null? data.data.attributes
-	console.log("data", data, error)
+	// console.log("data home", data, error)
 	return (
 		<>
 			
@@ -35,10 +35,10 @@ function Home() {
 						<HomeBanner data={data}/>
 						<About data={data}/>
 						{data.services.isActive && <Service data={data}/>}
-						<Packages data={data}/>
-						<RecentWork data={data}/>
-						<Infogarphy data={data}/>
-						<TestimonialSlider data={data}/>
+						{data.premiumPackages.isActive && <Packages data={data.premiumPackages}/>}
+						<RecentWork data={data.recentWorkSection}/>
+						{data.withUsSection.isActive && <Infogarphy data={data.withUsSection}/>}
+						<TestimonialSlider data={data.testimonialsSection}/>
 					</div>
 				</main>
 			) : null}

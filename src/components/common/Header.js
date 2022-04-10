@@ -70,13 +70,25 @@ function Header({data}) {
                         </li>
                     </ul>
                 </li>
-                <li className="menu-link">
-                    <a href="/paint-protection-film" className="menu-link">PPF</a>
+                <li className="menu-item">
+                    <a href="#" className="menu-link typ-sm">Interior Detailing</a>
                 </li>
-                <li className="menu-link">
+                <li className="menu-item">
+                    <a href="#" className="menu-link typ-sm">Exterior Detailing</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#" className="menu-link typ-sm cm-highlight highlight-primary">Ceramic Coating</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#" className="menu-link typ-sm cm-highlight highlight-secondary">PPF</a>
+                </li>
+                <li className="menu-item">
+                    <a href="#" className="menu-link typ-sm">Customisation</a>
+                </li>
+                <li className="menu-item">
                     <a href="/franchise-with-us" className="menu-link">Franchise</a>
                 </li>
-                <li className="menu-link">
+                <li className="menu-item">
                     <a href="/contact-us" className="menu-link">Contact</a>
                 </li> */}
             </ul>

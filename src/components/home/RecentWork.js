@@ -1,7 +1,7 @@
 import React from 'react';
 import WorkSlider from './WorkSlider';
 
-function RecentWork() {
+function RecentWork({data}) {
 
   return (
     <section>
@@ -12,7 +12,7 @@ function RecentWork() {
                 </div>
             </div>
             <div className="sec-cont">
-                <WorkSlider/>
+                <WorkSlider data={data}/>
             </div>
         </div>
     </section>

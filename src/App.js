@@ -28,7 +28,7 @@ function App() {
 			// console.log("global error", error)
 		})
 	}, [])
-console.log("data global", data)
+// console.log("data global", data)
   return (
     <Router>
       {data!==null?(

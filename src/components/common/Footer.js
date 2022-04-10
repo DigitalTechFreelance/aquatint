@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 
 function Footer({data}) {
-  console.log("data footer", data)
+  // console.log("data footer", data)
   const {footerMenus, socialLinks, contacts, email, phoneNo}= data
   return (
     <div className="bs-footer">

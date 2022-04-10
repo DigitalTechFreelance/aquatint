@@ -1,6 +1,7 @@
 //lyt-content
 .lyt-content{
     padding-top: 16rem;
+    overflow-x: hidden;
     &.typ-home{
         padding-top: 0;
     }

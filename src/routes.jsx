@@ -43,6 +43,11 @@ const routes = [
     exact: true,
   },
   {
+    path: '/services/:slug',
+    component: <WashingServices />,
+    exact: true,
+  },
+  {
     path: '/washing-services',
     component: <WashingServices />,
     exact: true,

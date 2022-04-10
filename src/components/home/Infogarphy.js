@@ -1,7 +1,10 @@
 import React from 'react';
-import franchiseImg from '../../assets/images/franchise.webp';
+// import franchiseImg from '../../assets/images/franchise.webp';
+import ReactMarkdown from 'react-markdown';
 
-function Infogarphy() {
+function Infogarphy({data}) {
+  // console.log("Infogarphy data", data)
+  const {title, description, buttonAltText, buttonLink, buttonText, image} = data
   return (
     <section>
     <div className="bs-section typ-infography cm-paddtop-30 bs-pattern pattern-orange patter-pos-1">
@@ -9,15 +12,16 @@ function Infogarphy() {
         <div className="sec-cont">
           <div className='bs-infography'>
             <div className="info-wrap">
-                <h3 className="title">Franchise With Us</h3>
-                <div className="desc">
+                <h3 className="title">{title}</h3>
+                <ReactMarkdown className="desc rich-text" children={description} />
+                {/* <div className="desc">
                   <p>Aquatint is a premium detailing studio for cars and bikes. We use state of art technology &amp; choicest products for the finest detailing experience. We deploy International standards for detailing which allows us to deliver a top notch experience to our clients</p>
                   <p>With us, you can expect up to 60% return on investment in the first year itself.</p>
-                </div>
-                <a href="/franchise-with-us" className="btn btn-default"><span>Learn More</span></a>
+                </div> */}
+                <a href={buttonLink} className="btn btn-default"><span>{buttonText}</span></a>
             </div>
             <div className="img-wrap">
-              <img src={franchiseImg} alt=" image will come here" />
+              <img src={`http://localhost:1337${image.data.attributes.url}`} alt={image.data.attributes.alternativeText} title={image.data.attributes.name}  />
             </div>
           </div>
         </div>

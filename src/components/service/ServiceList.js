@@ -16,7 +16,7 @@ function ServiceList() {
                     </div>
                     <div className="info-wrap">
                         <h3 className="title">wash <span className="cm-line-break">services</span></h3>
-                        <ul className="feature-list">
+                        <ul className="feature-list">insta gloss pro wash ceramic wash
                             <li className="feature-item">insta gloss</li>
                             <li className="feature-item">pro wash</li>
                             <li className="feature-item">ceramic wash</li>
