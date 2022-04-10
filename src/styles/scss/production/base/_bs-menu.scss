@@ -25,8 +25,8 @@
         @include font-source-sans(3.6rem,4rem, $font1, $font-smbold, $clr-base, capitalize);
         padding: 0.6rem 8rem;
         @include mq-below($xs){
-            font-size: 2rem;
-            line-height: 2.4rem;
+            font-size: 1.6rem;
+            line-height: 2rem;
             padding: 0.6rem 3rem;
         }
         &.typ-sm{
@@ -34,8 +34,8 @@
             line-height: 2.8rem;
             font-weight: $font-medium;
             @include mq-below($xs){
-                font-size: 1.6rem;
-                line-height: 2rem;
+                font-size: 1.4rem;
+                line-height: 1.8rem;
             }
         }
 
@@ -117,6 +117,12 @@
                 }
             }
             
+        }
+    }
+
+    .menu-wrap{
+        @include mq-below($xs){
+            width: 100%;
         }
     }
 
