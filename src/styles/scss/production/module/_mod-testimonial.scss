@@ -37,7 +37,7 @@
         p{
             @include font-source-sans(2.4rem,3.2rem, $font2, $font-regular, $clr-base, initial);
             @include mq-below($xs){
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 line-height: 2rem;
             }
         }
