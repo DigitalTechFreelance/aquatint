@@ -3,6 +3,10 @@
   align-items: flex-start;
   column-gap: 15%;
 
+  @include mq-below($xs) {
+    flex-direction: column;
+  }
+
   .logo-item {
     @include mq-below($xs) {
       margin-bottom: 2rem;
@@ -13,7 +17,7 @@
         margin-bottom: 0;
       }
     }
-    
+
     .m-logo {
       @include mq-below($xs) {
         width: 60%;
