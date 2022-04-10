@@ -29,7 +29,7 @@
 
         
 
-        &:before{
+        &:after{
             content:'';
             left: 0;
             top: 0;
@@ -42,7 +42,7 @@
         }
 
         &:hover{
-            &:before{
+            &:after{
                 width: 100%;
             }
         }
@@ -67,7 +67,7 @@
         }
         &:nth-child(even){
             .menu-link{
-                &:before{
+                &:after{
                     background: rgba(64,196,226,1);
                     background: -moz-linear-gradient(left, rgba(64,196,226,1) 0%, rgba(64,198,231,0.5) 54%, rgba(64,198,231,0) 100%);
                     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(64,196,226,1)), color-stop(54%, rgba(64,198,231,0.5)), color-stop(100%, rgba(64,198,231,0)));
@@ -83,7 +83,7 @@
 
         &:nth-child(odd){
             .menu-link{
-                &:before{
+                &:after{
                     background: rgba(243,145,32,1);
                     background: -moz-linear-gradient(left, rgba(243,145,32,1) 0%, rgba(243,145,32,0.5) 54%, rgba(243,145,32,0) 100%);
                     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243,145,32,1)), color-stop(54%, rgba(243,145,32,0.5)), color-stop(100%, rgba(243,145,32,0)));

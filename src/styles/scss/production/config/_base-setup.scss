@@ -6,7 +6,7 @@
 
 @include mq-between($lg, $xl){
     html {
-        font-size: 8.5px;
+        font-size: 7.8px;
     }
 }
 
@@ -114,6 +114,7 @@ button {
         bottom: 0;
         right: 60%;
         position: absolute;
+        z-index: -1;
     }
 
     &.highlight-primary{
