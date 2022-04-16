@@ -12,6 +12,9 @@
     align-items: center;
     width: 40rem;
     overflow-y: auto;
+    @include mq-below($xs){
+        width: 100%;
+    }
 
     &.active{
         transform: translateX(0);
@@ -21,10 +24,19 @@
         display: block;
         @include font-source-sans(3.6rem,4rem, $font1, $font-smbold, $clr-base, capitalize);
         padding: 0.6rem 8rem;
+        @include mq-below($xs){
+            font-size: 1.6rem;
+            line-height: 2rem;
+            padding: 0.6rem 3rem;
+        }
         &.typ-sm{
             font-size: 2.4rem;
             line-height: 2.8rem;
             font-weight: $font-medium;
+            @include mq-below($xs){
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+            }
         }
 
         
@@ -57,11 +69,21 @@
         padding: 1rem;
         width: 3rem;
         height: 3rem;
+        @include mq-below($xs){
+            top: 0;
+            right: 0.5rem;
+            font-size: 2rem;
+            width: auto;
+            height: auto;
+        }
     }
 
     .menu-item{
         margin-bottom: 3rem;
         display: block;
+        @include mq-below($xs){
+            margin-bottom: 1.5rem;
+        }
         &:last-child{
             margin-bottom: 0;
         }
@@ -95,6 +117,12 @@
                 }
             }
             
+        }
+    }
+
+    .menu-wrap{
+        @include mq-below($xs){
+            width: 100%;
         }
     }
 

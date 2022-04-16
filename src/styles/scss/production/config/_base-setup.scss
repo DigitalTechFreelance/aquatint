@@ -28,6 +28,10 @@ body {
     width: 100%;
     overflow-x: hidden !important;
     @include scrollbars(6px, $clr-primary-shade, $clr-root);
+
+    @include mq-below($xs) {
+        @include font-source-sans(1.2rem, 1.6rem);
+    }
 }
 
 h1,
@@ -86,10 +90,18 @@ button {
     @include mq-above ($lg) {
         padding: 0 6rem;
     }
+    @include mq-below($xs){
+        max-width: initial;
+        width: 100%;
+        padding: 0 1.5rem;
+    }
 }
 
 .cm-paddtop-30{
     padding-top: 30rem !important;
+    @include mq-below($xs){
+        padding-top: 3rem !important;
+    }
 }
 
 .cm-no-pad-top{
@@ -143,6 +155,12 @@ button {
     }
 }
 
+.cm-visible-xs{
+    display: none !important;
+    @include mq-below($xs){
+        display: block !important;
+    }
+}
 
 
   

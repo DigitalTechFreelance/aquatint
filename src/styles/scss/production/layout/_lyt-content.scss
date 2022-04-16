@@ -2,6 +2,11 @@
 .lyt-content{
     padding-top: 16rem;
     overflow-x: hidden;
+
+    @include mq-below($xs) {
+        padding-top: 8rem;
+    }
+
     &.typ-home{
         padding-top: 0;
     }

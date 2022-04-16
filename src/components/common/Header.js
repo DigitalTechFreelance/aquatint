@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import useScrollPosition from '../../hooks/useScrollPosition';
-import useWindowSize from '../../hooks/useWindowSize';  
+
 
 
 function Header({data}) {
-    let size = useWindowSize();
+    // let size = useWindowSize();
     let scrollPosition = useScrollPosition();
 
     const [menuOpen, setMenuOpen] = useState(false);

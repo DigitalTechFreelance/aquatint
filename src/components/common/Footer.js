@@ -75,7 +75,7 @@ function Footer({data}) {
                       return (
                         item.isActive && (
                           <div className="social-icon" key={index}>
-                            <a href={item.link}>
+                            <a href={item.link} target="_blank">
                               <span className={`icon icon-${item.icon}`}></span>
                             </a>
                           </div>

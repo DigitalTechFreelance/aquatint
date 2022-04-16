@@ -1,6 +1,10 @@
 .bs-tabs {
   .tab-nav {
     margin-bottom: 17rem;
+
+    @include mq-below($xs) {
+      margin-bottom: 2rem;
+    }
   }
 
   .MuiTabs-flexContainer {
@@ -11,6 +15,11 @@
   .btn-tab {
     @include font-source-sans(3.2rem, normal, $font1, $font-smbold, $clr-hover, initial);
     padding: 1.2rem 4.5rem;
+
+    @include mq-below($xs) {
+      @include font-source-sans(0.8rem, normal);
+      padding: 0.6rem 0.4rem;
+    }
   }
 
   .btn-tab{
@@ -26,5 +35,13 @@
 
   .MuiTypography-root {
     font-size: unset;
+  }
+
+  .tab-content {
+    .MuiBox-root {
+      @include mq-below($xs) {
+        padding: 0;
+      }
+    }
   }
 }

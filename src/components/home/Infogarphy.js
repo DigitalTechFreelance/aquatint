@@ -10,7 +10,7 @@ function Infogarphy({data}) {
     <div className="bs-section typ-infography cm-paddtop-30 bs-pattern pattern-orange patter-pos-1">
       <div className="cm-container">
         <div className="sec-cont">
-          <div className='bs-infography'>
+          <div className='bs-infography typ-franchise'>
             <div className="info-wrap">
                 <h3 className="title">{title}</h3>
                 <ReactMarkdown className="desc rich-text" children={description} />

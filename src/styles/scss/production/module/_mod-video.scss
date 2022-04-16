@@ -11,6 +11,10 @@
 
       .icon {
         font-size: 6rem;
+
+        @include mq-below($xs) {
+          font-size: 2rem;
+        }
       }
     }
   }
@@ -35,6 +39,12 @@
       width: 65%;
       margin: 0 auto 14rem auto;
       min-height: 72rem;
+
+      @include mq-below($xs) {
+        width: 95%;
+        margin: 0 auto 2rem auto;
+        min-height: auto;
+      }
     }
 
     .action-wrap {

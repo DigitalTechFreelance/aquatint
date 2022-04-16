@@ -7,9 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
 
 //assets
 import tileImg from '../../assets/images/offering-wash.webp';
@@ -24,7 +25,14 @@ function WorkSlider({data}) {
         spaceBetween={20}
         loop={true}
         navigation={true} 
-        modules={[Navigation]} 
+        pagination={true}
+        modules={[Navigation, Pagination]} 
+        breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 15
+            }
+        }}
         className="mySwiper bs-swiper typ-tile"
     >
          {data.map((item, index)=>(

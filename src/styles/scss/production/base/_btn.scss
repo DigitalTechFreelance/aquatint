@@ -6,11 +6,19 @@
         @include font-source-sans(2.4rem,3rem, $font1, $font-medium, $clr-primary, uppercase);
         position: relative;
         mix-blend-mode: difference;
+        @include mq-below($xs){
+            font-size:1.4rem;
+            line-height: 2rem;
+            display: flex;
+        }
     }
     &.btn-default{
         padding: 2.5rem 6rem;
         border: 2px solid $clr-primary;    
         border-radius: 5rem;
+        @include mq-below($xs){
+            padding: 1rem 3rem;
+        }
         &:before{
             content: '';
             background-color: $clr-primary;

@@ -5,12 +5,27 @@
     justify-content: space-between;
     max-width: 160rem;
     margin: 0 auto;
+
+    @include mq-below($xs) {
+        flex-direction: column;
+    }
     
 
     &:not(.typ-bg){
         max-width: 140rem;
         margin: 0 auto;
         padding: 4.8rem 5.5rem;
+
+        @include mq-below($xs) {
+            max-width: 100%;
+            padding: 0;
+        }
+    }
+
+    .info-wrap {
+        @include mq-below($xs) {
+            margin-bottom: 1rem;
+        }
     }
 
 
@@ -18,12 +33,23 @@
         @include font-source-sans(3.6rem,3.8rem, $font1, $font-bold, $clr-base, uppercase);
         font-style: italic;
         letter-spacing: 0.3rem;
+
+        @include mq-below($xs) {
+            @include font-source-sans(1.8rem, 1.9rem);
+            letter-spacing: 0.1rem;
+            margin-bottom: 1rem;
+        }
     }
 
     .sub-title{
         @include font-source-sans(2.4rem,2.6rem, $font1, $font-medium, $clr-base, uppercase);
         letter-spacing: 0.25rem;
         opacity: 0.8;
+
+        @include mq-below($xs) {
+            @include font-source-sans(1.2rem, 1.5rem); 
+            letter-spacing: 0.15rem;
+        }
     }
 
     &.typ-bg{
@@ -34,6 +60,13 @@
             width: 115rem;
             position: relative;
             padding: 4.8rem 0;
+
+            @include mq-below($xs) {
+                flex-direction: column;
+                width: 100%;
+                padding: 2.4rem 0;
+            }
+
             &:before{
                 content: '';
                 position: absolute;

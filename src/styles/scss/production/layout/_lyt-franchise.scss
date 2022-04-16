@@ -1,6 +1,10 @@
 .lyt-franchise {
   .wrapper-content {
     width: 65%;
+
+    @include mq-below($xs) {
+      width: 100%;
+    }
   }
 
   .sec-desc {

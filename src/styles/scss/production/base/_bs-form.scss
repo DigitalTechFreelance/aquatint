@@ -9,13 +9,27 @@
         flex-flow: row wrap;
         box-sizing: border-box;
 
+        @include mq-below($xs) {
+            flex-direction: column;
+            margin: 0 -3rem 2rem -3rem;
+        }
+
         .form-group{
             width: 33.33%;
             padding: 0 3rem;
             margin-bottom: 4rem;
 
+            @include mq-below($xs) {
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+
             &.typ-full{
                 width: 66.66%;
+
+                @include mq-below($xs) {
+                    width: 100%;
+                }
             }
         }
     }
@@ -38,8 +52,17 @@
             height: 4rem;
         }
         @include font-source-sans(2.4rem,3.2rem, $font1, $font-regular, $clr-base, initial);
+
+        @include mq-below($xs) {
+            @include font-source-sans(1.2rem, 1.6rem);
+        }
+
         @include placeholder{
             @include font-source-sans(2.4rem,3.2rem, $font1, $font-light, $clr-base, uppercase);
+
+            @include mq-below($xs) {
+                @include font-source-sans(1.2rem, 1.6rem);
+            }
         }
 
         &.typ-readonly{

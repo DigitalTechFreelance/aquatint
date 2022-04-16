@@ -7,9 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import required modules
-import { Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
 
 //assets
 
@@ -27,7 +28,8 @@ function TestimonialSlider({data}) {
               slidesPerView={1}
               spaceBetween={30}
               navigation={true} 
-              modules={[Navigation]} 
+              pagination={true}
+              modules={[Navigation, Pagination]} 
               className="mySwiper bs-swiper typ-testimonials bs-testimonial"
             >
               {data.map((item, index)=>(

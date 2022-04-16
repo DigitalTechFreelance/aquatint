@@ -1,11 +1,17 @@
 //bs-swiper
 .bs-swiper{
+    @include mq-below($xs){
+        padding: 0 1.5rem 3.8rem 1.5rem !important;
+    }
 
     .swiper-button-prev,.swiper-button-next{
         &:after{
             font-family: 'icomoon' !important;
             font-size: 5rem;
             color: $clr-primary;
+        }
+        @include mq-below($xs){
+            display: none;
         }
     }
 
@@ -20,10 +26,36 @@
             content: "\e90e";
         }
     }
+
+    .swiper-pagination{
+        display: none;
+        @include mq-below($xs){
+            display: block;
+        }
+    }
+
+    .swiper-pagination-bullet{
+        width: 0.6rem;
+        height: 0.6rem;
+        @include background-opacity($clr-primary, 0.8);
+        clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+        transition: all 0.3s ease;
+        border-radius: 0;
+
+        &.swiper-pagination-bullet-active{
+            width: 3rem;
+            @include background-opacity($clr-primary, 1);
+        }
+    }
+
+    
     
 
     &.typ-tile{
         padding: 0 6rem !important;
+        @include mq-below($xs){
+            padding: 0 1.5rem 3.8rem 1.5rem !important;
+        }
 
         &:before,&:after{
             content:'';
@@ -33,6 +65,9 @@
             width: 6rem;
             z-index: 2;
             background-color: $clr-root;
+            @include mq-below($xs){
+                display: none;
+            }
         }
     
         &::before{

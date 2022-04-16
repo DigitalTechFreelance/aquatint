@@ -3,14 +3,34 @@
     max-width: 117rem;
     margin: 0 auto 10rem;
 
+    @include mq-below($xs) {
+        margin: 0;
+    }
+
     .team-wrap{
         display: flex;
         align-items: flex-start;
         margin: 0 -4.3rem;
         
+        @include mq-below($xs) {
+            flex-direction: column;
+            margin: 0;
+        }
+        
         .team-item{
             width: 33.33%;
             padding: 0 4.3rem;
+
+            @include mq-below($xs) {
+                width: 100%;
+                padding: 2rem 0;
+            }
+
+            &:last-child {
+                @include mq-below($xs) {
+                    padding-bottom: 0;
+                }
+            }
         }
     }
 
