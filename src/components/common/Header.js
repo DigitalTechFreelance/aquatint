@@ -40,22 +40,22 @@ function Header() {
                     <a href="/services" className="menu-link">All Services</a>
                 </li>
                 <li className="menu-item">
-                    <a href="#" className="menu-link typ-sm">Wash</a>
+                    <a href="/washing-services" className="menu-link typ-sm">Wash</a>
                 </li>
                 <li className="menu-item">
-                    <a href="#" className="menu-link typ-sm">Interior Detailing</a>
+                    <a href="/detailing-services" className="menu-link typ-sm">Interior Detailing</a>
                 </li>
                 <li className="menu-item">
-                    <a href="#" className="menu-link typ-sm">Exterior Detailing</a>
+                    <a href="detailing-services" className="menu-link typ-sm">Exterior Detailing</a>
                 </li>
                 <li className="menu-item">
-                    <a href="#" className="menu-link typ-sm cm-highlight highlight-primary">Ceramic Coating</a>
+                    <a href="/ceramic-coating" className="menu-link typ-sm cm-highlight highlight-primary">Ceramic Coating</a>
                 </li>
                 <li className="menu-item">
-                    <a href="#" className="menu-link typ-sm cm-highlight highlight-secondary">PPF</a>
+                    <a href="/paint-protection-film" className="menu-link typ-sm cm-highlight highlight-secondary">PPF</a>
                 </li>
                 <li className="menu-item">
-                    <a href="#" className="menu-link typ-sm">Customisation</a>
+                    <a href="/customisation-service" className="menu-link typ-sm">Customisation</a>
                 </li>
                 <li className="menu-item">
                     <a href="/franchise-with-us" className="menu-link">Franchise</a>
