@@ -16,7 +16,7 @@ function Home() {
 			<Header/>
 			<main>
 				<div className="lyt-content typ-home">
-					<HomeBanner/>
+					<HomeBanner bannerTitle = {'welcome to aquatint auto detailing'}/>
 					<section>
 						<div className="bs-section cm-no-pad-top cm-no-pad-bottom">
 							<div className="sec-cont">

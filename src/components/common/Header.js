@@ -34,6 +34,9 @@ function Header() {
             <button type="button" className="icon icon-close menu-close" onClick={handleMenuClose}></button>
             <ul className="menu-wrap">
                 <li className="menu-item">
+                    <a href="/home" className="menu-link">Home</a>
+                </li>
+                <li className="menu-item">
                     <a href="/about-us" className="menu-link">About Us</a>
                 </li>
                 <li className="menu-item">

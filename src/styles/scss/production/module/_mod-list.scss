@@ -70,6 +70,7 @@
 
         @include mq-below($xs) {
             flex-direction: column;
+            width: 100%;
         }
 
         .list-item{
@@ -158,6 +159,12 @@
                 font-style: italic;
                 letter-spacing: 0.03rem;
                 margin-bottom: 6rem;
+
+                @include mq-below($xs){
+                    @include font-source-sans(1.8rem,normal);
+                    margin-bottom: 1rem;
+                    letter-spacing: normal;
+                }
             }
 
         }
@@ -165,8 +172,18 @@
         .mod-list{
             &.typ-disc{
                 padding-left: 2.4rem;
+
+                @include mq-below($xs){
+                    padding-left: 1.5rem;
+                }
+
                 .item{
                     margin-bottom: 2rem;
+
+                    @include mq-below($xs){
+                        margin-bottom: 1rem;
+                    }
+
                     &:last-child{
                         margin-bottom: 0
                     }
@@ -184,11 +201,21 @@
             >p{
                 @include font-source-sans(2.4rem,3.2rem, $font2, $font-regular, $clr-base, initial);
                 margin-bottom: 4rem;
+                @include mq-below($xs){
+                    @include font-source-sans(1.2rem, 1.5);
+                    margin-bottom: 2rem;
+                }
+                
                 &.title{
                     @include font-source-sans(3.2rem,4rem, $font1, $font-smbold, $clr-base, uppercase);
                     font-style: italic;
                     letter-spacing: 0.03rem;
                     margin-bottom: 3rem;
+
+                    @include mq-below($xs){
+                        @include font-source-sans(1.2rem,normal);
+                        margin-bottom: 1.5rem;
+                    }
     
                 }
             }
@@ -204,9 +231,19 @@
         flex-flow: row wrap;
         align-items: flex-start;
 
+        @include mq-below($xs){
+            width: 100%;
+            flex-direction: column;
+        }
+        
         >.item{
             width: 50%;
             margin-bottom: 6rem;
+
+            @include mq-below($xs){
+                width: 100%;
+                margin-bottom: 2rem;
+            }
         }
 
     }

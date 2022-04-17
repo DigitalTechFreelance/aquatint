@@ -8,6 +8,7 @@ function Footer() {
           <div className="footer-item">
             <h4 className="title"><span>Links</span></h4>
             <ul className="footer-list">
+              <li className="footer-list-item"><a href="/home">Home</a></li>
               <li className="footer-list-item"><a href="/about-us">About us</a></li>
               <li className="footer-list-item"><a href="/services">Services</a></li>
               <li className="footer-list-item"><a href="/ceramic-coating">Ceramic Coating</a></li>

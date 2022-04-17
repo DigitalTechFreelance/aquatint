@@ -6,10 +6,10 @@ import bannerImgTablet from '../../assets/images/home-banner.webp';
 import bannerImgMobile from '../../assets/images/home-banner.webp';
 import useSetBgImage from '../../hooks/useSetBgImage';
 // import Videoplayer from '../components/common/Videoplayer';
-import videosrc from '../../assets/video/dummy-video.mp4';
+import videosrc from '../../assets/video/copy-of-final.mp4';
 import videoSrcMobile from '../../assets/video/comp2.mp4';
 
-function HomeBanner() {
+function HomeBanner(props: any) {
 
   let size = useWindowSize();
 
@@ -46,7 +46,7 @@ const handleVideoStatus = (videoPlayStatus) => {
           > </video>
         </div>
         <div className="banner-info">
-            <h2 className="banner-title">welcome to aquatint auto detailing</h2>
+            <h2 className="banner-title">{props.bannerTitle}</h2>
         </div>
     </div>
   )

@@ -41,9 +41,9 @@
             @include font-source-sans(2.4rem, 1.8, $font1, $font-medium, $clr-base, initial);
             margin-bottom: 2rem;
             @include mq-below($xs){
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 line-height: 1.6rem;
-                margin-bottom: 1.5rem;
+                margin-bottom: 1.2rem;
             }
             span{
                 position: relative;
@@ -83,8 +83,8 @@
             @include font-source-sans(2rem, normal, $font1, $font-regular, $clr-base, initial);
             padding: 1rem 0;
             @include mq-below($xs){
-                font-size: 1.1rem;
-                line-height: 1.4rem;
+                font-size: 1rem;
+                line-height: 1.2rem;
                 padding: 0.7rem 0;
             }
 
@@ -109,7 +109,7 @@
                 vertical-align: middle;
                 margin-right: 1.5rem;
                 @include mq-below($xs){
-                    font-size: 2rem;
+                    font-size: 1.4rem;
                     margin-right: 1rem;
                 }
             }
@@ -117,7 +117,7 @@
                 @include font-source-sans(2.4rem, 2, $font2, $font-medium, $clr-base, initial);
                 vertical-align: middle;
                 @include mq-below($xs){
-                    font-size: 1.4rem;
+                    font-size: 1rem;
                     line-height: 1.6rem;
                 }
             }
@@ -137,7 +137,7 @@
                 .icon {
                     font-size: 3.6rem;
                     @include mq-below($xs){
-                        font-size: 2.5rem;
+                        font-size: 1.8rem;
                     }
                 }
                 a{

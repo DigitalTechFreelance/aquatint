@@ -7,9 +7,8 @@
         position: relative;
         mix-blend-mode: difference;
         @include mq-below($xs){
-            font-size:1.4rem;
-            line-height: 2rem;
-            display: flex;
+            font-size:1rem;
+            line-height: 1.5rem;
         }
     }
     &.btn-default{
@@ -17,7 +16,7 @@
         border: 2px solid $clr-primary;    
         border-radius: 5rem;
         @include mq-below($xs){
-            padding: 1rem 3rem;
+            padding: 0.9rem 2.5rem;
         }
         &:before{
             content: '';
