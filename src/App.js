@@ -18,7 +18,7 @@ function App() {
 	const [error, setError] = React.useState(null)
 
   React.useEffect(()=>{
-		axios.get(`api/global?populate=*`)
+		axios.get(`/api/global?populate=*`)
 		.then((res) => {
 			// console.log("global result",res)
 			setData(res.data.data.attributes)
@@ -28,12 +28,12 @@ function App() {
 			// console.log("global error", error)
 		})
 	}, [])
-// console.log("data global", data)
+  
   return (
     <Router>
-      {data!==null?(
-        <>
+        {data!==null?(
           <Header data={data}/>
+        ): null}
           <React.Suspense
             fallback={
               <div>
@@ -52,11 +52,10 @@ function App() {
               ))}
             </Routes>
           </React.Suspense>
+        {data!==null?(
           <Footer data={data}/>
-          <Flybutton/>
-        </>
-      ): null}
-     
+        ): null}
+        <Flybutton/>
     </Router>
   );
 }

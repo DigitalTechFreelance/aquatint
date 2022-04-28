@@ -14,7 +14,7 @@ function Header({data}) {
     const handleMenuClose = () => {
         setMenuOpen(false);
     }
-    const {logo, headerMenus} = data
+    const {logo, headerMenus} = data !== null && data
   return (
       <>
         <header className={`bs-header ${(scrollPosition > 10 ) ? "header-blur header-scroll" : ""}`}>
@@ -34,63 +34,20 @@ function Header({data}) {
             <ul className="menu-wrap">
                 {headerMenus.map((item, index)=>{
                     return(
-                        <li className="menu-link" key={index}>
-                            <a href={item.link} className="menu-link">{item.name}</a>
-                        </li>
+                        <>
+                            <li className="menu-item" key={index}>
+                                <a href={item.link} className={` menu-link`}>{item.name}</a>
+                            </li>
+                            {item.submenus.map((ele, i)=> {
+                                return (
+                                <li className="menu-item" key={i}>
+                                    <a href={ele.link} className={`menu-link typ-sm cm-highlight ${ele.name === "Ceramic Coating"? 'highlight-primary': ele.name === "PPF"?' highlight-secondary': ''}`}>{ele.name}</a>
+                                </li>
+                                )
+                            })}
+                        </>
                     )
                 })}
-                {/* <li className="menu-link">
-                    <a href="/about-us" className="menu-link">About Us</a>
-                </li>
-                <li className="menu-link sub-menu">
-                    <a href="/services" className="menu-link">Services</a>
-                     <ul className="sub-menu-wrap">
-                        <li className="menu-item">
-                            <a href="#" className="menu-link">About Us</a>
-                        </li>
-                        <li className="menu-item">
-                            <a href="#" className="menu-link">About Us</a>
-                        </li>
-                        <li className="menu-item">
-                            <a href="#" className="menu-link">About Us</a>
-                        </li>
-                    </ul>
-                </li>
-                <li className="menu-link sub-menu">
-                    <a href="/ceramic-coating" className="menu-link">Ceramic Coating</a>
-                     <ul className="sub-menu-wrap">
-                        <li className="menu-item">
-                            <a href="#" className="menu-link">About Us</a>
-                        </li>
-                        <li className="menu-item">
-                            <a href="#" className="menu-link">About Us</a>
-                        </li>
-                        <li className="menu-item">
-                            <a href="#" className="menu-link">About Us</a>
-                        </li>
-                    </ul>
-                </li>
-                <li className="menu-item">
-                    <a href="#" className="menu-link typ-sm">Interior Detailing</a>
-                </li>
-                <li className="menu-item">
-                    <a href="#" className="menu-link typ-sm">Exterior Detailing</a>
-                </li>
-                <li className="menu-item">
-                    <a href="#" className="menu-link typ-sm cm-highlight highlight-primary">Ceramic Coating</a>
-                </li>
-                <li className="menu-item">
-                    <a href="#" className="menu-link typ-sm cm-highlight highlight-secondary">PPF</a>
-                </li>
-                <li className="menu-item">
-                    <a href="#" className="menu-link typ-sm">Customisation</a>
-                </li>
-                <li className="menu-item">
-                    <a href="/franchise-with-us" className="menu-link">Franchise</a>
-                </li>
-                <li className="menu-item">
-                    <a href="/contact-us" className="menu-link">Contact</a>
-                </li> */}
             </ul>
         </div>
     </>

@@ -7,7 +7,7 @@ import premiumPackageImg from '../../assets/images/premium-package.webp';
 
 function Packages({data}) {
 
-  const {title1, title2, title3, desktopImage, tabletImage, mobileImage, packages, buttonText, buttonUrl, buttonUrlAltText} = data
+  const {title1, title2, title3, image, packages, buttonText, buttonUrl, buttonUrlAltText} = data
 
   return (
     <section>
@@ -28,7 +28,7 @@ function Packages({data}) {
                         <a href={buttonUrl} className="btn btn-default"><span>{buttonText}</span></a>
                     </div>
                     <div className="img-wrap">
-                        <img src={`http://localhost:1337${desktopImage.data.attributes.url}`} alt={desktopImage.data.attributes.alternativeText} title={desktopImage.data.attributes.name} />
+                        <img src={`http://localhost:1337${image.data.attributes.url}`} alt={image.data.attributes.alternativeText} title={image.data.attributes.name} />
                     </div>
                 </div>
             </div>

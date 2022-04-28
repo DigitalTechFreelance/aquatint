@@ -4,6 +4,10 @@
       .title {
         @include font-source-sans(3.6rem, normal);
         width: 20%;
+
+        @include mq-below($xs){
+          @include font-source-sans(1.6rem);
+        }
       }
     }
   }

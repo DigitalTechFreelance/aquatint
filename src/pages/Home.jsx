@@ -13,9 +13,8 @@ function Home() {
 	const [error, setError] = React.useState(null)
 
 	React.useEffect(()=>{
-		axios.get(`api/home?populate=*`)
+		axios.get(`/api/home?populate=*`)
 		.then((res) => {
-			// console.log("result",res)
 			setData(res.data.data.attributes)
 		})
 		.catch((error) => {
@@ -24,26 +23,20 @@ function Home() {
 		})
 	}, [])
 	
-// const {description,desktopBannerImage, homeVideoUpload, mobileBannerImage, premiumPackages, recentWorkSection, seo, services, tabletBannerImage, testimonialsSection, title,withUsSection}= data!==null? data.data.attributes
-	// console.log("data home", data, error)
 	return (
-		<>
-			
-			{data!==null? (
-				<main>
-					<div className="lyt-content typ-home">
-						<HomeBanner data={data}/>
-						<About data={data}/>
-						{data.services.isActive && <Service data={data}/>}
-						{data.premiumPackages.isActive && <Packages data={data.premiumPackages}/>}
-						<RecentWork data={data.recentWorkSection}/>
-						{data.withUsSection.isActive && <Infogarphy data={data.withUsSection}/>}
-						<TestimonialSlider data={data.testimonialsSection}/>
-					</div>
-				</main>
-			) : null}
-			
-		</>
+		data!==null? (
+			<main>
+				<div className="lyt-content typ-home">
+					<HomeBanner data={data}/>
+					<About data={data}/>
+					{data.services.isActive && <Service data={data.services.services.data}/>}
+					{data.premiumPackages.isActive && <Packages data={data.premiumPackages}/>}
+					<RecentWork data={data.recentWorkSection}/>
+					{data.withUsSection.isActive && <Infogarphy data={data.withUsSection}/>}
+					<TestimonialSlider data={data.testimonialsSection}/>
+				</div>
+			</main>
+		) : null
 	);
 }
 

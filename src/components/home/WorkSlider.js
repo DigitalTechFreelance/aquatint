@@ -1,19 +1,14 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import useSetBgImage from '../../hooks/useSetBgImage';
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 // import required modules
 import { Navigation, Pagination } from "swiper";
 
-//assets
-import tileImg from '../../assets/images/offering-wash.webp';
 
 function WorkSlider({data}) {
 
@@ -28,6 +23,10 @@ function WorkSlider({data}) {
         pagination={true}
         modules={[Navigation, Pagination]} 
         breakpoints={{
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
             320: {
               slidesPerView: 1,
               spaceBetween: 15

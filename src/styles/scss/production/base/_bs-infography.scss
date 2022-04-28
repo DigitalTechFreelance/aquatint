@@ -31,7 +31,7 @@
             display: block;
             @include mq-below($xs){
                 font-size: 1.6rem;
-                line-height: 1.8rem;
+                line-height: 2rem;
             }
         }
         .text-lg{
@@ -50,7 +50,7 @@
             display: block;
             @include mq-below($xs){
                 font-size: 2rem;
-                line-height: 2.4rem;
+                line-height: 3rem;
             }
         }
         .text-xl{
@@ -59,7 +59,7 @@
             display: block;
             @include mq-below($xs){
                 font-size: 3rem;
-                line-height: 3.2rem;
+                line-height: 4.5rem;
             }
         }
     }
@@ -207,12 +207,24 @@
         justify-content: space-between;
         position: relative;
 
+        @include mq-below($xs){
+            flex-direction: column;
+        }
+        
         .img-wrap{
             width: 115rem;
             position: absolute;
             right: -35%;
             top: -25rem;
             transform: scale(2);
+
+            @include mq-below($xs){
+                width: 100%;
+                position: unset;
+                right: unset;
+                top: unset;
+                transform: scale(1.2);
+            }
         }
 
         &.typ-vertical-center{
@@ -221,6 +233,13 @@
                 right: -15%;
                 top: 50%;
                 transform: translateY(-50%) scale(1.5);
+
+                @include mq-below($xs){
+                    right: unset;
+                    top: unset;
+                    transform: scale(1.2);
+                }
+                
             }
 
         }
@@ -249,12 +268,20 @@
         .info-wrap{
             max-width: initial;
             width: 78rem;
+
+            @include mq-below($xs) {
+                width: 100%;
+            }
         }
 
         .mod-list{
             &.typ-bold{
                 >.item{
                     margin-bottom: 8rem;
+
+                    @include mq-below($xs) {
+                        margin-bottom: 2rem;
+                    }
                 }
             }
         } 
@@ -317,6 +344,12 @@
         .info-wrap{
             margin-left: -8rem;
             z-index: -1;
+
+            @include mq-below($xs) {
+                margin-left: 0;
+                max-width: 100%;
+                margin-top: 3rem;
+            }
         }
 
         .img-wrap{
@@ -340,6 +373,10 @@
             margin-top: -16rem;
             position: relative;
 
+            @include mq-below($xs) {
+                margin-top: 4rem;
+            }
+
             &:before{
                 content:'+';
                 @include font-source-sans(45rem,1, $font2, $font-bold, $clr-primary, initial);
@@ -347,6 +384,12 @@
                 position: absolute;
                 top: -12rem;
                 right: 14rem;
+
+                @include mq-below($xs) {
+                    font-size: 20rem;
+                    top: -7rem;
+                    left: -3rem;
+                }
             }
 
         }
@@ -355,12 +398,24 @@
 
             .text-md{
                 margin-left: -35rem;
+
+                @include mq-below($xs) {
+                    margin-left: 9rem;
+                }
             }
             .text-xl{
                 margin-left: -13rem;
+
+                @include mq-below($xs) {
+                    margin-left: 9rem;
+                }
             }
             .text-sm{
                 margin-left: -11rem;
+
+                @include mq-below($xs) {
+                    margin-left: 7rem;
+                }
             }
 
         }
@@ -436,6 +491,5 @@
             }
         }
     }
-
 
 }

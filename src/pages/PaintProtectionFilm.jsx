@@ -1,8 +1,10 @@
 import React from 'react';
 import PaintProtectionFilmInfography from '../components/service/PaintProtectionFilmInfography';
 import Videoplayer from '../components/common/Videoplayer';
-import videosrc from '../assets/video/dummy-video.mp4';
+import videosrc from '../assets/video/mini-cooper-red.mp4';
+import Flybutton from '../components/common/Flybutton';
 import TileGridPPF from '../components/service/TileGridPPF';
+import HomeBanner from '../components/home/HomeBanner';
 
 function PaintProtectionFilm() {
     const [playState, setPlayState] = React.useState({
@@ -18,29 +20,21 @@ function PaintProtectionFilm() {
     <>
         <main>
             <div className="lyt-content">
-                <div className="lyt-single-page typ-2">
-                    <div className="sp-head">
-                        <h2 className="sp-title">paint protection film</h2>
-                        <div className="sp-desc">
-                            <p>ULTRASHIELD Paint Protection Film (PPF) is a Top coated thermoplastic urethane sheet with amazing scratch resistance, stain resistance, self healing properties, hydrophobicity, high gloss and Optical clarity as its key features. The PPF is meticulously tested and proven to deliver the best protection even under the most difficult conditions.</p>
-                            <p>Now stop worrying about the scooter rider who is on a mission to scrape off the paint from your car. Drive eith peace.</p>
-                        </div>
-                    </div>
-                    <div className="sp-cont">
-                        <section>
-                            <div className="bs-section bs-pattern pattern-orange patter-pos-2">
-                                <div className="sec-cont">
-                                    <div className="mod-video typ-lg typ-orange">
-                                        <div className="media-wrap">
-                                            <div className="video">
-                                                <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videosrc}/>
-                                            </div>
-                                            {/* <button className='btn'><span className="icon icon-play"></span></button> */}
-                                        </div>
-                                    </div>
+                <HomeBanner bannerTitle={'Paint Protection Flim'}/>
+                <section>
+                    <div className="bs-section cm-no-pad-top cm-no-pad-bottom">
+                        <div className="sec-cont">
+                            <div className="bs-band typ-gradiant">
+                                <div className="text-wrap">
+                                <p>ULTRASHIELD Paint Protection Film (PPF) is a Top coated thermoplastic urethane sheet with amazing scratch resistance, stain resistance, self healing properties, hydrophobicity, high gloss and Optical clarity as its key features. The PPF is meticulously tested and proven to deliver the best protection even under the most difficult conditions.</p>
+                                <p>Now stop worrying about the scooter rider who is on a mission to scrape off the paint from your car. Drive eith peace.</p>
                                 </div>
                             </div>
-                        </section>
+                        </div>
+                    </div>
+				</section>
+                <div className="lyt-single-page typ-2">
+                    <div className="sp-cont">
                         <section>
                             <div className="bs-section typ-center">
                                 <div className="sec-cont cm-container">

@@ -69,6 +69,7 @@
         padding: 1rem;
         width: 3rem;
         height: 3rem;
+        z-index: 10;
         @include mq-below($xs){
             top: 0;
             right: 0.5rem;
@@ -82,7 +83,7 @@
         margin-bottom: 3rem;
         display: block;
         @include mq-below($xs){
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
         &:last-child{
             margin-bottom: 0;

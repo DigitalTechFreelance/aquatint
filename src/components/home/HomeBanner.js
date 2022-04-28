@@ -6,7 +6,7 @@ import useWindowSize from '../../hooks/useWindowSize';
 // import bannerImgMobile from '../../assets/images/home-banner.webp';
 import useSetBgImage from '../../hooks/useSetBgImage';
 // import Videoplayer from '../components/common/Videoplayer';
-// import videosrc from '../../assets/video/dummy-video.mp4';
+// import videosrc from '../../assets/video/copy-of-final.mp4';
 // import videoSrcMobile from '../../assets/video/comp2.mp4';
 
 function HomeBanner({data}) {
@@ -22,8 +22,9 @@ function HomeBanner({data}) {
   // const handleVideoStatus = (videoPlayStatus) => {
   //   setPlayState({...playState, playing: videoPlayStatus.playing, buttonClose: videoPlayStatus.buttonClose})
   // }
-  const {title, homeVideoUpload} = data
-  const {url} = homeVideoUpload.data.attributes
+  const {title, desktopVideoUpload, mobileVideoUpload} = data
+  const desktopVideoUrl = `http://localhost:1337${desktopVideoUpload.data.attributes.url}`
+  const mobileVideoUrl = `http://localhost:1337${mobileVideoUpload.data.attributes.url}`
 
   return (
     <div className="bs-banner">
@@ -38,8 +39,7 @@ function HomeBanner({data}) {
         </div> */}
         <div className="video-wrap">
           <video
-            src={`http://localhost:1337${url}`}
-            // src={size.width > 768 ? videosrc : videoSrcMobile}
+            src={size.width > 768 ? desktopVideoUrl : mobileVideoUrl}
             controls
             muted
             autoPlay={"autoplay"}
