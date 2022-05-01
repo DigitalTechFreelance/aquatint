@@ -70,7 +70,7 @@ const routes = [
     exact: true,
   },
   {
-    path: '/customisation-service',
+    path: '/services/customisation-service',
     component: <CustomisationService />,
     exact: true,
   },
