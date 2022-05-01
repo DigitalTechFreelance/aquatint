@@ -7,20 +7,21 @@ import Grid from '@mui/material/Grid';
 // import customizeImg from '../../assets/images/offering-customize.webp'; 
 import useSetBgImage from '../../hooks/useSetBgImage';
 
-function TileGrid({data, index}) {
+function TileGrid({data, index,dataLength}) {
 
     useSetBgImage(".setBgSrc", ".getBgSrc");
   return (
     <>
-            <Grid item xs={12} md={index>1?4:6} className="grid-item" key={index}>
+            <Grid item xs={12} md={dataLength % 2 === 0? 6: index>1?4:6} className="grid-item" key={index}>
                 <div className={`bs-tile setBgSrc typ${index+1}`}>
+                    {data.cardImage!== null && 
                     <div className="img-wrap">
-                        <img src={`http://localhost:1337${data.cardImage.data.attributes.url}`} alt={data.cardImage.data.attributes.alternativeText} title={data.cardImage.data.attributes.name} className="getBgSrc" />
-                    </div>
+                    <img src={`http://localhost:1337${data.cardImage.data.attributes.url}`} alt={data.cardImage.data.attributes.alternativeText} title={data.cardImage.data.attributes.name} className="getBgSrc" />
+                    </div>}
                     <div className="text-wrap">
                         <h3 className="title">{data.name}</h3>
                     </div>
-                    <a href={`/services/${data.slug}`} className="link"></a>
+                    <a href={`/services${data.redirectUrl}`} className="link"/>
                 </div>
             </Grid>
     </>  

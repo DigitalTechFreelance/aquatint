@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import TileGrid from './TileGrid';
+import TileGrid from '../home/TileGrid';
 import Grid from '@mui/material/Grid';
 
 function Service({data}) {
@@ -15,7 +15,7 @@ function Service({data}) {
                 <div className="sec-cont">
                     <Grid container spacing={2} className="lyt-tile-grid">
                         {data.map((item, index)=>(
-                            item.attributes.isActive && <TileGrid data={item.attributes} key={index} index={index}/>
+                            item.isActive && <TileGrid data={item} dataLength={data.length} key={index} index={index}/>
                         ))}
                     </Grid>
                 </div>

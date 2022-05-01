@@ -1,5 +1,5 @@
 import React from 'react';
-import CoatingInfogarphy from '../components/service/CoatingInfogarphy';
+import CoatingInfogarphy from '../components/packages/Infogarphy';
 import Videoplayer from '../components/common/Videoplayer';
 import videosrc from '../assets/video/dummy-video.mp4';
 

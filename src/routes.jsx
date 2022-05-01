@@ -5,15 +5,12 @@ const AboutUs = React.lazy(() => import('./pages/AboutUs'));
 const Services = React.lazy(() => import('./pages/Services'));
 const WashingServices = React.lazy(() => import('./pages/WashingServices'));
 const DetailingServices = React.lazy(() => import('./pages/DetailingServices'));
-const CeramicCoating = React.lazy(() => import('./pages/CeramicCoating'));
 const PaintProtectionFilm = React.lazy(() => import('./pages/PaintProtectionFilm'));
-const ClarityCoat = React.lazy(() => import('./pages/ClarityCoat'));
+const CoatingDetail = React.lazy(() => import('./pages/CoatingDetail'));
 const CustomisationService = React.lazy(() => import('./pages/CustomisationService'));
 const FranchiseWithUs = React.lazy(() => import('./pages/FranchiseWithUs'));
 const ContactUs = React.lazy(() => import('./pages/ContactUs'));
-const ComprehensizePackage = React.lazy(() => import('./pages/ComprehensizePackage'));
-const SignaturePackage = React.lazy(() => import('./pages/SignaturePackage'));
-const EssentialPackage = React.lazy(() => import('./pages/EssentialPackage'));
+const PackageDetail = React.lazy(() => import('./pages/PackageDetail'));
 const IndexList = React.lazy(() => import('./temp/IndexList'));
 
 const routes = [
@@ -48,6 +45,11 @@ const routes = [
     exact: true,
   },
   {
+    path: '/packages/:slug',
+    component: <PackageDetail />,
+    exact: true,
+  },
+  {
     path: '/washing-services',
     component: <WashingServices />,
     exact: true,
@@ -58,18 +60,13 @@ const routes = [
     exact: true,
   },
   {
-    path: '/ceramic-coating',
-    component: <CeramicCoating />,
-    exact: true,
-  },
-  {
-    path: '/paint-protection-film',
+    path: '/services/paint-protection-film',
     component: <PaintProtectionFilm />,
     exact: true,
   },
   {
-    path: '/clarity-coat',
-    component: <ClarityCoat />,
+    path: '/coatings/:slug',
+    component: <CoatingDetail />,
     exact: true,
   },
   {
@@ -85,21 +82,6 @@ const routes = [
   {
     path: '/contact-us',
     component: <ContactUs />,
-    exact: true,
-  },
-  {
-    path: '/comprehensive-package',
-    component: <ComprehensizePackage />,
-    exact: true,
-  },
-  {
-    path: '/signature-package',
-    component: <SignaturePackage />,
-    exact: true,
-  },
-  {
-    path: '/essential-package',
-    component: <EssentialPackage />,
     exact: true,
   }
 ];

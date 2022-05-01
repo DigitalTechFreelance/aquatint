@@ -5,7 +5,6 @@ import axios from '../axios-common';
 function Services() {
     
 	const [data, setData] = React.useState(null)
-	const [error, setError] = React.useState(null)
 
 	React.useEffect(()=>{
 		axios.get(`/api/service?populate=*`)
@@ -13,11 +12,10 @@ function Services() {
 			setData(res.data.data.attributes)
 		})
 		.catch((error) => {
-			setError(error)
-			// console.log("home error", error)
 		})
 	}, [])
-const {serviceType} = data!==null && data
+    const {serviceType} = data!==null && data
+
   return (
     <>
             <main>

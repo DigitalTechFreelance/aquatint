@@ -15,16 +15,13 @@ const routes = [
 function App() {
 
   const [data, setData] = React.useState(null)
-	const [error, setError] = React.useState(null)
 
   React.useEffect(()=>{
 		axios.get(`/api/global?populate=*`)
 		.then((res) => {
-			// console.log("global result",res)
 			setData(res.data.data.attributes)
 		})
 		.catch((error) => {
-			setError(error)
 			// console.log("global error", error)
 		})
 	}, [])

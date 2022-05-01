@@ -76,12 +76,12 @@ function IndexList() {
                         <ul className="custAcc">
                             <li className="opn">
                                 <div className="lbl">
-                                    <a href="/ceramic-coating">Ceramic Coating</a>
+                                    <a href="/coatings/ceramic-coating">Ceramic Coating</a>
                                 </div>
                             </li>
                             <li className="opn">
                                 <div className="lbl">
-                                    <a href="/clarity-coat">Clarity Coating</a>
+                                    <a href="/coatings/clarity-coat">Clarity Coating</a>
                                 </div>
                             </li>
                         </ul>
@@ -91,17 +91,17 @@ function IndexList() {
                         <ul className="custAcc">
                             <li className="opn">
                                 <div className="lbl">
-                                    <a href="/comprehensive-package">Comprehensive Package</a>
+                                    <a href="/packages/comprehensive-package">Comprehensive Package</a>
                                 </div>
                             </li>
                             <li className="opn">
                                 <div className="lbl">
-                                    <a href="/signature-package">Signature Package</a>
+                                    <a href="/packages/signature-package">Signature Package</a>
                                 </div>
                             </li>
                             <li className="opn">
                                 <div className="lbl">
-                                    <a href="/essential-package">Essential Package</a>
+                                    <a href="/packages/essential-package">Essential Package</a>
                                 </div>
                             </li>
                         </ul>
