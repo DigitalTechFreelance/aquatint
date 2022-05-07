@@ -38,7 +38,8 @@ const handleVideoStatus = (videoPlayStatus) => {
           <video
             src={size.width > 768 ? videosrc : videoSrcMobile}
             controls
-            muted
+            muted={false}
+            volume
             autoPlay={"autoplay"}
             preload="auto"
             loop 
