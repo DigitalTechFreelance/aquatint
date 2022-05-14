@@ -17,7 +17,7 @@ function Flybutton() {
         </a>
       </div>
       <button className='fly-trigger' onClick={() =>setActive(!isActive)}>
-        {isActive ? <span className='icon icon-close'></span> : <span className='icon icon-chat'></span>}
+        {isActive ? <span className='icon icon-close'></span> : <span className='icon icon-contact'></span>}
       </button>
     </div>
     </>

@@ -4,9 +4,10 @@
     align-items: center;
     position: relative;
 
-    @include mq-below($xs) {
-        flex-direction: column;
-    }
+    // @include mq-below($xs) {
+    //     flex-direction: column;
+
+    // }
 
     .title{
         @include font-source-sans(8rem,8.4rem, $font1, $font-bold, $clr-base, uppercase);
@@ -42,6 +43,24 @@
 
     .img-wrap{
         max-width: 80rem;
+        @include mq-below($xs){
+            position: relative;
+
+            &:after{
+                content:'';
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                z-index: 1;
+                @include background-opacity($clr-root, 0.2);
+            }
+        }
+
+        
+        
+
     }
 
     .feature-list{
@@ -84,6 +103,10 @@
 
         @include mq-below($xs) {
             padding: 0 1.6rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
         }
 
         .water-mark{

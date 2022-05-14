@@ -1,9 +1,9 @@
 //lyt-service
 .lyt-service{
     .list-item{
-        @include mq-below($xs) {
-            margin-bottom: 2rem;
-        }
+        // @include mq-below($xs) {
+        //     margin-bottom: 2rem;
+        // }
 
         &:nth-child(even){
             .bs-service{
@@ -105,8 +105,17 @@
 
                     @include mq-below($xs){
                         top: -16rem;
-                        left: 0;
+                        left: -4rem;
                         right:0;
+                    }
+                }
+            }
+        }
+        &:nth-child(odd){
+            @include mq-below($xs){
+                .bs-service{
+                    .info-wrap{
+                        left: 24%;
                     }
                 }
             }

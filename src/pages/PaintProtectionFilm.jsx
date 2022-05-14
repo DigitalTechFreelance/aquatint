@@ -2,21 +2,21 @@ import React from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import PaintProtectionFilmInfography from '../components/service/PaintProtectionFilmInfography';
-import Videoplayer from '../components/common/Videoplayer';
-import videosrc from '../assets/video/mini-cooper-red.mp4';
+// import Videoplayer from '../components/common/Videoplayer';
+// import videosrc from '../assets/video/mini-cooper-red.mp4';
 import Flybutton from '../components/common/Flybutton';
 import TileGridPPF from '../components/service/TileGridPPF';
 import HomeBanner from '../components/home/HomeBanner';
 
 function PaintProtectionFilm() {
-    const [playState, setPlayState] = React.useState({
-        playing: false,
-        buttonClose: false,
-    });
+    // const [playState, setPlayState] = React.useState({
+    //     playing: false,
+    //     buttonClose: false,
+    // });
     
-    const handleVideoStatus = (videoPlayStatus) => {
-        setPlayState({...playState, playing: videoPlayStatus.playing, buttonClose: videoPlayStatus.buttonClose})
-    }
+    // const handleVideoStatus = (videoPlayStatus) => {
+    //     setPlayState({...playState, playing: videoPlayStatus.playing, buttonClose: videoPlayStatus.buttonClose})
+    // }
 
   return (
     <>
