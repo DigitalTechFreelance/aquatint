@@ -5,6 +5,7 @@
 
     @include mq-below($xs) {
         padding-top: 8rem;
+        overflow-y: hidden;
     }
 
     &.typ-home{

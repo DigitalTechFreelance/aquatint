@@ -12,7 +12,7 @@ function ServiceList() {
             <li className="list-item">
                 <div className="bs-service">
                     <div className="img-wrap">
-                        <img src={washServiceImg} alt="Wash Service" alt="Wash Service" />
+                        <img src={washServiceImg} alt="Wash Service"/>
                     </div>
                     <div className="info-wrap">
                         <h3 className="title">wash <span className="cm-line-break">services</span></h3>
@@ -29,7 +29,7 @@ function ServiceList() {
             <li className="list-item">
                 <div className="bs-service">
                     <div className="img-wrap">
-                        <img src={detailServiceImg} alt="detailing services" alt="detailing services" />
+                        <img src={detailServiceImg} alt="detailing services"/>
                     </div>
                     <div className="info-wrap">
                         <h3 className="title">detailing <span className="cm-line-break">services</span></h3>
@@ -45,7 +45,7 @@ function ServiceList() {
             <li className="list-item">
                 <div className="bs-service">
                     <div className="img-wrap">
-                        <img src={coatServiceImg} alt="ceramic coating" alt="ceramic coating" />
+                        <img src={coatServiceImg} alt="ceramic coating"/>
                     </div>
                     <div className="info-wrap">
                         <h3 className="title">ceramic <span className="cm-line-break">coating</span></h3>
@@ -62,7 +62,7 @@ function ServiceList() {
             <li className="list-item">
                 <div className="bs-service">
                     <div className="img-wrap">
-                        <img src={filmServieImg} alt="paint protection film (ppf)" alt="paint protection film (ppf)" />
+                        <img src={filmServieImg} alt="paint protection film (ppf)"/>
                     </div>
                     <div className="info-wrap">
                         <h3 className="title">paint protection <span className="cm-line-break">film (ppf)</span></h3>
@@ -79,7 +79,7 @@ function ServiceList() {
             <li className="list-item">
                 <div className="bs-service">
                     <div className="img-wrap">
-                        <img src={customizeServiceImg} alt="customisation services" alt="customisation services" />
+                        <img src={customizeServiceImg} alt="customisation services"/>
                     </div>
                     <div className="info-wrap">
                         <h3 className="title">customisation <span className="cm-line-break">services</span></h3>

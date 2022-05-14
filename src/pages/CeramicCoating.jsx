@@ -59,7 +59,7 @@ function CeramicCoating() {
                                     <div className="sec-cont">
                                         <ul className="lyt-info">
                                             <li className="info-item">
-                                                <div className="mod-info">
+                                                <a href="#" className="mod-info">
                                                     <div className="info-wrap">
                                                         <h3 className="title">NANO CERAMIC COATING</h3>
                                                     </div>
@@ -67,10 +67,10 @@ function CeramicCoating() {
                                                         <span className="count">1</span>
                                                         <span className="text">year warranty</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li className="info-item">
-                                                <div className="mod-info">
+                                                <a href="#" className="mod-info">
                                                     <div className="info-wrap">
                                                         <h3 className="title">GLOSS COAT</h3>
                                                     </div>
@@ -78,7 +78,7 @@ function CeramicCoating() {
                                                         <span className="count">2</span>
                                                         <span className="text">year warranty</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -92,7 +92,7 @@ function CeramicCoating() {
                                     <div className="sec-cont">
                                         <ul className="lyt-info">
                                             <li className="info-item">
-                                                <div className="mod-info typ-bg">
+                                                <a href="/comprehensive-package" className="mod-info typ-bg">
                                                     <div className="info-wrap">
                                                         <h3 className="title">COMPREHENSIVE PACKAGE</h3>
                                                         <p className="sub-title">Interior + exterior protection</p>
@@ -101,10 +101,10 @@ function CeramicCoating() {
                                                         <span className="count">3</span>
                                                         <span className="text">year warranty</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li className="info-item">
-                                                <div className="mod-info typ-bg">
+                                                <a href="/signature-package" className="mod-info typ-bg">
                                                     <div className="info-wrap">
                                                         <h3 className="title">SIGNATURE PACKAGE</h3>
                                                         <p className="sub-title">Interior + exterior protection</p>
@@ -113,10 +113,10 @@ function CeramicCoating() {
                                                         <span className="count">5</span>
                                                         <span className="text">year warranty</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                             <li className="info-item">
-                                                <div className="mod-info typ-bg">
+                                                <a href="/essential-package" className="mod-info typ-bg">
                                                     <div className="info-wrap">
                                                         <h3 className="title">ESSENTIAL PACKAGE</h3>
                                                         <p className="sub-title">Ceramic + ppf dual protection</p>
@@ -125,7 +125,7 @@ function CeramicCoating() {
                                                         <span className="count">3</span>
                                                         <span className="text">year warranty</span>
                                                     </div>
-                                                </div>
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>

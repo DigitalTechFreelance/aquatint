@@ -121,4 +121,55 @@
             }
         }
     }
+
+    &.typ-packages{
+
+        .bs-service{
+            .water-mark{
+                font-size: 18rem;
+                @include mq-below($xs) {
+                    font-size: 2.6rem;
+                }
+            }
+        }
+
+        .list-item{
+
+            &:first-child{
+                .bs-service{
+                    .water-mark{
+                        left: -100%;
+                        @include mq-below($xs){
+                            left: -5.7rem;
+                        }
+                    }
+                }
+            }
+
+            &:last-child{
+                .bs-service{
+                    .water-mark{
+                        right: -45rem;
+                        @include mq-below($xs){
+                            right: -1rem;
+                            left: auto;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(2){
+                .bs-service{
+                    .water-mark{
+                        left: -45rem;
+                        @include mq-below($xs){
+                            left: -5rem;
+                        }
+                    }
+                }
+            }
+
+        }
+
+    }
 }

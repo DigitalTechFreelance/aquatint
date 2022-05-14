@@ -59,7 +59,7 @@ function Home() {
 												<li>SIGNATURE PACKAGE</li>
 												<li>ESSENTIAL PACKAGE</li>
 											</ul>
-											<a href="/essential-package" className="btn btn-default"><span>explore</span></a>
+											<a href="/premium-packages" className="btn btn-default"><span>explore</span></a>
 										</div>
 										<div className="img-wrap">
 											<img src={premiumPackageImg} alt="Coating Car" title="Coating Car" />

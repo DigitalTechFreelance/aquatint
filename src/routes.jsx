@@ -14,6 +14,7 @@ const ContactUs = React.lazy(() => import('./pages/ContactUs'));
 const ComprehensizePackage = React.lazy(() => import('./pages/ComprehensizePackage'));
 const SignaturePackage = React.lazy(() => import('./pages/SignaturePackage'));
 const EssentialPackage = React.lazy(() => import('./pages/EssentialPackage'));
+const Packages = React.lazy(() => import('./pages/Packages'));
 const IndexList = React.lazy(() => import('./temp/IndexList'));
 
 const routes = [
@@ -95,6 +96,11 @@ const routes = [
   {
     path: '/essential-package',
     component: <EssentialPackage />,
+    exact: true,
+  },
+  {
+    path: '/premium-packages',
+    component: <Packages />,
     exact: true,
   }
 ];
