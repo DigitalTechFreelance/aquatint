@@ -8,6 +8,7 @@ import TestimonialSlider from '../components/home/TestimonialSlider';
 import HomeBanner from '../components/home/HomeBanner';
 import premiumPackageImg from '../assets/images/premium-package.webp';
 import Flybutton from '../components/common/Flybutton';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 
 function Home() {
@@ -105,6 +106,7 @@ function Home() {
 			</main>
 			<Footer/>
 			<Flybutton/>
+			{/* <DetailsCaptureModal/> */}
 		</>
 	);
 }

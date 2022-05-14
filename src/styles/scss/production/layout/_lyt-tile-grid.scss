@@ -11,4 +11,20 @@
       }
     }
   }
+
+  .grid-item{
+    transition: all 0.3s ease;
+
+    &:hover{
+      opacity: 1 !important;
+    }
+  }
+
+  &:hover{
+
+    .grid-item{
+      opacity: 0.5;
+    }
+
+  }
 }
