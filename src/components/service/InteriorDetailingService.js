@@ -104,6 +104,9 @@ function InteriorDetailingService() {
       >
         <Fade in={open}>
             <Box className='modal-body'>
+                <button className="modal-close" onClick={handleClose}>
+                  <span className="icon-close"></span>
+                </button>
                 <YoutubeEmbed embedId="35npVaFGHMY" />
             </Box>
         </Fade>

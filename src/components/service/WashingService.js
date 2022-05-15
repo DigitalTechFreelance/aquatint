@@ -168,7 +168,7 @@ function WashingService() {
         aria-describedby="transition-modal-description"
         className="bs-modal"
         open={open}
-        onClose={handleClose}
+        // onClose={handleClose}
         closeAfterTransition
         BackdropComponent={Backdrop}
         BackdropProps={{
@@ -177,6 +177,9 @@ function WashingService() {
       >
         <Fade in={open}>
             <Box className='modal-body'>
+                <button className="modal-close" onClick={handleClose}>
+                  <span className="icon-close"></span>
+                </button>
                 <YoutubeEmbed embedId="35npVaFGHMY" />
             </Box>
         </Fade>

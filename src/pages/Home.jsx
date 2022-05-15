@@ -9,6 +9,7 @@ import HomeBanner from '../components/home/HomeBanner';
 import premiumPackageImg from '../assets/images/premium-package.webp';
 import Flybutton from '../components/common/Flybutton';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
+import Loader from '../components/common/Loader';
 
 
 function Home() {
@@ -103,10 +104,11 @@ function Home() {
 						</div>
 					</section>
 				</div>
+				{/* <Loader/> */}
 			</main>
 			<Footer/>
 			<Flybutton/>
-			{/* <DetailsCaptureModal/> */}
+			<DetailsCaptureModal/>
 		</>
 	);
 }

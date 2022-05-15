@@ -44,8 +44,9 @@ function TileGrid() {
                     <div className="text-wrap">
                         <h3 className="title">ceramic coating</h3>
                     </div>
+                    <a href="/ceramic-coating" className="link"></a>
                 </div>
-                <a href="/ceramic-coating" className="link"></a>
+                
             </Grid>
             <Grid item xs={12} md={4} className="grid-item">
                 <div className="bs-tile setBgSrc typ4">
