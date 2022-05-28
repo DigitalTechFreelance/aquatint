@@ -14,7 +14,7 @@ function TileGrid() {
 
     const [autoPlay, setAutoPlay] = useState(false);
 
-    useSetBgImage(".setBgSrc", ".getBgSrc");
+    // useSetBgImage(".setBgSrc", ".getBgSrc");
 
     useEffect(() => {
         setAutoPlay(true)
@@ -33,6 +33,7 @@ function TileGrid() {
                             width="100%"
                             height="40.8rem"
                             playing={autoPlay}
+                            muted={true}
                         />
                     </div>
                     <div className="text-wrap">
@@ -44,7 +45,15 @@ function TileGrid() {
             <Grid item xs={12} md={6} className="grid-item">
                 <div className="bs-tile setBgSrc typ2">
                     <div className="img-wrap">
-                        <img src={detailImg} alt="Detail Service" title="Detail Service" className="getBgSrc"/>
+                        {/* <img src={detailImg} alt="Detail Service" title="Detail Service" className="getBgSrc"/> */}
+                        <ReactPlayer 
+                            url='https://www.youtube.com/watch?v=Cdd_amqSFAg' 
+                            loop={true}
+                            width="100%"
+                            height="40.8rem"
+                            playing={autoPlay}
+                            muted={true}
+                        />
                     </div>
                     <div className="text-wrap">
                         <h3 className="title">detail</h3>
@@ -55,7 +64,15 @@ function TileGrid() {
             <Grid item xs={12} md={4} className="grid-item">
                 <div className="bs-tile setBgSrc typ3">
                     <div className="img-wrap">
-                        <img src={ceramicCoatingImg} alt="Ceramic Coating" title="Ceramic Coating" className="getBgSrc"/>
+                        {/* <img src={ceramicCoatingImg} alt="Ceramic Coating" title="Ceramic Coating" className="getBgSrc"/> */}
+                        <ReactPlayer 
+                            url='https://www.youtube.com/watch?v=CXWX0U3EXqk' 
+                            loop={true}
+                            width="100%"
+                            height="40.8rem"
+                            playing={autoPlay}
+                            muted={true}
+                        />
                     </div>
                     <div className="text-wrap">
                         <h3 className="title">ceramic coating</h3>
@@ -67,7 +84,15 @@ function TileGrid() {
             <Grid item xs={12} md={4} className="grid-item">
                 <div className="bs-tile setBgSrc typ4">
                     <div className="img-wrap">
-                        <img src={ppfImg} alt="Paint Protection Film" title="Paint Protection Film" className="getBgSrc"/>
+                        {/* <img src={ppfImg} alt="Paint Protection Film" title="Paint Protection Film" className="getBgSrc"/> */}
+                        <ReactPlayer 
+                            url='https://www.youtube.com/watch?v=8BqXWxXRS4E' 
+                            loop={true}
+                            width="100%"
+                            height="40.8rem"
+                            playing={autoPlay}
+                            muted={true}
+                        />
                     </div>
                     <div className="text-wrap">
                         <h3 className="title">paint protection film</h3>
@@ -78,7 +103,15 @@ function TileGrid() {
             <Grid item xs={12} md={4} className="grid-item">
                 <div className="bs-tile setBgSrc typ5">
                     <div className="img-wrap">
-                        <img src={customizeImg} alt="Customise" title="Customise" className="getBgSrc"/>
+                        {/* <img src={customizeImg} alt="Customise" title="Customise" className="getBgSrc"/> */}
+                        <ReactPlayer 
+                            url='https://www.youtube.com/watch?v=9sBozUaYajE' 
+                            loop={true}
+                            width="100%"
+                            height="40.8rem"
+                            playing={autoPlay}
+                            muted={true}
+                        />
                     </div>
                     <div className="text-wrap">
                         <h3 className="title">cutomise</h3>

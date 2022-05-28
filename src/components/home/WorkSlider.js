@@ -14,12 +14,21 @@ import { Navigation, Pagination } from "swiper";
 
 //assets
 import tileImg from '../../assets/images/offering-wash.webp';
+import Backdrop from '@mui/material/Backdrop';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
+import YoutubeEmbed from '../common/YoutubeEmbed';
 
 function WorkSlider() {
 
     useSetBgImage(".setBgSrc", ".getBgSrc");
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
   return (
+    <>
     <Swiper 
         slidesPerView={3}
         spaceBetween={20}
@@ -45,9 +54,9 @@ function WorkSlider() {
                     <img src={tileImg} alt="recent work 1" title="recent work 1" className="getBgSrc" />
                 </div>
                 <div className="action-wrap">
-                    <a href="#" type="button" className="link" data-video-src="">
+                    <button type="button" className="link" data-video-src="" onClick={handleOpen}>
                         <span className="icon icon-play2"></span>
-                    </a>
+                    </button>
                 </div>
             </div>
         </SwiperSlide>
@@ -76,6 +85,28 @@ function WorkSlider() {
             </div>
         </SwiperSlide>
     </Swiper>
+    <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className="bs-modal"
+        open={open}
+        // onClose={handleClose}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={open}>
+            <Box className='modal-body'>
+                <button className="modal-close" onClick={handleClose}>
+                  <span className="icon-close"></span>
+                </button>
+                <YoutubeEmbed embedId="35npVaFGHMY" />
+            </Box>
+        </Fade>
+      </Modal>
+    </>
   )
 }
 

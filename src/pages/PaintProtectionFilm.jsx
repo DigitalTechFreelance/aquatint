@@ -81,7 +81,7 @@ function PaintProtectionFilm() {
                 <section>
                   <div className="bs-section typ-center">
                     <div className="sec-head">
-                        <h2 className="sec-title">Where to apply</h2>
+                        <h2 className="sec-title">Where Should I Apply Paint Protection Flim</h2>
                     </div>
                     <div className="sec-cont">
                         <PpfCompareList/>

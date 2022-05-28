@@ -108,7 +108,7 @@ function Home() {
 			</main>
 			<Footer/>
 			<Flybutton/>
-			{/* <DetailsCaptureModal/> */}
+			<DetailsCaptureModal/>
 		</>
 	);
 }
