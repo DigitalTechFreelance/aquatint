@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import washImg from '../../assets/images/offering-wash1.gif';
 import detailImg from '../../assets/images/offering-detail1.gif';
@@ -7,9 +7,18 @@ import ppfImg from '../../assets/images/offering-ppf.gif';
 import customizeImg from '../../assets/images/offering-customize.webp'; 
 import useSetBgImage from '../../hooks/useSetBgImage';
 
+/*react player import */
+import ReactPlayer from 'react-player';
+
 function TileGrid() {
 
+    const [autoPlay, setAutoPlay] = useState(false);
+
     useSetBgImage(".setBgSrc", ".getBgSrc");
+
+    useEffect(() => {
+        setAutoPlay(true)
+    }, [autoPlay]);
 
   return (
     <>
@@ -17,7 +26,14 @@ function TileGrid() {
             <Grid item xs={12} md={6} className="grid-item">
                 <div className="bs-tile setBgSrc typ1">
                     <div className="img-wrap">
-                        <img src={washImg} alt="Wash Service" title="wash Service" className="getBgSrc" />
+                        {/* <img src={washImg} alt="Wash Service" title="wash Service" className="getBgSrc" /> */}
+                        <ReactPlayer 
+                            url='https://www.youtube.com/watch?v=8k41mZZY2tQ' 
+                            loop={true}
+                            width="100%"
+                            height="40.8rem"
+                            playing={autoPlay}
+                        />
                     </div>
                     <div className="text-wrap">
                         <h3 className="title">wash</h3>

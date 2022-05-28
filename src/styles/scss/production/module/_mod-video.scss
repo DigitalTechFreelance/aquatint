@@ -28,6 +28,14 @@
         margin-bottom: 2rem;
         padding: 0 1rem;
       }
+
+      &.fixed-width{
+        max-width: 120rem;
+        margin: 0 auto;
+        @include mq-below($xs){
+          max-width: initial;
+        }
+      }
     }
 
     .title {
