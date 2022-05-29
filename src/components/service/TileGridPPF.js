@@ -30,6 +30,7 @@ function TileGridPPF() {
                             height="40.8rem"
                             playing={autoPlay}
                             muted={true}
+                            className="mod-gif"
                         />
                     </div>
                     <div className="text-wrap">
@@ -49,6 +50,7 @@ function TileGridPPF() {
                             height="40.8rem"
                             playing={autoPlay}
                             muted={true}
+                            className="mod-gif"
                         />
                     </div>
                     <div className="text-wrap">
@@ -68,6 +70,7 @@ function TileGridPPF() {
                             height="40.8rem"
                             playing={autoPlay}
                             muted={true}
+                            className="mod-gif"
                         />
                     </div>
                     <div className="text-wrap">
@@ -86,6 +89,7 @@ function TileGridPPF() {
                             height="40.8rem"
                             playing={autoPlay}
                             muted={true}
+                            className="mod-gif"
                         />
                     </div>
                     <div className="text-wrap">
@@ -105,6 +109,7 @@ function TileGridPPF() {
                             height="40.8rem"
                             playing={autoPlay}
                             muted={true}
+                            className="mod-gif"
                         />
                     </div>
                     <div className="text-wrap">
@@ -124,6 +129,7 @@ function TileGridPPF() {
                             height="40.8rem"
                             playing={autoPlay}
                             muted={true}
+                            className="mod-gif"
                         />
                     </div>
                     <div className="text-wrap">

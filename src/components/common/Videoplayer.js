@@ -141,7 +141,7 @@ function Videoplayer(props) {
                   </span>
                 </span>
                 <span className={!playing ? "cm-hide" : ""}>
-                  <span className="icon icon-play2"></span>
+                  <span className="icon icon-pause"></span>
                 </span>
               </button>
               <span className="video_time">{format(currentTime)}</span>

@@ -5,7 +5,6 @@ import detailImg from '../../assets/images/offering-detail1.gif';
 import ceramicCoatingImg from '../../assets/images/offering-ceramic-coating1.gif';
 import ppfImg from '../../assets/images/offering-ppf.gif';
 import customizeImg from '../../assets/images/offering-customize.webp'; 
-import useSetBgImage from '../../hooks/useSetBgImage';
 
 /*react player import */
 import ReactPlayer from 'react-player';
@@ -13,8 +12,6 @@ import ReactPlayer from 'react-player';
 function TileGrid() {
 
     const [autoPlay, setAutoPlay] = useState(false);
-
-    // useSetBgImage(".setBgSrc", ".getBgSrc");
 
     useEffect(() => {
         setAutoPlay(true)
@@ -24,7 +21,7 @@ function TileGrid() {
     <>
         <Grid container spacing={2} className="lyt-tile-grid">
             <Grid item xs={12} md={6} className="grid-item">
-                <div className="bs-tile setBgSrc typ1">
+                <div className="bs-tile typ1">
                     <div className="img-wrap">
                         {/* <img src={washImg} alt="Wash Service" title="wash Service" className="getBgSrc" /> */}
                         <ReactPlayer 
@@ -34,6 +31,7 @@ function TileGrid() {
                             height="40.8rem"
                             playing={autoPlay}
                             muted={true}
+                            className="mod-gif"
                         />
                     </div>
                     <div className="text-wrap">
@@ -43,7 +41,7 @@ function TileGrid() {
                 </div>
             </Grid>
             <Grid item xs={12} md={6} className="grid-item">
-                <div className="bs-tile setBgSrc typ2">
+                <div className="bs-tile typ2">
                     <div className="img-wrap">
                         {/* <img src={detailImg} alt="Detail Service" title="Detail Service" className="getBgSrc"/> */}
                         <ReactPlayer 
@@ -53,6 +51,7 @@ function TileGrid() {
                             height="40.8rem"
                             playing={autoPlay}
                             muted={true}
+                            className="mod-gif"
                         />
                     </div>
                     <div className="text-wrap">
@@ -62,7 +61,7 @@ function TileGrid() {
                 </div>
             </Grid>
             <Grid item xs={12} md={4} className="grid-item">
-                <div className="bs-tile setBgSrc typ3">
+                <div className="bs-tile typ3">
                     <div className="img-wrap">
                         {/* <img src={ceramicCoatingImg} alt="Ceramic Coating" title="Ceramic Coating" className="getBgSrc"/> */}
                         <ReactPlayer 
@@ -72,6 +71,7 @@ function TileGrid() {
                             height="40.8rem"
                             playing={autoPlay}
                             muted={true}
+                            className="mod-gif"
                         />
                     </div>
                     <div className="text-wrap">
@@ -82,7 +82,7 @@ function TileGrid() {
                 
             </Grid>
             <Grid item xs={12} md={4} className="grid-item">
-                <div className="bs-tile setBgSrc typ4">
+                <div className="bs-tile typ4">
                     <div className="img-wrap">
                         {/* <img src={ppfImg} alt="Paint Protection Film" title="Paint Protection Film" className="getBgSrc"/> */}
                         <ReactPlayer 
@@ -92,6 +92,7 @@ function TileGrid() {
                             height="40.8rem"
                             playing={autoPlay}
                             muted={true}
+                            className="mod-gif"
                         />
                     </div>
                     <div className="text-wrap">
@@ -101,7 +102,7 @@ function TileGrid() {
                 </div>
             </Grid>
             <Grid item xs={12} md={4} className="grid-item">
-                <div className="bs-tile setBgSrc typ5">
+                <div className="bs-tile typ5">
                     <div className="img-wrap">
                         {/* <img src={customizeImg} alt="Customise" title="Customise" className="getBgSrc"/> */}
                         <ReactPlayer 
@@ -111,6 +112,7 @@ function TileGrid() {
                             height="40.8rem"
                             playing={autoPlay}
                             muted={true}
+                            className="mod-gif"
                         />
                     </div>
                     <div className="text-wrap">

@@ -78,6 +78,13 @@
             margin-right: 0;
             clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
         }
+
+        // >div{
+        //     >div{
+        //         width: 113% !important;
+        //         height: 120% !important;
+        //     }
+        // }
     }
     &.typ2{
         margin-bottom: 2.5rem;
@@ -85,25 +92,48 @@
             margin-bottom: 0;
             clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
         }
-        // clip-path: polygon(0 0, 95% 0, 95% 100%, 0 100%);
+        // >div{
+        //     >div{
+        //         width: 110% !important;
+        //         height: 120% !important;
+        //     }
+        // }
     }
     &.typ3{
         clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
         @include mq-below($xs){
             clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
         }
+        // >div{
+        //     >div{
+        //         width: 140% !important;
+        //         height: 101% !important;
+        //     }
+        // }
     }
     &.typ4{
         clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
         @include mq-below($xs){
             clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
         }
+        // >div{
+        //     >div{
+        //         width: 140% !important;
+        //         height: 100% !important;
+        //     }
+        // }
     }
     &.typ5{
         clip-path: polygon(5% 0, 100% 0%, 100% 100%, 0% 100%);
         @include mq-below($xs){
             clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
         }
+        // >div{
+        //     >div{
+        //         width: 140% !important;
+        //         height: 110% !important;
+        //     }
+        // }
     }
 
     &:hover{
