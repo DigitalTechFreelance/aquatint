@@ -27,8 +27,8 @@ function TileGrid() {
                         <ReactPlayer 
                             url='https://www.youtube.com/watch?v=8k41mZZY2tQ' 
                             loop={true}
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
                             width="100%"
-                            height="40.8rem"
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
@@ -48,7 +48,7 @@ function TileGrid() {
                             url='https://www.youtube.com/watch?v=Cdd_amqSFAg' 
                             loop={true}
                             width="100%"
-                            height="40.8rem"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
@@ -68,7 +68,7 @@ function TileGrid() {
                             url='https://www.youtube.com/watch?v=CXWX0U3EXqk' 
                             loop={true}
                             width="100%"
-                            height="40.8rem"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
@@ -89,7 +89,7 @@ function TileGrid() {
                             url='https://www.youtube.com/watch?v=8BqXWxXRS4E' 
                             loop={true}
                             width="100%"
-                            height="40.8rem"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
@@ -109,7 +109,7 @@ function TileGrid() {
                             url='https://www.youtube.com/watch?v=9sBozUaYajE' 
                             loop={true}
                             width="100%"
-                            height="40.8rem"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"

@@ -2,5 +2,9 @@
 .mod-gif{
     iframe{
         transform: scale(1.5) !important;
+
+        @include mq-below($xs){
+            transform: scale(1.9) !important;
+        }
     }
 }

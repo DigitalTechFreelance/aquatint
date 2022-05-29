@@ -20,14 +20,14 @@ function TileGridPPF() {
     <>
         <Grid container spacing={2} className="lyt-tile-grid typ-tileof3">
             <Grid item xs={12} md={4} className="grid-item">
-                <div className="bs-tile setBgSrc typ3">
+                <div className="bs-tile typ3">
                     <div className="img-wrap">
                         {/* <img src={washImg} alt="Wash Service" title="wash Service" className="getBgSrc" /> */}
                         <ReactPlayer 
                             url='https://www.youtube.com/watch?v=8k41mZZY2tQ' 
                             loop={true}
                             width="100%"
-                            height="40.8rem"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
@@ -40,14 +40,14 @@ function TileGridPPF() {
                 </div>
             </Grid>
             <Grid item xs={12} md={4} className="grid-item">
-                <div className="bs-tile setBgSrc typ4">
+                <div className="bs-tile typ4">
                     <div className="img-wrap">
                         {/* <img src={detailImg} alt="Detail Service" title="Detail Service" className="getBgSrc"/> */}
                         <ReactPlayer 
                             url='https://www.youtube.com/watch?v=8k41mZZY2tQ' 
                             loop={true}
                             width="100%"
-                            height="40.8rem"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
@@ -60,14 +60,14 @@ function TileGridPPF() {
                 </div>
             </Grid>
             <Grid item xs={12} md={4} className="grid-item">
-                <div className="bs-tile setBgSrc typ5">
+                <div className="bs-tile typ5">
                     <div className="img-wrap">
                         {/* <img src={customizeImg} alt="Ceramic Coating" title="Ceramic Coating" className="getBgSrc"/> */}
                         <ReactPlayer 
                             url='https://www.youtube.com/watch?v=j_GmoXQTB2c' 
                             loop={true}
                             width="100%"
-                            height="40.8rem"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
@@ -79,14 +79,14 @@ function TileGridPPF() {
                 </div>
             </Grid> 
             <Grid item xs={12} md={4} className="grid-item">
-                <div className="bs-tile setBgSrc typ3">
+                <div className="bs-tile typ3">
                     <div className="img-wrap">
                         {/* <img src={ceramicCoatingImg} alt="Ceramic Coating" title="Ceramic Coating" className="getBgSrc"/> */}
                         <ReactPlayer 
                             url='https://www.youtube.com/watch?v=biYnXvwlqVM' 
                             loop={true}
                             width="100%"
-                            height="40.8rem"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
@@ -99,14 +99,14 @@ function TileGridPPF() {
                 
             </Grid>
             <Grid item xs={12} md={4} className="grid-item">
-                <div className="bs-tile setBgSrc typ4">
+                <div className="bs-tile typ4">
                     <div className="img-wrap">
                         {/* <img src={ppfImg} alt="Paint Protection Film" title="Paint Protection Film" className="getBgSrc"/> */}
                         <ReactPlayer 
                             url='https://www.youtube.com/watch?v=R-PQLRLjFco' 
                             loop={true}
                             width="100%"
-                            height="40.8rem"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
@@ -119,14 +119,14 @@ function TileGridPPF() {
                 </div>
             </Grid>
             <Grid item xs={12} md={4} className="grid-item">
-                <div className="bs-tile setBgSrc typ5">
+                <div className="bs-tile typ5">
                     <div className="img-wrap">
                         {/* <img src={customizeImg} alt="Customise" title="Customise" className="getBgSrc"/> */}
                         <ReactPlayer 
                             url='https://www.youtube.com/watch?v=8k41mZZY2tQ' 
                             loop={true}
                             width="100%"
-                            height="40.8rem"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
