@@ -9,13 +9,19 @@ import HomeBanner from '../components/home/HomeBanner';
 import premiumPackageImg from '../assets/images/premium-package.webp';
 import Flybutton from '../components/common/Flybutton';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
-import Loader from '../components/common/Loader';
-
+// import Loader from '../components/common/Loader';
+import {Helmet} from "react-helmet";
 
 function Home() {
 	return (
 		<>
 			<Header/>
+			<Helmet>
+				<meta charSet="utf-8" />
+				<title>Professional car wash & Interior cleaning service at affordable prices</title>
+				{/* <link rel="canonical" href="http://mysite.com/example" /> */}
+				<meta name="description" content="Get your car cleaned inside-out with premium steam wash service | High value service at an unbeatable price | Drive out with a clean & shiny looking car | Free wax application provides gloss and instant protection." />
+			</Helmet>
 			<main>
 				<div className="lyt-content typ-home">
 					<HomeBanner bannerTitle = {'welcome to aquatint auto detailing'}/>

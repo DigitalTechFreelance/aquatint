@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import logoImg from '../../assets/images/logo.png';
 import useScrollPosition from '../../hooks/useScrollPosition';
 
-
-
 function Header() {
     
     let scrollPosition = useScrollPosition();
@@ -18,7 +16,7 @@ function Header() {
 
   return (
       <>
-    <header className={`bs-header ${(scrollPosition > 10 ) ? "header-blur header-scroll" : ""}`}>
+        <header className={`bs-header ${(scrollPosition > 10 ) ? "header-blur header-scroll" : ""}`}>
         <div className="cm-container">
             <a href="/home" className="logo">
                 <img src={logoImg} alt="Company Logo" title="Company Logo" />

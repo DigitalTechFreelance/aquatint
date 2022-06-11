@@ -4,7 +4,8 @@ import useSetBgImage from '../../hooks/useSetBgImage';
 // import Videoplayer from '../components/common/Videoplayer';
 import videosrc from '../../assets/video/copy-of-final.mp4';
 import videoSrcMobile from '../../assets/video/comp2.mp4';
-import ReactPlayer from 'react-player';
+// import ReactPlayer from 'react-player';
+import VideoPlayer from './VideoPlayer';
 
 function HomeBanner(props) {
 
@@ -15,10 +16,21 @@ function HomeBanner(props) {
     playing: false,
     buttonClose: false,
   });
-
   const handleVideoStatus = (videoPlayStatus) => {
-    setPlayState({ ...playState, playing: videoPlayStatus.playing, buttonClose: videoPlayStatus.buttonClose })
-  }
+    setPlayState({
+      ...playState,
+      playing: videoPlayStatus.playing,
+      buttonClose: videoPlayStatus.buttonClose,
+    });
+  };
+  // const [playState, setPlayState] = React.useState({
+  //   playing: false,
+  //   buttonClose: false,
+  // });
+
+  // const handleVideoStatus = (videoPlayStatus) => {
+  //   setPlayState({ ...playState, playing: videoPlayStatus.playing, buttonClose: videoPlayStatus.buttonClose })
+  // }
 
   const [autoPlay, setAutoPlay] = useState(false);
 
@@ -29,7 +41,7 @@ function HomeBanner(props) {
   return (
     <div className="bs-banner">
       <div className="video-wrap">
-        <video
+        {/* <video
           src={size.width > 768 ? videosrc : videoSrcMobile}
           controls
           muted={true}
@@ -38,16 +50,17 @@ function HomeBanner(props) {
           preload="auto"
           loop
           className='video-player'
-        > </video>
-        {/* <ReactPlayer
-          url={`${size.width > 768 ? 'https://www.youtube.com/watch?v=-FR6ZosRGyk' : 'https://www.youtube.com/shorts/45PegK6fcLU'}`}
-          loop={true}
-          // height={window.innerWidth>=767 ? "40.8rem" : "auto" }
-          width="100%"
-          playing={autoPlay}
+        > </video> */}
+        <VideoPlayer
+          buttonClose={false}
+          playingStatus={handleVideoStatus}
+          srcUrl={size.width > 768 ? videosrc : videoSrcMobile}
           muted={true}
+          autoPlay={true}
           className="video-player"
-        /> */}
+          height="100%"
+          loop={true}
+        />
       </div>
       <div className="banner-info">
         <h2 className="banner-title">{props.bannerTitle}</h2>

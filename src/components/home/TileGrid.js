@@ -5,6 +5,7 @@ import detailImg from '../../assets/images/offering-detail1.gif';
 import ceramicCoatingImg from '../../assets/images/offering-ceramic-coating1.gif';
 import ppfImg from '../../assets/images/offering-ppf.gif';
 import customizeImg from '../../assets/images/offering-customize.webp'; 
+import VideoPlayer from './VideoPlayer';
 
 /*react player import */
 import ReactPlayer from 'react-player';
@@ -24,7 +25,17 @@ function TileGrid() {
                 <div className="bs-tile typ1">
                     <div className="img-wrap">
                         {/* <img src={washImg} alt="Wash Service" title="wash Service" className="getBgSrc" /> */}
-                        <ReactPlayer 
+                        <VideoPlayer
+                            buttonClose={false}
+                            playingStatus={()=>{}}
+                            srcUrl={'https://www.youtube.com/watch?v=8k41mZZY2tQ'}
+                            muted={true}
+                            autoPlay={true}
+                            className="mod-gif"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
+                            loop={true}
+                        />
+                        {/* <ReactPlayer 
                             url='https://www.youtube.com/watch?v=8k41mZZY2tQ' 
                             loop={true}
                             height={window.innerWidth>=767 ? "40.8rem" : "auto" }
@@ -32,7 +43,7 @@ function TileGrid() {
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
-                        />
+                        /> */}
                     </div>
                     <div className="text-wrap">
                         <h3 className="title">wash</h3>
@@ -44,7 +55,17 @@ function TileGrid() {
                 <div className="bs-tile typ2">
                     <div className="img-wrap">
                         {/* <img src={detailImg} alt="Detail Service" title="Detail Service" className="getBgSrc"/> */}
-                        <ReactPlayer 
+                        <VideoPlayer
+                            buttonClose={false}
+                            playingStatus={()=>{}}
+                            srcUrl={'https://www.youtube.com/watch?v=Cdd_amqSFAg'}
+                            muted={true}
+                            autoPlay={true}
+                            className="mod-gif"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
+                            loop={true}
+                        />
+                        {/* <ReactPlayer 
                             url='https://www.youtube.com/watch?v=Cdd_amqSFAg' 
                             loop={true}
                             width="100%"
@@ -52,7 +73,7 @@ function TileGrid() {
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
-                        />
+                        /> */}
                     </div>
                     <div className="text-wrap">
                         <h3 className="title">detail</h3>
@@ -64,7 +85,17 @@ function TileGrid() {
                 <div className="bs-tile typ3">
                     <div className="img-wrap">
                         {/* <img src={ceramicCoatingImg} alt="Ceramic Coating" title="Ceramic Coating" className="getBgSrc"/> */}
-                        <ReactPlayer 
+                        <VideoPlayer
+                            buttonClose={false}
+                            playingStatus={()=>{}}
+                            srcUrl={'https://www.youtube.com/watch?v=CXWX0U3EXqk'}
+                            muted={true}
+                            autoPlay={true}
+                            className="mod-gif"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
+                            loop={true}
+                        />
+                        {/* <ReactPlayer 
                             url='https://www.youtube.com/watch?v=CXWX0U3EXqk' 
                             loop={true}
                             width="100%"
@@ -72,7 +103,7 @@ function TileGrid() {
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
-                        />
+                        /> */}
                     </div>
                     <div className="text-wrap">
                         <h3 className="title">ceramic coating</h3>
@@ -85,7 +116,17 @@ function TileGrid() {
                 <div className="bs-tile typ4">
                     <div className="img-wrap">
                         {/* <img src={ppfImg} alt="Paint Protection Film" title="Paint Protection Film" className="getBgSrc"/> */}
-                        <ReactPlayer 
+                        <VideoPlayer
+                            buttonClose={false}
+                            playingStatus={()=>{}}
+                            srcUrl={'https://www.youtube.com/watch?v=8BqXWxXRS4E'}
+                            muted={true}
+                            autoPlay={true}
+                            className="mod-gif"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
+                            loop={true}
+                        />
+                        {/* <ReactPlayer 
                             url='https://www.youtube.com/watch?v=8BqXWxXRS4E' 
                             loop={true}
                             width="100%"
@@ -93,7 +134,7 @@ function TileGrid() {
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
-                        />
+                        /> */}
                     </div>
                     <div className="text-wrap">
                         <h3 className="title">paint protection film</h3>
@@ -105,7 +146,17 @@ function TileGrid() {
                 <div className="bs-tile typ5">
                     <div className="img-wrap">
                         {/* <img src={customizeImg} alt="Customise" title="Customise" className="getBgSrc"/> */}
-                        <ReactPlayer 
+                        <VideoPlayer
+                            buttonClose={false}
+                            playingStatus={()=>{}}
+                            srcUrl={'https://www.youtube.com/watch?v=9sBozUaYajE'}
+                            muted={true}
+                            autoPlay={true}
+                            className="mod-gif"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
+                            loop={true}
+                        />
+                        {/* <ReactPlayer 
                             url='https://www.youtube.com/watch?v=9sBozUaYajE' 
                             loop={true}
                             width="100%"
@@ -113,7 +164,7 @@ function TileGrid() {
                             playing={autoPlay}
                             muted={true}
                             className="mod-gif"
-                        />
+                        /> */}
                     </div>
                     <div className="text-wrap">
                         <h3 className="title">cutomise</h3>
