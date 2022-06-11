@@ -125,7 +125,7 @@ function VideoPlayer(props) {
             // eslint-disable-next-line react/prop-types
             url={props.srcUrl}
             onReady={initHandler}
-            playing={props?.autoPlay? props.autoPlay: playing}
+            playing={props?.autoPlay === true ? true : playing}
             onProgress={handelProgress}
             // volume={0}
             muted={props.muted}

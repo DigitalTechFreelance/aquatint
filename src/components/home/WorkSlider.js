@@ -19,14 +19,29 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import YoutubeEmbed from '../common/YoutubeEmbed';
+import VideoPlayer from './VideoPlayer';
 
 function WorkSlider() {
 
     useSetBgImage(".setBgSrc", ".getBgSrc");
     const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
+    const [embedId, setEmbedId] = React.useState(null)
+    const handleOpen = (id) => {
+        setOpen(true);
+        setEmbedId(id)
+    }
     const handleClose = () => setOpen(false);
-
+    const [playState, setPlayState] = React.useState({
+        playing: false,
+        buttonClose: false,
+      });
+      const handleVideoStatus = (videoPlayStatus) => {
+        setPlayState({
+          ...playState,
+          playing: videoPlayStatus.playing,
+          buttonClose: videoPlayStatus.buttonClose,
+        });
+      };
   return (
     <>
     <Swiper 
@@ -54,7 +69,7 @@ function WorkSlider() {
                     <img src={tileImg} alt="recent work 1" title="recent work 1" className="getBgSrc" />
                 </div>
                 <div className="action-wrap">
-                    <button type="button" className="link" data-video-src="" onClick={handleOpen}>
+                    <button type="button" className="link" data-video-src="" onClick={()=>handleOpen("35npVaFGHMY")}>
                         <span className="icon icon-play2"></span>
                     </button>
                 </div>
@@ -66,9 +81,9 @@ function WorkSlider() {
                     <img src={tileImg} alt="recent work 2" title="recent work 2" className="getBgSrc"/>
                 </div>
                 <div className="action-wrap">
-                    <a href="#" type="button" className="link" data-video-src="">
-                    <span className="icon icon-play2"></span>
-                    </a>
+                    <button type="button" className="link" data-video-src="" onClick={()=>handleOpen("35npVaFGHMY")}>
+                        <span className="icon icon-play2"></span>
+                    </button>
                 </div>
             </div>
         </SwiperSlide>
@@ -78,9 +93,9 @@ function WorkSlider() {
                     <img src={tileImg} alt="recent work 3" title="recent work 3" className="getBgSrc"/>
                 </div>
                 <div className="action-wrap">
-                    <a href="#" type="button" className="link" data-video-src="">
-                    <span className="icon icon-play2"></span>
-                    </a>
+                    <button type="button" className="link" data-video-src="" onClick={()=>handleOpen("35npVaFGHMY")}>
+                        <span className="icon icon-play2"></span>
+                    </button>
                 </div>
             </div>
         </SwiperSlide>
@@ -102,7 +117,19 @@ function WorkSlider() {
                 <button className="modal-close" onClick={handleClose}>
                   <span className="icon-close"></span>
                 </button>
-                <YoutubeEmbed embedId="35npVaFGHMY" />
+                <YoutubeEmbed embedId={embedId}/>
+                {/* <div className="youtube-video">
+                    <VideoPlayer
+                        className='yt-iframe'
+                        srcUrl={'https://www.youtube.com/watch?v=35npVaFGHMY'}
+                        muted={false}
+                        autoPlay={false}
+                        buttonClose={false}
+                        playingStatus={handleVideoStatus}
+                        loop={false}
+                        // height={"100%"}
+                    />
+                </div> */}
             </Box>
         </Fade>
       </Modal>
