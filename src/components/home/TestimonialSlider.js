@@ -14,62 +14,101 @@ import { Navigation, Pagination } from "swiper";
 
 //assets
 
-import testiImg1 from '../../assets/images/testimonial1.webp';
-import testiImg2 from '../../assets/images/testimonial2.webp';
-import testiImg3 from '../../assets/images/testimonial3.webp';
+import tomJoseph from '../../assets/images/testimonials/tom-joseph.webp';
+import sameerSharma from '../../assets/images/testimonials/sameer-sharma.webp';
+import ajayGodambe from '../../assets/images/testimonial3.webp';
+import satyeshPati from '../../assets/images/testimonial3.webp';
+import anupamGupta from '../../assets/images/testimonial3.webp';
 
 function TestimonialSlider() {
   useSetBgImage(".setBgSrc", ".getBgSrc");
   return (
-    <Swiper 
-    slidesPerView={1}
-    spaceBetween={30}
-    navigation={true} 
-    pagination={true}
-    modules={[Navigation, Pagination]} 
-    className="mySwiper bs-swiper typ-testimonials bs-testimonial"
+    <Swiper
+      slidesPerView={1}
+      spaceBetween={30}
+      navigation={true}
+      pagination={true}
+      autoHeight={true}
+      modules={[Navigation, Pagination]}
+      className="mySwiper bs-swiper typ-testimonials bs-testimonial"
     >
       <SwiperSlide>
-          <div className="mod-testimonial">
-            <div className="info-wrap">
-              <h3 className="title">Mr. John Doe</h3>
-              <strong className="place">Pune, India</strong>
-              <div className="desc">
-                <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p>
-              </div>
-            </div>
-            <div className="img-wrap setBgSrc">
-              <img src={testiImg1} alt="Testimonial 1" title="testimonial 1" className="getBgSrc"/>
+        <div className="mod-testimonial">
+          <div className="info-wrap">
+            <h3 className="title">Mr. Ajay Godambe</h3>
+            <strong className="place">Pune, India</strong>
+            <div className="desc">
+              <p>No Competition!</p>
+              <p>Class leading detailers with a focused approach and expert guidance.</p>
+              <p>My goto place for over 5 years.</p>
             </div>
           </div>
+          <div className="img-wrap">
+            {/* <img src={ajayGodambe} alt="Testimonial 1" title="testimonial 1" className="getBgSrc" /> */}
+            <span className="testi-initials">A</span>
+          </div>
+        </div>
       </SwiperSlide>
       <SwiperSlide>
-          <div className="mod-testimonial">
-            <div className="info-wrap">
-              <h3 className="title">Mr. John Doe</h3>
-              <strong className="place">Pune, India</strong>
-              <div className="desc">
-                <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p>
-              </div>
-            </div>
-            <div className="img-wrap setBgSrc">
-              <img src={testiImg2} alt="Testimonial 2" title="testimonial 2" className="getBgSrc"/>
+        <div className="mod-testimonial">
+          <div className="info-wrap">
+            <h3 className="title">Mr. Satyesh Pati</h3>
+            <strong className="place">Pune, India</strong>
+            <div className="desc">
+              <p>Positive: Professionalism, Punctuality, Quality, Value</p>
+              <p>I have been visiting them since 2018 and today got opti coat pro coating done on my VW Polo TSI. Marvelous work, super finish upto quality standards. Very commited team to detailing.</p>
             </div>
           </div>
+          <div className="img-wrap">
+            {/* <img src={satyeshPati} alt="Testimonial 2" title="testimonial 2" className="getBgSrc" /> */}
+            <span className="testi-initials">S</span>
+          </div>
+        </div>
       </SwiperSlide>
       <SwiperSlide>
-          <div className="mod-testimonial">
-            <div className="info-wrap">
-              <h3 className="title">Mr. John Doe</h3>
-              <strong className="place">Pune, India</strong>
-              <div className="desc">
-                <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."</p>
-              </div>
-            </div>
-            <div className="img-wrap setBgSrc">
-              <img src={testiImg3} alt="Testimonial 3" title="testimonial 3" className="getBgSrc"/>
+        <div className="mod-testimonial">
+          <div className="info-wrap">
+            <h3 className="title">Mr. Tom Joseph</h3>
+            <strong className="place">Pune, India</strong>
+            <div className="desc">
+              <p>One of the finest car detailers in India. They suggested me to go for a special steam wash. I had driven the car all the way from Kerala to Pune and after the 1 hour long procedure my car was looking as if it is ceramic coated. I was attended by Mr.Lallett &amp; I’m greatly impressed by the way he has trained the team.</p>
             </div>
           </div>
+          <div className="img-wrap setBgSrc">
+            <img src={tomJoseph} alt="Tom Joseph" title="Tom Joseph" className="getBgSrc" />
+            {/* <span className="testi-initials">T</span> */}
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="mod-testimonial">
+          <div className="info-wrap">
+            <h3 className="title">Mr. Anupam Gupta</h3>
+            <strong className="place">Pune, India</strong>
+            <div className="desc">
+              <p>Thank you so much lallett, you and your team are extremely professional. The best part is you and your team doesn’t differentiate between luxury and normal car. Irrespective of which car they are detailing. The attention to detail by each indivisual was superb.  No other detailer is as professional as you guys are.</p>
+            </div>
+          </div>
+          <div className="img-wrap">
+            {/* <img src={anupamGupta} alt="Testimonial 3" title="testimonial 3" className="getBgSrc" /> */}
+            <span className="testi-initials">A</span>
+          </div>
+        </div>
+      </SwiperSlide>
+      <SwiperSlide>
+        <div className="mod-testimonial">
+          <div className="info-wrap">
+            <h3 className="title">Mr. Sameer Sharma</h3>
+            <strong className="place">Pune, India</strong>
+            <div className="desc">
+              <p>Ever seen 10+ year old Octavia sparkling brand new in its original OEM paint? Sounds impossible, right? That’s what Aquatint does & having seen that, all my cars are maintained only at Aquatint since last 5 years. They are the best fitness doctors for your car’s paint & leather. The amount of passion &amp; efforts they bring to make your car sparkle brand new is unmatchable.</p>
+            </div>
+          </div>
+          <div className="img-wrap setBgSrc">
+            <img src={sameerSharma} alt="Sameer Sharma" title="Sameer Sharma" className="getBgSrc" />
+            {/* <span className="testi-initials">S</span> */}
+          </div>
+        </div>
       </SwiperSlide>
     </Swiper>
   )
