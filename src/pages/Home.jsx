@@ -10,21 +10,21 @@ import premiumPackageImg from '../assets/images/premium-package.webp';
 import Flybutton from '../components/common/Flybutton';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 // import Loader from '../components/common/Loader';
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 function Home() {
 	return (
 		<>
-			<Header/>
+			<Header />
 			<Helmet>
 				<meta charSet="utf-8" />
 				<title>Professional car wash & Interior cleaning service at affordable prices</title>
-				{/* <link rel="canonical" href="http://mysite.com/example" /> */}
+				<meta name="keywords" content="Steam wash, Foam wash, Pressure wash, Wash near me, Car wash, Car clean, Car wash near me, Nearest car wash, Express car wash, Auto car wash, Car cleaning near me, Car spa, Eco car wash, Car cleaning, Car detailing, Car wash in pune, Car wash in Nashik, Car wash in baramati, Bike detailing, Bike wash"></meta>
 				<meta name="description" content="Get your car cleaned inside-out with premium steam wash service | High value service at an unbeatable price | Drive out with a clean & shiny looking car | Free wax application provides gloss and instant protection." />
 			</Helmet>
 			<main>
 				<div className="lyt-content typ-home">
-					<HomeBanner bannerTitle = {'welcome to aquatint auto detailing'}/>
+					<HomeBanner bannerTitle={'welcome to aquatint auto detailing'} />
 					<section>
 						<div className="bs-section cm-no-pad-top cm-no-pad-bottom">
 							<div className="sec-cont">
@@ -44,37 +44,37 @@ function Home() {
 									<h2 className="sec-title">Services We Offer</h2>
 								</div>
 								<div className="sec-cont">
-									<TileGrid/>
+									<TileGrid />
 								</div>
 							</div>
 						</div>
 					</section>
 					<section>
-							<div className="bs-section">
-								<div className="sec-head cm-visible-xs cm-container">
-									<h2 className="sec-title">explore our premium packages</h2>
-								</div>
-								<div className="sec-cont">
-									<div className="bs-infography typ-reverse typ-explore">
-										<div className="info-wrap">
-											<h3 className="title">
-												<span className="text-sm text-pos-1">explore our</span>
-												<span className="text-lg text-pos-2">premium</span>
-												<span className="text-lg text-pos-3">packages</span>
-											</h3>
-											<ul className="feature-list">
-												<li>COMPREHENSIVE PACKAGE</li>
-												<li>SIGNATURE PACKAGE</li>
-												<li>ESSENTIAL PACKAGE</li>
-											</ul>
-											<a href="/premium-packages" className="btn btn-default"><span>explore</span></a>
-										</div>
-										<div className="img-wrap">
-											<img src={premiumPackageImg} alt="Coating Car" title="Coating Car" />
-										</div>
+						<div className="bs-section">
+							<div className="sec-head cm-visible-xs cm-container">
+								<h2 className="sec-title">explore our premium packages</h2>
+							</div>
+							<div className="sec-cont">
+								<div className="bs-infography typ-reverse typ-explore">
+									<div className="info-wrap">
+										<h3 className="title">
+											<span className="text-sm text-pos-1">explore our</span>
+											<span className="text-lg text-pos-2">premium</span>
+											<span className="text-lg text-pos-3">packages</span>
+										</h3>
+										<ul className="feature-list">
+											<li>COMPREHENSIVE PACKAGE</li>
+											<li>SIGNATURE PACKAGE</li>
+											<li>ESSENTIAL PACKAGE</li>
+										</ul>
+										<a href="/premium-packages" className="btn btn-default"><span>explore</span></a>
+									</div>
+									<div className="img-wrap">
+										<img src={premiumPackageImg} alt="Coating Car" title="Coating Car" />
 									</div>
 								</div>
 							</div>
+						</div>
 					</section>
 					<section>
 						<div className="bs-section">
@@ -84,7 +84,7 @@ function Home() {
 								</div>
 							</div>
 							<div className="sec-cont">
-								<WorkSlider/>
+								<WorkSlider />
 							</div>
 						</div>
 					</section>
@@ -96,7 +96,7 @@ function Home() {
 							</div>
 							<div className="cm-container">
 								<div className="sec-cont">
-									<Infogarphy/>
+									<Infogarphy />
 								</div>
 							</div>
 						</div>
@@ -105,16 +105,16 @@ function Home() {
 					<section>
 						<div className="bs-section sec-last">
 							<div className="sec-cont">
-								<TestimonialSlider/>
+								<TestimonialSlider />
 							</div>
 						</div>
 					</section>
 				</div>
 				{/* <Loader/> */}
 			</main>
-			<Footer/>
-			<Flybutton/>
-			<DetailsCaptureModal/>
+			<Footer />
+			<Flybutton />
+			<DetailsCaptureModal />
 		</>
 	);
 }
