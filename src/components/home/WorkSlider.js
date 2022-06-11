@@ -34,91 +34,91 @@ function WorkSlider() {
     const [playState, setPlayState] = React.useState({
         playing: false,
         buttonClose: false,
-      });
-      const handleVideoStatus = (videoPlayStatus) => {
+    });
+    const handleVideoStatus = (videoPlayStatus) => {
         setPlayState({
-          ...playState,
-          playing: videoPlayStatus.playing,
-          buttonClose: videoPlayStatus.buttonClose,
+            ...playState,
+            playing: videoPlayStatus.playing,
+            buttonClose: videoPlayStatus.buttonClose,
         });
-      };
-  return (
-    <>
-    <Swiper 
-        slidesPerView={3}
-        spaceBetween={20}
-        loop={true}
-        navigation={true} 
-        pagination={true}
-        modules={[Navigation, Pagination]} 
-        breakpoints={{
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-            },
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 15
-            }
-        }}
-        className="mySwiper bs-swiper typ-tile"
-    >
-        <SwiperSlide>
-            <div className="bs-tile typ-video setBgSrc">
-                <div className="img-wrap">
-                    <img src={tileImg} alt="recent work 1" title="recent work 1" className="getBgSrc" />
-                </div>
-                <div className="action-wrap">
-                    <button type="button" className="link" data-video-src="" onClick={()=>handleOpen("35npVaFGHMY")}>
-                        <span className="icon icon-play2"></span>
-                    </button>
-                </div>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className="bs-tile typ-video setBgSrc">
-                <div className="img-wrap">
-                    <img src={tileImg} alt="recent work 2" title="recent work 2" className="getBgSrc"/>
-                </div>
-                <div className="action-wrap">
-                    <button type="button" className="link" data-video-src="" onClick={()=>handleOpen("35npVaFGHMY")}>
-                        <span className="icon icon-play2"></span>
-                    </button>
-                </div>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className="bs-tile typ-video setBgSrc">
-                <div className="img-wrap">
-                    <img src={tileImg} alt="recent work 3" title="recent work 3" className="getBgSrc"/>
-                </div>
-                <div className="action-wrap">
-                    <button type="button" className="link" data-video-src="" onClick={()=>handleOpen("35npVaFGHMY")}>
-                        <span className="icon icon-play2"></span>
-                    </button>
-                </div>
-            </div>
-        </SwiperSlide>
-    </Swiper>
-    <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className="bs-modal"
-        open={open}
-        // onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
-        }}
-      >
-        <Fade in={open}>
-            <Box className='modal-body'>
-                <button className="modal-close" onClick={handleClose}>
-                  <span className="icon-close"></span>
-                </button>
-                <YoutubeEmbed embedId={embedId}/>
-                {/* <div className="youtube-video">
+    };
+    return (
+        <>
+            <Swiper
+                slidesPerView={3}
+                spaceBetween={20}
+                loop={true}
+                navigation={true}
+                pagination={true}
+                modules={[Navigation, Pagination]}
+                breakpoints={{
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 15
+                    }
+                }}
+                className="mySwiper bs-swiper typ-tile"
+            >
+                <SwiperSlide>
+                    <div className="bs-tile typ-video setBgSrc">
+                        <div className="img-wrap">
+                            <img src={tileImg} alt="recent work 1" title="recent work 1" className="getBgSrc" />
+                        </div>
+                        <div className="action-wrap">
+                            <button type="button" className="link" data-video-src="" onClick={() => handleOpen("KdGhneBElgQ")}>
+                                <span className="icon icon-play2"></span>
+                            </button>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="bs-tile typ-video setBgSrc">
+                        <div className="img-wrap">
+                            <img src={tileImg} alt="recent work 2" title="recent work 2" className="getBgSrc" />
+                        </div>
+                        <div className="action-wrap">
+                            <button type="button" className="link" data-video-src="" onClick={() => handleOpen("u_Cfe2f_HW8")}>
+                                <span className="icon icon-play2"></span>
+                            </button>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="bs-tile typ-video setBgSrc">
+                        <div className="img-wrap">
+                            <img src={tileImg} alt="recent work 3" title="recent work 3" className="getBgSrc" />
+                        </div>
+                        <div className="action-wrap">
+                            <button type="button" className="link" data-video-src="" onClick={() => handleOpen("6J5SZzJd5bk")}>
+                                <span className="icon icon-play2"></span>
+                            </button>
+                        </div>
+                    </div>
+                </SwiperSlide>
+            </Swiper>
+            <Modal
+                aria-labelledby="transition-modal-title"
+                aria-describedby="transition-modal-description"
+                className="bs-modal"
+                open={open}
+                // onClose={handleClose}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                    timeout: 500,
+                }}
+            >
+                <Fade in={open}>
+                    <Box className='modal-body'>
+                        <button className="modal-close" onClick={handleClose}>
+                            <span className="icon-close"></span>
+                        </button>
+                        <YoutubeEmbed embedId={embedId} />
+                        {/* <div className="youtube-video">
                     <VideoPlayer
                         className='yt-iframe'
                         srcUrl={'https://www.youtube.com/watch?v=35npVaFGHMY'}
@@ -130,11 +130,11 @@ function WorkSlider() {
                         // height={"100%"}
                     />
                 </div> */}
-            </Box>
-        </Fade>
-      </Modal>
-    </>
-  )
+                    </Box>
+                </Fade>
+            </Modal>
+        </>
+    )
 }
 
 export default WorkSlider

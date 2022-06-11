@@ -5,7 +5,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: $clr-root;
-    width: 60%;
+    width: 80vw;
 
     @include mq-below($xs) {
       width: 95%;
@@ -38,13 +38,13 @@
 
   .yt-iframe {
     width: 100%;
-    height: 50rem;
+    height: 80vh;
 
     @include mq-below($xs) {
-     height: 20rem;
+      height: 20rem;
     }
   }
- 
+
   &.typ-modal-form {
     .modal-body {
       width: 40%;
@@ -63,7 +63,8 @@
     .modal-close {
       border-top-right-radius: 2rem;
       top: 0;
-      @include mq-below($xs){
+
+      @include mq-below($xs) {
         border-top-right-radius: 1rem;
       }
     }
@@ -71,17 +72,17 @@
     .modal-title {
       margin-bottom: 5rem;
 
-      @include mq-below($xs){
+      @include mq-below($xs) {
         margin-bottom: 1.5rem;
       }
 
       .title {
-        @include font-source-sans(4rem,5.2rem, $font1, $font-smbold, $clr-base);
+        @include font-source-sans(4rem, 5.2rem, $font1, $font-smbold, $clr-base);
         letter-spacing: 0.4rem;
         margin-bottom: 2rem;
         text-align: center;
 
-        @include mq-below($xs){
+        @include mq-below($xs) {
           font-size: 1.4rem;
           line-height: 1.2rem;
           letter-spacing: 0.2rem;
@@ -101,7 +102,7 @@
         flex-direction: column;
         margin: 0 0 4rem 0;
 
-        @include mq-below($xs){
+        @include mq-below($xs) {
           margin: 0 0 2rem 0;
         }
 
@@ -110,7 +111,7 @@
           padding: 0;
           margin-bottom: 5rem;
 
-          @include mq-below($xs){
+          @include mq-below($xs) {
             margin-bottom: 2rem;
           }
         }
@@ -123,7 +124,7 @@
           &.btn-default {
             padding: 2rem 6rem;
 
-            @include mq-below($xs){
+            @include mq-below($xs) {
               width: 100%;
               padding: 1rem 3rem;
             }
