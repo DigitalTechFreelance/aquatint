@@ -20,6 +20,7 @@ function Home() {
 				<meta charSet="utf-8" />
 				<title>Professional car wash & Interior cleaning service at affordable prices</title>
 				{/* <link rel="canonical" href="http://mysite.com/example" /> */}
+				<meta name="keywords" content="Music, Audio, Lyrics"/> 
 				<meta name="description" content="Get your car cleaned inside-out with premium steam wash service | High value service at an unbeatable price | Drive out with a clean & shiny looking car | Free wax application provides gloss and instant protection." />
 			</Helmet>
 			<main>
