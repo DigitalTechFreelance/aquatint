@@ -5,7 +5,7 @@ import useSetBgImage from '../../hooks/useSetBgImage';
 import videosrc from '../../assets/video/copy-of-final.mp4';
 import videoSrcMobile from '../../assets/video/comp2.mp4';
 // import ReactPlayer from 'react-player';
-import VideoPlayer from './VideoPlayer';
+import VideoPlayer from '../common/VideoPlayer';
 
 function HomeBanner(props) {
 
@@ -23,34 +23,12 @@ function HomeBanner(props) {
       buttonClose: videoPlayStatus.buttonClose,
     });
   };
-  // const [playState, setPlayState] = React.useState({
-  //   playing: false,
-  //   buttonClose: false,
-  // });
 
-  // const handleVideoStatus = (videoPlayStatus) => {
-  //   setPlayState({ ...playState, playing: videoPlayStatus.playing, buttonClose: videoPlayStatus.buttonClose })
-  // }
 
-  const [autoPlay, setAutoPlay] = useState(false);
-
-  useEffect(() => {
-    setAutoPlay(true)
-  }, [autoPlay]);
 
   return (
     <div className="bs-banner">
       <div className="video-wrap">
-        {/* <video
-          src={size.width > 768 ? videosrc : videoSrcMobile}
-          controls
-          muted={true}
-          volume
-          autoPlay={"autoplay"}
-          preload="auto"
-          loop
-          className='video-player'
-        > </video> */}
         <VideoPlayer
           buttonClose={false}
           playingStatus={handleVideoStatus}

@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import PaintProtectionFilmInfography from '../components/service/PaintProtectionFilmInfography';
-import Videoplayer from '../components/common/Videoplayer';
 import videosrc from '../assets/video/mini-cooper-red.mp4';
 import Flybutton from '../components/common/Flybutton';
 import TileGridPPF from '../components/service/TileGridPPF';
@@ -10,6 +9,7 @@ import HomeBanner from '../components/home/HomeBanner';
 import PpfCompareList from '../components/service/PpfCompareList';
 import PpfWorkSlider from '../components/service/PpfWorkSlider';
 import { Helmet } from "react-helmet";
+import VideoPlayer from '../components/common/VideoPlayer';
 
 function PaintProtectionFilm() {
     const [playState, setPlayState] = React.useState({
@@ -77,7 +77,11 @@ function PaintProtectionFilm() {
                                     </div>
                                     <div className="media-wrap">
                                         <div className="video">
-                                            <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videosrc} />
+                                            <VideoPlayer
+                                                buttonClose={false} 
+                                                playingStatus={handleVideoStatus}
+                                                srcUrl={videosrc}
+                                            />
                                         </div>
                                         <button className='btn'><span className="icon icon-play"></span></button>
                                     </div>

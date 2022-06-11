@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import useSetBgImage from '../../hooks/useSetBgImage';
-import ReactPlayer from 'react-player';
+import VideoPlayer from '../common/VideoPlayer';
 
 function TileGridPPF() {
     const [autoPlay, setAutoPlay] = useState(false);
@@ -17,14 +17,14 @@ function TileGridPPF() {
             <Grid item xs={12} md={4} className="grid-item">
                 <div className="bs-tile typ3">
                     <div className="img-wrap">
-                        <ReactPlayer 
-                            url='https://www.youtube.com/watch?v=8k41mZZY2tQ' 
-                            loop={true}
-                            width="100%"
-                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
-                            playing={autoPlay}
+                        <VideoPlayer
+                            buttonClose={false}
+                            srcUrl={'https://www.youtube.com/watch?v=8k41mZZY2tQ'}
                             muted={true}
+                            autoPlay={true}
                             className="mod-gif"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
+                            loop={true}
                         />
                     </div>
                     <div className="text-wrap">
@@ -36,14 +36,14 @@ function TileGridPPF() {
             <Grid item xs={12} md={4} className="grid-item">
                 <div className="bs-tile typ4">
                     <div className="img-wrap">
-                        <ReactPlayer 
-                            url='https://www.youtube.com/watch?v=8k41mZZY2tQ' 
-                            loop={true}
-                            width="100%"
-                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
-                            playing={autoPlay}
+                        <VideoPlayer
+                            buttonClose={false}
+                            srcUrl={'https://www.youtube.com/watch?v=8k41mZZY2tQ'}
                             muted={true}
+                            autoPlay={true}
                             className="mod-gif"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
+                            loop={true}
                         />
                     </div>
                     <div className="text-wrap">
@@ -55,14 +55,14 @@ function TileGridPPF() {
             <Grid item xs={12} md={4} className="grid-item">
                 <div className="bs-tile typ5">
                     <div className="img-wrap">
-                        <ReactPlayer 
-                            url='https://www.youtube.com/watch?v=j_GmoXQTB2c' 
-                            loop={true}
-                            width="100%"
-                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
-                            playing={autoPlay}
+                        <VideoPlayer
+                            buttonClose={false}
+                            srcUrl={'https://www.youtube.com/watch?v=j_GmoXQTB2c'}
                             muted={true}
+                            autoPlay={true}
                             className="mod-gif"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
+                            loop={true}
                         />
                     </div>
                     <div className="text-wrap">
@@ -73,14 +73,14 @@ function TileGridPPF() {
             <Grid item xs={12} md={4} className="grid-item">
                 <div className="bs-tile typ3">
                     <div className="img-wrap">
-                        <ReactPlayer 
-                            url='https://www.youtube.com/watch?v=biYnXvwlqVM' 
-                            loop={true}
-                            width="100%"
-                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
-                            playing={autoPlay}
+                        <VideoPlayer
+                            buttonClose={false}
+                            srcUrl={'https://www.youtube.com/watch?v=biYnXvwlqVM'}
                             muted={true}
+                            autoPlay={true}
                             className="mod-gif"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
+                            loop={true}
                         />
                     </div>
                     <div className="text-wrap">
@@ -92,14 +92,14 @@ function TileGridPPF() {
             <Grid item xs={12} md={4} className="grid-item">
                 <div className="bs-tile typ4">
                     <div className="img-wrap">
-                        <ReactPlayer 
-                            url='https://www.youtube.com/watch?v=R-PQLRLjFco' 
-                            loop={true}
-                            width="100%"
-                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
-                            playing={autoPlay}
+                        <VideoPlayer
+                            buttonClose={false}
+                            srcUrl={'https://www.youtube.com/watch?v=R-PQLRLjFco'}
                             muted={true}
+                            autoPlay={true}
                             className="mod-gif"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
+                            loop={true}
                         />
                     </div>
                     <div className="text-wrap">
@@ -111,14 +111,14 @@ function TileGridPPF() {
             <Grid item xs={12} md={4} className="grid-item">
                 <div className="bs-tile typ5">
                     <div className="img-wrap">
-                        <ReactPlayer 
-                            url='https://www.youtube.com/watch?v=8k41mZZY2tQ' 
-                            loop={true}
-                            width="100%"
-                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
-                            playing={autoPlay}
+                        <VideoPlayer
+                            buttonClose={false}
+                            srcUrl={'https://www.youtube.com/watch?v=8k41mZZY2tQ'}
                             muted={true}
+                            autoPlay={true}
                             className="mod-gif"
+                            height={window.innerWidth>=767 ? "40.8rem" : "auto" }
+                            loop={true}
                         />
                     </div>
                     <div className="text-wrap">

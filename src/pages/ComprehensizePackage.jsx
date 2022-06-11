@@ -2,8 +2,8 @@ import React from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import CoatingInfogarphy from '../components/service/CoatingInfogarphy';
-import Videoplayer from '../components/common/Videoplayer';
 import videosrc from '../assets/video/dummy-video.mp4';
+import VideoPlayer from '../components/common/VideoPlayer';
 
 function ComprehensizePackage() {
     const [playState, setPlayState] = React.useState({
@@ -56,7 +56,11 @@ function ComprehensizePackage() {
                                         </div>
                                         <div className="media-wrap">
                                             <div className="video">
-                                                <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videosrc}/>
+                                                <VideoPlayer
+                                                    buttonClose={false} 
+                                                    playingStatus={handleVideoStatus}
+                                                    srcUrl={videosrc}
+                                                />
                                             </div>
                                         </div>
                                         <div className="action-wrap">

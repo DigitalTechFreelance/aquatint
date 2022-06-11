@@ -2,10 +2,10 @@ import React from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import CeramicCoatingInfogarphy from '../components/service/CeramicCoatingInfogarphy';
-import Videoplayer from '../components/common/Videoplayer';
 import videosrc from '../assets/video/dummy-video.mp4';
 import Flybutton from '../components/common/Flybutton';
 import { Helmet } from "react-helmet";
+import VideoPlayer from '../components/common/VideoPlayer';
 
 function CeramicCoating() {
     const [playState, setPlayState] = React.useState({
@@ -42,7 +42,11 @@ function CeramicCoating() {
                                         <div className="mod-video typ-lg">
                                             <div className="media-wrap">
                                                 <div className="video">
-                                                    <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videosrc} />
+                                                    <VideoPlayer
+                                                        buttonClose={false} 
+                                                        playingStatus={handleVideoStatus}
+                                                        srcUrl={videosrc}
+                                                    />
                                                 </div>
                                                 {/* <button className='btn'><span className="icon icon-play"></span></button> */}
                                             </div>

@@ -7,7 +7,11 @@ import YoutubeEmbed from '../common/YoutubeEmbed';
 
 function InteriorDetailingService() {
     const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
+    const [embedId, setEmbedId] = React.useState(null)
+    const handleOpen = (id) => {
+        setOpen(true);
+        setEmbedId(id)
+    }
     const handleClose = () => setOpen(false);
   return (
     <div className="lyt-features-list typ-orange">
@@ -41,7 +45,7 @@ function InteriorDetailingService() {
                         <div className="media-wrap">
                             <div className="video">
                                 <img src="https://via.placeholder.com/846x476.png/1a1a1a/919191%20%20?text=Placeholder" alt="placeholder" />
-                                <button className='btn btn-play' onClick={handleOpen}><span className="icon icon-play1"></span></button>
+                                <button className='btn btn-play' onClick={()=> handleOpen('35npVaFGHMY')}><span className="icon icon-play1"></span></button>
                             </div>
                         </div>
                     </div>
@@ -82,7 +86,7 @@ function InteriorDetailingService() {
                         <div className="media-wrap">
                             <div className="video">
                                 <img src="https://via.placeholder.com/846x476.png/1a1a1a/919191%20%20?text=Placeholder" alt="placeholder" />
-                                <button className='btn btn-play' onClick={handleOpen}><span className="icon icon-play1"></span></button>
+                                <button className='btn btn-play' onClick={()=> handleOpen('35npVaFGHMY')}><span className="icon icon-play1"></span></button>
                             </div>
                         </div>
                     </div>
@@ -107,7 +111,7 @@ function InteriorDetailingService() {
                 <button className="modal-close" onClick={handleClose}>
                   <span className="icon-close"></span>
                 </button>
-                <YoutubeEmbed embedId="35npVaFGHMY" />
+                <YoutubeEmbed embedId={embedId} />
             </Box>
         </Fade>
       </Modal>

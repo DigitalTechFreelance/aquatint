@@ -24,9 +24,13 @@ function PpfWorkSlider() {
 
     useSetBgImage(".setBgSrc", ".getBgSrc");
     const [open, setOpen] = React.useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    const [embedId, setEmbedId] = React.useState(null)
 
+    const handleOpen = (id) => {
+        setOpen(true);
+        setEmbedId(id)
+    }
+    const handleClose = () => setOpen(false);
   return (
     <>
         <Swiper 
@@ -54,7 +58,7 @@ function PpfWorkSlider() {
                         <img src={tileImg} alt="recent work 1" title="recent work 1" className="getBgSrc" />
                     </div>
                     <div className="action-wrap">
-                        <button type="button" className="link" data-video-src="" onClick={handleOpen}>
+                        <button type="button" className="link" data-video-src="" onClick={() => handleOpen("KdGhneBElgQ")}>
                             <span className="icon icon-play2"></span>
                         </button>
                     </div>
@@ -66,9 +70,9 @@ function PpfWorkSlider() {
                         <img src={tileImg} alt="recent work 2" title="recent work 2" className="getBgSrc"/>
                     </div>
                     <div className="action-wrap">
-                        <a href="#" type="button" className="link" data-video-src="">
-                        <span className="icon icon-play2"></span>
-                        </a>
+                        <button type="button" className="link" data-video-src="" onClick={() => handleOpen("u_Cfe2f_HW8")}>
+                            <span className="icon icon-play2"></span>
+                        </button>
                     </div>
                 </div>
             </SwiperSlide>
@@ -78,9 +82,9 @@ function PpfWorkSlider() {
                         <img src={tileImg} alt="recent work 3" title="recent work 3" className="getBgSrc"/>
                     </div>
                     <div className="action-wrap">
-                        <a href="#" type="button" className="link" data-video-src="">
-                        <span className="icon icon-play2"></span>
-                        </a>
+                        <button type="button" className="link" data-video-src="" onClick={() => handleOpen("6J5SZzJd5bk")}>
+                            <span className="icon icon-play2"></span>
+                        </button>
                     </div>
                 </div>
             </SwiperSlide>
@@ -102,7 +106,7 @@ function PpfWorkSlider() {
                 <button className="modal-close" onClick={handleClose}>
                   <span className="icon-close"></span>
                 </button>
-                <YoutubeEmbed embedId="35npVaFGHMY" />
+                <YoutubeEmbed embedId={embedId} />
             </Box>
         </Fade>
       </Modal>
