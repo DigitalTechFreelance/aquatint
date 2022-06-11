@@ -1,120 +1,133 @@
 //lyt-service
-.lyt-service{
-    .list-item{
+.lyt-service {
+    .list-item {
         // @include mq-below($xs) {
         //     margin-bottom: 2rem;
         // }
 
-        &:nth-child(even){
-            .bs-service{
+        &:nth-child(even) {
+            .bs-service {
                 flex-direction: row-reverse;
 
-                @include mq-below($xs){
+                @include mq-below($xs) {
                     flex-direction: column;
                 }
 
-                .water-mark{
+                .water-mark {
                     color: $clr-secondary;
                 }
-                .feature-list{
-                    .feature-item{
+
+                .feature-list {
+                    .feature-item {
                         color: $clr-secondary;
-                        &:after{
+
+                        &:after {
                             background-color: $clr-secondary;
                         }
                     }
                 }
-                .btn{
-                    &.btn-default{
+
+                .btn {
+                    &.btn-default {
                         border-color: $clr-secondary;
-                        &:before{
+
+                        &:before {
                             background-color: $clr-secondary;
                         }
-                        span{
+
+                        span {
                             color: $clr-secondary;
                         }
                     }
                 }
             }
         }
-        &:first-child{
-            .bs-service{
-                .water-mark{
+
+        &:first-child {
+            .bs-service {
+                .water-mark {
                     top: -9rem;
                     left: -22rem;
 
                     @include mq-below($xs) {
-                        top: -16rem;
+                        top: auto;
                         left: 0;
+                        bottom: 11rem;
                     }
                 }
             }
         }
-        &:nth-child(2){
-            .bs-service{
-                .water-mark{
+
+        &:nth-child(2) {
+            .bs-service {
+                .water-mark {
                     top: -9rem;
                     left: -10rem;
 
                     @include mq-below($xs) {
-                        top: -16rem;
+                        top: 0;
                         left: 0;
                     }
                 }
             }
         }
-        &:nth-child(3){
-            .bs-service{
-                .water-mark{
+
+        &:nth-child(3) {
+            .bs-service {
+                .water-mark {
                     top: -9rem;
                     left: auto;
                     right: 7rem;
 
-                    @include mq-below($xs){
-                        top: -16rem;
+                    @include mq-below($xs) {
+                        top: -0.6rem;
                     }
                 }
             }
         }
-        &:nth-child(4){
-            .bs-service{
-                .water-mark{
+
+        &:nth-child(4) {
+            .bs-service {
+                .water-mark {
                     top: -9rem;
                     left: -10rem;
 
-                    @include mq-below($xs){
-                        top: -16rem;
+                    @include mq-below($xs) {
+                        top: -0.3rem;
                         left: 0;
                     }
                 }
-                .info-wrap{
+
+                .info-wrap {
                     margin-left: 19rem;
 
-                    @include mq-below($xs){
+                    @include mq-below($xs) {
                         margin-left: 0;
                     }
                 }
             }
         }
-        &:last-child{
-            .bs-service{
-                .water-mark{
+
+        &:last-child {
+            .bs-service {
+                .water-mark {
                     top: -9rem;
                     left: auto;
                     right: -8rem;
 
-                    @include mq-below($xs){
-                        top: -16rem;
+                    @include mq-below($xs) {
+                        top: -0.4rem;
                         left: -4rem;
-                        right:0;
+                        right: 0;
                     }
                 }
             }
         }
-        &:nth-child(odd){
-            @include mq-below($xs){
-                .bs-service{
-                    .info-wrap{
+
+        &:nth-child(odd) {
+            @include mq-below($xs) {
+                .bs-service {
+                    .info-wrap {
                         left: 24%;
                     }
                 }
@@ -122,35 +135,38 @@
         }
     }
 
-    &.typ-packages{
+    &.typ-packages {
 
-        .bs-service{
-            .water-mark{
+        .bs-service {
+            .water-mark {
                 font-size: 18rem;
+
                 @include mq-below($xs) {
                     font-size: 2.6rem;
                 }
             }
         }
 
-        .list-item{
+        .list-item {
 
-            &:first-child{
-                .bs-service{
-                    .water-mark{
+            &:first-child {
+                .bs-service {
+                    .water-mark {
                         left: -100%;
-                        @include mq-below($xs){
+
+                        @include mq-below($xs) {
                             left: -5.7rem;
                         }
                     }
                 }
             }
 
-            &:last-child{
-                .bs-service{
-                    .water-mark{
+            &:last-child {
+                .bs-service {
+                    .water-mark {
                         right: -45rem;
-                        @include mq-below($xs){
+
+                        @include mq-below($xs) {
                             right: -1rem;
                             left: auto;
                         }
@@ -158,11 +174,12 @@
                 }
             }
 
-            &:nth-child(2){
-                .bs-service{
-                    .water-mark{
+            &:nth-child(2) {
+                .bs-service {
+                    .water-mark {
                         left: -45rem;
-                        @include mq-below($xs){
+
+                        @include mq-below($xs) {
                             left: -5rem;
                         }
                     }
