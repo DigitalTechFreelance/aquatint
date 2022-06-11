@@ -17,7 +17,7 @@ import { Navigation, Pagination } from "swiper";
 import tomJoseph from '../../assets/images/testimonials/tom-joseph.webp';
 import sameerSharma from '../../assets/images/testimonials/sameer-sharma.webp';
 import ajayGodambe from '../../assets/images/testimonial3.webp';
-import satyeshPati from '../../assets/images/testimonial3.webp';
+import satyeshPati from '../../assets/images/testimonials/satyesh-patil.webp';
 import anupamGupta from '../../assets/images/testimonial3.webp';
 
 function TestimonialSlider() {
@@ -52,16 +52,16 @@ function TestimonialSlider() {
       <SwiperSlide>
         <div className="mod-testimonial">
           <div className="info-wrap">
-            <h3 className="title">Mr. Satyesh Pati</h3>
+            <h3 className="title">Mr. Satyesh Patil</h3>
             <strong className="place">Pune, India</strong>
             <div className="desc">
               <p>Positive: Professionalism, Punctuality, Quality, Value</p>
               <p>I have been visiting them since 2018 and today got opti coat pro coating done on my VW Polo TSI. Marvelous work, super finish upto quality standards. Very commited team to detailing.</p>
             </div>
           </div>
-          <div className="img-wrap">
-            {/* <img src={satyeshPati} alt="Testimonial 2" title="testimonial 2" className="getBgSrc" /> */}
-            <span className="testi-initials">S</span>
+          <div className="img-wrap setBgSrc">
+            <img src={satyeshPati} alt="Satyesh Patil" title="Satyesh Patil" className="getBgSrc" />
+            {/* <span className="testi-initials">S</span> */}
           </div>
         </div>
       </SwiperSlide>
