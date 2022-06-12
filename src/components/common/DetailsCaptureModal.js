@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Backdrop from '@mui/material/Backdrop';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
@@ -17,18 +17,18 @@ function DetailsCaptureModal(props) {
             "Phone No": values.contactNo
         }
         axios.post(
-            'https://sheet.best/api/sheets/1559c773-9061-4fad-93aa-88a979220541', 
+            'https://sheet.best/api/sheets/1559c773-9061-4fad-93aa-88a979220541',
             data
         )
-        .then(function (response) {
-            if(response.status === 200) {
-                setFormSuccess(true)
-                formikLead.resetForm()
-            }
-        })
-        .catch(function (error) {
-            console.log("error", error)
-        });
+            .then(function (response) {
+                if (response.status === 200) {
+                    setFormSuccess(true)
+                    formikLead.resetForm()
+                }
+            })
+            .catch(function (error) {
+                console.log("error", error)
+            });
 
     }
 
@@ -39,7 +39,7 @@ function DetailsCaptureModal(props) {
             contactNo: ''
         },
         onSubmit: (values, { resetForm }) => {
-                    submitToLead(values)
+            submitToLead(values)
         },
         validate: values => {
             const errors = {};
@@ -66,91 +66,91 @@ function DetailsCaptureModal(props) {
     });
     const [formSuccess, setFormSuccess] = React.useState(false);
 
-  return (
-      <>
-        {/* <Button onClick={handleOpen}>Open modal</Button> */}
-        <Modal
-            aria-labelledby="transition-modal-title"
-            aria-describedby="transition-modal-description"
-            className="bs-modal typ-modal-form"
-            open={props.leadFormOpen}
-            // onClose={handleClose}
-            closeAfterTransition
-            BackdropComponent={Backdrop}
-            BackdropProps={{
-            timeout: 500,
-            }}
-        >
-            <Fade in={props.leadFormOpen}>
-               <div className="modal-body">    
-                    <button className="modal-close" onClick={props.handleClose}>
-                        <span className="icon-close"></span>
-                    </button>
-                    <div className="modal-title">
-                        <h3 className="title">Get in touch with us</h3>
-                        <p className="sub-title">To know more about our services and packages, please feel free to get in touch with us. Fill in your contact details below.</p>
+    return (
+        <>
+            {/* <Button onClick={handleOpen}>Open modal</Button> */}
+            <Modal
+                aria-labelledby="transition-modal-title"
+                aria-describedby="transition-modal-description"
+                className="bs-modal typ-modal-form"
+                open={props.leadFormOpen}
+                // onClose={handleClose}
+                closeAfterTransition
+                BackdropComponent={Backdrop}
+                BackdropProps={{
+                    timeout: 500,
+                }}
+            >
+                <Fade in={props.leadFormOpen}>
+                    <div className="modal-body">
+                        <button className="modal-close" onClick={props.handleClose}>
+                            <span className="icon-close"></span>
+                        </button>
+                        <div className="modal-title">
+                            <h3 className="title">Get in touch with us</h3>
+                            <p className="sub-title">To know more about our services and packages, please feel free to get in touch with us. Fill in your contact details below.</p>
+                        </div>
+                        <div className="modal-main">
+                            <form className="bs-form" onSubmit={formikLead.handleSubmit}>
+                                <div className="form-wrap">
+                                    <div className={`form-group ${formikLead.touched.name && formikLead.errors.name ? "error" : ""}`}>
+                                        <input type="text"
+                                            className="form-control"
+                                            placeholder="name"
+                                            name="name"
+                                            id="name"
+                                            value={formikLead.values.name}
+                                            onChange={formikLead.handleChange}
+                                            onBlur={formikLead.handleBlur}
+                                        />
+                                        {formikLead.touched.name && formikLead.errors.name ? (
+                                            <span className="error">{formikLead.errors.name}</span>
+                                        ) : null}
+                                    </div>
+                                    <div className={`form-group ${formikLead.touched.emailId && formikLead.errors.emailId ? "error" : ""}`}>
+                                        <input type="text"
+                                            className="form-control"
+                                            placeholder="email-id"
+                                            name="emailId"
+                                            id="emailId"
+                                            value={formikLead.values.emailId}
+                                            onChange={formikLead.handleChange}
+                                            onBlur={formikLead.handleBlur}
+                                        />
+                                        {formikLead.touched.emailId && formikLead.errors.emailId ? (
+                                            <span className="error">{formikLead.errors.emailId}</span>
+                                        ) : null}
+                                    </div>
+                                    <div className={`form-group ${formikLead.touched.contactNo && formikLead.errors.contactNo ? "error" : ""}`}>
+                                        <input
+                                            type="tel"
+                                            className="form-control"
+                                            placeholder="contact no."
+                                            name="contactNo"
+                                            id="contactNo"
+                                            maxLength={10}
+                                            value={formikLead.values.contactNo}
+                                            onChange={formikLead.handleChange}
+                                            onBlur={formikLead.handleBlur}
+                                        />
+                                        {formikLead.touched.contactNo && formikLead.errors.contactNo ? (
+                                            <span className="error">{formikLead.errors.contactNo}</span>
+                                        ) : null}
+                                    </div>
+                                </div>
+                                <div className="form-action">
+                                    <button type="submit" name="btnSubmit" className="btn btn-default"><span>submit</span></button>
+                                </div>
+                                {formSuccess ? (
+                                    <span className="success success-msg">Succesfully Sent!!</span>
+                                ) : null}
+                            </form>
+                        </div>
                     </div>
-                    <div className="modal-main">
-                        <form className="bs-form" onSubmit={formikLead.handleSubmit}>
-                            <div className="form-wrap">
-                                <div className="form-group">
-                                    <input type="text" 
-                                        className="form-control" 
-                                        placeholder="name"
-                                        name="name"
-                                        id="name"
-                                        value={formikLead.values.name}
-                                        onChange={formikLead.handleChange}
-                                        onBlur={formikLead.handleBlur}
-                                     />
-                                     {formikLead.touched.name && formikLead.errors.name ? (
-                                        <span className="error">{formikLead.errors.name}</span>
-                                     ) : null}
-                                </div>
-                                <div className="form-group">
-                                    <input type="text" 
-                                        className="form-control" 
-                                        placeholder="email-id"
-                                        name="emailId"
-                                        id="emailId"
-                                        value={formikLead.values.emailId}
-                                        onChange={formikLead.handleChange}
-                                        onBlur={formikLead.handleBlur} 
-                                    />
-                                    {formikLead.touched.emailId && formikLead.errors.emailId ? (
-                                        <span className="error">{formikLead.errors.emailId}</span>
-                                    ) : null}
-                                </div>
-                                <div className="form-group">
-                                    <input 
-                                        type="tel" 
-                                        className="form-control"
-                                        placeholder="contact no." 
-                                        name="contactNo"
-                                        id="contactNo"
-                                        maxLength={10}
-                                        value={formikLead.values.contactNo}
-                                        onChange={formikLead.handleChange}
-                                        onBlur={formikLead.handleBlur}
-                                    />
-                                    {formikLead.touched.contactNo && formikLead.errors.contactNo ? (
-                                        <span className="error">{formikLead.errors.contactNo}</span>
-                                     ) : null}
-                                </div>
-                            </div>
-                            <div className="form-action">
-                                <button type="submit" name="btnSubmit" className="btn btn-default"><span>submit</span></button>
-                            </div>
-                            {formSuccess ? (
-                                <span className="success success-msg">Succesfully Sent!!</span>
-                            ) : null}
-                        </form>
-                    </div>
-               </div>
-            </Fade>
-        </Modal>
-    </>
-  )
+                </Fade>
+            </Modal>
+        </>
+    )
 }
 
 export default DetailsCaptureModal

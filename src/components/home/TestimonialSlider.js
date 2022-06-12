@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import required modules
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 
 //assets
 
@@ -26,10 +26,15 @@ function TestimonialSlider() {
     <Swiper
       slidesPerView={1}
       spaceBetween={30}
+      speed={1500}
       navigation={true}
       pagination={true}
       autoHeight={true}
-      modules={[Navigation, Pagination]}
+      modules={[Navigation, Pagination, Autoplay]}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: true,
+      }}
       className="mySwiper bs-swiper typ-testimonials bs-testimonial"
     >
       <SwiperSlide>
