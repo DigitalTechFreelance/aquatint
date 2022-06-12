@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import CeramicCoatingInfogarphy from '../components/service/CeramicCoatingInfogarphy';
@@ -6,11 +6,18 @@ import videosrc from '../assets/video/dummy-video.mp4';
 import Flybutton from '../components/common/Flybutton';
 import { Helmet } from "react-helmet";
 import VideoPlayer from '../components/common/VideoPlayer';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function CeramicCoating() {
     React.useEffect(()=>{
         window.scrollTo(0, 0);
+		setTimeout(()=>{
+			setLeadFormOpen(true);
+		},2000)
     },[])
+
+	const [leadFormOpen, setLeadFormOpen] = useState(false);
+    const handleLeadFormClose = () => setLeadFormOpen(false);
 
     const [playState, setPlayState] = React.useState({
         playing: false,
@@ -200,6 +207,7 @@ function CeramicCoating() {
             </main>
             <Footer />
             <Flybutton />
+			<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
         </>
     )
 }

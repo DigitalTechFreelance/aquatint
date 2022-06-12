@@ -16,15 +16,12 @@ import { Helmet } from "react-helmet";
 function Home() {
 	React.useEffect(()=>{
         window.scrollTo(0, 0);
-    },[])
-	
-	const [leadFormOpen, setLeadFormOpen] = useState(false);
-
-	useEffect(()=>{
 		setTimeout(()=>{
 			setLeadFormOpen(true);
 		},2000)
-	}, [])
+    },[])
+
+	const [leadFormOpen, setLeadFormOpen] = useState(false);
     const handleLeadFormClose = () => setLeadFormOpen(false);
 	return (
 		<>

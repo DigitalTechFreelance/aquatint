@@ -44,10 +44,11 @@ function a11yProps(index) {
     };
 }
 
-function DetailingServiceTabs() {
+function DetailingServiceTabs(props) {
     const [value, setValue] = useState(0);
     const handleChange = (event, newValue) => {
         setValue(newValue);
+        props.setActiveTab(newValue)
     };
 
     return (

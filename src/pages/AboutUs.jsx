@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import Infogarphy from '../components/aboutUs/Infogarphy';
 import Team from '../components/aboutUs/Team';
 import OurVision from '../components/aboutUs/OurVision';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function AboutUs() {
   React.useEffect(()=>{
     window.scrollTo(0, 0);
+  setTimeout(()=>{
+    setLeadFormOpen(true);
+  },2000)
   },[])
+
+  const [leadFormOpen, setLeadFormOpen] = useState(false);
+  const handleLeadFormClose = () => setLeadFormOpen(false);
   return (
     <>
         <Header/>
@@ -51,6 +58,8 @@ function AboutUs() {
                 </div>
             </main>
         <Footer/>
+			  <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
+
     </>
   )
 }

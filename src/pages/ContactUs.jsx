@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import TextField from '@mui/material/TextField';
 import TextareaAutosize from '@mui/base/TextareaAutosize';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function ContactUs() {
     React.useEffect(()=>{
         window.scrollTo(0, 0);
+		setTimeout(()=>{
+			setLeadFormOpen(true);
+		},2000)
     },[])
-    
+
+	const [leadFormOpen, setLeadFormOpen] = useState(false);
+    const handleLeadFormClose = () => setLeadFormOpen(false);
+
   return (
     <>
         <Header/>
@@ -119,6 +126,7 @@ function ContactUs() {
             </div>
         </main>
         <Footer/>
+	    <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
     </>
   )
 }

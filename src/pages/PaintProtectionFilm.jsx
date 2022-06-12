@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import PaintProtectionFilmInfography from '../components/service/PaintProtectionFilmInfography';
@@ -10,12 +10,19 @@ import PpfCompareList from '../components/service/PpfCompareList';
 import PpfWorkSlider from '../components/service/PpfWorkSlider';
 import { Helmet } from "react-helmet";
 import VideoPlayer from '../components/common/VideoPlayer';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function PaintProtectionFilm() {
     React.useEffect(()=>{
         window.scrollTo(0, 0);
+		setTimeout(()=>{
+			setLeadFormOpen(true);
+		},2000)
     },[])
-    
+
+	const [leadFormOpen, setLeadFormOpen] = useState(false);
+    const handleLeadFormClose = () => setLeadFormOpen(false);
+
     const [playState, setPlayState] = React.useState({
         playing: false,
         buttonClose: false,
@@ -119,6 +126,7 @@ function PaintProtectionFilm() {
             </main>
             <Footer />
             <Flybutton />
+			<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
         </>
     )
 }

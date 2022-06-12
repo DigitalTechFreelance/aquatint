@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import colab1Img from '../assets/images/colab1.webp';
 import colab2Img from '../assets/images/colab2.webp';
 import TextField from '@mui/material/TextField';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function FranchiseWithUs() {
     React.useEffect(()=>{
         window.scrollTo(0, 0);
+		setTimeout(()=>{
+			setLeadFormOpen(true);
+		},2000)
     },[])
-    
+
+	const [leadFormOpen, setLeadFormOpen] = useState(false);
+    const handleLeadFormClose = () => setLeadFormOpen(false);
+
   return (
     <>
         <Header/>
@@ -110,6 +117,7 @@ function FranchiseWithUs() {
             </div>
         </main>
         <Footer/>
+		<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
     </>
   )
 }
