@@ -33,6 +33,12 @@
     iframe {
       height: 100vh;
     }
+
+    .mod-gif {
+      iframe {
+        height: 100%;
+      }
+    }
   }
 
   .controls {
