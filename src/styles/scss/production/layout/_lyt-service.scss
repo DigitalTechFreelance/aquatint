@@ -156,6 +156,8 @@
 
                         @include mq-below($xs) {
                             left: -5.7rem;
+                            top: -0.4rem;
+                            bottom: auto;
                         }
                     }
                 }
@@ -169,6 +171,7 @@
                         @include mq-below($xs) {
                             right: -1rem;
                             left: auto;
+                            top: -0.4rem;
                         }
                     }
                 }
@@ -181,6 +184,7 @@
 
                         @include mq-below($xs) {
                             left: -5rem;
+                            top: -0.4rem;
                         }
                     }
                 }

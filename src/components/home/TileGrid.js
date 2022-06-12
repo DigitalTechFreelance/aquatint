@@ -20,7 +20,7 @@ function TileGrid() {
                             {/* <img src={washImg} alt="Wash Service" title="wash Service" className="getBgSrc" /> */}
                             <VideoPlayer
                                 buttonClose={false}
-                                srcUrl={'https://www.youtube.com/watch?v=8k41mZZY2tQ'}
+                                srcUrl={'https://www.youtube.com/v/8k41mZZY2tQ?version=2'}
                                 muted={true}
                                 autoPlay={true}
                                 className="mod-gif"
@@ -40,7 +40,7 @@ function TileGrid() {
                             {/* <img src={detailImg} alt="Detail Service" title="Detail Service" className="getBgSrc"/> */}
                             <VideoPlayer
                                 buttonClose={false}
-                                srcUrl={'https://www.youtube.com/watch?v=Cdd_amqSFAg'}
+                                srcUrl={'https://www.youtube.com/v/Cdd_amqSFAg?version=2'}
                                 muted={true}
                                 autoPlay={true}
                                 className="mod-gif"
@@ -60,7 +60,7 @@ function TileGrid() {
                             {/* <img src={ceramicCoatingImg} alt="Ceramic Coating" title="Ceramic Coating" className="getBgSrc"/> */}
                             <VideoPlayer
                                 buttonClose={false}
-                                srcUrl={'https://www.youtube.com/watch?v=CXWX0U3EXqk'}
+                                srcUrl={'https://www.youtube.com/v/CXWX0U3EXqk?version=2'}
                                 muted={true}
                                 autoPlay={true}
                                 className="mod-gif"
@@ -81,7 +81,7 @@ function TileGrid() {
                             {/* <img src={ppfImg} alt="Paint Protection Film" title="Paint Protection Film" className="getBgSrc"/> */}
                             <VideoPlayer
                                 buttonClose={false}
-                                srcUrl={'https://www.youtube.com/watch?v=8BqXWxXRS4E'}
+                                srcUrl={'https://www.youtube.com/v/8BqXWxXRS4E?version=2'}
                                 muted={true}
                                 autoPlay={true}
                                 className="mod-gif"
@@ -101,7 +101,7 @@ function TileGrid() {
                             {/* <img src={customizeImg} alt="Customise" title="Customise" className="getBgSrc"/> */}
                             <VideoPlayer
                                 buttonClose={false}
-                                srcUrl={'https://www.youtube.com/watch?v=9sBozUaYajE'}
+                                srcUrl={'https://www.youtube.com/v/9sBozUaYajE?version=2'}
                                 muted={true}
                                 autoPlay={true}
                                 className="mod-gif"
