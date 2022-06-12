@@ -5,7 +5,7 @@ import PaintProtectionFilmInfography from '../components/service/PaintProtection
 import videosrc from '../assets/video/mini-cooper-red.mp4';
 import Flybutton from '../components/common/Flybutton';
 import TileGridPPF from '../components/service/TileGridPPF';
-import HomeBanner from '../components/home/HomeBanner';
+import BannerPpf from '../components/service/BannerPpf';
 import PpfCompareList from '../components/service/PpfCompareList';
 import PpfWorkSlider from '../components/service/PpfWorkSlider';
 import { Helmet } from "react-helmet";
@@ -31,8 +31,8 @@ function PaintProtectionFilm() {
                 <meta name="description" content="International PPF film products at aquatint gives you ultimate scratchproof protection with high gloss finish on the car. Self healing properties gives brand new finish of your car forever. Ask for Ultrashield X, Garware PPF, llumar, Xpel, Stek brand PPF at affordable prices. " />
             </Helmet>
             <main>
-                <div className="lyt-content">
-                    <HomeBanner bannerTitle={'Paint Protection Flim'} />
+                <div className="lyt-content typ-home">
+                    <BannerPpf bannerTitle={'Paint Protection Flim'} />
                     <section>
                         <div className="bs-section cm-no-pad-top cm-no-pad-bottom">
                             <div className="sec-cont">

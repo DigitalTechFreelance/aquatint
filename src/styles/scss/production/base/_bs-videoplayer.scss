@@ -1,8 +1,10 @@
 .bs-videoplayer {
   position: relative;
   overflow: hidden;
+
   .playerWrapper {
     position: relative;
+
     >div {
       min-height: 52.8rem;
 
@@ -27,9 +29,13 @@
         }
       }
     }
+
+    iframe {
+      height: 100vh;
+    }
   }
 
-  .controls{
+  .controls {
     position: absolute;
     left: 10rem;
     right: 10rem;
@@ -38,7 +44,7 @@
     transition: all 0.3s ease;
     transform: translateY(150%);
 
-    @include mq-below($xs){
+    @include mq-below($xs) {
       position: unset;
     }
   }
@@ -66,8 +72,8 @@
     }
   }
 
-  &:hover{
-    .controls{
+  &:hover {
+    .controls {
       transform: translateY(0);
     }
   }
