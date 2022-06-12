@@ -3,7 +3,7 @@ import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import ClarityCoatingInfogarphy from '../components/service/ClarityCoatingInfogarphy';
 import videosrc from '../assets/video/dummy-video.mp4';
-import VideoPlayer from '../components/common/Videoplayer';
+import VideoPlayer from '../components/common/VideoPlayer';
 
 function ClarityCoat() {
     const [playState, setPlayState] = React.useState({

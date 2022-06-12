@@ -9,7 +9,7 @@ import BannerPpf from '../components/service/BannerPpf';
 import PpfCompareList from '../components/service/PpfCompareList';
 import PpfWorkSlider from '../components/service/PpfWorkSlider';
 import { Helmet } from "react-helmet";
-import VideoPlayer from '../components/common/Videoplayer';
+import VideoPlayer from '../components/common/VideoPlayer';
 
 function PaintProtectionFilm() {
     const [playState, setPlayState] = React.useState({

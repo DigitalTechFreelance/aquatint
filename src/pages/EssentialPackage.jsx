@@ -3,7 +3,7 @@ import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import EssentialInfogarphy from '../components/service/EssentialInfogarphy';
 import videosrc from '../assets/video/dummy-video.mp4';
-import VideoPlayer from '../components/common/Videoplayer';
+import VideoPlayer from '../components/common/VideoPlayer';
 
 function EssentialPackage() {
     const [playState, setPlayState] = React.useState({

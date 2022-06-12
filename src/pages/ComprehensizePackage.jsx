@@ -2,8 +2,8 @@ import React from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import CoatingInfogarphy from '../components/service/CoatingInfogarphy';
-import videosrc from '../assets/video/dummy-video.mp4';
-import VideoPlayer from '../components/common/Videoplayer';
+// import videosrc from '../assets/video/dummy-video.mp4';
+import VideoPlayer from '../components/common/VideoPlayer';
 
 function ComprehensizePackage() {
     const [playState, setPlayState] = React.useState({
@@ -59,7 +59,8 @@ function ComprehensizePackage() {
                                                     <VideoPlayer
                                                         buttonClose={false}
                                                         playingStatus={handleVideoStatus}
-                                                        srcUrl={videosrc}
+                                                        // srcUrl={videosrc}
+                                                        srcUrl={'https://www.youtube.com/watch?v=WdDGXkZVIGs'}
                                                     />
                                                 </div>
                                             </div>

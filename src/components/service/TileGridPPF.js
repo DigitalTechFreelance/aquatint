@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import useSetBgImage from '../../hooks/useSetBgImage';
-import VideoPlayer from '../common/Videoplayer';
+import VideoPlayer from '../common/VideoPlayer';
 
 function TileGridPPF() {
     const [autoPlay, setAutoPlay] = useState(false);
