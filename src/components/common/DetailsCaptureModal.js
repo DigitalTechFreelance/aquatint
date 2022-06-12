@@ -2,15 +2,14 @@ import React, {useState} from 'react';
 import Backdrop from '@mui/material/Backdrop';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
-import Button from '@mui/material/Button';
 import { useFormik } from 'formik';
 import axios from 'axios';
 
-function DetailsCaptureModal() {
+function DetailsCaptureModal(props) {
 
-    const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
+    // const [open, setOpen] = useState(false);
+    // const handleOpen = () => setOpen(true);
+    // const handleClose = () => setOpen(false);
     const submitToLead = (values) => {
         let data = {
             "Name": values.name,
@@ -69,12 +68,12 @@ function DetailsCaptureModal() {
 
   return (
       <>
-        <Button onClick={handleOpen}>Open modal</Button>
+        {/* <Button onClick={handleOpen}>Open modal</Button> */}
         <Modal
             aria-labelledby="transition-modal-title"
             aria-describedby="transition-modal-description"
             className="bs-modal typ-modal-form"
-            open={open}
+            open={props.leadFormOpen}
             // onClose={handleClose}
             closeAfterTransition
             BackdropComponent={Backdrop}
@@ -82,9 +81,9 @@ function DetailsCaptureModal() {
             timeout: 500,
             }}
         >
-            <Fade in={open}>
+            <Fade in={props.leadFormOpen}>
                <div className="modal-body">    
-                    <button className="modal-close" onClick={handleClose}>
+                    <button className="modal-close" onClick={props.handleClose}>
                         <span className="icon-close"></span>
                     </button>
                     <div className="modal-title">

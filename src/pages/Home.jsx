@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import TileGrid from '../components/home/TileGrid';
@@ -14,6 +14,16 @@ import { Helmet } from "react-helmet";
 
 
 function Home() {
+	const [leadFormOpen, setLeadFormOpen] = useState(false);
+	const [count, setCount] = useState(0);
+
+	useEffect(()=>{
+		if(count === 1){
+			setLeadFormOpen(true);
+		}
+	}, [count])
+    const handleLeadFormClose = () => setLeadFormOpen(false);
+	console.log("count", count)
 	return (
 		<>
 			<Header />
@@ -45,7 +55,7 @@ function Home() {
 									<h2 className="sec-title">Services We Offer</h2>
 								</div>
 								<div className="sec-cont">
-									<TileGrid />
+									<TileGrid setCount={setCount} count={count} />
 								</div>
 							</div>
 						</div>
@@ -115,7 +125,7 @@ function Home() {
 			</main>
 			<Footer />
 			<Flybutton />
-			<DetailsCaptureModal />
+			<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
 		</>
 	);
 }

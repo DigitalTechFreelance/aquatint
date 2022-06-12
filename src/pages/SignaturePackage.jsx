@@ -2,8 +2,8 @@ import React from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import CoatingInfogarphy2 from '../components/service/CoatingInfogarphy2';
-import videosrc from '../assets/video/dummy-video.mp4';
-import VideoPlayer from '../components/common/Videoplayer';
+// import videosrc from '../assets/video/dummy-video.mp4';
+import VideoPlayer from '../components/common/VideoPlayer';
 
 function SignaturePackage() {
     const [playState, setPlayState] = React.useState({
@@ -60,7 +60,8 @@ function SignaturePackage() {
                                                     <VideoPlayer
                                                         buttonClose={false}
                                                         playingStatus={handleVideoStatus}
-                                                        srcUrl={videosrc}
+                                                        // srcUrl={videosrc}
+                                                        srcUrl={'https://www.youtube.com/watch?v=6J5SZzJd5bk'}
                                                     />
                                                 </div>
                                                 <button className='btn'><span className="icon icon-play"></span></button>

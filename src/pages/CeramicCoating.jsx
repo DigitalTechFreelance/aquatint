@@ -5,7 +5,7 @@ import CeramicCoatingInfogarphy from '../components/service/CeramicCoatingInfoga
 import videosrc from '../assets/video/dummy-video.mp4';
 import Flybutton from '../components/common/Flybutton';
 import { Helmet } from "react-helmet";
-import VideoPlayer from '../components/common/Videoplayer';
+import VideoPlayer from '../components/common/VideoPlayer';
 
 function CeramicCoating() {
     const [playState, setPlayState] = React.useState({
