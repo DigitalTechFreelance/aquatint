@@ -5,7 +5,7 @@ import PaintProtectionFilmInfography from '../components/service/PaintProtection
 import videosrc from '../assets/video/mini-cooper-red.mp4';
 import Flybutton from '../components/common/Flybutton';
 import TileGridPPF from '../components/service/TileGridPPF';
-import HomeBanner from '../components/home/HomeBanner';
+import BannerPpf from '../components/service/BannerPpf';
 import PpfCompareList from '../components/service/PpfCompareList';
 import PpfWorkSlider from '../components/service/PpfWorkSlider';
 import { Helmet } from "react-helmet";
@@ -32,7 +32,7 @@ function PaintProtectionFilm() {
             </Helmet>
             <main>
                 <div className="lyt-content">
-                    <HomeBanner bannerTitle={'Paint Protection Flim'} />
+                    <BannerPpf bannerTitle={'Paint Protection Flim'} />
                     <section>
                         <div className="bs-section cm-no-pad-top cm-no-pad-bottom">
                             <div className="sec-cont">
