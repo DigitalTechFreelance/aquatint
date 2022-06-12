@@ -16,16 +16,20 @@ const SignaturePackage = React.lazy(() => import('./pages/SignaturePackage'));
 const EssentialPackage = React.lazy(() => import('./pages/EssentialPackage'));
 const Packages = React.lazy(() => import('./pages/Packages'));
 const IndexList = React.lazy(() => import('./temp/IndexList'));
-
+// {
+//   path: '/pages',
+//   component: <IndexList />,
+//   exact: true,
+// },
+// {
+//   path: '/',
+//   component: <IndexList />,
+//   exact: true,
+// },
 const routes = [
   {
-    path: '/pages',
-    component: <IndexList />,
-    exact: true,
-  },
-  {
     path: '/',
-    component: <IndexList />,
+    component: <Home />,
     exact: true,
   },
   {

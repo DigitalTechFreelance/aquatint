@@ -7,10 +7,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 const routes = [
   ...localRoutes
 ];
+// https://hakunaabataataa.com
   
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <React.Suspense
         fallback={
           <div>
