@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import CoatingInfogarphy2 from '../components/service/CoatingInfogarphy2';
 // import videosrc from '../assets/video/dummy-video.mp4';
 import VideoPlayer from '../components/common/VideoPlayer';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function SignaturePackage() {
     React.useEffect(()=>{
         window.scrollTo(0, 0);
+		setTimeout(()=>{
+			setLeadFormOpen(true);
+		},2000)
     },[])
-    
+
+	const [leadFormOpen, setLeadFormOpen] = useState(false);
+    const handleLeadFormClose = () => setLeadFormOpen(false);
+
     const [playState, setPlayState] = React.useState({
         playing: false,
         buttonClose: false,
@@ -86,6 +93,7 @@ function SignaturePackage() {
                 </div>
             </main>
             <Footer />
+			<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
         </>
     )
 }

@@ -59,7 +59,7 @@ function Header(props) {
                         <a href="/customisation-service" className={`menu-link typ-sm ${window.location.pathname === "/customisation-service"? 'cm-highlight highlight-primary': ''}`}>Customisation</a>
                     </li>
                     <li className="menu-item">
-                        <a href="/premium-packages" className={`menu-link ${window.location.pathname === "/premium-packages"? 'cm-highlight highlight-primary': ''}`}>Packages</a>
+                        <a href="/premium-packages" className={`menu-link ${window.location.pathname === "/premium-packages" || window.location.pathname === '/comprehensive-package' || window.location.pathname === '/signature-package' || window.location.pathname === '/essential-package'? 'cm-highlight highlight-primary': ''}`}>Packages</a>
                     </li>
                     <li className="menu-item">
                         <a href="/franchise-with-us" className={`menu-link ${window.location.pathname === "/franchise-with-us"? 'cm-highlight highlight-primary': ''}`}>Franchise</a>

@@ -1,15 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import CoatingInfogarphy from '../components/service/CoatingInfogarphy';
 // import videosrc from '../assets/video/dummy-video.mp4';
 import VideoPlayer from '../components/common/VideoPlayer';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function ComprehensizePackage() {
     React.useEffect(()=>{
         window.scrollTo(0, 0);
+		setTimeout(()=>{
+			setLeadFormOpen(true);
+		},2000)
     },[])
-    
+
+	const [leadFormOpen, setLeadFormOpen] = useState(false);
+    const handleLeadFormClose = () => setLeadFormOpen(false);
+
     const [playState, setPlayState] = React.useState({
         playing: false,
         buttonClose: false,
@@ -84,6 +91,7 @@ function ComprehensizePackage() {
                 </div>
             </main>
             <Footer />
+			<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
         </>
     )
 }

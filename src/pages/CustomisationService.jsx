@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import dentingImg from '../assets/images/denting.webp';
 import sunFilmImg from '../assets/images/sun-film.webp';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function CustomisationService() {
     React.useEffect(()=>{
         window.scrollTo(0, 0);
+		setTimeout(()=>{
+			setLeadFormOpen(true);
+		},2000)
     },[])
-    
+
+	const [leadFormOpen, setLeadFormOpen] = useState(false);
+    const handleLeadFormClose = () => setLeadFormOpen(false);
+
   return (
     <>
         <Header/>
@@ -129,6 +136,7 @@ function CustomisationService() {
             </div>
         </main>
         <Footer/>
+		<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
     </>
   )
 }

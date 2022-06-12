@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import WashingService from '../components/service/WashingService';
 import WashingServiceCompareList from '../components/service/WashingServiceCompareList';
 import { Helmet } from "react-helmet";
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function WashingServices() {
   React.useEffect(()=>{
     window.scrollTo(0, 0);
+  setTimeout(()=>{
+    setLeadFormOpen(true);
+  },2000)
   },[])
+
+const [leadFormOpen, setLeadFormOpen] = useState(false);
+const handleLeadFormClose = () => setLeadFormOpen(false);
 
   return (
     <>
@@ -44,6 +51,7 @@ function WashingServices() {
         </div>
       </main>
       <Footer />
+			<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
     </>
   )
 }
