@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import DetailingServiceTabs from '../components/service/DetailingServiceTabs';
@@ -8,10 +8,11 @@ function DetailingServices() {
   React.useEffect(()=>{
     window.scrollTo(0, 0);
   },[])
+  const [activeTab, setActiveTab] = useState(0)
 
   return (
     <>
-      <Header />
+      <Header activeTab={activeTab}/>
       <Helmet>
         <meta charSet="utf-8" />
         <title>Top notch car interior cleaning service - Premium treatment for clean interior</title>
@@ -26,7 +27,7 @@ function DetailingServices() {
                 <h2 className="sp-title">Detailing Services</h2>
               </div>
               <div className="sp-cont">
-                <DetailingServiceTabs />
+                <DetailingServiceTabs setActiveTab={(value)=> setActiveTab(value)}/>
               </div>
             </div>
           </div>
