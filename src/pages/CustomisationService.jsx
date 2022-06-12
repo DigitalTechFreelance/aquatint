@@ -5,6 +5,10 @@ import dentingImg from '../assets/images/denting.webp';
 import sunFilmImg from '../assets/images/sun-film.webp';
 
 function CustomisationService() {
+    React.useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
+    
   return (
     <>
         <Header/>

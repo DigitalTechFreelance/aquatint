@@ -14,16 +14,18 @@ import { Helmet } from "react-helmet";
 
 
 function Home() {
+	React.useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
+	
 	const [leadFormOpen, setLeadFormOpen] = useState(false);
-	const [count, setCount] = useState(0);
 
 	useEffect(()=>{
-		if(count === 1){
+		setTimeout(()=>{
 			setLeadFormOpen(true);
-		}
-	}, [count])
+		},2000)
+	}, [])
     const handleLeadFormClose = () => setLeadFormOpen(false);
-	console.log("count", count)
 	return (
 		<>
 			<Header />
@@ -55,7 +57,7 @@ function Home() {
 									<h2 className="sec-title">Services We Offer</h2>
 								</div>
 								<div className="sec-cont">
-									<TileGrid setCount={setCount} count={count} />
+									<TileGrid />
 								</div>
 							</div>
 						</div>

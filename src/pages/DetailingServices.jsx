@@ -5,6 +5,10 @@ import DetailingServiceTabs from '../components/service/DetailingServiceTabs';
 import { Helmet } from "react-helmet";
 
 function DetailingServices() {
+  React.useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   return (
     <>
       <Header />

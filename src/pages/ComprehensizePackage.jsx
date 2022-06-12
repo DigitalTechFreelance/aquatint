@@ -6,6 +6,10 @@ import CoatingInfogarphy from '../components/service/CoatingInfogarphy';
 import VideoPlayer from '../components/common/VideoPlayer';
 
 function ComprehensizePackage() {
+    React.useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
+    
     const [playState, setPlayState] = React.useState({
         playing: false,
         buttonClose: false,

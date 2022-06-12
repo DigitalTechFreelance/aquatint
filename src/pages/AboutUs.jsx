@@ -6,6 +6,9 @@ import Team from '../components/aboutUs/Team';
 import OurVision from '../components/aboutUs/OurVision';
 
 function AboutUs() {
+  React.useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
   return (
     <>
         <Header/>

@@ -6,6 +6,10 @@ import CoatingInfogarphy2 from '../components/service/CoatingInfogarphy2';
 import VideoPlayer from '../components/common/VideoPlayer';
 
 function SignaturePackage() {
+    React.useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
+    
     const [playState, setPlayState] = React.useState({
         playing: false,
         buttonClose: false,

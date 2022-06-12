@@ -6,6 +6,10 @@ import WashingServiceCompareList from '../components/service/WashingServiceCompa
 import { Helmet } from "react-helmet";
 
 function WashingServices() {
+  React.useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   return (
     <>
       <Header />

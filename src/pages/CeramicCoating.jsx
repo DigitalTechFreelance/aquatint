@@ -8,6 +8,10 @@ import { Helmet } from "react-helmet";
 import VideoPlayer from '../components/common/VideoPlayer';
 
 function CeramicCoating() {
+    React.useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
+
     const [playState, setPlayState] = React.useState({
         playing: false,
         buttonClose: false,

@@ -5,6 +5,10 @@ import TextField from '@mui/material/TextField';
 import TextareaAutosize from '@mui/base/TextareaAutosize';
 
 function ContactUs() {
+    React.useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
+    
   return (
     <>
         <Header/>
