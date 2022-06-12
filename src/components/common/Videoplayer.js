@@ -108,7 +108,7 @@ function VideoPlayer(props) {
       }
     };
   }, []);
-  
+
   return (
       <>
       <div className="bs-videoplayer">
@@ -128,7 +128,7 @@ function VideoPlayer(props) {
               progressInterval={100}
               ref={playerRef}
               // eslint-disable-next-line react/prop-types
-              url={props.srcUrl}
+              url={props.srcUrl?.includes?.('youtube.com/shorts')? props.srcUrl.split('?')[0].replace('shorts/', 'watch?v='): props.srcUrl}
               onReady={initHandler}
               playing={props?.autoPlay === true ? true : playing}
               onProgress={handelProgress}
