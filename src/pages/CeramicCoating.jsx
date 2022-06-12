@@ -5,7 +5,7 @@ import CeramicCoatingInfogarphy from '../components/service/CeramicCoatingInfoga
 import videosrc from '../assets/video/dummy-video.mp4';
 import Flybutton from '../components/common/Flybutton';
 import { Helmet } from "react-helmet";
-import VideoPlayer from '../components/common/VideoPlayer';
+import VideoPlayer from '../components/common/Videoplayer';
 
 function CeramicCoating() {
     const [playState, setPlayState] = React.useState({
@@ -43,7 +43,7 @@ function CeramicCoating() {
                                             <div className="media-wrap">
                                                 <div className="video">
                                                     <VideoPlayer
-                                                        buttonClose={false} 
+                                                        buttonClose={false}
                                                         playingStatus={handleVideoStatus}
                                                         srcUrl={videosrc}
                                                     />

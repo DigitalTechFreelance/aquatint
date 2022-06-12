@@ -9,7 +9,7 @@ import HomeBanner from '../components/home/HomeBanner';
 import PpfCompareList from '../components/service/PpfCompareList';
 import PpfWorkSlider from '../components/service/PpfWorkSlider';
 import { Helmet } from "react-helmet";
-import VideoPlayer from '../components/common/VideoPlayer';
+import VideoPlayer from '../components/common/Videoplayer';
 
 function PaintProtectionFilm() {
     const [playState, setPlayState] = React.useState({
@@ -78,7 +78,7 @@ function PaintProtectionFilm() {
                                     <div className="media-wrap">
                                         <div className="video">
                                             <VideoPlayer
-                                                buttonClose={false} 
+                                                buttonClose={false}
                                                 playingStatus={handleVideoStatus}
                                                 srcUrl={videosrc}
                                             />

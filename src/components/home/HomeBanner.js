@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import useWindowSize from '../../hooks/useWindowSize';
 import useSetBgImage from '../../hooks/useSetBgImage';
-// import Videoplayer from '../components/common/Videoplayer';
 import videosrc from '../../assets/video/copy-of-final.mp4';
 import videoSrcMobile from '../../assets/video/comp2.mp4';
 // import ReactPlayer from 'react-player';
-import VideoPlayer from '../common/VideoPlayer';
+import VideoPlayer from '../common/Videoplayer';
 
 function HomeBanner(props) {
 
