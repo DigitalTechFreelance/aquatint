@@ -94,16 +94,21 @@ function VideoPlayer(props) {
     const isBrowser = typeof window !== 'undefined';
     if (isBrowser) {
       window.addEventListener('scroll', handleScroll);
-      playHandler('playing video');
+      if(playing){
+        playHandler('playing video');
+      }
     }
-    setState({ ...state, playing: true });
+    // setState({ ...state, playing: true });
     return () => {
       if (isBrowser) {
         window.removeEventListener('scroll', () => handleScroll);
-        playHandler('playing video');
+        if(playing){
+          playHandler('playing video');
+        }
       }
     };
   }, []);
+  
   return (
       <>
       <div className="bs-videoplayer">
