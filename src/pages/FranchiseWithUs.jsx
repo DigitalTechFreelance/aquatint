@@ -6,6 +6,10 @@ import colab2Img from '../assets/images/colab2.webp';
 import TextField from '@mui/material/TextField';
 
 function FranchiseWithUs() {
+    React.useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
+    
   return (
     <>
         <Header/>

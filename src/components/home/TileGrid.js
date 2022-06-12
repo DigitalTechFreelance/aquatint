@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import VideoPlayer from '../common/VideoPlayer';
-import { useNavigate } from 'react-router-dom';
 
 
-function TileGrid(props) {
-    const history = useNavigate();
+function TileGrid() {
+
     const [autoPlay, setAutoPlay] = useState(false);
 
     useEffect(() => {
@@ -32,13 +31,7 @@ function TileGrid(props) {
                         <div className="text-wrap">
                             <h3 className="title">wash</h3>
                         </div>
-                        <button
-                            onClick={()=> {
-                            props.setCount(props.count + 1)
-                            if(props.count>0){
-                                history('/washing-services')
-                            }}} 
-                            className="link"></button>
+                        <a href="/washing-services" className="link"></a>
                     </div>
                 </Grid>
                 <Grid item xs={12} md={6} className="grid-item">

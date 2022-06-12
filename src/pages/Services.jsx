@@ -4,6 +4,10 @@ import Footer from '../components/common/Footer';
 import ServiceList from '../components/service/ServiceList';
 
 function Services() {
+    React.useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
+    
   return (
     <>
         <Header/>

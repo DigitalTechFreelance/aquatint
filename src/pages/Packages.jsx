@@ -4,6 +4,9 @@ import Footer from '../components/common/Footer';
 import PackageList from '../components/packages/PackageList';
 
 function Packages() {
+    React.useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
   return (
     <>
         <Header/>
