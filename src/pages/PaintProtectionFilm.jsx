@@ -31,7 +31,7 @@ function PaintProtectionFilm() {
                 <meta name="description" content="International PPF film products at aquatint gives you ultimate scratchproof protection with high gloss finish on the car. Self healing properties gives brand new finish of your car forever. Ask for Ultrashield X, Garware PPF, llumar, Xpel, Stek brand PPF at affordable prices. " />
             </Helmet>
             <main>
-                <div className="lyt-content">
+                <div className="lyt-content typ-home">
                     <BannerPpf bannerTitle={'Paint Protection Flim'} />
                     <section>
                         <div className="bs-section cm-no-pad-top cm-no-pad-bottom">

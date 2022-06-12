@@ -29,10 +29,11 @@
         padding: 0 1rem;
       }
 
-      &.fixed-width{
+      &.fixed-width {
         max-width: 120rem;
         margin: 0 auto;
-        @include mq-below($xs){
+
+        @include mq-below($xs) {
           max-width: initial;
         }
       }
@@ -76,11 +77,23 @@
         }
       }
     }
+
+    .bs-videoplayer {
+      .playerWrapper {
+        >div {
+          height: 72rem !important;
+
+          @include mq-below($xs) {
+            height: 25rem !important;
+          }
+        }
+      }
+    }
   }
 
   &.typ-orange {
-    .playerWrapper{
-      .cm-btn-watch{
+    .playerWrapper {
+      .cm-btn-watch {
         .icon {
           color: $clr-secondary;
         }
