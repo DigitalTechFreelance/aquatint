@@ -12,6 +12,7 @@ import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 // import Loader from '../components/common/Loader';
 import { Helmet } from "react-helmet";
 
+
 function Home() {
 	return (
 		<>

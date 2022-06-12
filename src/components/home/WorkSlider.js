@@ -13,7 +13,9 @@ import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper";
 
 //assets
-import tileImg from '../../assets/images/offering-wash.webp';
+import tileImg1 from '../../assets/images/recent-work/1.webp';
+import tileImg2 from '../../assets/images/recent-work/2.webp';
+import tileImg3 from '../../assets/images/recent-work/3.webp';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -54,7 +56,7 @@ function WorkSlider() {
                 <SwiperSlide>
                     <div className="bs-tile typ-video setBgSrc">
                         <div className="img-wrap">
-                            <img src={tileImg} alt="recent work 1" title="recent work 1" className="getBgSrc" />
+                            <img src={tileImg1} alt="recent work 1" title="recent work 1" className="getBgSrc" />
                         </div>
                         <div className="action-wrap">
                             <button type="button" className="link" data-video-src="" onClick={() => handleOpen("KdGhneBElgQ")}>
@@ -66,7 +68,7 @@ function WorkSlider() {
                 <SwiperSlide>
                     <div className="bs-tile typ-video setBgSrc">
                         <div className="img-wrap">
-                            <img src={tileImg} alt="recent work 2" title="recent work 2" className="getBgSrc" />
+                            <img src={tileImg2} alt="recent work 2" title="recent work 2" className="getBgSrc" />
                         </div>
                         <div className="action-wrap">
                             <button type="button" className="link" data-video-src="" onClick={() => handleOpen("u_Cfe2f_HW8")}>
@@ -78,7 +80,7 @@ function WorkSlider() {
                 <SwiperSlide>
                     <div className="bs-tile typ-video setBgSrc">
                         <div className="img-wrap">
-                            <img src={tileImg} alt="recent work 3" title="recent work 3" className="getBgSrc" />
+                            <img src={tileImg3} alt="recent work 3" title="recent work 3" className="getBgSrc" />
                         </div>
                         <div className="action-wrap">
                             <button type="button" className="link" data-video-src="" onClick={() => handleOpen("6J5SZzJd5bk")}>
