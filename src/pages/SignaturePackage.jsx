@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import CoatingInfogarphy2 from '../components/service/CoatingInfogarphy2';
-import videosrc from '../assets/video/dummy-video.mp4';
+import videosrc from 'https://www.youtube.com/watch?v=6J5SZzJd5bk';
 import VideoPlayer from '../components/common/Videoplayer';
 
 function SignaturePackage() {
