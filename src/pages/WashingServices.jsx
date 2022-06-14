@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import WashingService from '../components/service/WashingService';
@@ -7,15 +7,15 @@ import { Helmet } from "react-helmet";
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function WashingServices() {
-  React.useEffect(()=>{
+  React.useEffect(() => {
     window.scrollTo(0, 0);
-  setTimeout(()=>{
-    setLeadFormOpen(true);
-  },2000)
-  },[])
+    setTimeout(() => {
+      setLeadFormOpen(true);
+    }, 15000)
+  }, [])
 
-const [leadFormOpen, setLeadFormOpen] = useState(false);
-const handleLeadFormClose = () => setLeadFormOpen(false);
+  const [leadFormOpen, setLeadFormOpen] = useState(false);
+  const handleLeadFormClose = () => setLeadFormOpen(false);
 
   return (
     <>
@@ -51,7 +51,7 @@ const handleLeadFormClose = () => setLeadFormOpen(false);
         </div>
       </main>
       <Footer />
-			<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
+      <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
     </>
   )
 }

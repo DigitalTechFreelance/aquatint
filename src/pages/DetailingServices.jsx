@@ -6,12 +6,12 @@ import { Helmet } from "react-helmet";
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function DetailingServices() {
-  React.useEffect(()=>{
+  React.useEffect(() => {
     window.scrollTo(0, 0);
-  setTimeout(()=>{
-    setLeadFormOpen(true);
-  },2000)
-  },[])
+    setTimeout(() => {
+      setLeadFormOpen(true);
+    }, 15000)
+  }, [])
 
   const [leadFormOpen, setLeadFormOpen] = useState(false);
   const handleLeadFormClose = () => setLeadFormOpen(false);
@@ -19,7 +19,7 @@ function DetailingServices() {
 
   return (
     <>
-      <Header activeTab={activeTab}/>
+      <Header activeTab={activeTab} />
       <Helmet>
         <meta charSet="utf-8" />
         <title>Top notch car interior cleaning service - Premium treatment for clean interior</title>
@@ -34,14 +34,14 @@ function DetailingServices() {
                 <h2 className="sp-title">Detailing Services</h2>
               </div>
               <div className="sp-cont">
-                <DetailingServiceTabs setActiveTab={(value)=> setActiveTab(value)}/>
+                <DetailingServiceTabs setActiveTab={(value) => setActiveTab(value)} />
               </div>
             </div>
           </div>
         </div>
       </main>
       <Footer />
-			<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
+      <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
     </>
   )
 }
