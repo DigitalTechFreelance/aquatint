@@ -1,22 +1,22 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import CeramicCoatingInfogarphy from '../components/service/CeramicCoatingInfogarphy';
-import videosrc from '../assets/video/dummy-video.mp4';
+// import videosrc from '../assets/video/dummy-video.mp4';
 import Flybutton from '../components/common/Flybutton';
 import { Helmet } from "react-helmet";
 import VideoPlayer from '../components/common/VideoPlayer';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function CeramicCoating() {
-    React.useEffect(()=>{
+    React.useEffect(() => {
         window.scrollTo(0, 0);
-		setTimeout(()=>{
-			setLeadFormOpen(true);
-		},2000)
-    },[])
+        setTimeout(() => {
+            setLeadFormOpen(true);
+        }, 2000)
+    }, [])
 
-	const [leadFormOpen, setLeadFormOpen] = useState(false);
+    const [leadFormOpen, setLeadFormOpen] = useState(false);
     const handleLeadFormClose = () => setLeadFormOpen(false);
 
     const [playState, setPlayState] = React.useState({
@@ -50,13 +50,13 @@ function CeramicCoating() {
                             <section>
                                 <div className="bs-section">
                                     <div className="sec-cont">
-                                        <div className="mod-video typ-lg">
+                                        <div className="mod-video typ-lg typ-primary">
                                             <div className="media-wrap">
                                                 <div className="video">
                                                     <VideoPlayer
                                                         buttonClose={false}
                                                         playingStatus={handleVideoStatus}
-                                                        srcUrl={videosrc}
+                                                        srcUrl={'https://www.youtube.com/watch?v=6J5SZzJd5bk'}
                                                     />
                                                 </div>
                                                 {/* <button className='btn'><span className="icon icon-play"></span></button> */}
@@ -207,7 +207,7 @@ function CeramicCoating() {
             </main>
             <Footer />
             <Flybutton />
-			<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
+            <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
         </>
     )
 }

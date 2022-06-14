@@ -32,6 +32,10 @@
 
     iframe {
       height: 100vh;
+
+      @include mq-below($xs) {
+        height: 82vh;
+      }
     }
 
     .mod-gif {

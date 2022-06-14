@@ -12,15 +12,21 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination } from "swiper";
 
-//assets
-import tileImg1 from '../../assets/images/recent-work/1.webp';
-import tileImg2 from '../../assets/images/recent-work/2.webp';
-import tileImg3 from '../../assets/images/recent-work/3.webp';
+
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import YoutubeEmbed from '../common/YoutubeEmbed';
+
+//Video thumbnail Images
+import tileImg1 from '../../assets/images/recent-work/1.webp';
+import tileImg2 from '../../assets/images/recent-work/2.webp';
+import tileImg3 from '../../assets/images/recent-work/3.webp';
+import tileImg4 from '../../assets/images/recent-work/4.webp';
+import tileImg5 from '../../assets/images/recent-work/5.webp';
+import tileImg6 from '../../assets/images/recent-work/6.webp';
+import tileImg7 from '../../assets/images/recent-work/7.webp';
 
 function WorkSlider() {
 
@@ -84,6 +90,54 @@ function WorkSlider() {
                         </div>
                         <div className="action-wrap">
                             <button type="button" className="link" data-video-src="" onClick={() => handleOpen("6J5SZzJd5bk")}>
+                                <span className="icon icon-play2"></span>
+                            </button>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="bs-tile typ-video setBgSrc">
+                        <div className="img-wrap">
+                            <img src={tileImg4} alt="recent work 4" title="recent work 4" className="getBgSrc" />
+                        </div>
+                        <div className="action-wrap">
+                            <button type="button" className="link" data-video-src="" onClick={() => handleOpen("Se54_qdyKpo")}>
+                                <span className="icon icon-play2"></span>
+                            </button>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="bs-tile typ-video setBgSrc">
+                        <div className="img-wrap">
+                            <img src={tileImg5} alt="recent work 5" title="recent work 5" className="getBgSrc" />
+                        </div>
+                        <div className="action-wrap">
+                            <button type="button" className="link" data-video-src="" onClick={() => handleOpen("-AE2BTd5Vas")}>
+                                <span className="icon icon-play2"></span>
+                            </button>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="bs-tile typ-video setBgSrc">
+                        <div className="img-wrap">
+                            <img src={tileImg6} alt="recent work 6" title="recent work 6" className="getBgSrc" />
+                        </div>
+                        <div className="action-wrap">
+                            <button type="button" className="link" data-video-src="" onClick={() => handleOpen("A1WR9S7uJJI")}>
+                                <span className="icon icon-play2"></span>
+                            </button>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="bs-tile typ-video setBgSrc">
+                        <div className="img-wrap">
+                            <img src={tileImg7} alt="recent work 6" title="recent work 6" className="getBgSrc" />
+                        </div>
+                        <div className="action-wrap">
+                            <button type="button" className="link" data-video-src="" onClick={() => handleOpen("2yCKwWWSKRg")}>
                                 <span className="icon icon-play2"></span>
                             </button>
                         </div>

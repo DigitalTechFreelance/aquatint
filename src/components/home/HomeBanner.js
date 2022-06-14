@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useWindowSize from '../../hooks/useWindowSize';
 import useSetBgImage from '../../hooks/useSetBgImage';
-import videosrc from '../../assets/video/copy-of-final.mp4';
-import videoSrcMobile from '../../assets/video/comp2.mp4';
 // import ReactPlayer from 'react-player';
 import VideoPlayer from '../common/VideoPlayer';
 
@@ -31,7 +29,7 @@ function HomeBanner(props) {
         <VideoPlayer
           buttonClose={false}
           playingStatus={handleVideoStatus}
-          srcUrl={size.width > 768 ? videosrc : videoSrcMobile}
+          srcUrl={size.width > 768 ? 'https://www.youtube.com/watch?v=-FR6ZosRGyk' : 'https://www.youtube.com/shorts/45PegK6fcLU'}
           muted={true}
           autoPlay={true}
           className="video-player"
