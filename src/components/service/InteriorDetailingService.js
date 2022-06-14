@@ -5,6 +5,9 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import YoutubeEmbed from '../common/YoutubeEmbed';
 
+//video thumbnails
+import thumb2 from '../../assets/images/thumb/interior-detailing.webp';
+
 function InteriorDetailingService() {
     const [open, setOpen] = React.useState(false);
     const [embedId, setEmbedId] = React.useState(null)
@@ -85,7 +88,7 @@ function InteriorDetailingService() {
                         <div className="mod-video">
                             <div className="media-wrap">
                                 <div className="video">
-                                    <img src="https://via.placeholder.com/846x476.png/1a1a1a/919191%20%20?text=Placeholder" alt="placeholder" />
+                                    <img src={thumb2} alt="placeholder" />
                                     <button className='btn btn-play' onClick={() => handleOpen('JSH9ZarMeL4')}><span className="icon icon-play1"></span></button>
                                 </div>
                             </div>

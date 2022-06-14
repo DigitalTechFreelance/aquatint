@@ -5,6 +5,10 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import YoutubeEmbed from '../common/YoutubeEmbed';
 
+//video thumnails 
+import thumb2 from '../../assets/images/thumb/paint-sealant.webp';
+import thumb3 from '../../assets/images/thumb/nano-ceramic-coating.webp';
+
 function ExteriorDetailingService() {
     const [open, setOpen] = React.useState(false);
     const [embedId, setEmbedId] = React.useState(null)
@@ -91,7 +95,7 @@ function ExteriorDetailingService() {
                         <div className="mod-video">
                             <div className="media-wrap">
                                 <div className="video">
-                                    <img src="https://via.placeholder.com/846x476.png/1a1a1a/919191%20%20?text=Placeholder" alt="placeholder" />
+                                    <img src={thumb2} alt="placeholder" />
                                     <button className='btn btn-play' onClick={() => handleOpen('u_Cfe2f_HW8')}><span className="icon icon-play1"></span></button>
                                 </div>
                             </div>
@@ -131,7 +135,7 @@ function ExteriorDetailingService() {
                         <div className="mod-video">
                             <div className="media-wrap">
                                 <div className="video">
-                                    <img src="https://via.placeholder.com/846x476.png/1a1a1a/919191%20%20?text=Placeholder" alt="placeholder" />
+                                    <img src={thumb3} alt="placeholder" />
                                     <button className='btn btn-play' onClick={() => handleOpen('f1BF5rZhaYg')}><span className="icon icon-play1"></span></button>
                                 </div>
                                 <div className="mod-warranty typ-detailing-services">

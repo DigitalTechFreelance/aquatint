@@ -5,6 +5,10 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import YoutubeEmbed from '../common/YoutubeEmbed';
 
+//thumb images
+
+import thumb1 from '../../assets/images/thumb/1.webp';
+
 function WashingService() {
     const [open, setOpen] = React.useState(false);
     const [embedId, setEmbedId] = React.useState(null)
@@ -56,7 +60,7 @@ function WashingService() {
                         <div className="mod-video">
                             <div className="media-wrap">
                                 <div className="video">
-                                    <img src="https://via.placeholder.com/846x476.png/1a1a1a/919191%20%20?text=Placeholder" alt="placeholder" />
+                                    <img src={thumb1} alt="placeholder" />
                                     <button className='btn btn-play' onClick={() => handleOpen('KdGhneBElgQ')}><span className="icon icon-play1"></span></button>
                                 </div>
                             </div>
@@ -96,7 +100,7 @@ function WashingService() {
                         <div className="mod-video">
                             <div className="media-wrap">
                                 <div className="video">
-                                    <img src="https://via.placeholder.com/846x476.png/1a1a1a/919191%20%20?text=Placeholder" alt="placeholder" />
+                                    <img src={thumb1} alt="placeholder" />
                                     <button className='btn btn-play' onClick={() => handleOpen('KdGhneBElgQ')}><span className="icon icon-play1"></span></button>
                                 </div>
                             </div>
@@ -157,7 +161,7 @@ function WashingService() {
                         <div className="mod-video">
                             <div className="media-wrap">
                                 <div className="video">
-                                    <img src="https://via.placeholder.com/846x476.png/1a1a1a/919191%20%20?text=Placeholder" alt="placeholder" />
+                                    <img src={thumb1} alt="placeholder" />
                                     <button className='btn btn-play' onClick={() => handleOpen('KdGhneBElgQ')}><span className="icon icon-play1"></span></button>
                                 </div>
 

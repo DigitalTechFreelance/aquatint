@@ -1,0 +1,25 @@
+.anim-color {
+    animation-name: animate-colors;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@include keyframes(animate-colors) {
+    0% {
+        color: $clr-base
+    }
+
+    33% {
+        color: $clr-primary
+    }
+
+    66% {
+        color: $clr-secondary
+    }
+
+    100% {
+        color: $clr-base
+    }
+
+}

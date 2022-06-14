@@ -1,26 +1,26 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import PaintProtectionFilmInfography from '../components/service/PaintProtectionFilmInfography';
-import videosrc from '../assets/video/mini-cooper-red.mp4';
+// import videosrc from '../assets/video/mini-cooper-red.mp4';
 import Flybutton from '../components/common/Flybutton';
 import TileGridPPF from '../components/service/TileGridPPF';
 import BannerPpf from '../components/service/BannerPpf';
 import PpfCompareList from '../components/service/PpfCompareList';
-import PpfWorkSlider from '../components/service/PpfWorkSlider';
+import WorkSlider from '../components/home/WorkSlider';
 import { Helmet } from "react-helmet";
 import VideoPlayer from '../components/common/VideoPlayer';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function PaintProtectionFilm() {
-    React.useEffect(()=>{
+    React.useEffect(() => {
         window.scrollTo(0, 0);
-		setTimeout(()=>{
-			setLeadFormOpen(true);
-		},2000)
-    },[])
+        setTimeout(() => {
+            setLeadFormOpen(true);
+        }, 2000)
+    }, [])
 
-	const [leadFormOpen, setLeadFormOpen] = useState(false);
+    const [leadFormOpen, setLeadFormOpen] = useState(false);
     const handleLeadFormClose = () => setLeadFormOpen(false);
 
     const [playState, setPlayState] = React.useState({
@@ -69,7 +69,7 @@ function PaintProtectionFilm() {
                                 <div className="bs-section typ-center">
                                     <div className="cm-container">
                                         <div className="sec-head">
-                                            <h2 className="sec-title">BENEFITS OF PPF</h2>
+                                            <h2 className="sec-title anim-color">BENEFITS OF PPF</h2>
                                         </div>
                                         <div className="sec-cont">
                                             <TileGridPPF />
@@ -91,7 +91,7 @@ function PaintProtectionFilm() {
                                             <VideoPlayer
                                                 buttonClose={false}
                                                 playingStatus={handleVideoStatus}
-                                                srcUrl={videosrc}
+                                                srcUrl={'https://www.youtube.com/watch?v=zR2vBv4OgwU'}
                                             />
                                         </div>
                                         <button className='btn'><span className="icon icon-play"></span></button>
@@ -118,7 +118,7 @@ function PaintProtectionFilm() {
                                 </div>
                             </div>
                             <div className="sec-cont">
-                                <PpfWorkSlider />
+                                <WorkSlider />
                             </div>
                         </div>
                     </section>
@@ -126,7 +126,7 @@ function PaintProtectionFilm() {
             </main>
             <Footer />
             <Flybutton />
-			<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
+            <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
         </>
     )
 }
