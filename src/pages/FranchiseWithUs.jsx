@@ -5,6 +5,8 @@ import colab1Img from '../assets/images/colab1.webp';
 import colab2Img from '../assets/images/colab2.webp';
 import TextField from '@mui/material/TextField';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
+import { useFormik } from 'formik';
+import axios from 'axios';
 
 function FranchiseWithUs() {
     React.useEffect(()=>{
@@ -16,6 +18,65 @@ function FranchiseWithUs() {
 
 	const [leadFormOpen, setLeadFormOpen] = useState(false);
     const handleLeadFormClose = () => setLeadFormOpen(false);
+    const submitToLead = (values) => {
+        const current = new Date();
+        const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+            
+        let data = {
+            "Date": date,
+            "Name": values.name,
+            "Email": values.emailId,
+            "Phone No": values.contactNo
+        }
+        axios.post(
+            'https://sheet.best/api/sheets/9d05fb91-8418-4ed3-97dc-4f71c489608f',
+            data
+        )
+            .then(function (response) {
+                if (response.status === 200) {
+                    setFormSuccess(true)
+                    formikLead.resetForm()
+                }
+            })
+            .catch(function (error) {
+                console.log("error", error)
+            });
+
+    }
+
+    const formikLead = useFormik({
+        initialValues: {
+            name: '',
+            emailId: '',
+            contactNo: ''
+        },
+        onSubmit: (values, { resetForm }) => {
+            submitToLead(values)
+        },
+        validate: values => {
+            const errors = {};
+
+            if (!values.name) {
+                errors.name = 'Name is required';
+            }
+
+            if (!values.emailId) {
+                errors.emailId = 'Email is required';
+            } else if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(values.emailId)) {
+                errors.emailId = 'Please enter valid email address.';
+            }
+
+            if (!values.contactNo) {
+                errors.contactNo = 'Mobile no required';
+            } else if (!/^([0-9]){10}?$/.test(values.contactNo)) {
+                errors.contactNo = 'Please enter valid 10 digit mobile no.';
+            }
+
+
+            return errors;
+        }
+    });
+    const [formSuccess, setFormSuccess] = React.useState(false);
 
   return (
     <>
@@ -91,21 +152,61 @@ function FranchiseWithUs() {
                                             <div className="sec-desc">
                                                 <p>To know more about the Franchise Prerequisites, Project Cost, Franchise Fees and other details, please feel free to get in touch with us. Fill in your contact details below.</p>
                                             </div>
-                                            <form className="bs-form">
+                                            <form className="bs-form" onSubmit={formikLead.handleSubmit}>
                                                 <div className="form-wrap">
-                                                    <div className="form-group">
-                                                        <input type="text" className="form-control" placeholder="name" />
+                                                    <div className={`form-group ${formikLead.touched.name && formikLead.errors.name ? "error" : ""}`}>
+                                                        <input 
+                                                            type="text" 
+                                                            className="form-control" 
+                                                            placeholder="name" 
+                                                            name="name"
+                                                            id="name"
+                                                            value={formikLead.values.name}
+                                                            onChange={formikLead.handleChange}
+                                                            onBlur={formikLead.handleBlur}
+                                                        />
+                                                        {formikLead.touched.name && formikLead.errors.name ? (
+                                                            <span className="error">{formikLead.errors.name}</span>
+                                                        ) : null}
                                                     </div>
-                                                    <div className="form-group">
-                                                        <input type="text" className="form-control" placeholder="email-id" />
+                                                    <div className={`form-group ${formikLead.touched.emailId && formikLead.errors.emailId ? "error" : ""}`}>
+                                                        <input 
+                                                            type="text" 
+                                                            className="form-control" 
+                                                            placeholder="email-id"
+                                                            name="emailId"
+                                                            id="emailId"
+                                                            value={formikLead.values.emailId}
+                                                            onChange={formikLead.handleChange}
+                                                            onBlur={formikLead.handleBlur}
+                                                        />
+                                                        {formikLead.touched.emailId && formikLead.errors.emailId ? (
+                                                            <span className="error">{formikLead.errors.emailId}</span>
+                                                        ) : null}
                                                     </div>
-                                                    <div className="form-group">
-                                                        <input type="text" className="form-control" placeholder="contact no." />
+                                                    <div className={`form-group ${formikLead.touched.contactNo && formikLead.errors.contactNo ? "error" : ""}`}>
+                                                        <input 
+                                                            type="tel" 
+                                                            className="form-control" 
+                                                            placeholder="contact no."
+                                                            name="contactNo"
+                                                            id="contactNo"
+                                                            maxLength={10}
+                                                            value={formikLead.values.contactNo}
+                                                            onChange={formikLead.handleChange}
+                                                            onBlur={formikLead.handleBlur}
+                                                        />
+                                                        {formikLead.touched.contactNo && formikLead.errors.contactNo ? (
+                                                            <span className="error">{formikLead.errors.contactNo}</span>
+                                                        ) : null}
                                                     </div>
                                                 </div>
                                                 <div className="form-action">
-                                                    <button type="button" className="btn btn-default"><span>submit</span></button>
+                                                    <button type="submit" name="btnSubmit" className="btn btn-default"><span>submit</span></button>
                                                 </div>
+                                                {formSuccess ? (
+                                                    <span className="success success-msg">Succesfully Sent!!</span>
+                                                ) : null}
                                             </form>
                                         </div>
                                     </div>

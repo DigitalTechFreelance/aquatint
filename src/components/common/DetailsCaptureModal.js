@@ -7,17 +7,18 @@ import axios from 'axios';
 
 function DetailsCaptureModal(props) {
 
-    // const [open, setOpen] = useState(false);
-    // const handleOpen = () => setOpen(true);
-    // const handleClose = () => setOpen(false);
     const submitToLead = (values) => {
+        const current = new Date();
+        const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
+            
         let data = {
+            "Date": date,
             "Name": values.name,
             "Email": values.emailId,
             "Phone No": values.contactNo
         }
         axios.post(
-            'https://sheet.best/api/sheets/1559c773-9061-4fad-93aa-88a979220541',
+            'https://sheet.best/api/sheets/9d05fb91-8418-4ed3-97dc-4f71c489608f',
             data
         )
             .then(function (response) {
