@@ -24,8 +24,16 @@
                 margin-bottom: 2rem;
             }
 
-            &.typ-full {
+            &.typ-2col {
                 width: 66.66%;
+
+                @include mq-below($xs) {
+                    width: 100%;
+                }
+            }
+
+            &.typ-full {
+                width: 100%;
 
                 @include mq-below($xs) {
                     width: 100%;
@@ -46,7 +54,8 @@
         }
     }
 
-    .form-control {
+    .form-control,
+    .rnc-input {
         width: 100%;
         background: transparent;
         border-radius: 0;
@@ -84,6 +93,27 @@
             border: 1px solid $clr-primary;
             padding: 3rem;
         }
+    }
+
+    .rnc {
+        display: flex;
+        align-items: stretch;
+        height: 4rem;
+
+        .rnc-column {
+            display: none;
+        }
+
+        .rnc-canvas {
+            background-color: $clr-primary;
+            height: 100%;
+            width: 25rem;
+        }
+
+        .rnc-input {
+            padding-left: 4rem;
+        }
+
     }
 
 }
