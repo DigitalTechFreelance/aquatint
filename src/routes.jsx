@@ -53,7 +53,12 @@ const routes = [
     exact: true,
   },
   {
-    path: '/detailing-services',
+    path: '/detailing-services/interior',
+    component: <DetailingServices />,
+    exact: true,
+  },
+  {
+    path: '/detailing-services/exterior',
     component: <DetailingServices />,
     exact: true,
   },
