@@ -24,7 +24,7 @@ function ContactUs() {
         window.scrollTo(0, 0);
         setTimeout(() => {
             setLeadFormOpen(true);
-        }, 2000)
+        }, 15000)
     }, [])
 
     const [leadFormOpen, setLeadFormOpen] = useState(false);
@@ -47,7 +47,6 @@ function ContactUs() {
                 data
             )
                 .then(function (response) {
-                    console.log("response", response)
                     if (response.status === 200) {
                         setFormSuccess(true)
                         formikLead.resetForm()

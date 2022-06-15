@@ -13,7 +13,7 @@ function FranchiseWithUs() {
         window.scrollTo(0, 0);
 		setTimeout(()=>{
 			setLeadFormOpen(true);
-		},2000)
+		},15000)
     },[])
 
 	const [leadFormOpen, setLeadFormOpen] = useState(false);

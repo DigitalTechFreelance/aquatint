@@ -50,6 +50,16 @@ function DetailingServiceTabs(props) {
         setValue(newValue);
         props.setActiveTab(newValue)
     };
+    React.useEffect(()=>{
+        if(window.location.pathname === "/detailing-services/interior"){
+            setValue(1);
+            props.setActiveTab(1)
+        }
+        if(window.location.pathname === "/detailing-services/exterior"){
+            setValue(0);
+            props.setActiveTab(0)
+        }
+    }, [])
 
     return (
         <div className="bs-tabs">

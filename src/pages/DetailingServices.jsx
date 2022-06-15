@@ -16,7 +16,6 @@ function DetailingServices() {
   const [leadFormOpen, setLeadFormOpen] = useState(false);
   const handleLeadFormClose = () => setLeadFormOpen(false);
   const [activeTab, setActiveTab] = useState(0)
-
   return (
     <>
       <Header activeTab={activeTab} />

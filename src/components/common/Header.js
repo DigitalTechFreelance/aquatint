@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { OutletProps } from 'react-router-dom';
 import logoImg from '../../assets/images/logo.png';
 import useScrollPosition from '../../hooks/useScrollPosition';
-
 function Header(props) {
 
     let scrollPosition = useScrollPosition();
@@ -44,10 +43,10 @@ function Header(props) {
                         <a href="/washing-services" className={`menu-link typ-sm ${window.location.pathname === "/washing-services"? 'cm-highlight highlight-primary': ''}`}>Wash</a>
                     </li>
                     <li className="menu-item">
-                        <a href="/detailing-services" className={`menu-link typ-sm ${window.location.pathname === "/detailing-services" && props.activeTab === 1 ? 'cm-highlight highlight-primary': ''}`}>Interior Detailing</a>
+                        <a href="/detailing-services/interior" className={`menu-link typ-sm ${window.location.pathname === "/detailing-services/interior" && props.activeTab === 1 ? 'cm-highlight highlight-primary': ''}`}>Interior Detailing</a>
                     </li>
                     <li className="menu-item">
-                        <a href="/detailing-services" className={`menu-link typ-sm ${window.location.pathname === "/detailing-services" && props.activeTab === 0 ? 'cm-highlight highlight-primary': ''}`}>Exterior Detailing</a>
+                        <a href="/detailing-services/exterior" className={`menu-link typ-sm ${window.location.pathname === "/detailing-services/exterior" && props.activeTab === 0 ? 'cm-highlight highlight-primary': ''}`}>Exterior Detailing</a>
                     </li>
                     <li className="menu-item">
                         <a href="/ceramic-coating" className="menu-link typ-sm cm-highlight highlight-primary">Ceramic Coating</a>
