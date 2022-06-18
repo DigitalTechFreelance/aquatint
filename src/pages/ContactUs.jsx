@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import successImg from '../assets/images/success.gif';
 
 const style = {
     position: 'absolute',
@@ -100,7 +101,17 @@ function ContactUs() {
     });
     const [formSuccess, setFormSuccess] = React.useState(false);
 
+    useEffect(() => {
+
+        setTimeout(() => {
+            setFormSuccess(false);
+        }, 10000);
+
+    });
+
     return (
+
+
         <>
             <Header />
             <main>
@@ -278,14 +289,14 @@ function ContactUs() {
             <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
             <Modal
                 open={formSuccess}
-                onClose={!formSuccess}
+                // onClose={handleClose}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style} className="bs-message-card">
                     <div className="icon-wrap">
                         <span className="icon">
-                            <svg className="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle className="checkmark__circle" cx="26" cy="26" r="25" fill="none" /><path className="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" /></svg>
+                            <img src={successImg} alt="success" title="success" />
                         </span>
                     </div>
                     <div className="content-wrap">
