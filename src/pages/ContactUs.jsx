@@ -275,7 +275,7 @@ function ContactUs() {
                                                 </div>
                                             </div>
                                             <div className="form-action">
-                                                <button type="submit" disabled={!captchaSuccess} name="btnSubmit" className="btn btn-default"><span>submit</span></button>
+                                                <button type="submit" disabled={!captchaSuccess} name="btnSubmit" className="btn btn-default btn-disabled"><span>submit</span></button>
                                             </div>
                                         </form>
                                     </div>
