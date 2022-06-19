@@ -7,16 +7,37 @@ import TextField from '@mui/material/TextField';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 import { useFormik } from 'formik';
 import axios from 'axios';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import successImg from '../assets/images/success.gif';
+
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)'
+};
 
 function FranchiseWithUs() {
+    
+
+	const [leadFormOpen, setLeadFormOpen] = useState(false);
+    const [formSuccess, setFormSuccess] = React.useState(false);
+
     React.useEffect(()=>{
         window.scrollTo(0, 0);
 		setTimeout(()=>{
 			setLeadFormOpen(true);
 		},15000)
-    },[])
+    },[]);
 
-	const [leadFormOpen, setLeadFormOpen] = useState(false);
+    React.useEffect(() => {
+        setTimeout(() => {
+            setFormSuccess(false);
+        }, 10000);
+    },[formSuccess]);
+
+
     const handleLeadFormClose = () => setLeadFormOpen(false);
     const submitToLead = (values) => {
         const current = new Date();
@@ -76,7 +97,6 @@ function FranchiseWithUs() {
             return errors;
         }
     });
-    const [formSuccess, setFormSuccess] = React.useState(false);
 
   return (
     <>
@@ -204,9 +224,6 @@ function FranchiseWithUs() {
                                                 <div className="form-action">
                                                     <button type="submit" name="btnSubmit" className="btn btn-default"><span>submit</span></button>
                                                 </div>
-                                                {formSuccess ? (
-                                                    <span className="success success-msg">Succesfully Sent!!</span>
-                                                ) : null}
                                             </form>
                                         </div>
                                     </div>
@@ -219,6 +236,24 @@ function FranchiseWithUs() {
         </main>
         <Footer/>
 		<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
+        <Modal
+                open={formSuccess}
+                // onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={style} className="bs-message-card">
+                    <div className="icon-wrap">
+                        <span className="icon">
+                            <img src={successImg} alt="success" title="success" />
+                        </span>
+                    </div>
+                    <div className="content-wrap">
+                        <p className="text">Thank you for contecting Us!!!</p>
+                        <p className="text text-sm">Our team will reach you shortly</p>
+                    </div>
+                </Box>
+        </Modal>
     </>
   )
 }

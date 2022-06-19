@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
@@ -6,8 +6,6 @@ import { useFormik } from 'formik';
 import axios from 'axios';
 import Canvas from "react-numeric-captcha";
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import successImg from '../assets/images/success.gif';
 
@@ -21,13 +19,21 @@ const style = {
 function ContactUs() {
     const [captchaSuccess, setCaptchaSuccess] = React.useState(false);
     const [captchaError, setCaptchaError] = React.useState(null);
+    const [formSuccess, setFormSuccess] = React.useState(false);
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
         setTimeout(() => {
             setLeadFormOpen(true);
         }, 15000)
+
     }, [])
+
+    React.useEffect(() => {
+        setTimeout(() => {
+            setFormSuccess(false);
+        }, 10000);
+    },[formSuccess]);
 
     const [leadFormOpen, setLeadFormOpen] = useState(false);
     const handleLeadFormClose = () => setLeadFormOpen(false);
@@ -51,6 +57,7 @@ function ContactUs() {
                 .then(function (response) {
                     if (response.status === 200) {
                         setFormSuccess(true)
+                        document.getElementsByClassName('rnc-input')[0].value= ''
                         formikLead.resetForm()
                     }
                 })
@@ -100,15 +107,8 @@ function ContactUs() {
             return errors;
         }
     });
-    const [formSuccess, setFormSuccess] = React.useState(false);
 
-    useEffect(() => {
-
-        setTimeout(() => {
-            setFormSuccess(false);
-        }, 10000);
-
-    });
+   
 
     return (
 
@@ -257,7 +257,7 @@ function ContactUs() {
                                                                 setCaptchaError("Invalid")
                                                             }
                                                         }}
-                                                        placeholder="Verify"
+                                                        placeholder="Verifsy"
                                                     />
                                                     {captchaError !== null && captchaError ? (
                                                         <span className="error">{captchaError}</span>
@@ -308,7 +308,7 @@ function ContactUs() {
                         </span>
                     </div>
                     <div className="content-wrap">
-                        <p className="text">Thankyou for contecting Us!!!</p>
+                        <p className="text">Thank you for contecting Us!!!</p>
                         <p className="text text-sm">Our team will reach you shortly</p>
                     </div>
                 </Box>

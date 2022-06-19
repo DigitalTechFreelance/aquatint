@@ -1,16 +1,31 @@
-import React, { useState } from 'react';
+/* eslint-disable react-hooks/rules-of-hooks */
+import React from 'react';
 import Backdrop from '@mui/material/Backdrop';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import { useFormik } from 'formik';
 import axios from 'axios';
+import Box from '@mui/material/Box';
+import successImg from '../../assets/images/success.gif';
 
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)'
+};
 function DetailsCaptureModal(props) {
+    const [formSuccess, setFormSuccess] = React.useState(false);
+    React.useEffect(() => {
+        setTimeout(() => {
+            setFormSuccess(false);
+        }, 10000);
+    },[formSuccess]);
 
     const submitToLead = (values) => {
         const current = new Date();
         const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
-            
+    
         let data = {
             "Date": date,
             "Name": values.name,
@@ -65,7 +80,6 @@ function DetailsCaptureModal(props) {
             return errors;
         }
     });
-    const [formSuccess, setFormSuccess] = React.useState(false);
 
     return (
         <>
@@ -142,14 +156,29 @@ function DetailsCaptureModal(props) {
                                 <div className="form-action">
                                     <button type="submit" name="btnSubmit" className="btn btn-default"><span>submit</span></button>
                                 </div>
-                                {formSuccess ? (
-                                    <span className="success success-msg">Succesfully Sent!!</span>
-                                ) : null}
                             </form>
                         </div>
                     </div>
                 </Fade>
             </Modal>
+            <Modal
+                open={formSuccess}
+                // onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box sx={style} className="bs-message-card">
+                    <div className="icon-wrap">
+                        <span className="icon">
+                            <img src={successImg} alt="success" title="success" />
+                        </span>
+                    </div>
+                    <div className="content-wrap">
+                        <p className="text">Thank you for contecting Us!!!</p>
+                        <p className="text text-sm">Our team will reach you shortly</p>
+                    </div>
+                </Box>
+        </Modal>
         </>
     )
 }
