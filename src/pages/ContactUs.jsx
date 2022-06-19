@@ -20,6 +20,7 @@ const style = {
 
 function ContactUs() {
     const [captchaSuccess, setCaptchaSuccess] = React.useState(false);
+    const [captchaError, setCaptchaError] = React.useState(null);
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -246,15 +247,21 @@ function ContactUs() {
                                                         <span className="error">{formikLead.errors.vehicleName}</span>
                                                     ) : null}
                                                 </div>
-                                                <div className="form-group typ-2col">
+                                                <div className={`form-group typ-2col ${captchaError!==null && captchaError ? "error" : ""}`}>
                                                     <Canvas
                                                         onChange={(e) => {
                                                             if (e === true) {
                                                                 setCaptchaSuccess(true)
+                                                                setCaptchaError(null)
+                                                            }else {
+                                                                setCaptchaError("Invalid")
                                                             }
                                                         }}
                                                         placeholder="Verify"
                                                     />
+                                                    {captchaError !== null && captchaError ? (
+                                                        <span className="error">{captchaError}</span>
+                                                    ) : null}
                                                 </div>
                                                 <div className={`form-group typ-full ${formikLead.touched.message && formikLead.errors.message ? "error" : ""}`}>
                                                     <textarea
@@ -275,7 +282,8 @@ function ContactUs() {
                                                 </div>
                                             </div>
                                             <div className="form-action">
-                                                <button type="submit" disabled={!captchaSuccess} name="btnSubmit" className="btn btn-default btn-disabled"><span>submit</span></button>
+                                                <button type="submit" name="btnSubmit" className={`btn btn-default`}><span>submit</span></button>
+                                                {/* <button type="submit" disabled={!captchaSuccess} name="btnSubmit" className={`btn btn-default ${!captchaSuccess?'btn-disabled': ''}`}><span>submit</span></button> */}
                                             </div>
                                         </form>
                                     </div>
