@@ -112,11 +112,6 @@ function Footer() {
                           <span className="icon icon-instagram"></span>
                         </a>
                       </div>
-                      <div className="social-icon">
-                        <a href="#">
-                          <span className="icon icon-linkedin"></span>
-                        </a>
-                      </div>
                     </div>
                   </li>
                 </ul> : null}
@@ -156,11 +151,6 @@ function Footer() {
                     <div className="social-icon">
                       <a href="https://www.instagram.com/aquatint_detailing/?utm_source=ig_profile_share&amp;igshid=vbrmw51kw0wp" target="_blank">
                         <span className="icon icon-instagram"></span>
-                      </a>
-                    </div>
-                    <div className="social-icon">
-                      <a href="#">
-                        <span className="icon icon-linkedin"></span>
                       </a>
                     </div>
                   </div>
