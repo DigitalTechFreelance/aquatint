@@ -19,13 +19,13 @@ function DetailsCaptureModal(props) {
     React.useEffect(() => {
         setTimeout(() => {
             setFormSuccess(false);
-        }, 10000);
-    },[formSuccess]);
+        }, 15000);
+    }, [formSuccess]);
 
     const submitToLead = (values) => {
         const current = new Date();
-        const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
-    
+        const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
+
         let data = {
             "Date": date,
             "Name": values.name,
@@ -178,7 +178,7 @@ function DetailsCaptureModal(props) {
                         <p className="text text-sm">Our team will reach you shortly</p>
                     </div>
                 </Box>
-        </Modal>
+            </Modal>
         </>
     )
 }

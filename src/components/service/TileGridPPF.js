@@ -113,7 +113,7 @@ function TileGridPPF() {
                         <div className="img-wrap">
                             <VideoPlayer
                                 buttonClose={false}
-                                srcUrl={'https://www.youtube.com/watch?v=8k41mZZY2tQ'}
+                                srcUrl={'https://www.youtube.com/watch?v=wE-NXZ_QHmw'}
                                 muted={true}
                                 autoPlay={true}
                                 className="mod-gif"

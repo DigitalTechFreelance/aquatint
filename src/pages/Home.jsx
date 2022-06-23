@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import TileGrid from '../components/home/TileGrid';
@@ -7,22 +7,21 @@ import Infogarphy from '../components/home/Infogarphy';
 import TestimonialSlider from '../components/home/TestimonialSlider';
 import HomeBanner from '../components/home/HomeBanner';
 import premiumPackageImg from '../assets/images/premium-package.webp';
-import Flybutton from '../components/common/Flybutton';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 // import Loader from '../components/common/Loader';
 import { Helmet } from "react-helmet";
 
 
 function Home() {
-	React.useEffect(()=>{
-        window.scrollTo(0, 0);
-		setTimeout(()=>{
+	React.useEffect(() => {
+		window.scrollTo(0, 0);
+		setTimeout(() => {
 			setLeadFormOpen(true);
-		},15000)
-    },[])
+		}, 15000)
+	}, [])
 
 	const [leadFormOpen, setLeadFormOpen] = useState(false);
-    const handleLeadFormClose = () => setLeadFormOpen(false);
+	const handleLeadFormClose = () => setLeadFormOpen(false);
 	return (
 		<>
 			<Header />
@@ -123,8 +122,7 @@ function Home() {
 				{/* <Loader/> */}
 			</main>
 			<Footer />
-			<Flybutton />
-			<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/>
+			<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
 		</>
 	);
 }

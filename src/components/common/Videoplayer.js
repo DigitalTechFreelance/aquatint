@@ -94,7 +94,7 @@ function VideoPlayer(props) {
     const isBrowser = typeof window !== 'undefined';
     if (isBrowser) {
       window.addEventListener('scroll', handleScroll);
-      if(playing){
+      if (playing) {
         playHandler('playing video');
       }
     }
@@ -102,7 +102,7 @@ function VideoPlayer(props) {
     return () => {
       if (isBrowser) {
         window.removeEventListener('scroll', () => handleScroll);
-        if(playing){
+        if (playing) {
           playHandler('playing video');
         }
       }
@@ -110,7 +110,7 @@ function VideoPlayer(props) {
   }, []);
 
   return (
-      <>
+    <>
       <div className="bs-videoplayer">
         {props.buttonClose && (
           <button onClick={handleClose} className="icon icon-close"></button>
@@ -121,21 +121,21 @@ function VideoPlayer(props) {
           ref={playerWrapperRef}
           onClick={playHandler}
         >
-            <ReactPlayer
-              width="100%"
-              height={props.height}
-              onEnded={handelPlayDone}
-              progressInterval={100}
-              ref={playerRef}
-              // eslint-disable-next-line react/prop-types
-              url={props.srcUrl?.includes?.('youtube.com/shorts')? props.srcUrl.split('?')[0].replace('shorts/', 'watch?v='): props.srcUrl}
-              onReady={initHandler}
-              playing={props?.autoPlay === true ? true : playing}
-              onProgress={handelProgress}
-              muted={props.muted}
-              className={props.className}
-              loop={props.loop}
-            />
+          <ReactPlayer
+            width="100%"
+            height={props.height}
+            onEnded={handelPlayDone}
+            progressInterval={100}
+            ref={playerRef}
+            // eslint-disable-next-line react/prop-types
+            url={props.srcUrl?.includes?.('youtube.com/shorts') ? props.srcUrl.split('?')[0].replace('shorts/', 'watch?v=') : props.srcUrl}
+            onReady={initHandler}
+            playing={props?.autoPlay === true ? true : playing}
+            onProgress={handelProgress}
+            muted={props.muted}
+            className={props.className}
+            loop={props.loop}
+          />
           <button className="action-btn" onClick={playHandler}>
             <span className={props?.autoPlay || playing ? "cm-hide" : ""}>
               <span className="cm-btn-watch">

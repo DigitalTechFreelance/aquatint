@@ -64,6 +64,10 @@
     .video-wrap {
         position: relative;
 
+        @include mq-above($md) {
+            transform: scale(1.15);
+        }
+
         @include mq-below($xs) {
             width: 100%;
             height: 100%;

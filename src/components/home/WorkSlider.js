@@ -20,8 +20,6 @@ import Fade from '@mui/material/Fade';
 import YoutubeEmbed from '../common/YoutubeEmbed';
 
 //Video thumbnail Images
-import tileImg1 from '../../assets/images/recent-work/1.webp';
-import tileImg2 from '../../assets/images/recent-work/2.webp';
 import tileImg3 from '../../assets/images/recent-work/3.webp';
 import tileImg4 from '../../assets/images/recent-work/4.webp';
 import tileImg5 from '../../assets/images/recent-work/5.webp';
@@ -59,30 +57,6 @@ function WorkSlider() {
                 }}
                 className="mySwiper bs-swiper typ-tile"
             >
-                <SwiperSlide>
-                    <div className="bs-tile typ-video setBgSrc">
-                        <div className="img-wrap">
-                            <img src={tileImg1} alt="recent work 1" title="recent work 1" className="getBgSrc" />
-                        </div>
-                        <div className="action-wrap">
-                            <button type="button" className="link" data-video-src="" onClick={() => handleOpen("KdGhneBElgQ")}>
-                                <span className="icon icon-play2"></span>
-                            </button>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className="bs-tile typ-video setBgSrc">
-                        <div className="img-wrap">
-                            <img src={tileImg2} alt="recent work 2" title="recent work 2" className="getBgSrc" />
-                        </div>
-                        <div className="action-wrap">
-                            <button type="button" className="link" data-video-src="" onClick={() => handleOpen("u_Cfe2f_HW8")}>
-                                <span className="icon icon-play2"></span>
-                            </button>
-                        </div>
-                    </div>
-                </SwiperSlide>
                 <SwiperSlide>
                     <div className="bs-tile typ-video setBgSrc">
                         <div className="img-wrap">
@@ -134,7 +108,7 @@ function WorkSlider() {
                 <SwiperSlide>
                     <div className="bs-tile typ-video setBgSrc">
                         <div className="img-wrap">
-                            <img src={tileImg7} alt="recent work 6" title="recent work 6" className="getBgSrc" />
+                            <img src={tileImg7} alt="recent work 7" title="recent work 7" className="getBgSrc" />
                         </div>
                         <div className="action-wrap">
                             <button type="button" className="link" data-video-src="" onClick={() => handleOpen("2yCKwWWSKRg")}>

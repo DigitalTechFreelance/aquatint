@@ -16,7 +16,7 @@ import { Navigation, Pagination, Autoplay } from "swiper";
 
 import tomJoseph from '../../assets/images/testimonials/tom-joseph.webp';
 import sameerSharma from '../../assets/images/testimonials/sameer-sharma.webp';
-import ajayGodambe from '../../assets/images/testimonial3.webp';
+import ajayGodambe from '../../assets/images/testimonials/ajay-godambe.webp';
 import satyeshPati from '../../assets/images/testimonials/satyesh-patil.webp';
 import anupamGupta from '../../assets/images/testimonial3.webp';
 
@@ -48,9 +48,9 @@ function TestimonialSlider() {
               <p>My goto place for over 5 years.</p>
             </div>
           </div>
-          <div className="img-wrap">
-            {/* <img src={ajayGodambe} alt="Testimonial 1" title="testimonial 1" className="getBgSrc" /> */}
-            <span className="testi-initials">A</span>
+          <div className="img-wrap setBgSrc">
+            <img src={ajayGodambe} alt="Ajay Godambe" title="Ajay Godambe" className="getBgSrc" />
+            {/* <span className="testi-initials">A</span> */}
           </div>
         </div>
       </SwiperSlide>
