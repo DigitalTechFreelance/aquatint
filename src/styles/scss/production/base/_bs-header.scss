@@ -7,15 +7,16 @@
     right: 0;
     z-index: 10;
     transition: all 0.5s ease;
+    @include background-opacity($clr-root, 0.5);
     @include mq-below($xs){
         padding: 0.5rem 0;
     }
     
-    &.header-blur{
-        backdrop-filter: blur( 30px );
-        -webkit-backdrop-filter: blur( 30px );
-        @include background-opacity($clr-root, 0.5);
-    }
+    // &.header-blur{
+    //     backdrop-filter: blur( 30px );
+    //     -webkit-backdrop-filter: blur( 30px );
+    //     @include background-opacity($clr-root, 0.5);
+    // }
 
     .cm-container{
         display: flex;

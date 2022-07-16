@@ -25,7 +25,6 @@ import tileImg4 from '../../assets/images/recent-work/4.webp';
 import tileImg5 from '../../assets/images/recent-work/5.webp';
 import tileImg6 from '../../assets/images/recent-work/6.webp';
 import tileImg7 from '../../assets/images/recent-work/7.webp';
-
 function WorkSlider() {
 
     useSetBgImage(".setBgSrc", ".getBgSrc");

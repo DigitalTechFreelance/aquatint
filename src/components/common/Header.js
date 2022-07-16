@@ -15,7 +15,7 @@ function Header(props) {
     }
     return (
         <>
-            <header className={`bs-header ${(scrollPosition > 10) ? "header-blur header-scroll" : ""}`}>
+            <header className={`bs-header ${(scrollPosition > 10) ? "header-scroll" : ""}`}>
                 <div className="cm-container">
                     <a href="/home" className="logo">
                         <img src={logoImg} alt="Company Logo" title="Company Logo" />

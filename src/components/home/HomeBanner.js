@@ -3,7 +3,6 @@ import useWindowSize from '../../hooks/useWindowSize';
 import useSetBgImage from '../../hooks/useSetBgImage';
 // import ReactPlayer from 'react-player';
 import Videoplayer from '../common/Videoplayer';
-import gif1 from '../../assets/images/offering-ceramic-coating1.gif';
 
 function HomeBanner(props) {
 
@@ -21,13 +20,9 @@ function HomeBanner(props) {
       buttonClose: videoPlayStatus.buttonClose,
     });
   };
-  const isMobileDevice = window.innerWidth <= 820 ? true : false;
-
-
 
   return (
     <div className="bs-banner">
-      {!isMobileDevice ?
       <div className="video-wrap">
         <Videoplayer
           buttonClose={false}
@@ -40,11 +35,6 @@ function HomeBanner(props) {
           loop={true}
         />
       </div> 
-      : 
-      <div className="img-wrap">
-        <img src={gif1} alt="home banner" title="home banner" className="" />
-      </div>
-      }
       <div className="banner-info">
         <h2 className="banner-title">{props.bannerTitle}</h2>
       </div>
