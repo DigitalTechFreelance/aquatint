@@ -1,7 +1,7 @@
 import React from 'react';
 import useWindowSize from '../../hooks/useWindowSize';
 import useSetBgImage from '../../hooks/useSetBgImage';
-import VideoPlayer from '../common/VideoPlayer';
+import Videoplayer from '../common/Videoplayer';
 
 function BannerPpf(props) {
 
@@ -25,7 +25,7 @@ function BannerPpf(props) {
     return (
         <div className="bs-banner">
             <div className="video-wrap">
-                <VideoPlayer
+                <Videoplayer
                     buttonClose={false}
                     playingStatus={handleVideoStatus}
                     srcUrl={size.width > 768 ? 'https://www.youtube.com/watch?v=-AE2BTd5Vas' : 'https://www.youtube.com/shorts/RTY5pKUtq8I'}

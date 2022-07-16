@@ -5,7 +5,7 @@ import CeramicCoatingInfogarphy from '../components/service/CeramicCoatingInfoga
 // import videosrc from '../assets/video/dummy-video.mp4';
 import Flybutton from '../components/common/Flybutton';
 import { Helmet } from "react-helmet";
-import VideoPlayer from '../components/common/VideoPlayer';
+import Videoplayer from '../components/common/Videoplayer';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function CeramicCoating() {
@@ -53,7 +53,7 @@ function CeramicCoating() {
                                         <div className="mod-video typ-lg typ-primary">
                                             <div className="media-wrap">
                                                 <div className="video">
-                                                    <VideoPlayer
+                                                    <Videoplayer
                                                         buttonClose={false}
                                                         playingStatus={handleVideoStatus}
                                                         srcUrl={'https://www.youtube.com/watch?v=6J5SZzJd5bk'}

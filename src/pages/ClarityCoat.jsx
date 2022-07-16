@@ -3,7 +3,7 @@ import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import ClarityCoatingInfogarphy from '../components/service/ClarityCoatingInfogarphy';
 import videosrc from '../assets/video/dummy-video.mp4';
-import VideoPlayer from '../components/common/VideoPlayer';
+import Videoplayer from '../components/common/Videoplayer';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function ClarityCoat() {
@@ -93,7 +93,7 @@ function ClarityCoat() {
                                         <div className="mod-video typ-lg typ-orange">
                                             <div className="media-wrap">
                                                 <div className="video">
-                                                    <VideoPlayer
+                                                    <Videoplayer
                                                         buttonClose={false}
                                                         playingStatus={handleVideoStatus}
                                                         srcUrl={videosrc}

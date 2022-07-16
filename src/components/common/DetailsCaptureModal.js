@@ -19,7 +19,7 @@ function DetailsCaptureModal(props) {
     React.useEffect(() => {
         setTimeout(() => {
             setFormSuccess(false);
-        }, 15000);
+        }, 6000);
     }, [formSuccess]);
 
     const submitToLead = (values) => {
@@ -55,7 +55,8 @@ function DetailsCaptureModal(props) {
             contactNo: ''
         },
         onSubmit: (values, { resetForm }) => {
-            submitToLead(values)
+            submitToLead(values);
+            props.handleClose()
         },
         validate: values => {
             const errors = {};

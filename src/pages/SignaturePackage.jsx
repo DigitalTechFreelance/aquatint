@@ -3,7 +3,7 @@ import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import CoatingInfogarphy2 from '../components/service/CoatingInfogarphy2';
 // import videosrc from '../assets/video/dummy-video.mp4';
-import VideoPlayer from '../components/common/VideoPlayer';
+import Videoplayer from '../components/common/Videoplayer';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function SignaturePackage() {
@@ -68,7 +68,7 @@ function SignaturePackage() {
                                             </div>
                                             <div className="media-wrap">
                                                 <div className="video">
-                                                    <VideoPlayer
+                                                    <Videoplayer
                                                         buttonClose={false}
                                                         playingStatus={handleVideoStatus}
                                                         // srcUrl={videosrc}

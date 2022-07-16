@@ -89,7 +89,7 @@ function ServiceList() {
                                 <li className="feature-item">clarity coat</li>
                             </ul>
                             <a href="/customisation-service" className="btn btn-default"><span>see more</span></a>
-                            <span className="water-mark">customise</span>
+                            <span className="water-mark">Customize</span>
                         </div>
                     </div>
                 </li>

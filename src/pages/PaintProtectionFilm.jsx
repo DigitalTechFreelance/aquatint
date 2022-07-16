@@ -9,7 +9,7 @@ import BannerPpf from '../components/service/BannerPpf';
 import PpfCompareList from '../components/service/PpfCompareList';
 import WorkSlider from '../components/home/WorkSlider';
 import { Helmet } from "react-helmet";
-import VideoPlayer from '../components/common/VideoPlayer';
+import Videoplayer from '../components/common/Videoplayer';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function PaintProtectionFilm() {
@@ -88,7 +88,7 @@ function PaintProtectionFilm() {
                                     </div>
                                     <div className="media-wrap">
                                         <div className="video">
-                                            <VideoPlayer
+                                            <Videoplayer
                                                 buttonClose={false}
                                                 playingStatus={handleVideoStatus}
                                                 srcUrl={'https://www.youtube.com/watch?v=zR2vBv4OgwU'}

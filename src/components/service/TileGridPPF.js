@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import useSetBgImage from '../../hooks/useSetBgImage';
-import VideoPlayer from '../common/VideoPlayer';
+import Videoplayer from '../common/Videoplayer';
 
 function TileGridPPF() {
     const [autoPlay, setAutoPlay] = useState(false);
@@ -17,7 +17,7 @@ function TileGridPPF() {
                 <Grid item xs={12} md={4} className="grid-item">
                     <div className="bs-tile typ3">
                         <div className="img-wrap">
-                            <VideoPlayer
+                            <Videoplayer
                                 buttonClose={false}
                                 srcUrl={'https://www.youtube.com/watch?v=7uKEpuhFIDs'}
                                 muted={true}
@@ -36,7 +36,7 @@ function TileGridPPF() {
                 <Grid item xs={12} md={4} className="grid-item">
                     <div className="bs-tile typ4">
                         <div className="img-wrap">
-                            <VideoPlayer
+                            <Videoplayer
                                 buttonClose={false}
                                 srcUrl={'https://www.youtube.com/watch?v=v-wdt3iPtmo'}
                                 muted={true}
@@ -55,7 +55,7 @@ function TileGridPPF() {
                 <Grid item xs={12} md={4} className="grid-item">
                     <div className="bs-tile typ5">
                         <div className="img-wrap">
-                            <VideoPlayer
+                            <Videoplayer
                                 buttonClose={false}
                                 srcUrl={'https://www.youtube.com/watch?v=j_GmoXQTB2c'}
                                 muted={true}
@@ -73,7 +73,7 @@ function TileGridPPF() {
                 <Grid item xs={12} md={4} className="grid-item">
                     <div className="bs-tile typ3">
                         <div className="img-wrap">
-                            <VideoPlayer
+                            <Videoplayer
                                 buttonClose={false}
                                 srcUrl={'https://www.youtube.com/watch?v=biYnXvwlqVM'}
                                 muted={true}
@@ -92,7 +92,7 @@ function TileGridPPF() {
                 <Grid item xs={12} md={4} className="grid-item">
                     <div className="bs-tile typ4">
                         <div className="img-wrap">
-                            <VideoPlayer
+                            <Videoplayer
                                 buttonClose={false}
                                 srcUrl={'https://www.youtube.com/watch?v=R-PQLRLjFco'}
                                 muted={true}
@@ -111,7 +111,7 @@ function TileGridPPF() {
                 <Grid item xs={12} md={4} className="grid-item">
                     <div className="bs-tile typ5">
                         <div className="img-wrap">
-                            <VideoPlayer
+                            <Videoplayer
                                 buttonClose={false}
                                 srcUrl={'https://www.youtube.com/watch?v=wE-NXZ_QHmw'}
                                 muted={true}

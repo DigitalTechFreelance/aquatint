@@ -92,6 +92,15 @@
         }
     }
 
+    .img-wrap {
+        img{
+            @include mq-below($xs) {
+                width: 100%;
+                height: 30rem;
+            }
+        }
+    }
+
 }
 
 @keyframes scale {

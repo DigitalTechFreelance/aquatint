@@ -68,10 +68,10 @@ function TileGrid() {
                 <Grid item xs={12} md={4} className="grid-item">
                     <div className="bs-tile typ5 setBgSrc">
                         <div className="img-wrap">
-                            <img src={customizeImg} alt="Customise" title="Customise" className="getBgSrc" />
+                            <img src={customizeImg} alt="Customize" title="Customize" className="getBgSrc" />
                         </div>
                         <div className="text-wrap">
-                            <h3 className="title">cutomise</h3>
+                            <h3 className="title">Customize</h3>
                         </div>
                         <a href="/customisation-service" className="link"></a>
                     </div>
