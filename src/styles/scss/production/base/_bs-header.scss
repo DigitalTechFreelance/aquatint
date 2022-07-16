@@ -1,6 +1,6 @@
 //bs-header
 .bs-header{
-    padding: 3.5rem 0;
+    padding: 2rem 0;
     position: fixed;
     top:0;
     left: 0;
@@ -25,7 +25,7 @@
     }
 
     .logo{
-        max-width: 15rem;
+        max-width: 10rem;
         transition: all 0.5s ease;
         @include mq-below($xs){
             max-width: 4rem;
