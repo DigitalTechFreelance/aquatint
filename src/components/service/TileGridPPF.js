@@ -18,7 +18,7 @@ function TileGridPPF() {
                 <Grid item xs={12} md={4} className="grid-item">
                     <div className="bs-tile typ3">
                         <div className="img-wrap">
-                            {!isMobileDevice ?
+                            {/* {!isMobileDevice ? */}
                                 <Videoplayer
                                     buttonClose={false}
                                     srcUrl={'https://www.youtube.com/watch?v=7uKEpuhFIDs'}
@@ -28,9 +28,8 @@ function TileGridPPF() {
                                     height={window.innerWidth >= 767 ? "40.8rem" : "auto"}
                                     loop={true}
                                 />
-                            :
-                            < img src={dummygif} alt="dummy gif" title="gif" className="" />
-                            }
+                            {/* :
+                            < img src={dummygif} alt="dummy gif" title="gif" className="" />} */}
                         </div>
                         <div className="text-wrap">
                             <h3 className="title">200 Micron Thickness</h3>
@@ -41,7 +40,7 @@ function TileGridPPF() {
                 <Grid item xs={12} md={4} className="grid-item">
                     <div className="bs-tile typ4">
                         <div className="img-wrap">
-                        {!isMobileDevice ?
+                        {/* {!isMobileDevice ? */}
                             <Videoplayer
                                 buttonClose={false}
                                 srcUrl={'https://www.youtube.com/watch?v=v-wdt3iPtmo'}
@@ -51,9 +50,8 @@ function TileGridPPF() {
                                 height={window.innerWidth >= 767 ? "40.8rem" : "auto"}
                                 loop={true}
                             />
-                        :
-                        < img src={dummygif} alt="dummy gif" title="gif" className="" />
-                        }
+                        {/* :
+                        < img src={dummygif} alt="dummy gif" title="gif" className="" />} */}
                         </div>
                         <div className="text-wrap">
                             <h3 className="title">Scratchproof</h3>
@@ -64,7 +62,7 @@ function TileGridPPF() {
                 <Grid item xs={12} md={4} className="grid-item">
                     <div className="bs-tile typ5">
                         <div className="img-wrap">
-                        {!isMobileDevice ?
+                        {/* {!isMobileDevice ? */}
                             <Videoplayer
                                 buttonClose={false}
                                 srcUrl={'https://www.youtube.com/watch?v=j_GmoXQTB2c'}
@@ -74,9 +72,8 @@ function TileGridPPF() {
                                 height={window.innerWidth >= 767 ? "40.8rem" : "auto"}
                                 loop={true}
                             />
-                            :
-                            < img src={dummygif} alt="dummy gif" title="gif" className="" />
-                        }
+                            {/* :
+                            < img src={dummygif} alt="dummy gif" title="gif" className="" />} */}
                         </div>
                         <div className="text-wrap">
                             <h3 className="title">High Gloss</h3>
@@ -86,7 +83,7 @@ function TileGridPPF() {
                 <Grid item xs={12} md={4} className="grid-item">
                     <div className="bs-tile typ3">
                         <div className="img-wrap">
-                        {!isMobileDevice ?
+                        {/* {!isMobileDevice ? */}
                             <Videoplayer
                                 buttonClose={false}
                                 srcUrl={'https://www.youtube.com/watch?v=biYnXvwlqVM'}
@@ -96,9 +93,8 @@ function TileGridPPF() {
                                 height={window.innerWidth >= 767 ? "40.8rem" : "auto"}
                                 loop={true}
                             />
-                            :
-                            < img src={dummygif} alt="dummy gif" title="gif" className="" />
-                        }
+                            {/* :
+                            < img src={dummygif} alt="dummy gif" title="gif" className="" />} */}
                         </div>
                         <div className="text-wrap">
                             <h3 className="title">Water Repellent</h3>
@@ -109,7 +105,7 @@ function TileGridPPF() {
                 <Grid item xs={12} md={4} className="grid-item">
                     <div className="bs-tile typ4">
                         <div className="img-wrap">
-                        {!isMobileDevice ?
+                        {/* {!isMobileDevice ? */}
                             <Videoplayer
                                 buttonClose={false}
                                 srcUrl={'https://www.youtube.com/watch?v=R-PQLRLjFco'}
@@ -119,9 +115,8 @@ function TileGridPPF() {
                                 height={window.innerWidth >= 767 ? "40.8rem" : "auto"}
                                 loop={true}
                             />
-                            :
-                            < img src={dummygif} alt="dummy gif" title="gif" className="" />
-                        }
+                            {/* :
+                            < img src={dummygif} alt="dummy gif" title="gif" className="" />} */}
                         </div>
                         <div className="text-wrap">
                             <h3 className="title">Self Healing</h3>
@@ -132,7 +127,7 @@ function TileGridPPF() {
                 <Grid item xs={12} md={4} className="grid-item">
                     <div className="bs-tile typ5">
                         <div className="img-wrap">
-                        {!isMobileDevice ?
+                        {/* {!isMobileDevice ? */}
                             <Videoplayer
                                 buttonClose={false}
                                 srcUrl={'https://www.youtube.com/watch?v=wE-NXZ_QHmw'}
@@ -142,9 +137,8 @@ function TileGridPPF() {
                                 height={window.innerWidth >= 767 ? "40.8rem" : "auto"}
                                 loop={true}
                             />
-                            :
-                            < img src={dummygif} alt="dummy gif" title="gif" className="" />
-                        }
+                            {/* :
+                            < img src={dummygif} alt="dummy gif" title="gif" className="" />} */}
                         </div>
                         <div className="text-wrap">
                             <h3 className="title">Various Life Scratchs</h3>
