@@ -4,20 +4,134 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: $clr-base;
-    width: 60%;
+    background-color: $clr-root;
+    width: 80vw;
 
     @include mq-below($xs) {
       width: 95%;
     }
   }
 
-  .yt-iframe {
-    width: 100%;
-    height: 50rem;
+  .modal-close {
+    position: absolute;
+    right: 0;
+    width: 5rem;
+    height: 5rem;
+    background-color: $clr-root;
 
     @include mq-below($xs) {
-     height: 20rem;
+      width: 2rem;
+      height: 2rem;
     }
+
+    .icon-close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+
+      @include mq-below($xs) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .yt-iframe {
+    width: 100%;
+    height: 80vh;
+
+    @include mq-below($xs) {
+      height: 20rem;
+    }
+  }
+
+  &.typ-modal-form {
+    .modal-body {
+      width: 40%;
+      padding: 4rem;
+      border: 0;
+      border-radius: 2rem;
+      box-shadow: 0 0 0.5rem 0 $clr-primary;
+
+      @include mq-below($xs) {
+        width: 95%;
+        padding: 1.6rem;
+        border-radius: 1rem;
+      }
+    }
+
+    .modal-close {
+      border-top-right-radius: 2rem;
+      top: 0;
+
+      @include mq-below($xs) {
+        border-top-right-radius: 1rem;
+      }
+    }
+
+    .modal-title {
+      margin-bottom: 5rem;
+
+      @include mq-below($xs) {
+        margin-bottom: 1.5rem;
+      }
+
+      .title {
+        @include font-source-sans(4rem, 5.2rem, $font1, $font-smbold, $clr-base);
+        letter-spacing: 0.4rem;
+        margin-bottom: 2rem;
+        text-align: center;
+
+        @include mq-below($xs) {
+          font-size: 1.4rem;
+          line-height: 1.2rem;
+          letter-spacing: 0.2rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .sub-title {
+        opacity: 0.8;
+        font-style: italic;
+        text-align: center;
+      }
+    }
+
+    .bs-form {
+      .form-wrap {
+        flex-direction: column;
+        margin: 0 0 4rem 0;
+
+        @include mq-below($xs) {
+          margin: 0 0 2rem 0;
+        }
+
+        .form-group {
+          width: 100%;
+          padding: 0;
+          margin-bottom: 5rem;
+
+          @include mq-below($xs) {
+            margin-bottom: 2rem;
+          }
+        }
+      }
+
+      .form-action {
+        text-align: center;
+
+        .btn {
+          &.btn-default {
+            padding: 2rem 6rem;
+
+            @include mq-below($xs) {
+              width: 100%;
+              padding: 1rem 3rem;
+            }
+          }
+        }
+      }
+    }
+
   }
 }

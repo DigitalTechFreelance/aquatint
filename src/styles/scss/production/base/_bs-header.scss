@@ -14,6 +14,7 @@
     &.header-blur{
         backdrop-filter: blur( 30px );
         -webkit-backdrop-filter: blur( 30px );
+        @include background-opacity($clr-root, 0.5);
     }
 
     .cm-container{

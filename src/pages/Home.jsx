@@ -12,14 +12,16 @@ function Home() {
 	const [data, setData] = React.useState(null)
 
 	React.useEffect(()=>{
-		axios.get(`/api/home?populate=*`)
+		axios.get(`/home`)
 		.then((res) => {
-			setData(res.data.data.attributes)
+			console.log("home res", res)
+			setData(res.data)
 		})
 		.catch((error) => {
 			// console.log("home error", error)
 		})
 	}, [])
+	console.log("data ===>", data)
 	return (
 		data!==null? (
 			<main>
@@ -28,9 +30,9 @@ function Home() {
 					<About data={data}/>
 					{data.services.isActive && <Service data={data.services.services}/>}
 					{data.premiumPackages.isActive && <Packages data={data.premiumPackages}/>}
-					<RecentWork data={data.recentWorkSection}/>
+					{/*<RecentWork data={data.recentWorkSection}/>
 					{data.withUsSection.isActive && <Infogarphy data={data.withUsSection}/>}
-					<TestimonialSlider data={data.testimonialsSection}/>
+					<TestimonialSlider data={data.testimonialsSection}/> */}
 				</div>
 			</main>
 		) : null

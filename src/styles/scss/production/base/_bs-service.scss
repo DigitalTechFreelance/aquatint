@@ -1,15 +1,16 @@
 //bs-service
-.bs-service{
+.bs-service {
     display: flex;
     align-items: center;
     position: relative;
 
-    @include mq-below($xs) {
-        flex-direction: column;
-    }
+    // @include mq-below($xs) {
+    //     flex-direction: column;
 
-    .title{
-        @include font-source-sans(8rem,8.4rem, $font1, $font-bold, $clr-base, uppercase);
+    // }
+
+    .title {
+        @include font-source-sans(8rem, 8.4rem, $font1, $font-bold, $clr-base, uppercase);
         margin-bottom: 8rem;
         position: relative;
         z-index: 2;
@@ -20,8 +21,8 @@
         }
     }
 
-    .feature-item{
-        @include font-source-sans(2.8rem,3.2rem, $font1, $font-smbold, $clr-primary, uppercase);
+    .feature-item {
+        @include font-source-sans(2.8rem, 3.2rem, $font1, $font-smbold, $clr-primary, uppercase);
         letter-spacing: 0.3rem;
 
         @include mq-below($xs) {
@@ -30,34 +31,53 @@
         }
     }
 
-    .water-mark{
-        @include font-source-sans(28rem,35rem, $font1, $font-xbold, $clr-primary, uppercase);
+    .water-mark {
+        @include font-source-sans(28rem, 35rem, $font1, $font-xbold, $clr-primary, uppercase);
         font-style: italic;
         opacity: 0.2;
 
         @include mq-below($xs) {
-            @include font-source-sans(3.3rem);
+            @include font-source-sans(3.3rem, 3.8rem);
         }
     }
 
-    .img-wrap{
+    .img-wrap {
         max-width: 80rem;
+
+        @include mq-below($xs) {
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                z-index: 1;
+                @include background-opacity($clr-root, 0.2);
+            }
+        }
+
+
+
+
     }
 
-    .feature-list{
+    .feature-list {
         margin-bottom: 5rem;
         position: relative;
 
-        @include mq-below($xs){
+        @include mq-below($xs) {
             margin-bottom: 2rem;
         }
 
-        .feature-item{
+        .feature-item {
             display: inline-flex;
             align-items: center;
 
-            &:after{
-                content:'';
+            &:after {
+                content: '';
                 width: 1rem;
                 height: 1rem;
                 border-radius: 100%;
@@ -69,26 +89,38 @@
                     height: 0.5rem;
                     margin: 0 0.5rem;
                 }
-                
+
             }
-            &:last-child{
-                &:after{
+
+            &:last-child {
+                &:after {
                     display: none;
                 }
             }
         }
     }
 
-    .info-wrap{
+    .info-wrap {
         position: relative;
 
         @include mq-below($xs) {
             padding: 0 1.6rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
         }
 
-        .water-mark{
+        .water-mark {
             position: absolute;
             z-index: 1;
+        }
+    }
+
+    .btn {
+        @include mq-below($xs) {
+            position: relative;
+            z-index: 3;
         }
     }
 

@@ -17,7 +17,6 @@ function ContactUs() {
 		})
 	}, [])
 
-    console.log("data contact", data)
   return (
       data !== null ?(
         <main>

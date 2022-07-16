@@ -1,8 +1,8 @@
 //bs-form
-.bs-form{
+.bs-form {
     max-width: 135rem;
 
-    .form-wrap{
+    .form-wrap {
         display: flex;
         align-items: flex-start;
         margin: 0 -3rem 8rem -3rem;
@@ -14,7 +14,7 @@
             margin: 0 -3rem 2rem -3rem;
         }
 
-        .form-group{
+        .form-group {
             width: 33.33%;
             padding: 0 3rem;
             margin-bottom: 4rem;
@@ -24,8 +24,16 @@
                 margin-bottom: 2rem;
             }
 
-            &.typ-full{
+            &.typ-2col {
                 width: 66.66%;
+
+                @include mq-below($xs) {
+                    width: 100%;
+                }
+            }
+
+            &.typ-full {
+                width: 100%;
 
                 @include mq-below($xs) {
                     width: 100%;
@@ -34,38 +42,45 @@
         }
     }
 
-    .form-group{
-        &.error{
-            .form-control{
+    .form-group {
+        &.error {
+            .form-control {
                 border-color: $clr-error;
+            }
+
+            .error {
+                @include font-source-sans(1.4rem, 2rem, $font1, $font-regular, $clr-error, initial);
             }
         }
     }
 
-    .form-control{
+    .form-control,
+    .rnc-input {
         width: 100%;
         background: transparent;
         border-radius: 0;
         border-bottom: 1px solid $clr-primary;
         transition: all 0.3s ease;
-        &:not(textarea){
+
+        &:not(textarea) {
             height: 4rem;
         }
-        @include font-source-sans(2.4rem,3.2rem, $font1, $font-regular, $clr-base, initial);
+
+        @include font-source-sans(2.4rem, 3.2rem, $font1, $font-regular, $clr-base, initial);
 
         @include mq-below($xs) {
             @include font-source-sans(1.2rem, 1.6rem);
         }
 
-        @include placeholder{
-            @include font-source-sans(2.4rem,3.2rem, $font1, $font-light, $clr-base, uppercase);
+        @include placeholder {
+            @include font-source-sans(2.4rem, 3.2rem, $font1, $font-light, $clr-base, uppercase);
 
             @include mq-below($xs) {
                 @include font-source-sans(1.2rem, 1.6rem);
             }
         }
 
-        &.typ-readonly{
+        &.typ-readonly {
             background-color: $clr-primary;
             text-align: center;
             opacity: 0.8;
@@ -73,11 +88,32 @@
 
     }
 
-    textarea{
-        &.form-control{
-            border:1px solid $clr-primary;
+    textarea {
+        &.form-control {
+            border: 1px solid $clr-primary;
             padding: 3rem;
         }
+    }
+
+    .rnc {
+        display: flex;
+        align-items: stretch;
+        height: 4rem;
+
+        .rnc-column {
+            display: none;
+        }
+
+        .rnc-canvas {
+            background-color: $clr-primary;
+            height: 100%;
+            width: 25rem;
+        }
+
+        .rnc-input {
+            padding-left: 4rem;
+        }
+
     }
 
 }

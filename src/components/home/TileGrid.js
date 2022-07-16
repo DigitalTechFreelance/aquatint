@@ -16,7 +16,7 @@ function TileGrid({data, index,dataLength}) {
                 <div className={`bs-tile setBgSrc typ${index+1}`}>
                     {data.cardImage!== null && 
                     <div className="img-wrap">
-                    <img src={`http://localhost:1337${data.cardImage.data.attributes.url}`} alt={data.cardImage.data.attributes.alternativeText} title={data.cardImage.data.attributes.name} className="getBgSrc" />
+                    <img src={data.cardImage.url} alt={data.cardImage.alternativeText} title={data.cardImage.name} className="getBgSrc" />
                     </div>}
                     <div className="text-wrap">
                         <h3 className="title">{data.name}</h3>

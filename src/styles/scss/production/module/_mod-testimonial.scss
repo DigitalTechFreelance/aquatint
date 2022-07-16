@@ -1,57 +1,62 @@
 //mod-testimonial
-.mod-testimonial{
-    padding: 7rem 9rem 7rem 19.4rem;
+.mod-testimonial {
+    padding: 7rem 4rem 7rem 19.4rem;
     max-width: 74.4rem;
     border: 1px solid $clr-primary;
     margin: 0 auto;
     position: relative;
-    @include mq-below($xs){
+
+    @include mq-below($xs) {
         max-width: initial;
         width: 100%;
         padding: 8rem 0 0 0;
         border: none;
     }
 
-    .title{
-        @include font-source-sans(4.8rem,5.4rem, $font1, $font-smbold, $clr-base, capitalize);
+    .title {
+        @include font-source-sans(4.8rem, 5.4rem, $font1, $font-smbold, $clr-base, capitalize);
         margin-bottom: 2rem;
-        @include mq-below($xs){
+
+        @include mq-below($xs) {
             font-size: 2.4rem;
             line-height: 3rem;
             margin-bottom: 0;
         }
     }
 
-    .place{
-        @include font-source-sans(3.6rem,4rem, $font1, $font-medium, $clr-base, capitalize);
+    .place {
+        @include font-source-sans(3.6rem, 4rem, $font1, $font-medium, $clr-base, capitalize);
         margin-bottom: 2rem;
         display: block;
-        @include mq-below($xs){
+
+        @include mq-below($xs) {
             font-size: 2rem;
             line-height: 2.4rem;
             margin-bottom: 1rem;
         }
     }
 
-    .desc{
-        p{
-            @include font-source-sans(2.4rem,3.2rem, $font2, $font-regular, $clr-base, initial);
-            @include mq-below($xs){
+    .desc {
+        p {
+            @include font-source-sans(2.4rem, 3.2rem, $font2, $font-regular, $clr-base, initial);
+
+            @include mq-below($xs) {
                 font-size: 1.2rem;
                 line-height: 2rem;
             }
         }
     }
 
-    .info-wrap{
-        max-width: 46rem;
-        @include mq-below($xs){
+    .info-wrap {
+
+        // max-width: 46rem;
+        @include mq-below($xs) {
             border: 1px solid $clr-primary;
             padding: 5rem 1.5rem 1.5rem 1.5rem;
         }
     }
 
-    .img-wrap{
+    .img-wrap {
         width: 20.9rem;
         height: 28.5rem;
         display: block;
@@ -62,13 +67,27 @@
         left: -15%;
         top: 50%;
         transform: translateY(-50%);
-        @include mq-below($xs){
+        background-color: $clr-primary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include mq-below($xs) {
             left: 50%;
             top: 0;
-            transform: translate(-50%,0);
+            transform: translate(-50%, 0);
             width: 10rem;
             height: 12rem;
             background-position: top center;
+        }
+    }
+
+    .testi-initials {
+        @include font-source-sans(20rem, 24rem, $font1, $font-bold, $clr-root, uppercase);
+
+        @include mq-below($xs) {
+            font-size: 9rem;
+            line-height: 11rem;
         }
     }
 

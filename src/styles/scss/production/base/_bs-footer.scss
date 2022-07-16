@@ -44,6 +44,7 @@
                 font-size: 1.2rem;
                 line-height: 1.6rem;
                 margin-bottom: 1.2rem;
+                position: relative;
             }
             span{
                 position: relative;
@@ -56,6 +57,28 @@
                     width: 100%;
                     height: 0.1rem;
                     background-color: $clr-base;
+                }
+            }
+
+            &:before{
+                content: "\e90a";
+                font-family: 'icomoon' !important;
+                font-size: 1rem;
+                color: $clr-base;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%) rotate(0deg);
+                display: none;
+                transition: all 0.3s ease;
+                @include mq-below($xs){
+                    display: block;
+                }
+            }
+
+            &.active{
+                &:before{
+                    transform: translateY(-50%) rotate(180deg);
                 }
             }
         }
@@ -73,6 +96,18 @@
 
                 &:last-child {
                     padding-right: 0;
+                }
+            }
+        }
+        &:not(:last-child){
+            .cm-footer-hide{
+                @include mq-below($xs){
+                    display: none;
+                }
+                &.active{
+                    @include mq-below($xs){
+                        display: block;
+                    }
                 }
             }
         }

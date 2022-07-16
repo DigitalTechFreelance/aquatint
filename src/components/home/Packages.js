@@ -1,9 +1,4 @@
-
-
-
-
 import React from 'react';
-import premiumPackageImg from '../../assets/images/premium-package.webp';
 
 function Packages({data}) {
 
@@ -21,14 +16,14 @@ function Packages({data}) {
                             <span className="text-lg text-pos-3">{title3}</span>
                         </h3>
                         <ul className="feature-list">
-                            {packages.data.map((item, index)=>(
-                                <li key={index}>{item.attributes.packageName}</li>
+                            {packages.length>0 && packages.data.map((item, index)=>(
+                                <li key={index}>{item.packageName}</li>
                             ))}
                         </ul>
                         <a href={buttonUrl} className="btn btn-default"><span>{buttonText}</span></a>
                     </div>
                     <div className="img-wrap">
-                        <img src={`http://localhost:1337${image.data.attributes.url}`} alt={image.data.attributes.alternativeText} title={image.data.attributes.name} />
+                        <img src={image.url} alt={image.alternativeText} title={image.name} />
                     </div>
                 </div>
             </div>

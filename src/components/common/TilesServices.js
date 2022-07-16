@@ -5,6 +5,7 @@ import TileGrid from '../home/TileGrid';
 import Grid from '@mui/material/Grid';
 
 function Service({data}) {
+    console.log("data", data)
   return (
     <section>
         <div className="bs-section">

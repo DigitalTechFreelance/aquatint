@@ -32,6 +32,8 @@
 @import "base/bs-tabs";
 @import "base/bs-videoplayer";
 @import "base/bs-action-fly";
+@import "base/bs-keyframe-anim";
+@import "base/bs-message-card";
 
 
 /* module */
@@ -44,6 +46,7 @@
 @import "module/mod-warranty";
 @import "module/mod-video";
 @import "module/mod-logo-list";
+@import "module/mod-gif";
 
 /* layout */
 @import "layout/lyt-content";

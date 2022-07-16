@@ -18,4 +18,4 @@ function About({data}) {
   )
 }
 
-export default About
+export default About;

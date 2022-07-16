@@ -18,15 +18,12 @@ function CoatingDetail() {
 	React.useEffect(()=>{
 		axios.get(`/api/coatings?filters[slug][$eq]=${slug}`)
 		.then((res) => {
-            console.log("res", res)
 			setData(res.data.data[0].attributes)
 		})
 		.catch((error) => {
 			// console.log("home error", error)
 		})
 	}, [])
-
-	console.log("coatings ", data, slug)
 
   return (
       data !== null ? (

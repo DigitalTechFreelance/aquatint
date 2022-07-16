@@ -13,7 +13,6 @@ function PackageDetail() {
 	React.useEffect(()=>{
 		axios.get(`/api/packages?filters[slug][$eq]=${slug}`)
 		.then((res) => {
-            console.log("res", res)
 			setData(res.data.data[0].attributes)
 		})
 		.catch((error) => {

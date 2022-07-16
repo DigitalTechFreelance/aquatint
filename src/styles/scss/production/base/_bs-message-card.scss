@@ -1,0 +1,30 @@
+//bs-message-card
+.bs-message-card {
+    background-color: $clr-root;
+    padding: 5rem;
+    width: 60rem;
+    -webkit-box-shadow: 0px 0px 23px -7px rgba(114, 255, 0, 1);
+    -moz-box-shadow: 0px 0px 23px -7px rgba(114, 255, 0, 1);
+    box-shadow: 0px 0px 23px -7px rgba(114, 255, 0, 1);
+
+    .icon-wrap {
+        display: block;
+        width: 12rem;
+        height: 12rem;
+        margin: 0 auto 3rem;
+    }
+
+    .content-wrap {
+        text-align: center;
+    }
+
+    .text {
+        @include font-source-sans(2.5rem, 3rem, $font1, $font-smbold, $clr-base, initial);
+
+        &.text-sm {
+            margin-top: 1rem;
+            @include font-source-sans(1.8rem, 2.4rem, $font1, $font-smbold, $clr-base, initial);
+        }
+    }
+
+}

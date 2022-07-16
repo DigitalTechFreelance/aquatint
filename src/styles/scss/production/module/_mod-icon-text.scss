@@ -4,6 +4,9 @@
 
     .icon-wrap{
         margin: 0 auto 2.4rem;
+        @include mq-below($xs){
+            margin: 0 auto 1rem;
+        }
     }
 
     .icon{
@@ -11,7 +14,7 @@
         color: $clr-primary;
 
         @include mq-below($xs){
-            font-size: 5rem;
+            font-size: 3rem;
         }
     }
 

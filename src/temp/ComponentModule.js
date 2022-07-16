@@ -1,12 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Route, Switch } from 'react-router-dom';
 // import Banner from '../components/Banner'
 import './demo.css'
 
 function ComponentModule(props) {
-    useEffect(() => {
-        console.log(props)
-    }, [])
+
     return (
         <>
             <div className="left-panel">

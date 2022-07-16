@@ -1,109 +1,119 @@
 //bs-infography
-.bs-infography{
+.bs-infography {
     display: flex;
 
-    .info-wrap{
+    .info-wrap {
         max-width: 60rem;
         position: relative;
     }
 
-    .img-wrap{
+    .img-wrap {
         max-width: 80rem;
-        img{
-            @include mq-below($xs){
+
+        img {
+            @include mq-below($xs) {
                 display: block;
             }
         }
     }
 
-    .title{
-        @include font-source-sans(4.8rem,5.2rem, $font1, $font-smbold, $clr-base, uppercase);
+    .title {
+        @include font-source-sans(4.8rem, 5.2rem, $font1, $font-smbold, $clr-base, uppercase);
         letter-spacing: 0.4rem;
         margin-bottom: 8rem;
 
-        @include mq-below($xs){
+        @include mq-below($xs) {
             @include font-source-sans(2.4rem, 3rem);
-            margin-bottom: 2.5rem
+            // margin-bottom: 2.5rem
+            margin-bottom: 0;
         }
 
-        .text-sm{
-            @include font-source-sans(3.2rem,3.6rem, $font1, $font-medium, $clr-base, uppercase);
+        .text-sm {
+            @include font-source-sans(3.2rem, 3.6rem, $font1, $font-medium, $clr-base, uppercase);
             display: block;
-            @include mq-below($xs){
+
+            @include mq-below($xs) {
                 font-size: 1.6rem;
                 line-height: 2rem;
             }
         }
-        .text-lg{
-            @include font-source-sans(12rem,12.6rem, $font1, $font-bold, $clr-base, uppercase);
+
+        .text-lg {
+            @include font-source-sans(12rem, 12.6rem, $font1, $font-bold, $clr-base, uppercase);
             font-style: italic;
             display: block;
-            @include mq-below($xs){
+
+            @include mq-below($xs) {
                 font-size: 4rem;
                 line-height: 4.2rem;
             }
         }
 
-        .text-md{
-            @include font-source-sans(8rem,8.6rem, $font1, $font-bold, $clr-base, uppercase);
+        .text-md {
+            @include font-source-sans(8rem, 8.6rem, $font1, $font-bold, $clr-base, uppercase);
             font-style: italic;
             display: block;
-            @include mq-below($xs){
+
+            @include mq-below($xs) {
                 font-size: 2rem;
                 line-height: 3rem;
             }
         }
-        .text-xl{
-            @include font-source-sans(10rem,10.6rem, $font1, $font-bold, $clr-base, uppercase);
+
+        .text-xl {
+            @include font-source-sans(10rem, 10.6rem, $font1, $font-bold, $clr-base, uppercase);
             font-style: italic;
             display: block;
-            @include mq-below($xs){
+
+            @include mq-below($xs) {
                 font-size: 3rem;
                 line-height: 4.5rem;
             }
         }
     }
 
-    .desc{
+    .desc {
         margin-bottom: 6rem;
 
-        @include mq-below($xs){
+        @include mq-below($xs) {
             margin-bottom: 0;
         }
 
-        p{
-            @include font-source-sans(2.4rem,3.2rem, $font2, $font-regular, $clr-base, initial);
+        p {
+            @include font-source-sans(2.4rem, 3.2rem, $font2, $font-regular, $clr-base, initial);
             margin-bottom: 3rem;
 
-            &:last-child{
+            &:last-child {
                 margin-bottom: 0;
             }
 
             @include mq-below($xs) {
-               @include font-source-sans(1.4rem, 2rem); 
+                @include font-source-sans(1.4rem, 2rem);
             }
         }
 
     }
 
-    .feature-list{
-        
-        li{
+    .feature-list {
+
+        li {
             display: inline-block;
-            @include font-source-sans(2.8rem,3.4rem, $font1, $font-smbold, $clr-base, uppercase);
+            @include font-source-sans(2.8rem, 3.4rem, $font1, $font-smbold, $clr-base, uppercase);
             font-style: italic;
             padding-left: 2rem;
             margin-right: 2rem;
             position: relative;
             margin-bottom: 1rem;
-            @include mq-below($xs){
+
+            @include mq-below($xs) {
                 font-size: 1.2rem;
                 line-height: 1.6rem;
                 margin-right: 0;
                 margin-bottom: 0.7rem;
             }
-            &:before{
-                content:'';
+
+            &:before {
+                content: '';
                 width: 0.7rem;
                 height: 0.7rem;
                 background-color: $clr-base;
@@ -116,109 +126,131 @@
         }
     }
 
-    &.typ-reverse{
+    &.typ-reverse {
         flex-direction: row-reverse;
         justify-content: flex-end;
-        @include mq-below($xs){
+
+        @include mq-below($xs) {
             flex-direction: column-reverse;
         }
     }
 
-    &.typ-explore{
+    &.typ-explore {
         padding-top: 10rem;
-        @include mq-below($xs){
+
+        @include mq-below($xs) {
             padding: 0 1.5rem;
             position: relative;
         }
 
-        .img-wrap{
+        .img-wrap {
             max-width: 104rem;
         }
 
-        .title{
+        .title {
             margin-bottom: 4rem;
-            @include mq-below($xs){
+
+            @include mq-below($xs) {
                 display: none;
             }
-            span{
-                &.text-pos-1{
+
+            span {
+                &.text-pos-1 {
                     margin-left: -28rem;
                 }
-                &.text-pos-2{
+
+                &.text-pos-2 {
                     margin-left: -30rem;
                 }
-                &.text-pos-3{
+
+                &.text-pos-3 {
                     margin-left: -6rem;
                 }
             }
 
         }
 
-        .feature-list{
+        .feature-list {
             margin-bottom: 6rem;
-            @include mq-below($xs){
+
+            @include mq-below($xs) {
                 margin: 3rem 0;
             }
         }
 
     }
 
-    &.typ-icon{
+    &.typ-icon {
         justify-content: space-around;
         align-items: center;
 
-        @include mq-below($xs){
+        @include mq-below($xs) {
             flex-direction: column;
         }
 
-        .info-wrap{
+        .info-wrap {
             width: 68rem;
             max-width: initial;
             margin-left: 5rem;
 
-            @include mq-below($xs){
+            @include mq-below($xs) {
                 width: 100%;
                 margin-left: 0;
             }
         }
-        .img-wrap{
+
+        .img-wrap {
             max-width: 110rem;
             margin-left: auto;
-            img{
+
+            img {
                 width: 150%;
             }
         }
 
-        &.typ-2{
-            .img-wrap{
+        &.typ-2 {
+            .img-wrap {
                 max-width: 100rem;
                 margin-left: -7%;
-                img{
+
+                @include mq-below($xs) {
+                    max-width: initial;
+                    width: 100%;
+                    margin-left: 0;
+                    margin-top: 2rem;
+                }
+
+                img {
                     width: 100%;
                 }
             }
-            .info-wrap{
+
+            .info-wrap {
                 width: 80rem;
+
+                @include mq-below($xs) {
+                    width: 100%;
+                }
             }
         }
     }
 
-    &.typ-grid-left{
+    &.typ-grid-left {
         justify-content: space-between;
         position: relative;
 
-        @include mq-below($xs){
+        @include mq-below($xs) {
             flex-direction: column;
         }
-        
-        .img-wrap{
+
+        .img-wrap {
             width: 115rem;
             position: absolute;
             right: -35%;
             top: -25rem;
             transform: scale(2);
 
-            @include mq-below($xs){
+            @include mq-below($xs) {
                 width: 100%;
                 position: unset;
                 right: unset;
@@ -227,19 +259,19 @@
             }
         }
 
-        &.typ-vertical-center{
+        &.typ-vertical-center {
 
-            .img-wrap{
+            .img-wrap {
                 right: -15%;
                 top: 50%;
                 transform: translateY(-50%) scale(1.5);
 
-                @include mq-below($xs){
+                @include mq-below($xs) {
                     right: unset;
                     top: unset;
                     transform: scale(1.2);
                 }
-                
+
             }
 
         }
@@ -249,23 +281,23 @@
     &.typ-vertical {
         flex-direction: column;
 
-        .info-wrap{
+        .info-wrap {
             max-width: 82rem;
         }
 
-        .desc{
-            p{
+        .desc {
+            p {
                 font-style: italic;
                 font-weight: 600;
                 opacity: 0.8;
             }
-    
+
         }
     }
 
-    &.typ-vertical-center{
+    &.typ-vertical-center {
 
-        .info-wrap{
+        .info-wrap {
             max-width: initial;
             width: 78rem;
 
@@ -274,9 +306,9 @@
             }
         }
 
-        .mod-list{
-            &.typ-bold{
-                >.item{
+        .mod-list {
+            &.typ-bold {
+                >.item {
                     margin-bottom: 8rem;
 
                     @include mq-below($xs) {
@@ -284,52 +316,56 @@
                     }
                 }
             }
-        } 
+        }
 
     }
 
-    &.typ-about{
+    &.typ-about {
         justify-content: space-between;
         align-items: center;
+
         @include mq-below ($xs) {
             flex-direction: column;
         }
 
-        .img-wrap{
-            img{
+        .img-wrap {
+            img {
                 width: 155%;
             }
         }
     }
 
-    &.typ-quotes{
+    &.typ-quotes {
         margin: 0 auto;
         max-width: 106rem;
 
-        .title{
+        .title {
             text-align: center;
             margin-bottom: 4rem;
         }
 
-        .info-wrap{
+        .info-wrap {
             max-width: initial;
         }
 
-        .desc{
+        .desc {
             position: relative;
-            &:before,&:after{
+
+            &:before,
+            &:after {
                 font-size: 4.5rem;
                 color: $clr-primary;
                 font-family: 'icomoon' !important;
                 position: absolute;
             }
 
-            &:before{
+            &:before {
                 content: "\e901";
                 left: -7rem;
                 top: -1rem;
             }
-            &:after{
+
+            &:after {
                 content: "\e908";
                 right: -7rem;
                 bottom: 1rem;
@@ -339,9 +375,9 @@
 
     }
 
-    &.typ-7coatings{
+    &.typ-7coatings {
 
-        .info-wrap{
+        .info-wrap {
             margin-left: -8rem;
             z-index: -1;
 
@@ -352,24 +388,24 @@
             }
         }
 
-        .img-wrap{
-            img{
+        .img-wrap {
+            img {
                 width: 110%;
             }
         }
 
     }
 
-    &.typ-essential{
+    &.typ-essential {
         align-items: center;
 
-        .img-wrap{
+        .img-wrap {
             max-width: 115rem;
             position: relative;
             z-index: 1;
         }
 
-        .info-wrap{
+        .info-wrap {
             margin-top: -16rem;
             position: relative;
 
@@ -377,9 +413,9 @@
                 margin-top: 4rem;
             }
 
-            &:before{
-                content:'+';
-                @include font-source-sans(45rem,1, $font2, $font-bold, $clr-primary, initial);
+            &:before {
+                content: '+';
+                @include font-source-sans(45rem, 1, $font2, $font-bold, $clr-primary, initial);
                 font-style: italic;
                 position: absolute;
                 top: -12rem;
@@ -394,23 +430,25 @@
 
         }
 
-        .title{
+        .title {
 
-            .text-md{
+            .text-md {
                 margin-left: -35rem;
 
                 @include mq-below($xs) {
                     margin-left: 9rem;
                 }
             }
-            .text-xl{
+
+            .text-xl {
                 margin-left: -13rem;
 
                 @include mq-below($xs) {
                     margin-left: 9rem;
                 }
             }
-            .text-sm{
+
+            .text-sm {
                 margin-left: -11rem;
 
                 @include mq-below($xs) {
@@ -434,27 +472,28 @@
             padding-left: 10rem;
 
             @include mq-below($xs) {
-               position: unset;
-               padding-left: 0;
-               max-width: 100%;
+                position: unset;
+                padding-left: 0;
+                max-width: 100%;
             }
         }
 
         .img-wrap {
             max-width: 100rem;
             margin-left: auto;
+
             img {
                 width: 130%;
             }
         }
 
-        .title{
+        .title {
             font-style: italic;
             margin-bottom: 5rem;
 
-            @include mq-below($xs){
+            @include mq-below($xs) {
                 font-size: 1.6rem;
-                line-height: 1.5rem;
+                line-height: 2rem;
                 margin-bottom: 2rem;
             }
 
@@ -467,24 +506,29 @@
         }
     }
 
-    &.typ-franchise{
-        @include mq-below($xs){
+    &.typ-franchise {
+        @include mq-below($xs) {
             flex-direction: column-reverse;
-            .img-wrap{
+
+            .img-wrap {
                 margin-bottom: 3rem;
             }
-            .info-wrap{
-                .title{
+
+            .info-wrap {
+                .title {
                     display: none;
                 }
             }
-            .desc{
+
+            .desc {
                 margin-bottom: 3rem;
-                p{
+
+                p {
                     font-size: 1.2rem;
                     line-height: 2rem;
                     margin-bottom: 2rem;
-                    &:last-child{
+
+                    &:last-child {
                         margin-bottom: 0;
                     }
                 }
