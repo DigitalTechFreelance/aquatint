@@ -30,9 +30,9 @@ function Home() {
 					<About data={data}/>
 					{data.services.isActive && <Service data={data.services.services}/>}
 					{data.premiumPackages.isActive && <Packages data={data.premiumPackages}/>}
-					{/*<RecentWork data={data.recentWorkSection}/>
-					{data.withUsSection.isActive && <Infogarphy data={data.withUsSection}/>}
-					<TestimonialSlider data={data.testimonialsSection}/> */}
+					<RecentWork data={data.recentWorkSection}/> 
+					 {data.withUsSection.isActive && <Infogarphy data={data.withUsSection}/>}
+					<TestimonialSlider data={data.testimonialsSection}/>
 				</div>
 			</main>
 		) : null

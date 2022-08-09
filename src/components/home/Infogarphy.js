@@ -1,5 +1,4 @@
 import React from 'react';
-// import franchiseImg from '../../assets/images/franchise.webp';
 import ReactMarkdown from 'react-markdown';
 
 function Infogarphy({data}) {
@@ -17,7 +16,7 @@ function Infogarphy({data}) {
                 <a href={buttonLink} className="btn btn-default"><span>{buttonText}</span></a>
             </div>
             <div className="img-wrap">
-              <img src={`http://localhost:1337${image.data.attributes.url}`} alt={image.data.attributes.alternativeText} title={image.data.attributes.name}  />
+              <img src={image.url} alt={image.alternativeText} title={image.name}  />
             </div>
           </div>
         </div>
