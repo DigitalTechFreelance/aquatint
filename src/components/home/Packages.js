@@ -16,7 +16,7 @@ function Packages({data}) {
                             <span className="text-lg text-pos-3">{title3}</span>
                         </h3>
                         <ul className="feature-list">
-                            {packages.length>0 && packages.data.map((item, index)=>(
+                            {packages && packages.length>0 && packages.map((item, index)=>(
                                 <li key={index}>{item.packageName}</li>
                             ))}
                         </ul>

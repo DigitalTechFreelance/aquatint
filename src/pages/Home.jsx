@@ -14,14 +14,14 @@ function Home() {
 	React.useEffect(()=>{
 		axios.get(`/home`)
 		.then((res) => {
-			console.log("home res", res)
+			// console.log("home res", res)
 			setData(res.data)
 		})
 		.catch((error) => {
 			// console.log("home error", error)
 		})
 	}, [])
-	console.log("data ===>", data)
+	// console.log("data ===>", data)
 	return (
 		data!==null? (
 			<main>

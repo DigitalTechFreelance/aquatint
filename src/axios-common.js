@@ -1,7 +1,7 @@
 import axios from 'axios'; 
 
 
-export const baseURL = 'http://localhost:1337'
+export const baseURL = 'https://aquatint.onrender.com'
 
 let defaultHeaders = {
         'Accept': 'application/json',

@@ -29,61 +29,61 @@ const routes = [
     component: <Home />,
     exact: true,
   },
-  {
-    path: '/about-us',
-    component: <AboutUs />,
-    exact: true,
-  },
-  {
-    path: '/services',
-    component: <Services />,
-    exact: true,
-  },
-  {
-    path: '/services/:slug',
-    component: <WashingServices />,
-    exact: true,
-  },
-  {
-    path: '/packages/:slug',
-    component: <PackageDetail />,
-    exact: true,
-  },
-  {
-    path: '/washing-services',
-    component: <WashingServices />,
-    exact: true,
-  },
-  {
-    path: '/detailing-services',
-    component: <DetailingServices />,
-    exact: true,
-  },
-  {
-    path: '/services/paint-protection-film',
-    component: <PaintProtectionFilm />,
-    exact: true,
-  },
-  {
-    path: '/coatings/:slug',
-    component: <CoatingDetail />,
-    exact: true,
-  },
-  {
-    path: '/services/customisation-service',
-    component: <CustomisationService />,
-    exact: true,
-  },
-  {
-    path: '/franchise-with-us',
-    component: <FranchiseWithUs />,
-    exact: true,
-  },
-  {
-    path: '/contact-us',
-    component: <ContactUs />,
-    exact: true,
-  }
+  // {
+  //   path: '/about-us',
+  //   component: <AboutUs />,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/services',
+  //   component: <Services />,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/services/:slug',
+  //   component: <WashingServices />,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/packages/:slug',
+  //   component: <PackageDetail />,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/washing-services',
+  //   component: <WashingServices />,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/detailing-services',
+  //   component: <DetailingServices />,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/services/paint-protection-film',
+  //   component: <PaintProtectionFilm />,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/coatings/:slug',
+  //   component: <CoatingDetail />,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/services/customisation-service',
+  //   component: <CustomisationService />,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/franchise-with-us',
+  //   component: <FranchiseWithUs />,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/contact-us',
+  //   component: <ContactUs />,
+  //   exact: true,
+  // }
 ];
 
 export default routes;
