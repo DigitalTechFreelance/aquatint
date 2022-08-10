@@ -26,10 +26,9 @@ function App() {
 		})
 	}, [])
   return (
+    data!==null?(
     <Router>
-        {data!==null?(
           <Header data={data}/>
-        ): null}
           <React.Suspense
             fallback={
               <div>
@@ -48,11 +47,11 @@ function App() {
               ))}
             </Routes>
           </React.Suspense>
-        {data!==null?(
           <Footer data={data}/>
-        ): null}
         <Flybutton/>
     </Router>
+     ): null
+
   );
 }
 
