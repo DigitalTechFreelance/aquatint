@@ -16,21 +16,20 @@ function App() {
 
   const [data, setData] = React.useState(null)
 
-  // React.useEffect(()=>{
-	// 	axios.get(`/api/global`)
-	// 	.then((res) => {
-	// 		setData(res.data.data.attributes)
-	// 	})
-	// 	.catch((error) => {
-	// 		// console.log("global error", error)
-	// 	})
-	// }, [])
-  
+  React.useEffect(()=>{
+		axios.get(`/global`)
+		.then((res) => {
+			setData(res.data)
+		})
+		.catch((error) => {
+			// console.log("global error", error)
+		})
+	}, [])
   return (
     <Router>
-        {/* {data!==null?(
+        {data!==null?(
           <Header data={data}/>
-        ): null} */}
+        ): null}
           <React.Suspense
             fallback={
               <div>
@@ -49,9 +48,9 @@ function App() {
               ))}
             </Routes>
           </React.Suspense>
-        {/* {data!==null?(
+        {data!==null?(
           <Footer data={data}/>
-        ): null} */}
+        ): null}
         <Flybutton/>
     </Router>
   );

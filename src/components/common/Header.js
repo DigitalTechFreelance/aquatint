@@ -17,10 +17,10 @@ function Header({data}) {
     const {logo, headerMenus} = data !== null && data
   return (
       <>
-        <header className={`bs-header ${(scrollPosition > 10 ) ? "header-blur header-scroll" : ""}`}>
+        <header className={`bs-header ${(scrollPosition > 10) ? "header-scroll" : ""}`}>
             <div className="cm-container">
                 <a href="/home" className="logo">
-                    <img src={`http://localhost:1337${logo.data.attributes.url}`} alt="Company Logo" title="Company Logo" />
+                    <img src={logo.url} alt={logo.alternativeText} title={logo.name} />
                 </a>
                 <button className="menu-btn" onClick={handleMenuOpen}>
                     <span className="bar1"></span>
@@ -36,12 +36,12 @@ function Header({data}) {
                     return(
                         <>
                             <li className="menu-item" key={index}>
-                                <a href={item.link} className={` menu-link`}>{item.name}</a>
+                                <a href={item.link} className={`menu-link ${window.location.pathname === item.link ? 'cm-highlight highlight-primary': ''}`}>{item.name}</a>
                             </li>
                             {item.submenus.map((ele, i)=> {
                                 return (
                                 <li className="menu-item" key={i}>
-                                    <a href={ele.link} className={`menu-link typ-sm cm-highlight ${ele.name === "Ceramic Coating"? 'highlight-primary': ele.name === "PPF"?' highlight-secondary': ''}`}>{ele.name}</a>
+                                    <a href={ele.link} className={`menu-link typ-sm ${window.location.pathname === ele.link? 'cm-highlight highlight-primary': ''}`}>{ele.name}</a>
                                 </li>
                                 )
                             })}
