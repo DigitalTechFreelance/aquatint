@@ -14,14 +14,14 @@ const PackageDetail = React.lazy(() => import('./pages/PackageDetail'));
 const IndexList = React.lazy(() => import('./temp/IndexList'));
 
 const routes = [
-  {
-    path: '/pages',
-    component: <IndexList />,
-    exact: true,
-  },
+  // {
+  //   path: '/pages',
+  //   component: <IndexList />,
+  //   exact: true,
+  // },
   {
     path: '/',
-    component: <IndexList />,
+    component: <Home />,
     exact: true,
   },
   {
@@ -29,11 +29,11 @@ const routes = [
     component: <Home />,
     exact: true,
   },
-  // {
-  //   path: '/about-us',
-  //   component: <AboutUs />,
-  //   exact: true,
-  // },
+  {
+    path: '/about-us',
+    component: <AboutUs />,
+    exact: true,
+  },
   // {
   //   path: '/services',
   //   component: <Services />,
@@ -74,16 +74,16 @@ const routes = [
   //   component: <CustomisationService />,
   //   exact: true,
   // },
-  // {
-  //   path: '/franchise-with-us',
-  //   component: <FranchiseWithUs />,
-  //   exact: true,
-  // },
-  // {
-  //   path: '/contact-us',
-  //   component: <ContactUs />,
-  //   exact: true,
-  // }
+  {
+    path: '/franchise-with-us',
+    component: <FranchiseWithUs />,
+    exact: true,
+  },
+  {
+    path: '/contact-us',
+    component: <ContactUs />,
+    exact: true,
+  }
 ];
 
 export default routes;

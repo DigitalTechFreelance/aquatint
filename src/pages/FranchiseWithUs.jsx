@@ -9,15 +9,15 @@ function FranchiseWithUs() {
     const [data, setData] = React.useState(null)
 
 	React.useEffect(()=>{
-		axios.get(`/api/franchise?populate=*`)
+		axios.get(`/franchise`)
 		.then((res) => {
-			setData(res.data.data.attributes)
+			setData(res.data)
 		})
 		.catch((error) => {
 			// console.log("home error", error)
 		})
 	}, [])
-
+console.log("franchise", data)
   return (
       data!==null ? (
         <main>

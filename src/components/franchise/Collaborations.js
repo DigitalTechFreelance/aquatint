@@ -22,7 +22,7 @@ function Collaborations({data}) {
                                 {data.logos.map((item, index) =>{
                                     return (
                                         <li className="logo-item" key={index}>
-                                            <img className="m-logo" src={`http://localhost:1337${item.image.data.attributes.url}`} alt={item.image.data.attributes.alternativeText} title={item.image.data.attributes.name}  />
+                                            <img className="m-logo" src={item.image.url} alt={item.image.alternativeText} title={item.image.name}  />
                                         </li>
                                     )
                                 })}

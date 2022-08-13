@@ -25,11 +25,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-pause:before {
+  content: "\e91e";
+}
 .icon-phone:before {
   content: "\e91c";
 }
 .icon-download:before {
   content: "\e918";
+}
+.icon-contact:before {
+  content: "\e91d";
 }
 .icon-chat:before {
   content: "\e919";

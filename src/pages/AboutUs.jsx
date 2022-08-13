@@ -12,9 +12,9 @@ function AboutUs() {
 	const [error, setError] = React.useState(null)
 
 	React.useEffect(()=>{
-		axios.get(`/api/about-us?populate=*`)
+		axios.get(`/about-us`)
 		.then((res) => {
-			setData(res.data.data.attributes)
+			setData(res.data)
 		})
 		.catch((error) => {
 			setError(error)
@@ -22,7 +22,6 @@ function AboutUs() {
 	}, [])
   
   const {title, teamsSection, aboutInfo, ourVisionSection, whatWeDoSection} = data!==null && data
-	
   return (
     <>
             <main>
