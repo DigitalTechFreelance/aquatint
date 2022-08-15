@@ -9,7 +9,7 @@ import BannerPpf from '../components/service/BannerPpf';
 import PpfCompareList from '../components/service/PpfCompareList';
 import WorkSlider from '../components/home/WorkSlider';
 import { Helmet } from "react-helmet";
-import Videoplayer from '../components/common/Videoplayer';
+import Videoplayer from '../components/common/VideoPlayer';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function PaintProtectionFilm() {

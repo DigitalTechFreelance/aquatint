@@ -5,7 +5,7 @@ import CeramicCoatingInfogarphy from '../components/service/CeramicCoatingInfoga
 // import videosrc from '../assets/video/dummy-video.mp4';
 import Flybutton from '../components/common/Flybutton';
 import { Helmet } from "react-helmet";
-import Videoplayer from '../components/common/Videoplayer';
+import Videoplayer from '../components/common/VideoPlayer';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function CeramicCoating() {

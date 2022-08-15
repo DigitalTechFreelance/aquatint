@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import useWindowSize from '../../hooks/useWindowSize';
 import useSetBgImage from '../../hooks/useSetBgImage';
 // import ReactPlayer from 'react-player';
-import Videoplayer from '../common/Videoplayer';
+import Videoplayer from '../common/VideoPlayer';
 
 function HomeBanner(props) {
 
@@ -34,7 +34,7 @@ function HomeBanner(props) {
           height="100%"
           loop={true}
         />
-      </div> 
+      </div>
       <div className="banner-info">
         <h2 className="banner-title">{props.bannerTitle}</h2>
       </div>

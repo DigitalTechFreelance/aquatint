@@ -33,7 +33,7 @@ function ContactUs() {
         setTimeout(() => {
             setFormSuccess(false);
         }, 10000);
-    },[formSuccess]);
+    }, [formSuccess]);
 
     const [leadFormOpen, setLeadFormOpen] = useState(false);
     const handleLeadFormClose = () => setLeadFormOpen(false);
@@ -57,7 +57,7 @@ function ContactUs() {
                 .then(function (response) {
                     if (response.status === 200) {
                         setFormSuccess(true)
-                        document.getElementsByClassName('rnc-input')[0].value= ''
+                        document.getElementsByClassName('rnc-input')[0].value = ''
                         formikLead.resetForm()
                     }
                 })
@@ -76,6 +76,8 @@ function ContactUs() {
             message: ''
         },
         onSubmit: (values, { resetForm }) => {
+            // alert(values);
+            console.log(values, 'values');
             submitToLead(values)
         },
         validate: values => {
@@ -108,7 +110,7 @@ function ContactUs() {
         }
     });
 
-   
+
 
     return (
 
@@ -247,13 +249,13 @@ function ContactUs() {
                                                         <span className="error">{formikLead.errors.vehicleName}</span>
                                                     ) : null}
                                                 </div>
-                                                <div className={`form-group typ-2col ${captchaError!==null && captchaError ? "error" : ""}`}>
+                                                <div className={`form-group typ-2col ${captchaError !== null && captchaError ? "error" : ""}`}>
                                                     <Canvas
                                                         onChange={(e) => {
                                                             if (e === true) {
                                                                 setCaptchaSuccess(true)
                                                                 setCaptchaError(null)
-                                                            }else {
+                                                            } else {
                                                                 setCaptchaError("Invalid")
                                                             }
                                                         }}
@@ -282,7 +284,7 @@ function ContactUs() {
                                                 </div>
                                             </div>
                                             <div className="form-action">
-                                                <button type="submit" name="btnSubmit" className={`btn btn-default`}><span>submit</span></button>
+                                                <button name="btnSubmit" className={`btn btn-default`}><span>submit</span></button>
                                                 {/* <button type="submit" disabled={!captchaSuccess} name="btnSubmit" className={`btn btn-default ${!captchaSuccess?'btn-disabled': ''}`}><span>submit</span></button> */}
                                             </div>
                                         </form>
