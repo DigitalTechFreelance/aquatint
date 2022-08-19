@@ -17,7 +17,6 @@ function FranchiseWithUs() {
 			// console.log("home error", error)
 		})
 	}, [])
-console.log("franchise", data)
   return (
       data!==null ? (
         <main>

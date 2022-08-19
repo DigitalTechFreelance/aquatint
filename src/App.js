@@ -7,6 +7,7 @@ import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import Flybutton from './components/common/Flybutton';
 import axios from './axios-common';
+import Loader from './components/common/Loader';
 
 const routes = [
   ...localRoutes
@@ -27,15 +28,15 @@ function App() {
 	}, [])
   return (
     data!==null?(
-    <Router>
-          <Header data={data}/>
+      <Router>
           <React.Suspense
             fallback={
               <div>
-                {/* <PageLoader /> */}
+                <Loader />
               </div>
             }
           >
+          <Header data={data}/>
             <Routes>
               {routes.map((route) => (
                 <Route
@@ -46,11 +47,11 @@ function App() {
                 />
               ))}
             </Routes>
+            <Footer data={data}/>
+            <Flybutton/>
           </React.Suspense>
-          <Footer data={data}/>
-        <Flybutton/>
-    </Router>
-     ): null
+      </Router>
+     ): <Loader/>
 
   );
 }

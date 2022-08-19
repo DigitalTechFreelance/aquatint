@@ -59,11 +59,11 @@ const routes = [
   //   component: <DetailingServices />,
   //   exact: true,
   // },
-  // {
-  //   path: '/services/paint-protection-film',
-  //   component: <PaintProtectionFilm />,
-  //   exact: true,
-  // },
+  {
+    path: '/services/paint-protection-film',
+    component: <PaintProtectionFilm />,
+    exact: true,
+  },
   // {
   //   path: '/coatings/:slug',
   //   component: <CoatingDetail />,

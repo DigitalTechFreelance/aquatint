@@ -7,6 +7,7 @@ import Service from '../components/common/TilesServices';
 import Packages from '../components/home/Packages';
 import RecentWork from '../components/home/RecentWork'
 import axios from '../axios-common';
+import PageLoader from './PageLoader';
 
 function Home() {
 	const [data, setData] = React.useState(null)
@@ -16,23 +17,29 @@ function Home() {
 		.then((res) => {
 			// console.log("home res", res)
 			setData(res.data)
+			// setLoader(false)
 		})
 		.catch((error) => {
 			// console.log("home error", error)
 		})
-	}, [])
-	// console.log("data ===>", data)
+	})
 	return (
 		data!==null? (
 			<main>
 				<div className="lyt-content typ-home">
-					<VideoBanner data={data}/>
-					<About data={data}/>
-					{data.services.isActive && <Service data={data.services.services}/>}
-					{data.premiumPackages.isActive && <Packages data={data.premiumPackages}/>}
-					<RecentWork data={data.recentWorkSection}/> 
-					 {data.withUsSection.isActive && <Infogarphy data={data.withUsSection}/>}
-					<TestimonialSlider data={data.testimonialsSection}/>
+				{/* {loader? 
+				<Loader/> :
+				( */}
+					<>
+						<VideoBanner data={data}/>
+						<About data={data}/>
+						{data.services.isActive && <Service data={data.services.services} title="Services We Offer" page="home"/>}
+						{data.premiumPackages.isActive && <Packages data={data.premiumPackages}/>}
+						<RecentWork data={data.recentWorkSection}/> 
+						{data.withUsSection.isActive && <Infogarphy data={data.withUsSection}/>}
+						<TestimonialSlider data={data.testimonialsSection}/>
+					</>
+				{/* )} */}
 				</div>
 			</main>
 		) : null

@@ -9,14 +9,16 @@ function PaintProtectionFilm() {
     const [data, setData] = React.useState(null)
 
 	React.useEffect(()=>{
-		axios.get(`/api/ppf?populate=*`)
+		axios.get(`/ppf`)
 		.then((res) => {
-			setData(res.data.data.attributes)
+			setData(res.data)
 		})
 		.catch((error) => {
             // console.log("error", error)
 		})
 	}, [])
+    // console.log("daata", data)
+
   return (
 		data!==null? (
             <main>
@@ -26,7 +28,7 @@ function PaintProtectionFilm() {
                     <div className="lyt-single-page typ-2">
                         <div className="sp-cont">
                            {data.features.isActive && <Infography data={data.features}/>}
-                           {data.benefits.isActive && <Service data={data.benefits.services}/>}
+                           {data.benefits.isActive && <Service data={data.benefits.services} title="Benefits Of ppf" page="ppf"/>}
                         </div>
                     </div>
                 </div>
