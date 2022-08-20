@@ -6,9 +6,9 @@ function CustomisationService() {
     const [data, setData] = React.useState(null)
 
 	React.useEffect(()=>{
-		axios.get(`/api/customise-service?populate=*`)
+		axios.get(`/customise-service`)
 		.then((res) => {
-			setData(res.data.data.attributes)
+			setData(res.data)
 		})
 		.catch((error) => {
 			// console.log("home error", error)

@@ -138,7 +138,6 @@
 
     &:hover{
         transform: scale(1.03);
-       
     }   
     
     &.typ-video{
@@ -146,7 +145,14 @@
         &:hover{
             transform: scale(1);
         }  
-
     }
 
+    .img-wrap {
+        img{
+            @include mq-below($xs) {
+                width: 100%;
+                min-height: 13rem;
+            }
+        }
+    }
 }

@@ -1,21 +1,22 @@
 //bs-header
 .bs-header{
-    padding: 3.5rem 0;
+    padding: 2rem 0;
     position: fixed;
     top:0;
     left: 0;
     right: 0;
     z-index: 10;
     transition: all 0.5s ease;
+    @include background-opacity($clr-root, 0.5);
     @include mq-below($xs){
         padding: 0.5rem 0;
     }
     
-    &.header-blur{
-        backdrop-filter: blur( 30px );
-        -webkit-backdrop-filter: blur( 30px );
-        @include background-opacity($clr-root, 0.5);
-    }
+    // &.header-blur{
+    //     backdrop-filter: blur( 30px );
+    //     -webkit-backdrop-filter: blur( 30px );
+    //     @include background-opacity($clr-root, 0.5);
+    // }
 
     .cm-container{
         display: flex;
@@ -24,7 +25,7 @@
     }
 
     .logo{
-        max-width: 15rem;
+        max-width: 10rem;
         transition: all 0.5s ease;
         @include mq-below($xs){
             max-width: 4rem;

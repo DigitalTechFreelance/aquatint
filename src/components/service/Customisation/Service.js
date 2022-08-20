@@ -7,15 +7,15 @@ function Service({data}) {
         {data.map((item, index)=>{
             return (
             <section>
-                <div className={`bs-section ${item.subFeatures[0].description !==null ? '': 'cm-no-pad-top'}`} key={index}>
+                <div className={`bs-section ${item.subFeatures[0].description !==null && item.subFeatures[0].description?.length > 0 ? '': 'cm-no-pad-top'}`} key={index}>
                     <div className="sec-cont">
                         <div className="cm-container">
-                            <div className={`bs-infography typ-grid-left ${item.subFeatures[0].description !==null ? 'typ-vertical-center': '' }`}>
+                            <div className={`bs-infography typ-grid-left ${item.subFeatures[0]?.description !==null && item.subFeatures[0].description?.length > 0 ? 'typ-vertical-center': '' }`}>
                                 <div className="info-wrap">
                                     <ul className="mod-list typ-italic">
                                         <li className="list-item">
                                             <p>{item.name}</p>
-                                            <ul className={`mod-list typ-bold ${item.subFeatures[0].description !==null ? '': 'typ-grid'}`}>
+                                            <ul className={`mod-list typ-bold ${item.subFeatures[0]?.description !==null && item.subFeatures[0].description?.length > 0 ? '': 'typ-grid'}`}>
                                                 {item.subFeatures.map((ele, i)=>{
                                                     return (
                                                         <li className="item" key={i}>
@@ -38,7 +38,7 @@ function Service({data}) {
                                     </ul>
                                 </div>
                                 <div className="img-wrap">
-                                    <img src={`http://localhost:1337${item.image.data.attributes.url}`} alt={item.image.data.attributes.alternativeText} title={item.image.data.attributes.name}/>
+                                    <img src={item.image.url} alt={item.image.alternativeText} title={item.image.name}/>
                                 </div>
                             </div>
                         </div>

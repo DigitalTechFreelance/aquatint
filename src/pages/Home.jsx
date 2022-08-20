@@ -22,7 +22,7 @@ function Home() {
 		.catch((error) => {
 			// console.log("home error", error)
 		})
-	})
+	},[])
 	return (
 		data!==null? (
 			<main>

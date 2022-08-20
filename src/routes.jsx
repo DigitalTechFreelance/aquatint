@@ -12,6 +12,7 @@ const FranchiseWithUs = React.lazy(() => import('./pages/FranchiseWithUs'));
 const ContactUs = React.lazy(() => import('./pages/ContactUs'));
 const PackageDetail = React.lazy(() => import('./pages/PackageDetail'));
 const IndexList = React.lazy(() => import('./temp/IndexList'));
+const Packages = React.lazy(() => import('./pages/Packages'));
 
 const routes = [
   // {
@@ -34,11 +35,11 @@ const routes = [
     component: <AboutUs />,
     exact: true,
   },
-  // {
-  //   path: '/services',
-  //   component: <Services />,
-  //   exact: true,
-  // },
+  {
+    path: '/services',
+    component: <Services />,
+    exact: true,
+  },
   // {
   //   path: '/services/:slug',
   //   component: <WashingServices />,
@@ -69,11 +70,11 @@ const routes = [
   //   component: <CoatingDetail />,
   //   exact: true,
   // },
-  // {
-  //   path: '/services/customisation-service',
-  //   component: <CustomisationService />,
-  //   exact: true,
-  // },
+  {
+    path: '/services/customisation-service',
+    component: <CustomisationService />,
+    exact: true,
+  },
   {
     path: '/franchise-with-us',
     component: <FranchiseWithUs />,
@@ -82,6 +83,11 @@ const routes = [
   {
     path: '/contact-us',
     component: <ContactUs />,
+    exact: true,
+  },
+  {
+    path: '/premium-packages',
+    component: <Packages />,
     exact: true,
   }
 ];
