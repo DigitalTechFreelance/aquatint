@@ -10,6 +10,8 @@ function Protection({data}) {
     const handleVideoStatus = (videoPlayStatus) => {
         setPlayState({...playState, playing: videoPlayStatus.playing, buttonClose: videoPlayStatus.buttonClose})
     }
+    const videoUrl = data?.videoUpload !==null? data?.videoUpload?.url: JSON.parse(data?.youtubeLink)?.url
+
   return (
     <section>
         <div className="bs-section">
@@ -20,15 +22,15 @@ function Protection({data}) {
                     </div>
                     <div className="media-wrap">
                         <div className="video">
-                            <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={`http://localhost:1337${data.videoUpload.data.attributes.url}`}/>
+                            <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videoUrl}/>
                         </div>
                     </div>
                     <div className="action-wrap">
                         <p>{data.catalogueInfo}</p>
-                        <button type="button" className="btn btn-default">
+                        <a href={data.catalogue.url} className="btn btn-default">
                             <span className="icon icon-download"></span>
                             <span>catalogue</span>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

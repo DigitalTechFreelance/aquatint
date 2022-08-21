@@ -24,12 +24,9 @@ function Home() {
 		})
 	},[])
 	return (
-		data!==null? (
 			<main>
 				<div className="lyt-content typ-home">
-				{/* {loader? 
-				<Loader/> :
-				( */}
+				{data!==null? (
 					<>
 						<VideoBanner data={data}/>
 						<About data={data}/>
@@ -39,10 +36,9 @@ function Home() {
 						{data.withUsSection.isActive && <Infogarphy data={data.withUsSection}/>}
 						<TestimonialSlider data={data.testimonialsSection}/>
 					</>
-				{/* )} */}
+				) : null}
 				</div>
 			</main>
-		) : null
 	);
 }
 

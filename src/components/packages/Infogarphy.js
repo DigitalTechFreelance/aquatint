@@ -29,7 +29,7 @@ function Infogarphy({data}) {
               )}
             </div>
             <div className="img-wrap">
-              <img src={`http://localhost:1337${data.image.data.attributes.url}`} alt={data.image.data.attributes.alternativeText} title={data.image.data.attributes.name} />
+              <img src={data.image.url} alt={data.image.alternativeText} title={data.image.name} />
             </div>
           </div>
         </div>

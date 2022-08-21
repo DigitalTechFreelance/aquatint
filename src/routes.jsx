@@ -4,7 +4,7 @@ const Home = React.lazy(() => import('./pages/Home'));
 const AboutUs = React.lazy(() => import('./pages/AboutUs'));
 const Services = React.lazy(() => import('./pages/Services'));
 const WashingServices = React.lazy(() => import('./pages/WashingServices'));
-const DetailingServices = React.lazy(() => import('./pages/DetailingServices'));
+// const DetailingServices = React.lazy(() => import('./pages/DetailingServices'));
 const PaintProtectionFilm = React.lazy(() => import('./pages/PaintProtectionFilm'));
 const CoatingDetail = React.lazy(() => import('./pages/CoatingDetail'));
 const CustomisationService = React.lazy(() => import('./pages/CustomisationService'));
@@ -40,23 +40,18 @@ const routes = [
     component: <Services />,
     exact: true,
   },
+  {
+    path: '/services/:slug',
+    component: <WashingServices />,
+    exact: true,
+  },
+  {
+    path: '/premium-packages/:slug',
+    component: <PackageDetail />,
+    exact: true,
+  },
   // {
-  //   path: '/services/:slug',
-  //   component: <WashingServices />,
-  //   exact: true,
-  // },
-  // {
-  //   path: '/packages/:slug',
-  //   component: <PackageDetail />,
-  //   exact: true,
-  // },
-  // {
-  //   path: '/washing-services',
-  //   component: <WashingServices />,
-  //   exact: true,
-  // },
-  // {
-  //   path: '/detailing-services',
+  //   path: '/services/:slug/:type',
   //   component: <DetailingServices />,
   //   exact: true,
   // },
@@ -65,11 +60,11 @@ const routes = [
     component: <PaintProtectionFilm />,
     exact: true,
   },
-  // {
-  //   path: '/coatings/:slug',
-  //   component: <CoatingDetail />,
-  //   exact: true,
-  // },
+  {
+    path: '/coatings/:slug',
+    component: <CoatingDetail />,
+    exact: true,
+  },
   {
     path: '/services/customisation-service',
     component: <CustomisationService />,

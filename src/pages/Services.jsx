@@ -15,7 +15,6 @@ function Services() {
 		})
 	}, [])
     const {serviceType} = data!==null && data
-    console.log("data", data)
   return (
     <>
             <main>

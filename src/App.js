@@ -8,6 +8,7 @@ import Footer from './components/common/Footer';
 import Flybutton from './components/common/Flybutton';
 import axios from './axios-common';
 import Loader from './components/common/Loader';
+const DetailingServices = React.lazy(() => import('./pages/DetailingServices'));
 
 const routes = [
   ...localRoutes
@@ -16,6 +17,7 @@ const routes = [
 function App() {
 
   const [data, setData] = React.useState(null)
+  const [activeTab, setActiveTab] = React.useState(0)
 
   React.useEffect(()=>{
 		axios.get(`/global`)
@@ -26,6 +28,7 @@ function App() {
 			// console.log("global error", error)
 		})
 	}, [])
+
   return (
     data!==null?(
       <Router>
@@ -36,7 +39,7 @@ function App() {
               </div>
             }
           >
-          <Header data={data}/>
+          <Header data={data} activeTab={activeTab}/>
             <Routes>
               {routes.map((route) => (
                 <Route
@@ -46,6 +49,10 @@ function App() {
                   exact={route.exact}
                 />
               ))}
+              <Route
+                  path={'/services/:slug/:type'}
+                  element={<DetailingServices setActiveTab={(value) => setActiveTab(value)}/>}
+              />
             </Routes>
             <Footer data={data}/>
             <Flybutton/>
