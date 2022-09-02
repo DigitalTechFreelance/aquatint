@@ -10,7 +10,7 @@ function Team({data}) {
                     <li className="team-item" key={index}>
                         <div className="mod-team">
                             <div className="img-wrap">
-                                <img src={`http://localhost:1337${item.image.data.attributes.url}`} alt={item.image.data.attributes.alternativeText} title={item.image.data.attributes.name} height="100%" width="100%" />
+                                <img src={`http://13.233.247.201:1337/${item.image.data.attributes.url}`} alt={item.image.data.attributes.alternativeText} title={item.image.data.attributes.name} height="100%" width="100%" />
                             </div>
                             <div className="info-wrap">
                                 <h3 className="title">{item.name}</h3>

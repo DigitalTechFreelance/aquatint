@@ -38,7 +38,7 @@ function Service({data}) {
                                     </ul>
                                 </div>
                                 <div className="img-wrap">
-                                    <img src={`http://localhost:1337${item.image.data.attributes.url}`} alt={item.image.data.attributes.alternativeText} title={item.image.data.attributes.name}/>
+                                    <img src={`http://13.233.247.201:1337/${item.image.data.attributes.url}`} alt={item.image.data.attributes.alternativeText} title={item.image.data.attributes.name}/>
                                 </div>
                             </div>
                         </div>

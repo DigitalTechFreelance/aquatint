@@ -20,7 +20,7 @@ function Header({data}) {
         <header className={`bs-header ${(scrollPosition > 10 ) ? "header-blur header-scroll" : ""}`}>
             <div className="cm-container">
                 <a href="/home" className="logo">
-                    <img src={`http://localhost:1337${logo.data.attributes.url}`} alt="Company Logo" title="Company Logo" />
+                    <img src={`http://13.233.247.201:1337/${logo.data.attributes.url}`} alt="Company Logo" title="Company Logo" />
                 </a>
                 <button className="menu-btn" onClick={handleMenuOpen}>
                     <span className="bar1"></span>

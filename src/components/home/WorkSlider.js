@@ -40,7 +40,7 @@ console.log("data work", data)
                 <div className="bs-tile typ-video setBgSrc">
                     {item.image.data !== null &&
                     <div className="img-wrap">
-                        <img src={`http://localhost:1337${item.image.url}`} alt={item.image.alternativeText} title={item.image.name} className="getBgSrc" />
+                        <img src={`http://13.233.247.201:1337/${item.image.url}`} alt={item.image.alternativeText} title={item.image.name} className="getBgSrc" />
                     </div>
                     }
                     

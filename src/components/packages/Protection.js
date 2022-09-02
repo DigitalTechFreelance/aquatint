@@ -20,7 +20,7 @@ function Protection({data}) {
                     </div>
                     <div className="media-wrap">
                         <div className="video">
-                            <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={`http://localhost:1337${data.videoUpload.data.attributes.url}`}/>
+                            <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={`http://13.233.247.201:1337/${data.videoUpload.data.attributes.url}`}/>
                         </div>
                     </div>
                     <div className="action-wrap">
