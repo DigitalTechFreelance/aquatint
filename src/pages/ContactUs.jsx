@@ -8,9 +8,9 @@ function ContactUs() {
     const [data, setData] = React.useState(null)
 
 	React.useEffect(()=>{
-		axios.get(`/api/contact-us?populate=*`)
+		axios.get(`/contact-us`)
 		.then((res) => {
-			setData(res.data.data.attributes)
+			setData(res.data)
 		})
 		.catch((error) => {
 			// console.log("home error", error)

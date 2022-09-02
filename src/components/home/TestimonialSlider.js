@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import useSetBgImage from '../../hooks/useSetBgImage';
 
 // Import Swiper React components
@@ -10,13 +10,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import required modules
-import { Navigation, Pagination } from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 
-//assets
 
-import testiImg1 from '../../assets/images/testimonial1.webp';
-import testiImg2 from '../../assets/images/testimonial2.webp';
-import testiImg3 from '../../assets/images/testimonial3.webp';
 
 function TestimonialSlider({data}) {
   useSetBgImage(".setBgSrc", ".getBgSrc");
@@ -25,14 +21,21 @@ function TestimonialSlider({data}) {
         <div className="bs-section sec-last">
           <div className="sec-cont">
             <Swiper 
-              slidesPerView={1}
-              spaceBetween={30}
-              navigation={true} 
-              pagination={true}
-              modules={[Navigation, Pagination]} 
-              className="mySwiper bs-swiper typ-testimonials bs-testimonial"
+                slidesPerView={1}
+                spaceBetween={30}
+                speed={1500}
+                navigation={true}
+                pagination={true}
+                autoHeight={true}
+                modules={[Navigation, Pagination, Autoplay]}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: true,
+                }}
+                className="mySwiper bs-swiper typ-testimonials bs-testimonial"
             >
-              {data.map((item, index)=>(
+              {data.map((item, index)=>{
+                return (
                 <SwiperSlide key={index}>
                     <div className="mod-testimonial">
                       <div className="info-wrap">
@@ -42,12 +45,18 @@ function TestimonialSlider({data}) {
                           <p>{item.description}</p>
                         </div>
                       </div>
-                      <div className="img-wrap setBgSrc">
-                        <img src={`http://13.233.247.201:1337/${item.image.data.attributes.url}`} alt={item.image.data.attributes.alternativeText} title={item.image.data.attributes.name} className="getBgSrc"/>
-                      </div>
+                        {item.image !== null ?(
+                          <div className="img-wrap setBgSrc">
+                            <img src={item.image.url} alt={item.image.alternativeText} title={item.image.name} className="getBgSrc"/>
+                          </div>
+                        ):(
+                          <div className="img-wrap">
+                            <span className="testi-initials">A</span>
+                          </div>
+                        )}
                     </div>
                 </SwiperSlide>
-              ))}
+              )})}
             </Swiper>
           </div>
         </div>

@@ -12,7 +12,7 @@ function Infogarphy({data}) {
         <ReactMarkdown className="desc rich-text" children={description} />
       </div>
       <div className="img-wrap">
-        <img src={`http://13.233.247.201:1337/${image.data.attributes.url}`} alt={image.data.attributes.alternativeText} title={image.data.attributes.name} width="100%" height="auto"/>
+        <img src={image.url} alt={image.alternativeText} title={image.name} width="100%" height="auto"/>
       </div>
     </div>
   )

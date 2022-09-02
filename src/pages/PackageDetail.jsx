@@ -11,15 +11,14 @@ function PackageDetail() {
     const { slug } = useParams();
 
 	React.useEffect(()=>{
-		axios.get(`/api/packages?filters[slug][$eq]=${slug}`)
+		axios.get(`/packages?slug=${slug}`)
 		.then((res) => {
-			setData(res.data.data[0].attributes)
+			setData(res.data[0])
 		})
 		.catch((error) => {
 			// console.log("home error", error)
 		})
 	}, [])
-    
     const packageName = data !== null && data.packageName.split(' ')
   return (
     data!==null ? (
@@ -31,9 +30,9 @@ function PackageDetail() {
                         <ReactMarkdown className="sp-desc rich-text" children={data.description} />
                     </div>
                     <div className="sp-cont">
-                        {data.coatingFeatures.isActive && <Infogarphy data={data.coatingFeatures} />}
-                       <Warranty data={data.yearsWarranty}/>
-                       <Protection data={data.protectionVideoSection}/>
+                       {data.coatingFeatures.isActive && <Infogarphy data={data.coatingFeatures} />}
+                       {data.yearsWarranty !== null && <Warranty data={data.yearsWarranty}/> }
+                       {data.protectionVideoSection !==null && data.protectionVideoSection.isActive && <Protection data={data.protectionVideoSection}/>}
                     </div>
                 </div>
             </div>

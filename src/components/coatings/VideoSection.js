@@ -10,17 +10,16 @@ function VideoSection({data}) {
     const handleVideoStatus = (videoPlayStatus) => {
         setPlayState({...playState, playing: videoPlayStatus.playing, buttonClose: videoPlayStatus.buttonClose})
     }
-
+    const videoUrl = data?.videoUpload !==null? data?.videoUpload?.url: JSON.parse(data?.youtubeLink)?.url
   return (
     <section>
         <div className="bs-section">
             <div className="sec-cont">
-                <div className="mod-video typ-lg typ-orange">
+                <div className="mod-video typ-lg typ-primary">
                     <div className="media-wrap">
                         <div className="video">
-                            <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={`http://13.233.247.201:1337/${data.url}`}/>
+                            <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videoUrl}/>
                         </div>
-                        <button className='btn'><span className="icon icon-play"></span></button>
                     </div>
                 </div>
             </div>

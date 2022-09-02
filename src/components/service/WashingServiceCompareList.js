@@ -1,10 +1,35 @@
 import React from 'react'
 
-function WashingServiceCompareList() {
+function WashingServiceCompareList({data}) {
   return (
     <div className="bs-compare">
         <ul className="comapre-list-wrap">
-            <li className="item">
+            {data.map((item, index)=> {
+                return (
+                    item.isActive && (
+                    <li className="item" key={index}>
+                        <h4 className="title">{item.serviceName}</h4>
+                        <div className="mod-list">
+                            <ul className="details-list">
+                                {item.featurePoints.map((ele, i)=>(
+                                    <li className="item" key={i}>
+                                    <p>{ele.point}</p>
+                                    {ele.subPoints && ele.subPoints?.length>0 && (
+                                        <ul className="sub-list-wrap">
+                                            {ele.subPoints.map((point, index)=>(
+                                                <li className="sub-item" key={index}>{point.point}</li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </li>
+                    )
+                )
+            })}
+            {/* <li className="item">
                 <h4 className="title">INSTA GLOSS</h4>
                 <div className="mod-list">
                     <ul className="details-list">
@@ -103,7 +128,7 @@ function WashingServiceCompareList() {
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> */}
         </ul>
     </div>
   )

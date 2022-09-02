@@ -16,9 +16,9 @@ function CoatingDetail() {
     const { slug } = useParams();
 
 	React.useEffect(()=>{
-		axios.get(`/api/coatings?filters[slug][$eq]=${slug}`)
+		axios.get(`/coatings?slug=${slug}`)
 		.then((res) => {
-			setData(res.data.data[0].attributes)
+			setData(res.data[0])
 		})
 		.catch((error) => {
 			// console.log("home error", error)
@@ -37,7 +37,7 @@ function CoatingDetail() {
                     <div className="sp-cont">
                         {data.infography !== null && data.infography.isActive && <Infogarphy data={data.infography}/>}
                         {data.benefits !== null && data.benefits.isActive && <Benefits data={data.benefits}/>}
-                        {data.videoUpload !== null && <VideoSection data={data.videoUpload.data.attributes}/>}
+                        {data.videoSection !== null && data.videoSection.isActive && <VideoSection data={data.videoSection}/>}
                         {data.features !== null && data.features.isActive && <Features data={data.features}/>}
                         {data.servicesPackages !== null && data.servicesPackages.isActive && <PackagesYearly data={data.servicesPackages}/>}
                         {data.premiumPackages !== null && data.premiumPackages.isActive && <PackagesYearly data={data.premiumPackages}/>}

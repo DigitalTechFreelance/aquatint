@@ -7,15 +7,14 @@ function Services() {
 	const [data, setData] = React.useState(null)
 
 	React.useEffect(()=>{
-		axios.get(`/api/service?populate=*`)
+		axios.get(`/service`)
 		.then((res) => {
-			setData(res.data.data.attributes)
+			setData(res.data)
 		})
 		.catch((error) => {
 		})
 	}, [])
     const {serviceType} = data!==null && data
-
   return (
     <>
             <main>
