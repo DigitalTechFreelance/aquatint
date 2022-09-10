@@ -1,7 +1,7 @@
 import axios from 'axios'; 
 
 
-export const baseURL = 'http://13.233.247.201:1337/'
+export const baseURL = 'https://uat-aquatint-strapi.link/'
 
 let defaultHeaders = {
         'Accept': 'application/json',
