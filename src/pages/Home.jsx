@@ -7,38 +7,43 @@ import Service from '../components/common/TilesServices';
 import Packages from '../components/home/Packages';
 import RecentWork from '../components/home/RecentWork'
 import axios from '../axios-common';
-import PageLoader from './PageLoader';
+import SEO from '../components/common/Seo';
+import Loader from '../components/common/LoaderRounded';
 
 function Home() {
 	const [data, setData] = React.useState(null)
 
-	React.useEffect(()=>{
+	React.useEffect(() => {
 		axios.get(`/home`)
-		.then((res) => {
-			// console.log("home res", res)
-			setData(res.data)
-			// setLoader(false)
-		})
-		.catch((error) => {
-			// console.log("home error", error)
-		})
-	},[])
+			.then((res) => {
+				setData(res.data)
+			})
+			.catch((error) => {
+				// console.log("home error", error)
+			})
+	}, [])
+
 	return (
+		data !== null ? (
+		<>
+			{data.seo !== null && <SEO data={data?.seo}/>}
 			<main>
 				<div className="lyt-content typ-home">
-				{data!==null? (
-					<>
-						<VideoBanner data={data}/>
-						<About data={data}/>
-						{data.services.isActive && <Service data={data.services.services} title="Services We Offer" page="home"/>}
-						{data.premiumPackages.isActive && <Packages data={data.premiumPackages}/>}
-						<RecentWork data={data.recentWorkSection}/> 
-						{data.withUsSection.isActive && <Infogarphy data={data.withUsSection}/>}
-						<TestimonialSlider data={data.testimonialsSection}/>
-					</>
-				) : null}
+
+						<>
+							<VideoBanner data={data} />
+							<About data={data} />
+							{data.services.isActive && <Service data={data.services.services} title="Services We Offer" page="home" />}
+							{data.premiumPackages.isActive && <Packages data={data.premiumPackages} />}
+							<RecentWork data={data.recentWorkSection} />
+							{data.withUsSection.isActive && <Infogarphy data={data.withUsSection} />}
+							<TestimonialSlider data={data.testimonialsSection} />
+						</>
+					
 				</div>
 			</main>
+		</>
+		) : <Loader/>
 	);
 }
 
