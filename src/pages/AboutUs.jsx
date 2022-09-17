@@ -25,7 +25,6 @@ function AboutUs() {
   }, [])
 
   const { title, teamsSection, aboutInfo, ourVisionSection, whatWeDoSection } = data !== null && data
-  console.log("data",data);
   return (
     data && data !== null ?
       <>

@@ -2,7 +2,6 @@ import React from 'react'
 import { Helmet } from "react-helmet";
 
 function Seo({ data }) {
-    console.log("seo data", data)
     return (
         data && data !== null &&
         <Helmet>
