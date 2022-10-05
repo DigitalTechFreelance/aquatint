@@ -9,6 +9,7 @@ import PpfCompareList from '../components/service/PpfCompareList';
 import RecentWork from '../components/home/RecentWork'
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
+import Fade from 'react-reveal/Fade';
 
 function PaintProtectionFilm() {
     const [data, setData] = React.useState(null)
@@ -37,7 +38,7 @@ function PaintProtectionFilm() {
                 {data.seo !== null && <SEO data={data?.seo} />}
 
                 <main>
-                    <div className="lyt-content">
+                    <div className="lyt-content typ-home">
                         <VideoBanner data={data} />
                         <About data={data} />
                         <div className="lyt-single-page typ-2">
@@ -46,7 +47,7 @@ function PaintProtectionFilm() {
                                 {data.benefits.isActive && <Service data={data.benefits.services} title="Benefits Of ppf" page="ppf" />}
                             </div>
                         </div>
-                        {data.videoSection.isActive && <VideoSection handleVideoStatus={handleVideoStatus} data={data.videoSection} />}
+                        {data.videoSection.isActive && <Fade bottom distance="20px" delay={500} duration={800}><VideoSection handleVideoStatus={handleVideoStatus} data={data.videoSection} /></Fade>}
                         {data.ppfTypes.isActive && <PpfCompareList data={data.ppfTypes} />}
                         {data?.recentWorkSection && <RecentWork data={data.recentWorkSection} />}
                     </div>

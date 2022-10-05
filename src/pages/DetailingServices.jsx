@@ -5,6 +5,7 @@ import axios from '../axios-common';
 import { useParams } from "react-router-dom";
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
+import Fade from 'react-reveal/Fade';
 
 function DetailingServices({ setActiveTab }) {
   //   React.useEffect(() => {
@@ -39,9 +40,11 @@ function DetailingServices({ setActiveTab }) {
             <div className="cm-container">
 
               <div className="lyt-single-page">
-                <div className="sp-head">
-                  <h2 className="sp-title">{data.name}</h2>
-                </div>
+                <Fade bottom distance="20px" delay={500} duration={800}>
+                  <div className="sp-head">
+                    <h2 className="sp-title">{data.name}</h2>
+                  </div>
+                </Fade>
                 <div className="sp-cont">
                   <DetailingServiceTabs data={data.subServices} setActiveTab={(value) => setActiveTab(value)} page={slug} />
                 </div>

@@ -1,35 +1,49 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
+import LightSpeed from 'react-reveal/LightSpeed';
 
-function Packages({data}) {
+function Packages({ data }) {
 
-  const {title1, title2, title3, image, packages, buttonText, buttonUrl, buttonUrlAltText} = data
+    const { title1, title2, title3, image, packages, buttonText, buttonUrl, buttonUrlAltText } = data
 
-  return (
-    <section>
-        <div className="bs-section">
-            <div className="sec-cont">
-                <div className="bs-infography typ-reverse typ-explore">
-                    <div className="info-wrap">
-                        <h3 className="title">
-                            <span className="text-sm text-pos-1">{title1}</span>
-                            <span className="text-lg text-pos-2">{title2}</span>
-                            <span className="text-lg text-pos-3">{title3}</span>
-                        </h3>
-                        <ul className="feature-list">
-                            {packages && packages.length>0 && packages.map((item, index)=>(
-                                <li key={index}>{item.packageName}</li>
-                            ))}
-                        </ul>
-                        <a href={buttonUrl} className="btn btn-default"><span>{buttonText}</span></a>
-                    </div>
-                    <div className="img-wrap">
-                        <img src={image.url} alt={image.alternativeText} title={image.name} />
+    return (
+        <section>
+            <div className="bs-section">
+                <div className="sec-cont">
+                    <div className="bs-infography typ-reverse typ-explore">
+                        <div className="info-wrap">
+                            <h3 className="title">
+                                <LightSpeed right distance="20px" duration={500} delay={300}>
+                                    <span className="text-sm text-pos-1">{title1}</span>
+                                </LightSpeed>
+                                <LightSpeed right distance="20px" duration={500} delay={400}>
+                                    <span className="text-lg text-pos-2">{title2}</span>
+                                </LightSpeed>
+                                <LightSpeed right distance="20px" duration={500} delay={500}>
+                                    <span className="text-lg text-pos-3">{title3}</span>
+                                </LightSpeed>
+                            </h3>
+                            <ul className="feature-list">
+                                {packages && packages.length > 0 && packages.map((item, index) => (
+                                    <LightSpeed right delay={500 + (150 * (index + 1))} duration={500} distance="20px">
+                                        <li key={index}>{item.packageName}</li>
+                                    </LightSpeed>
+                                ))}
+                            </ul>
+                            <Fade duration={500} delay={1100}>
+                                <a href={buttonUrl} className="btn btn-default"><span>{buttonText}</span></a>
+                            </Fade>
+                        </div>
+                        <Fade left distance="20px" duration={500} delay={100}>
+                            <div className="img-wrap">
+                                <img src={image.url} alt={image.alternativeText} title={image.name} />
+                            </div>
+                        </Fade>
                     </div>
                 </div>
             </div>
-        </div>  
-    </section>
-  )
+        </section>
+    )
 }
 
 export default Packages

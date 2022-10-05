@@ -1,4 +1,5 @@
 import React from 'react';
+import FadeReveal from 'react-reveal/Fade';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -6,19 +7,20 @@ import Fade from '@mui/material/Fade';
 import YoutubeEmbed from '../common/YoutubeEmbed';
 import ReactMarkdown from 'react-markdown';
 
+
 //thumb images
 
 import thumb1 from '../../assets/images/thumb/1.webp';
 
-function chunkArray(arr,n){
-    var chunkLength = Math.max(arr.length/n ,1);
+function chunkArray(arr, n) {
+    var chunkLength = Math.max(arr.length / n, 1);
     var chunks = [];
     for (var i = 0; i < n; i++) {
-        if(chunkLength*(i+1)<=arr.length)chunks.push(arr.slice(chunkLength*i, chunkLength*(i+1)));
+        if (chunkLength * (i + 1) <= arr.length) chunks.push(arr.slice(chunkLength * i, chunkLength * (i + 1)));
     }
-    return chunks; 
+    return chunks;
 }
-function WashingService({data, type, page}) {
+function WashingService({ data, type, page }) {
     const [open, setOpen] = React.useState(false);
     const [embedId, setEmbedId] = React.useState(null)
     const handleOpen = (id) => {
@@ -27,48 +29,98 @@ function WashingService({data, type, page}) {
     }
     const handleClose = () => setOpen(false);
     return (
-        <div className={`lyt-features-list ${page==='detailing-services'? 'typ-orange': ''}`}>
+        <div className={`lyt-features-list ${page === 'detailing-services' ? 'typ-orange' : ''}`}>
             <ul className="list-wrap">
-                {data.map((item, index)=>{
+                {data.map((item, index) => {
                     return (
-                        <li className={`item ${index % 2 === 0? 'typ-odd': 'typ-even'}`} key={index}>
+                        <li className={`item ${index % 2 === 0 ? 'typ-odd' : 'typ-even'}`} key={index}>
                             <div className="bs-features">
-                                <div className="info-wrap">
-                                    <h3 className="title">{item.title}</h3>
-                                    <ReactMarkdown className="desc rich-text" children={item.description} />
-                                    <div className="mod-list">
-                                    {chunkArray(item.featurePoints, type === 'Interior Detailing'? 1: 2).map((itemData, i)=>{
-                                        return (
-                                            <ul className="details-list" key={i} >
-                                                {itemData.map((point, ind)=>{
+                                {index % 2 === 0 ? (
+                                    <FadeReveal left distance="20px" delay={200 + (100 * (index + 1))} duration={800}>
+                                        <div className="info-wrap">
+                                            <h3 className="title">{item.title}</h3>
+                                            <ReactMarkdown className="desc rich-text" children={item.description} />
+                                            <div className="mod-list">
+                                                {chunkArray(item.featurePoints, type === 'Interior Detailing' ? 1 : 2).map((itemData, i) => {
                                                     return (
-                                                            <li className="item" key={ind}>
-                                                                <p className="">{point.point}</p>
-                                                                {point.subPoints.length > 0 && (
-                                                                    <ul className='sub-list-wrap'>
-                                                                        {point.subPoints.map((ele, i)=>(
-                                                                            <li className="sub-item" key={i}>{ele.point}</li>
-                                                                        ))}
-                                                                    </ul>
-                                                                )}
-                                                            </li>
+                                                        <ul className="details-list" key={i} >
+                                                            {itemData.map((point, ind) => {
+                                                                return (
+                                                                    <li className="item" key={ind}>
+                                                                        <p className="">{point.point}</p>
+                                                                        {point.subPoints.length > 0 && (
+                                                                            <ul className='sub-list-wrap'>
+                                                                                {point.subPoints.map((ele, i) => (
+                                                                                    <li className="sub-item" key={i}>{ele.point}</li>
+                                                                                ))}
+                                                                            </ul>
+                                                                        )}
+                                                                    </li>
+                                                                )
+                                                            })}
+                                                        </ul>
                                                     )
                                                 })}
-                                            </ul>
-                                        )
-                                    })}
-                                    </div>
-                                </div>
-                                <div className="mod-video">
-                                    <div className="media-wrap">
-                                        <div className="video">
-                                            {item.videoPosterImage !== null && <img src={item.videoPosterImage.url} alt={item.videoPosterImage.alternativeText} />}
-                                            <button className='btn btn-play' onClick={() => handleOpen(item.videoLink)}><span className="icon icon-play1"></span></button>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </FadeReveal>
+                                ) : (
+                                    <FadeReveal right distance="20px" delay={200 + (100 * (index + 1))} duration={800}>
+                                        <div className="info-wrap">
+                                            <h3 className="title">{item.title}</h3>
+                                            <ReactMarkdown className="desc rich-text" children={item.description} />
+                                            <div className="mod-list">
+                                                {chunkArray(item.featurePoints, type === 'Interior Detailing' ? 1 : 2).map((itemData, i) => {
+                                                    return (
+                                                        <ul className="details-list" key={i} >
+                                                            {itemData.map((point, ind) => {
+                                                                return (
+                                                                    <li className="item" key={ind}>
+                                                                        <p className="">{point.point}</p>
+                                                                        {point.subPoints.length > 0 && (
+                                                                            <ul className='sub-list-wrap'>
+                                                                                {point.subPoints.map((ele, i) => (
+                                                                                    <li className="sub-item" key={i}>{ele.point}</li>
+                                                                                ))}
+                                                                            </ul>
+                                                                        )}
+                                                                    </li>
+                                                                )
+                                                            })}
+                                                        </ul>
+                                                    )
+                                                })}
+                                            </div>
+                                        </div>
+                                    </FadeReveal>
+                                )}
+
+                                {index % 2 === 0 ? (
+                                    <FadeReveal right distance="20px" delay={200 + (100 * (index + 1))} duration={800}>
+                                        <div className="mod-video">
+                                            <div className="media-wrap">
+                                                <div className="video">
+                                                    {item.videoPosterImage !== null && <img src={item.videoPosterImage.url} alt={item.videoPosterImage.alternativeText} />}
+                                                    <button className='btn btn-play' onClick={() => handleOpen(item.videoLink)}><span className="icon icon-play1"></span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </FadeReveal>
+                                ) : (
+                                    <FadeReveal left distance="20px" delay={200 + (100 * (index + 1))} duration={800}>
+                                        <div className="mod-video">
+                                            <div className="media-wrap">
+                                                <div className="video">
+                                                    {item.videoPosterImage !== null && <img src={item.videoPosterImage.url} alt={item.videoPosterImage.alternativeText} />}
+                                                    <button className='btn btn-play' onClick={() => handleOpen(item.videoLink)}><span className="icon icon-play1"></span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </FadeReveal>
+                                )}
                             </div>
                         </li>
+
                     )
                 })}
             </ul>

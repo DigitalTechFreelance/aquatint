@@ -1,29 +1,33 @@
-@include mq-above($md){
+html {
+    scroll-behavior: smooth;
+}
+
+@include mq-above($md) {
     html {
         font-size: 7px;
     }
 }
 
-@include mq-between($lg, $xl){
+@include mq-between($lg, $xl) {
     html {
         font-size: 7.8px;
     }
 }
 
-@include mq-between($xl, $xxl){
+@include mq-between($xl, $xxl) {
     html {
         font-size: 9px;
     }
 }
 
-@include mq-above($xxl){
+@include mq-above($xxl) {
     html {
         font-size: 10px;
     }
 }
 
 body {
-    @include font-source-sans(2.4rem,3.2rem, $font2, $font-regular, $clr-base, initial);
+    @include font-source-sans(2.4rem, 3.2rem, $font2, $font-regular, $clr-base, initial);
     background: $clr-root;
     width: 100%;
     overflow-x: hidden !important;
@@ -32,6 +36,10 @@ body {
     @include mq-below($xs) {
         @include font-source-sans(1.2rem, 1.6rem);
     }
+}
+
+main {
+    min-height: 100vh;
 }
 
 h1,
@@ -62,6 +70,7 @@ a {
     text-decoration: none;
     color: $clr-base;
     cursor: pointer;
+
     &:hover {
         text-decoration: none;
         color: $clr-base;
@@ -75,6 +84,7 @@ textarea {
 button {
     background: transparent;
     cursor: pointer;
+
     &:focus {
         outline: none !important;
     }
@@ -84,31 +94,42 @@ button {
     display: block;
 }
 
-.cm-container{
+.cm-container {
     max-width: 172rem;
     margin: 0 auto;
+
     @include mq-above ($lg) {
         padding: 0 6rem;
     }
-    @include mq-below($xs){
+
+    @include mq-below($xs) {
         max-width: initial;
         width: 100%;
         padding: 0 1.5rem;
     }
 }
 
-.cm-paddtop-30{
+.cm-paddtop-30 {
     padding-top: 30rem !important;
-    @include mq-below($xs){
+
+    @include mq-below($xs) {
         padding-top: 3rem !important;
     }
 }
 
-.cm-no-pad-top{
+.cm-paddtop-40 {
+    padding-top: 40rem !important;
+
+    @include mq-below($xs) {
+        padding-top: 3rem !important;
+    }
+}
+
+.cm-no-pad-top {
     padding-top: 0 !important;
 }
 
-.cm-no-pad-bottom{
+.cm-no-pad-bottom {
     padding-bottom: 0 !important;
 }
 
@@ -116,11 +137,11 @@ button {
     display: none;
 }
 
-.cm-highlight{
+.cm-highlight {
     position: relative;
 
-    &:before{
-        content:'';
+    &:before {
+        content: '';
         left: 0;
         top: 0;
         bottom: 0;
@@ -129,38 +150,37 @@ button {
         z-index: -1;
     }
 
-    &.highlight-primary{
-        &:before{
-            background: rgba(64,196,226,1);
-            background: -moz-linear-gradient(left, rgba(64,196,226,1) 0%, rgba(64,198,231,0.5) 54%, rgba(64,198,231,0) 100%);
-            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(64,196,226,1)), color-stop(54%, rgba(64,198,231,0.5)), color-stop(100%, rgba(64,198,231,0)));
-            background: -webkit-linear-gradient(left, rgba(64,196,226,1) 0%, rgba(64,198,231,0.5) 54%, rgba(64,198,231,0) 100%);
-            background: -o-linear-gradient(left, rgba(64,196,226,1) 0%, rgba(64,198,231,0.5) 54%, rgba(64,198,231,0) 100%);
-            background: -ms-linear-gradient(left, rgba(64,196,226,1) 0%, rgba(64,198,231,0.5) 54%, rgba(64,198,231,0) 100%);
-            background: linear-gradient(to right, rgba(64,196,226,1) 0%, rgba(64,198,231,0.5) 54%, rgba(64,198,231,0) 100%);
+    &.highlight-primary {
+        &:before {
+            background: rgba(64, 196, 226, 1);
+            background: -moz-linear-gradient(left, rgba(64, 196, 226, 1) 0%, rgba(64, 198, 231, 0.5) 54%, rgba(64, 198, 231, 0) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(64, 196, 226, 1)), color-stop(54%, rgba(64, 198, 231, 0.5)), color-stop(100%, rgba(64, 198, 231, 0)));
+            background: -webkit-linear-gradient(left, rgba(64, 196, 226, 1) 0%, rgba(64, 198, 231, 0.5) 54%, rgba(64, 198, 231, 0) 100%);
+            background: -o-linear-gradient(left, rgba(64, 196, 226, 1) 0%, rgba(64, 198, 231, 0.5) 54%, rgba(64, 198, 231, 0) 100%);
+            background: -ms-linear-gradient(left, rgba(64, 196, 226, 1) 0%, rgba(64, 198, 231, 0.5) 54%, rgba(64, 198, 231, 0) 100%);
+            background: linear-gradient(to right, rgba(64, 196, 226, 1) 0%, rgba(64, 198, 231, 0.5) 54%, rgba(64, 198, 231, 0) 100%);
             filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#40c4e2', endColorstr='#40c6e7', GradientType=1 )";
         }
     }
-    &.highlight-secondary{
-        &:before{
-            background: rgba(243,145,32,1);
-            background: -moz-linear-gradient(left, rgba(243,145,32,1) 0%, rgba(243,145,32,0.5) 54%, rgba(243,145,32,0) 100%);
-            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243,145,32,1)), color-stop(54%, rgba(243,145,32,0.5)), color-stop(100%, rgba(243,145,32,0)));
-            background: -webkit-linear-gradient(left, rgba(243,145,32,1) 0%, rgba(243,145,32,0.5) 54%, rgba(243,145,32,0) 100%);
-            background: -o-linear-gradient(left, rgba(243,145,32,1) 0%, rgba(243,145,32,0.5) 54%, rgba(243,145,32,0) 100%);
-            background: -ms-linear-gradient(left, rgba(243,145,32,1) 0%, rgba(243,145,32,0.5) 54%, rgba(243,145,32,0) 100%);
-            background: linear-gradient(to right, rgba(243,145,32,1) 0%, rgba(243,145,32,0.5) 54%, rgba(243,145,32,0) 100%);
+
+    &.highlight-secondary {
+        &:before {
+            background: rgba(243, 145, 32, 1);
+            background: -moz-linear-gradient(left, rgba(243, 145, 32, 1) 0%, rgba(243, 145, 32, 0.5) 54%, rgba(243, 145, 32, 0) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(243, 145, 32, 1)), color-stop(54%, rgba(243, 145, 32, 0.5)), color-stop(100%, rgba(243, 145, 32, 0)));
+            background: -webkit-linear-gradient(left, rgba(243, 145, 32, 1) 0%, rgba(243, 145, 32, 0.5) 54%, rgba(243, 145, 32, 0) 100%);
+            background: -o-linear-gradient(left, rgba(243, 145, 32, 1) 0%, rgba(243, 145, 32, 0.5) 54%, rgba(243, 145, 32, 0) 100%);
+            background: -ms-linear-gradient(left, rgba(243, 145, 32, 1) 0%, rgba(243, 145, 32, 0.5) 54%, rgba(243, 145, 32, 0) 100%);
+            background: linear-gradient(to right, rgba(243, 145, 32, 1) 0%, rgba(243, 145, 32, 0.5) 54%, rgba(243, 145, 32, 0) 100%);
             filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#f39120', endColorstr='#f39120', GradientType=1 )";
         }
     }
 }
 
-.cm-visible-xs{
+.cm-visible-xs {
     display: none !important;
-    @include mq-below($xs){
+
+    @include mq-below($xs) {
         display: block !important;
     }
 }
-
-
-  

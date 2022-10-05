@@ -3,6 +3,7 @@ import axios from '../axios-common';
 import Service from '../components/service/Customisation/Service';
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
+import Fade from 'react-reveal/Fade';
 
 function CustomisationService() {
     const [data, setData] = React.useState(null)
@@ -24,9 +25,11 @@ function CustomisationService() {
                 <main>
                     <div className="lyt-content">
                         <div className="lyt-single-page">
-                            <div className="sp-head">
-                                <h2 className="sp-title">CUSTOMISATION SERVICES</h2>
-                            </div>
+                            <Fade bottom distance="20px" delay={500} duration={800}>
+                                <div className="sp-head">
+                                    <h2 className="sp-title">CUSTOMISATION SERVICES</h2>
+                                </div>
+                            </Fade>
                             <Service data={data.features} />
                         </div>
                     </div>

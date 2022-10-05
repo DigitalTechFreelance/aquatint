@@ -4,6 +4,7 @@ import PackageList from '../components/packages/PackageList';
 import axios from '../axios-common';
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
+import Fade from 'react-reveal/Fade';
 
 function Packages() {
     // React.useEffect(()=>{
@@ -39,7 +40,9 @@ function Packages() {
                     <div className="lyt-content">
                         <div className="lyt-single-page">
                             <div className="sp-head">
-                                <h2 className="sp-title">premium packages</h2>
+                                <Fade bottom distance="20px" delay={500} duration={800}>
+                                    <h2 className="sp-title">premium packages</h2>
+                                </Fade>
                             </div>
                             <div className="sp-cont">
                                 <PackageList data={data.packagesType} />

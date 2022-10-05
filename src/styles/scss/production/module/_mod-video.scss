@@ -31,7 +31,7 @@
 
       &.fixed-width {
         max-width: 120rem;
-        margin: 0 auto;
+        margin: 0 auto 8rem;
 
         @include mq-below($xs) {
           max-width: initial;

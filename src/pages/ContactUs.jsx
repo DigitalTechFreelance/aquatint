@@ -5,6 +5,7 @@ import CompanyInfo from '../components/contactus/CompanyInfo';
 import CustomerDetails from '../components/contactus/CustomerDetails';
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
+import Fade from 'react-reveal/Fade';
 
 function ContactUs() {
     const [data, setData] = React.useState(null)
@@ -26,13 +27,15 @@ function ContactUs() {
                 <main>
                     <div className="lyt-content">
                         <div className="lyt-single-page">
-                            <div className="sp-head">
-                                <h2 className="sp-title">CONTACT us</h2>
-                            </div>
+                            <Fade bottom distance="20px" delay={500} duration={800}>
+                                <div className="sp-head">
+                                    <h2 className="sp-title">CONTACT us</h2>
+                                </div>
+                            </Fade>
                             <div className="sp-cont cm-container">
-                                {data.googleMap && <GoogleMap />}
-                                {data.companyInfo.isActive && <CompanyInfo data={data.companyInfo} />}
-                                {data.contactDetails.isActive && data.contactDetails.customerDetailsForm && <CustomerDetails data={data.contactDetails} />}
+                                {data.googleMap && <Fade bottom distance="20px" delay={800} duration={800}><GoogleMap /></Fade>}
+                                {data.companyInfo.isActive && <Fade bottom distance="20px" delay={500} duration={800}><CompanyInfo data={data.companyInfo} /></Fade>}
+                                {data.contactDetails.isActive && data.contactDetails.customerDetailsForm && <Fade bottom distance="20px" delay={500} duration={800}><CustomerDetails data={data.contactDetails} /></Fade>}
                             </div>
                         </div>
                     </div>

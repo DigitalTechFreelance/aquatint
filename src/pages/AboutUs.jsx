@@ -6,6 +6,7 @@ import axios from '../axios-common';
 import ReactMarkdown from 'react-markdown';
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
+import Fade from 'react-reveal/Fade';
 
 
 function AboutUs() {
@@ -28,17 +29,19 @@ function AboutUs() {
   return (
     data && data !== null ?
       <>
-			{data.seo !== null && <SEO data={data?.seo}/>}
+        {data.seo !== null && <SEO data={data?.seo} />}
         <main>
           <div className="lyt-content pg-about">
             <div className="lyt-single-page">
-              <div className="sp-head">
-                <h2 className="sp-title">{title}</h2>
-                <ReactMarkdown className="sp-desc rich-text" children={aboutInfo} />
-              </div>
+              <Fade bottom distance="20px" delay={500} duration={800}>
+                <div className="sp-head">
+                  <h2 className="sp-title">{title}</h2>
+                  <ReactMarkdown className="sp-desc rich-text" children={aboutInfo} />
+                </div>
+              </Fade>
               <div className="sp-cont cm-container">
                 <section>
-                  <div className="bs-section typ-infography cm-paddtop-30">
+                  <div className="bs-section typ-infography cm-paddtop-40">
                     <div className="sec-cont">
                       {whatWeDoSection !== undefined ? whatWeDoSection.isActive && <Infogarphy data={whatWeDoSection} /> : null}
                     </div>
@@ -47,7 +50,9 @@ function AboutUs() {
                 <section>
                   <div className="bs-section typ-center">
                     <div className="sec-head">
-                      <h2 className="sec-title typ-lg">our team</h2>
+                      <Fade bottom distance="20px" delay={500} duration={800}>
+                        <h2 className="sec-title typ-lg">our team</h2>
+                      </Fade>
                     </div>
                     <div className="sec-cont">
                       <Team data={teamsSection} />
@@ -57,7 +62,9 @@ function AboutUs() {
                 <section>
                   <div className="bs-section">
                     <div className="sec-cont">
-                      {ourVisionSection !== undefined ? ourVisionSection.isActive && <OurVision data={ourVisionSection} /> : null}
+                      <Fade bottom distance="20px" delay={500} duration={800}>
+                        {ourVisionSection !== undefined ? ourVisionSection.isActive && <OurVision data={ourVisionSection} /> : null}
+                      </Fade>
                     </div>
                   </div>
                 </section>

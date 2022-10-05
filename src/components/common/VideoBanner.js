@@ -1,9 +1,10 @@
 import React from 'react';
 import useWindowSize from '../../hooks/useWindowSize';
 import useSetBgImage from '../../hooks/useSetBgImage';
-import Videoplayer from '../common/Videoplayer';
+import Videoplayer from '../common/VideoPlayer';
+import Fade from 'react-reveal/Fade';
 
-function HomeBanner({data}) {
+function HomeBanner({ data }) {
 
   let size = useWindowSize();
 
@@ -20,10 +21,10 @@ function HomeBanner({data}) {
     });
   };
 
-  const {title, desktopVideoUpload, mobileVideoUpload, desktopYoutubeLink, mobileYoutubeLink} = data && data
-  const desktopVideoUrl = desktopVideoUpload !== null? desktopVideoUpload?.data?.url : JSON.parse(desktopYoutubeLink).url
-  const mobileVideoUrl = mobileVideoUpload !== null? mobileVideoUpload?.data?.url : JSON.parse(mobileYoutubeLink).url
-  
+  const { title, desktopVideoUpload, mobileVideoUpload, desktopYoutubeLink, mobileYoutubeLink } = data && data
+  const desktopVideoUrl = desktopVideoUpload !== null ? desktopVideoUpload?.data?.url : JSON.parse(desktopYoutubeLink).url
+  const mobileVideoUrl = mobileVideoUpload !== null ? mobileVideoUpload?.data?.url : JSON.parse(mobileYoutubeLink).url
+
   return (
     <div className="bs-banner">
       <div className="video-wrap">
@@ -37,9 +38,11 @@ function HomeBanner({data}) {
           height="100%"
           loop={true}
         />
-      </div> 
+      </div>
       <div className="banner-info">
-        <h2 className="banner-title">{title}</h2>
+        <Fade bottom distance="20px" delay={800} duration={800}>
+          <h2 className="banner-title">{title}</h2>
+        </Fade>
       </div>
     </div>
   )

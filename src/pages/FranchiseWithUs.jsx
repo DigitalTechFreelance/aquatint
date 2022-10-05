@@ -5,6 +5,7 @@ import Collaborations from '../components/franchise/Collaborations';
 import GetInTouch from '../components/franchise/GetInTouch';
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
+import Fade from 'react-reveal/Fade';
 
 function FranchiseWithUs() {
 
@@ -26,13 +27,17 @@ function FranchiseWithUs() {
                 <main>
                     <div className="lyt-content">
                         <div className="lyt-single-page lyt-franchise">
-                            <div className="sp-head">
-                                <h2 className="sp-title">Franchise with us</h2>
-                            </div>
+                            <Fade bottom distance="20px" delay={500} duration={800}>
+                                <div className="sp-head">
+                                    <h2 className="sp-title">Franchise with us</h2>
+                                </div>
+                            </Fade>
                             <div className="sp-cont">
-                                <WhyUs data={data} />
-                                {data.collaboration.isActive && <Collaborations data={data.collaboration} />}
-                                {data.getInTouch.isActive && <GetInTouch data={data.getInTouch} />}
+                                <Fade bottom distance="20px" delay={800} duration={800}>
+                                    <WhyUs data={data} />
+                                </Fade>
+                                {data.collaboration.isActive && <Fade bottom distance="20px" delay={500} duration={800}><Collaborations data={data.collaboration} /></Fade>}
+                                {data.getInTouch.isActive && <Fade bottom distance="20px" delay={500} duration={800}><GetInTouch data={data.getInTouch} /></Fade>}
                             </div>
                         </div>
                     </div>
