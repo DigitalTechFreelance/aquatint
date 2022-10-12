@@ -1,9 +1,15 @@
-[build]
-    command = "CI=false yarn build"
-    publish = "/build"
-    base = "/"
+build:
+    base: /opt/build/repo
+    command: CI=false yarn build
+    commandOrigin: config
 
-[[redirects]]
-    from = "/*"
-    to = "index.html"
-    status = 200
+environment:
+    - NPM_FLAGS
+    publish: /opt/build/repo/build
+    publishOrigin: config
+
+redirects:
+    - from: /*
+    status: 200
+    to: index.html
+    redirectsOrigin: config
