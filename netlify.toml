@@ -4,7 +4,6 @@
     commandOrigin = "config"
 
 [environment]
-    NPM_FLAGS
     publish = "/opt/build/repo/build"
     publishOrigin = "config"
 
