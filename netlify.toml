@@ -1,14 +1,9 @@
 [build]
-    base = "/"
-    command = "CI=false yarn build"
-    commandOrigin = "config"
-
-[environment]
+    command = "CI='' yarn build"
     publish = "/build"
-    publishOrigin = "config"
+    base = "/"
 
 [[redirects]]
     from = "/*"
-    status = 200
     to = "index.html"
-    redirectsOrigin = "config"
+    status = 200
