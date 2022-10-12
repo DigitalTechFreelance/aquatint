@@ -1,6 +1,6 @@
 import React from 'react';
 import CoatingInfogarphy from '../components/packages/Infogarphy';
-import Videoplayer from '../components/common/Videoplayer';
+import VideoPlayer from '../components/common/VideoPlayer';
 import videosrc from '../assets/video/dummy-video.mp4';
 
 function ComprehensizePackage() {
@@ -53,7 +53,7 @@ function ComprehensizePackage() {
                                         </div>
                                         <div className="media-wrap">
                                             <div className="video">
-                                                <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videosrc}/>
+                                                <VideoPlayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videosrc}/>
                                             </div>
                                         </div>
                                         <div className="action-wrap">

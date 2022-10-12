@@ -1,5 +1,5 @@
 import React from 'react';
-import Videoplayer from './VideoPlayer';
+import VideoPlayer from './VideoPlayer';
 
 function VideoSection({ handleVideoStatus, data }) {
     return (
@@ -12,7 +12,7 @@ function VideoSection({ handleVideoStatus, data }) {
                         </div>
                         <div className="media-wrap">
                             <div className="video">
-                                <Videoplayer
+                                <VideoPlayer
                                     buttonClose={false}
                                     playingStatus={handleVideoStatus}
                                     srcUrl={JSON.parse(data?.youtubeLink)?.url}

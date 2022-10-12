@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import useSetBgImage from '../../hooks/useSetBgImage';
-import Videoplayer from '../common/VideoPlayer';
+import VideoPlayer from '../common/VideoPlayer';
 
 function TileGrid({ data, index, dataLength, page }) {
     const [autoPlay, setAutoPlay] = useState(false);
@@ -22,7 +22,7 @@ function TileGrid({ data, index, dataLength, page }) {
                     }
                     {page === "ppf" && data && data?.youtubeLink !== null && (
                         <div className="img-wrap">
-                            <Videoplayer
+                            <VideoPlayer
                                 buttonClose={false}
                                 srcUrl={JSON.parse(data?.youtubeLink)?.url}
                                 muted={true}

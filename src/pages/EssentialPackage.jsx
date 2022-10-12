@@ -1,6 +1,6 @@
 import React from 'react';
 import EssentialInfogarphy from '../components/service/EssentialInfogarphy';
-import Videoplayer from '../components/common/Videoplayer';
+import VideoPlayer from '../components/common/VideoPlayer';
 import videosrc from '../assets/video/dummy-video.mp4';
 
 function EssentialPackage() {
@@ -52,7 +52,7 @@ function EssentialPackage() {
                                         </div>
                                         <div className="media-wrap">
                                         <div className="video">
-                                                <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videosrc}/>
+                                                <VideoPlayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videosrc}/>
                                             </div>
                                             <button className='btn'><span className="icon icon-play"></span></button>
                                         </div>

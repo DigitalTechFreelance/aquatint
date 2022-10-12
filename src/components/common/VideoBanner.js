@@ -1,7 +1,7 @@
 import React from 'react';
 import useWindowSize from '../../hooks/useWindowSize';
 import useSetBgImage from '../../hooks/useSetBgImage';
-import Videoplayer from '../common/VideoPlayer';
+import VideoPlayer from '../common/VideoPlayer';
 import Fade from 'react-reveal/Fade';
 
 function HomeBanner({ data }) {
@@ -28,7 +28,7 @@ function HomeBanner({ data }) {
   return (
     <div className="bs-banner">
       <div className="video-wrap">
-        <Videoplayer
+        <VideoPlayer
           buttonClose={false}
           playingStatus={handleVideoStatus}
           srcUrl={size.width > 768 ? desktopVideoUrl : mobileVideoUrl}

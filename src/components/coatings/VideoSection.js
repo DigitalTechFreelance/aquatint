@@ -1,5 +1,5 @@
 import React from 'react';
-import Videoplayer from '../common/VideoPlayer';
+import VideoPlayer from '../common/VideoPlayer';
 
 function VideoSection({ data }) {
     const [playState, setPlayState] = React.useState({
@@ -18,7 +18,7 @@ function VideoSection({ data }) {
                     <div className="mod-video typ-lg typ-primary">
                         <div className="media-wrap">
                             <div className="video">
-                                <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videoUrl} />
+                                <VideoPlayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videoUrl} />
                             </div>
                         </div>
                     </div>
