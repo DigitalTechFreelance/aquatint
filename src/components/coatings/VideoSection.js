@@ -1,5 +1,5 @@
 import React from 'react';
-import Videoplayer from '../common/VideoPlayer';
+import Videoplayer from '../common/Videoplayer';
 
 function VideoSection({ data }) {
     const [playState, setPlayState] = React.useState({

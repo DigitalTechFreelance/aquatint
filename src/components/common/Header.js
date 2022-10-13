@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import useScrollPosition from '../../hooks/useScrollPosition';
 
 
 
-function Header({data}) {
+function Header({ data }) {
     // let size = useWindowSize();
     let scrollPosition = useScrollPosition();
 
@@ -14,44 +14,48 @@ function Header({data}) {
     const handleMenuClose = () => {
         setMenuOpen(false);
     }
-    const {logo, headerMenus} = data !== null && data
-  return (
-      <>
-        <header className={`bs-header ${(scrollPosition > 10) ? "header-scroll" : ""}`}>
-            <div className="cm-container">
-                <a href="/home" className="logo">
-                    <img src={logo.url} alt={logo.alternativeText} title={logo.name} />
-                </a>
-                <button className="menu-btn" onClick={handleMenuOpen}>
-                    <span className="bar1"></span>
-                    <span className="bar2"></span>
-                    <span className="bar3"></span>
-                </button>
+    const { logo, headerMenus } = data !== null && data
+    return (
+        <>
+            <header className={`bs-header ${(scrollPosition > 10) ? "header-scroll" : ""}`}>
+                <div className="cm-container">
+                    <a href="/home" className="logo">
+                        <img src={logo.url} alt={logo.alternativeText} title={logo.name} />
+                    </a>
+                    <button className="menu-btn" onClick={handleMenuOpen}>
+                        <span className="bar1"></span>
+                        <span className="bar2"></span>
+                        <span className="bar3"></span>
+                    </button>
+                </div>
+            </header>
+            <div className={`bs-menu ${menuOpen ? "active" : ""}`}>
+                <button type="button" className="icon icon-close menu-close" onClick={handleMenuClose}></button>
+                <ul className="menu-wrap">
+                    {headerMenus.map((item, index) => {
+                        return (
+                            item.isActive && (
+                                <>
+                                    <li className="menu-item" key={index}>
+                                        <a href={item.link} className={`menu-link ${window.location.pathname === item.link ? 'cm-highlight highlight-primary' : ''}`}>{item.name}</a>
+                                    </li>
+                                    {item.submenus.map((ele, i) => {
+                                        return (
+                                            ele.isActive && (
+                                                <li className="menu-item" key={i}>
+                                                    <a href={ele.link} className={`menu-link typ-sm ${window.location.pathname === ele.link ? 'cm-highlight highlight-primary' : ''}`}>{ele.name}</a>
+                                                </li>
+                                            )
+                                        )
+                                    })}
+                                </>
+                            )
+                        )
+                    })}
+                </ul>
             </div>
-        </header>
-        <div className={`bs-menu ${menuOpen ? "active" : ""}`}>
-            <button type="button" className="icon icon-close menu-close" onClick={handleMenuClose}></button>
-            <ul className="menu-wrap">
-                {headerMenus.map((item, index)=>{
-                    return(
-                        <>
-                            <li className="menu-item" key={index}>
-                                <a href={item.link} className={`menu-link ${window.location.pathname === item.link ? 'cm-highlight highlight-primary': ''}`}>{item.name}</a>
-                            </li>
-                            {item.submenus.map((ele, i)=> {
-                                return (
-                                <li className="menu-item" key={i}>
-                                    <a href={ele.link} className={`menu-link typ-sm ${window.location.pathname === ele.link? 'cm-highlight highlight-primary': ''}`}>{ele.name}</a>
-                                </li>
-                                )
-                            })}
-                        </>
-                    )
-                })}
-            </ul>
-        </div>
-    </>
-  )
+        </>
+    )
 }
 
 export default Header

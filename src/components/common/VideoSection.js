@@ -1,5 +1,5 @@
 import React from 'react';
-import Videoplayer from './VideoPlayer';
+import Videoplayer from './Videoplayer';
 
 function VideoSection({ handleVideoStatus, data }) {
     return (

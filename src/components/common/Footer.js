@@ -13,9 +13,10 @@ function Footer({data}) {
                 <div className="footer-item" key={index}>
                 <h4 className="title"><span>{item.name}</span></h4>
                 <ul className="footer-list">
-                  {item.submenus.map((ele, i)=>(
-                    <li className="footer-list-item" key={i}><a href={ele.link}>{ele.name}</a></li>
-                  ))}
+                  {item.submenus.map((ele, i)=>{
+                    return (
+                    ele.isActive && <li className="footer-list-item" key={i}><a href={ele.link}>{ele.name}</a></li>
+                  )})}
                 </ul>
               </div>
               )
