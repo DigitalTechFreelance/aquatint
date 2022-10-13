@@ -16,6 +16,7 @@ const format = (sec) => {
   }
   return `${mm.toString().padStart(2, '0')}:${ss}`;
 };
+
 function VideoPlayer(props) {
   const [state, setState] = useState({
     playing: false,

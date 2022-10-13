@@ -4,7 +4,7 @@ import LightSpeed from 'react-reveal/LightSpeed';
 
 function Packages({ data }) {
 
-    const { title1, title2, title3, image, packages, buttonText, buttonUrl, buttonUrlAltText } = data
+    const { title1, title2, title3, image, packages, buttonText, buttonUrl } = data
 
     return (
         <section>

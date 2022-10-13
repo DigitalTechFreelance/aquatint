@@ -28,7 +28,7 @@ function HomeBanner({ data }) {
   return (
     <div className="bs-banner">
       <div className="video-wrap">
-        <Videoplayer
+        <VideoPlayer
           buttonClose={false}
           playingStatus={handleVideoStatus}
           srcUrl={size.width > 768 ? desktopVideoUrl : mobileVideoUrl}

@@ -22,7 +22,7 @@ function TileGrid({ data, index, dataLength, page }) {
                     }
                     {page === "ppf" && data && data?.youtubeLink !== null && (
                         <div className="img-wrap">
-                            <Videoplayer
+                            <VideoPlayer
                                 buttonClose={false}
                                 srcUrl={JSON.parse(data?.youtubeLink)?.url}
                                 muted={true}

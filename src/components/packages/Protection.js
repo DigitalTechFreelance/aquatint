@@ -22,7 +22,7 @@ function Protection({ data }) {
                         </div>
                         <div className="media-wrap">
                             <div className="video">
-                                <Videoplayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videoUrl} />
+                                <VideoPlayer buttonClose={playState.buttonClose} playingStatus={handleVideoStatus} srcUrl={videoUrl} />
                             </div>
                         </div>
                         <div className="action-wrap">

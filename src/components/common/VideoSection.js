@@ -12,7 +12,7 @@ function VideoSection({ handleVideoStatus, data }) {
                         </div>
                         <div className="media-wrap">
                             <div className="video">
-                                <Videoplayer
+                                <VideoPlayer
                                     buttonClose={false}
                                     playingStatus={handleVideoStatus}
                                     srcUrl={JSON.parse(data?.youtubeLink)?.url}
