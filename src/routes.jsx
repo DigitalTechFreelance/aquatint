@@ -11,7 +11,7 @@ const CustomisationService = React.lazy(() => import('./pages/CustomisationServi
 const FranchiseWithUs = React.lazy(() => import('./pages/FranchiseWithUs'));
 const ContactUs = React.lazy(() => import('./pages/ContactUs'));
 const PackageDetail = React.lazy(() => import('./pages/PackageDetail'));
-const IndexList = React.lazy(() => import('./temp/IndexList'));
+// const IndexList = React.lazy(() => import('./temp/IndexList'));
 const Packages = React.lazy(() => import('./pages/Packages'));
 
 const routes = [

@@ -4,7 +4,7 @@ import Slide from 'react-reveal/Slide';
 
 function Infogarphy({ data }) {
 
-  const { title, description, buttonAltText, buttonLink, buttonText, image } = data
+  const { title, description, buttonLink, buttonText, image } = data
   return (
     <section>
       <div className="bs-section typ-infography cm-paddtop-30 bs-pattern pattern-orange patter-pos-1">

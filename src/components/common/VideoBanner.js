@@ -1,7 +1,7 @@
 import React from 'react';
 import useWindowSize from '../../hooks/useWindowSize';
 import useSetBgImage from '../../hooks/useSetBgImage';
-import VideoPlayer from '../common/VideoPlayer';
+import VideoPlayer from '../common/Videoplayer';
 import Fade from 'react-reveal/Fade';
 
 function HomeBanner({ data }) {
