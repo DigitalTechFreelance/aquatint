@@ -11,6 +11,7 @@ import Proccess from '../components/coatings/Proccess';
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
 import Fade from 'react-reveal/Fade';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function CoatingDetail() {
 
@@ -18,7 +19,13 @@ function CoatingDetail() {
     const [data, setData] = React.useState(null)
     const { slug } = useParams();
 
+    const [leadFormOpen, setLeadFormOpen] = React.useState(false);
+    const handleLeadFormClose = () => setLeadFormOpen(false);
     React.useEffect(() => {
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+            setLeadFormOpen(true);
+        }, 15000)
         axios.get(`/coatings?slug=${slug}`)
             .then((res) => {
                 setData(res.data[0])
@@ -54,6 +61,8 @@ function CoatingDetail() {
                         </div>
                     </div>
                 </main>
+            <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
+
             </>
         ) : <Loader />
     )

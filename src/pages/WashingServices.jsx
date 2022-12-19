@@ -4,12 +4,18 @@ import WashingServiceCompareList from '../components/service/WashingServiceCompa
 import axios from '../axios-common';
 import { useParams } from "react-router-dom";
 import Fade from 'react-reveal/Fade';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function WashingServices() {
   const [data, setData] = React.useState(null)
   const { slug } = useParams();
-
+  const [leadFormOpen, setLeadFormOpen] = React.useState(false);
+  const handleLeadFormClose = () => setLeadFormOpen(false);
   React.useEffect(() => {
+    window.scrollTo(0, 0);
+    setTimeout(() => {
+        setLeadFormOpen(true);
+    }, 15000)
     axios.get(`/service-details?slug=${slug}`)
       .then((res) => {
         // console.log("home res", res)
@@ -58,6 +64,8 @@ function WashingServices() {
           </div>
         </div>
       </main>
+      <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
+
     </>
   )
 }

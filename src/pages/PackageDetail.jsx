@@ -7,12 +7,18 @@ import Warranty from '../components/packages/Warranty';
 import Protection from '../components/packages/Protection';
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function PackageDetail() {
     const [data, setData] = React.useState(null)
     const { slug } = useParams();
-
+    const [leadFormOpen, setLeadFormOpen] = React.useState(false);
+    const handleLeadFormClose = () => setLeadFormOpen(false);
     React.useEffect(() => {
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+            setLeadFormOpen(true);
+        }, 15000)
         axios.get(`/packages?slug=${slug}`)
             .then((res) => {
                 setData(res.data[0])
@@ -42,6 +48,8 @@ function PackageDetail() {
                         </div>
                     </div>
                 </main>
+                <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
+
             </>
         ) : <Loader />
     )

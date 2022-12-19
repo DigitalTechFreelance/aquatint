@@ -43,6 +43,7 @@ function GetInTouch({data}) {
             "Email": values.emailId,
             "Phone No": values.contactNo
         }
+        console.log("date", date, data)
         axios.post(
             'https://sheet.best/api/sheets/9d05fb91-8418-4ed3-97dc-4f71c489608f',
             data

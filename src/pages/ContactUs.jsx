@@ -6,11 +6,18 @@ import CustomerDetails from '../components/contactus/CustomerDetails';
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
 import Fade from 'react-reveal/Fade';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function ContactUs() {
     const [data, setData] = React.useState(null)
-
+    const [leadFormOpen, setLeadFormOpen] = React.useState(false);
+    const handleLeadFormClose = () => setLeadFormOpen(false);
+       
     React.useEffect(() => {
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+            setLeadFormOpen(true);
+        }, 15000)
         axios.get(`/contact-us`)
             .then((res) => {
                 setData(res.data)
@@ -40,6 +47,8 @@ function ContactUs() {
                         </div>
                     </div>
                 </main>
+            <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
+
             </>
         ) : <Loader />
     )

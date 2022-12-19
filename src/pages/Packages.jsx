@@ -5,20 +5,20 @@ import axios from '../axios-common';
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
 import Fade from 'react-reveal/Fade';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function Packages() {
-    // React.useEffect(()=>{
-    //     window.scrollTo(0, 0);
-    // 	setTimeout(()=>{
-    // 		setLeadFormOpen(true);
-    // 	},15000)
-    // },[])
 
-    // const [leadFormOpen, setLeadFormOpen] = useState(false);
-    // const handleLeadFormClose = () => setLeadFormOpen(false);
+    const [leadFormOpen, setLeadFormOpen] = useState(false);
+    const handleLeadFormClose = () => setLeadFormOpen(false);
     const [data, setData] = useState(null)
 
     React.useEffect(() => {
+        window.scrollTo(0, 0);
+        setTimeout(() => {
+            setLeadFormOpen(true);
+        }, 15000)
+
         axios.get(`/package`)
             .then((res) => {
                 // console.log("home res", res)
@@ -51,7 +51,7 @@ function Packages() {
                     </div>
                 </main>
 
-                {/* <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen}/> */}
+                <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
             </>
         ) : <Loader />
     )

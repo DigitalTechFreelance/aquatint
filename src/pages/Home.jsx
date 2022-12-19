@@ -9,11 +9,18 @@ import RecentWork from '../components/home/RecentWork'
 import axios from '../axios-common';
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
+import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 
 function Home() {
 	const [data, setData] = React.useState(null)
+	const [leadFormOpen, setLeadFormOpen] = React.useState(false);
+	const handleLeadFormClose = () => setLeadFormOpen(false);
 
 	React.useEffect(() => {
+		window.scrollTo(0, 0);
+		setTimeout(() => {
+			setLeadFormOpen(true);
+		}, 15000)
 		axios.get(`/home`)
 			.then((res) => {
 				setData(res.data)
@@ -25,10 +32,10 @@ function Home() {
 
 	return (
 		data !== null ? (
-		<>
-			{data.seo !== null && <SEO data={data?.seo}/>}
-			<main>
-				<div className="lyt-content typ-home">
+			<>
+				{data.seo !== null && <SEO data={data?.seo} />}
+				<main>
+					<div className="lyt-content typ-home">
 
 						<>
 							<VideoBanner data={data} />
@@ -39,11 +46,13 @@ function Home() {
 							{data.withUsSection.isActive && <Infogarphy data={data.withUsSection} />}
 							<TestimonialSlider data={data.testimonialsSection} />
 						</>
-					
-				</div>
-			</main>
-		</>
-		) : <Loader/>
+
+					</div>
+				</main>
+				<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
+
+			</>
+		) : <Loader />
 	);
 }
 
