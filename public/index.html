@@ -55,6 +55,27 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+  <script>
+    window.addEventListener('load', function () {
+
+      if (window.location.pathname.indexOf("/contact-us") != -1) {
+
+        var x = 0;
+        var myVar = setInterval(function () {
+          if (x == 0) {
+            if (document.querySelectorAll('.bs-message-card')[0].innerText == 'Thank you for contecting Us!!!\n\nOur team will reach you shortly') {
+              gtag('event', 'conversion', { 'send_to': 'AW-929250397/XrZJCJ6-2aQDEN34jLsD' });
+              clearInterval(myVar);
+              x = 1;
+            }
+          }
+        }, 1000);
+      }
+
+
+
+    });
+  </script>
 </body>
 
 </html>

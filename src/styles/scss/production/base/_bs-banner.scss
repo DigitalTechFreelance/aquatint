@@ -49,16 +49,18 @@
         }
     }
 
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -60rem;
-        right: 0;
-        bottom: 0;
-        background: url('../../../../assets/images/pattern-blue.svg') no-repeat 0 0 transparent;
-        background-size: 135%;
-        // animation: scale 1000s linear infinite;
+    &.video-cont {
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -60rem;
+            right: 0;
+            bottom: 0;
+            background: url('../../../../assets/images/pattern-blue.svg') no-repeat 0 0 transparent;
+            background-size: 135%;
+            // animation: scale 1000s linear infinite;
+        }
     }
 
     .video-wrap {
