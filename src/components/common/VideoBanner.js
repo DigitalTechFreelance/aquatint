@@ -22,8 +22,8 @@ function HomeBanner({ data }) {
   };
 
   const { title, desktopVideoUpload, mobileVideoUpload, desktopYoutubeLink, mobileYoutubeLink, desktopBannerImage, mobileBannerImage } = data && data
-  const desktopVideoUrl = desktopVideoUpload !== null ? desktopVideoUpload?.data?.url : JSON.parse(desktopYoutubeLink)?.url
-  const mobileVideoUrl = mobileVideoUpload !== null ? mobileVideoUpload?.data?.url : JSON.parse(mobileYoutubeLink)?.url
+  const desktopVideoUrl = desktopVideoUpload !== null ? desktopVideoUpload?.url : JSON.parse(desktopYoutubeLink)?.url
+  const mobileVideoUrl = mobileVideoUpload !== null ? mobileVideoUpload?.url : JSON.parse(mobileYoutubeLink)?.url
   return (
     <div 
     className={`bs-banner ${desktopVideoUrl && mobileVideoUrl}? 'video-cont': '' `}
