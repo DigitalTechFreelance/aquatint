@@ -11,6 +11,8 @@ import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
 import Fade from 'react-reveal/Fade';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
+import Lottie from "lottie-react";
+import desktopAnimation from "../assets/animation/animation-desktop.json";
 
 function PaintProtectionFilm() {
     const [data, setData] = React.useState(null)
@@ -46,7 +48,12 @@ function PaintProtectionFilm() {
 
                 <main>
                     <div className="lyt-content typ-home">
-                        <VideoBanner data={data} />
+                        {/* <VideoBanner data={data} /> */}
+                        <div className="bs-banner">
+                            <div className="lottie">
+                            <Lottie animationData={desktopAnimation} />
+                            </div>
+                        </div>
                         <About data={data} />
                         <div className="lyt-single-page typ-2">
                             <div className="sp-cont">
