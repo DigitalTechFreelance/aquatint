@@ -1,7 +1,7 @@
-import React,{useState} from 'react';
+import React from 'react';
 
 function Flybutton() {
-  const [isActive, setActive] = useState(false);
+  // const [isActive, setActive] = useState(false);
   return (
     <>
     {/* <div className={`bs-action-fly ${isActive ? 'active' :''}`}>
@@ -26,6 +26,7 @@ function Flybutton() {
           href="tel:7066457656"
           target="_blank"
           className="fly-trigger type-phone"
+          rel="noreferrer"
         >
           <span className="icon icon icon-phone"></span>
         </a>

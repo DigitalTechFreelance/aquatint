@@ -10,8 +10,11 @@ import axios from '../axios-common';
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
+import Header from '../components/common/Header';
+import Footer from '../components/common/Footer';
+import Flybutton from '../components/common/Flybutton';
 
-function Home() {
+function Home(props) {
 	const [data, setData] = React.useState(null)
 	const [leadFormOpen, setLeadFormOpen] = React.useState(false);
 	const handleLeadFormClose = () => setLeadFormOpen(false);
@@ -28,12 +31,13 @@ function Home() {
 			.catch((error) => {
 				// console.log("home error", error)
 			})
-	}, [])
-
+	}, []);
 	return (
 		data !== null ? (
 			<>
-				{data.seo !== null && <SEO data={data?.seo} />}
+      {props.globalData &&  <Header data={props.globalData} activeTab={props.activeTab} />} 
+
+				 <SEO data={data?.seo!==null? data?.seo: props.globalData} />
 				<main>
 					<div className="lyt-content typ-home">
 
@@ -50,7 +54,12 @@ function Home() {
 					</div>
 				</main>
 				<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
-
+				{props.globalData && (
+          <> 
+            <Footer data={props.globalData} />
+            <Flybutton />
+          </>) }
+        
 			</>
 		) : <Loader />
 	);

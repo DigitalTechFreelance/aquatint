@@ -8,8 +8,8 @@ function ServiceList({ data }) {
                 {data !== undefined && data.length > 0 && data.map((item, index) => {
                     return (
                         item.isActive && (
-                            <Fade bottom distance="20px" delay={500} duration={800}>
-                                <li className="list-item" key={index}>
+                            <Fade bottom distance="20px" delay={500} duration={800} key={index}>
+                                <li className="list-item" >
                                     <div className="bs-service">
                                         <div className="img-wrap">
                                             <img src={item.image.url} alt={item.image.alternativeText} title={item.image.name} />

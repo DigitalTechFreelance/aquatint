@@ -1,18 +1,21 @@
 import React from 'react';
 import './assets/css/icons.css';
 import './styles/scss/production/style.scss';
-import localRoutes from './routes';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/common/Header';
-import Footer from './components/common/Footer';
-import Flybutton from './components/common/Flybutton';
 import axios from './axios-common';
 import Loader from './components/common/LoaderRounded';
 const DetailingServices = React.lazy(() => import('./pages/DetailingServices'));
-
-const routes = [
-  ...localRoutes
-];
+const Home = React.lazy(() => import('./pages/Home'));
+const AboutUs = React.lazy(() => import('./pages/AboutUs'));
+const Services = React.lazy(() => import('./pages/Services'));
+const WashingServices = React.lazy(() => import('./pages/WashingServices'));
+const PaintProtectionFilm = React.lazy(() => import('./pages/PaintProtectionFilm'));
+const CoatingDetail = React.lazy(() => import('./pages/CoatingDetail'));
+const CustomisationService = React.lazy(() => import('./pages/CustomisationService'));
+const FranchiseWithUs = React.lazy(() => import('./pages/FranchiseWithUs'));
+const ContactUs = React.lazy(() => import('./pages/ContactUs'));
+const PackageDetail = React.lazy(() => import('./pages/PackageDetail'));
+const Packages = React.lazy(() => import('./pages/Packages'));
 
 function App() {
 
@@ -20,7 +23,6 @@ function App() {
   const [activeTab, setActiveTab] = React.useState(0)
 
   React.useEffect(() => {
-    setTimeout(() => {
       axios.get(`/global`)
         .then((res) => {
           setData(res.data)
@@ -28,10 +30,7 @@ function App() {
         .catch((error) => {
           // console.log("global error", error)
         })
-    }, 500)
-
   }, [])
-
   return (
     <Router>
       <React.Suspense
@@ -39,28 +38,89 @@ function App() {
             <Loader />
         }
       >
-        {data !== null && <Header data={data} activeTab={activeTab} />}
         <Routes>
-          {routes.map((route) => (
+        <Route
+            path={'/'}
+            element={<Home globalData={data} activeTab={activeTab} />}
+            exact={true}
+          />
             <Route
-              key={route.path}
-              path={route.path}
-              element={route.component}
-              exact={route.exact}
-            />
-          ))}
+            path={'/home'}
+            element={<Home globalData={data} activeTab={activeTab}/>}
+            exact={true}
+
+          />
+
+        <Route
+            path={'/about-us'}
+            element={<AboutUs globalData={data} activeTab={activeTab} />}
+            exact={true}
+
+          />
+            <Route
+            path={'/services'}
+            element={<Services globalData={data} activeTab={activeTab}/>}
+            exact={true}
+
+          />
+
+        <Route
+            path={'/services/:slug'}
+            element={<WashingServices globalData={data} activeTab={activeTab} />}
+            exact={true}
+
+          />
+            <Route
+            path={'/premium-packages/:slug'}
+            element={<PackageDetail globalData={data} activeTab={activeTab}/>}
+            exact={true}
+
+          />
+        <Route
+            path={'/services/paint-protection-film'}
+            element={<PaintProtectionFilm globalData={data} activeTab={activeTab} />}
+            exact={true}
+
+          />
+            <Route
+            path={'/coatings/:slug'}
+            element={<CoatingDetail globalData={data} activeTab={activeTab}/>}
+            exact={true}
+
+          />
+        <Route
+            path={'/services/customisation-service'}
+            element={<CustomisationService globalData={data} activeTab={activeTab} />}
+            exact={true}
+
+          />
+            <Route
+            path={'/franchise-with-us'}
+            element={<FranchiseWithUs globalData={data} activeTab={activeTab}/>}
+            exact={true}
+
+          />
+        <Route
+            path={'/contact-us'}
+            element={<ContactUs globalData={data} activeTab={activeTab} />}
+            exact={true}
+
+          />
+            <Route
+            path={'/premium-packages'}
+            element={<Packages globalData={data} activeTab={activeTab}/>}
+            exact={true}
+
+          />
+          
           <Route
             path={'/services/:slug/:type'}
-            element={<DetailingServices setActiveTab={(value) => setActiveTab(value)} />}
+            element={<DetailingServices setActiveTab={(value) => setActiveTab(value)} globalData={data} activeTab={activeTab} />}
+            exact={true}
+
           />
         </Routes>
-        {data !== null && (
-          <>
-            <Footer data={data} />
-            <Flybutton />
-          </>)
-
-        }
+       
       </React.Suspense>
     </Router>
   );

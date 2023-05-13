@@ -43,7 +43,7 @@ function DetailsCaptureModal(props) {
                 }
             })
             .catch(function (error) {
-                console.log("error", error)
+                // console.log("error", error)
             });
 
     }

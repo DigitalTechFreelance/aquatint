@@ -8,8 +8,8 @@ function Team({ data }) {
                 {data !== undefined && data.length > 0 && data.map((item, index) => {
                     return (
                         item.isActive && (
-                            <Fade bottom distance="20px" delay={200 + (300 * (index + 1))} duration={800}>
-                                <li className="team-item" key={index}>
+                            <Fade bottom distance="20px" delay={200 + (300 * (index + 1))} duration={800} key={index}>
+                                <li className="team-item">
                                     <div className="mod-team">
                                         <div className="img-wrap">
                                             <img src={item.image.url} alt={item.image.alternativeText} title={item.image.name} height="100%" width="100%" />

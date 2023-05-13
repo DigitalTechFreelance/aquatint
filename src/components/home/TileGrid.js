@@ -37,7 +37,7 @@ function TileGrid({ data, index, dataLength, page }) {
                     <div className="text-wrap">
                         <h3 className="title">{data.name}</h3>
                     </div>
-                    <a href={data.redirectUrl.includes('coat') ? `/coatings${data.redirectUrl}` : `/services${data.redirectUrl}`} className="link" />
+                    <a href={data?.redirectUrl?.includes('coat') ? `/coatings${data.redirectUrl}` : `/services${data.redirectUrl}`} className="link" rel="noreferrer" />
                 </div>
             </Grid>
         </>

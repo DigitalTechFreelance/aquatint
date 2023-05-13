@@ -6,8 +6,11 @@ import { useParams } from "react-router-dom";
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
 import Fade from 'react-reveal/Fade';
+import Header from '../components/common/Header';
+import Footer from '../components/common/Footer';
+import Flybutton from '../components/common/Flybutton';
 
-function DetailingServices({ setActiveTab }) {
+function DetailingServices({ setActiveTab, globalData, activeTab }) {
 
   const [leadFormOpen, setLeadFormOpen] = React.useState(false);
   const handleLeadFormClose = () => setLeadFormOpen(false);
@@ -27,11 +30,13 @@ function DetailingServices({ setActiveTab }) {
       .catch((error) => {
         // console.log("home error", error)
       })
-  }, [])
+  }, [slug])
   return (
     data !== null ? (
       <>
-        {data.seo !== null && <SEO data={data?.seo} />}
+      {globalData &&  <Header data={globalData} activeTab={activeTab} />} 
+
+        <SEO data={data?.seo!==null? data?.seo: globalData} />
 
         <main>
           <div className="lyt-content">
@@ -51,6 +56,11 @@ function DetailingServices({ setActiveTab }) {
           </div>
         </main>
         <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
+        {globalData && (
+          <> 
+            <Footer data={globalData} />
+            <Flybutton />
+          </>) }
       </>
     ) : <Loader />
   )
