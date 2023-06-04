@@ -11,6 +11,8 @@ import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
 import Fade from 'react-reveal/Fade';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
+import Lottie from "lottie-react";
+import groovyWalkAnimation from "../data/desktop.json";
 
 function PaintProtectionFilm() {
     const [data, setData] = React.useState(null)
@@ -46,6 +48,7 @@ function PaintProtectionFilm() {
 
                 <main>
                     <div className="lyt-content typ-home">
+                    <Lottie animationData={groovyWalkAnimation} loop={true} />;
                         <VideoBanner data={data} />
                         <About data={data} />
                         <div className="lyt-single-page typ-2">

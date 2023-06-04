@@ -8,9 +8,8 @@ function Seo({ data }) {
             <meta charSet="utf-8" />
             <title>{data.metaTitle}</title>
             <meta name="keywords" content={data.keyword}></meta>
-            <meta name="description" content={data.metaDescription} />
+<meta name="description" content={data.metaDescription} />
         </Helmet>
     )
 }
-
-export default Seo
+  export default Seo
