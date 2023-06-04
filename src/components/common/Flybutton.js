@@ -1,10 +1,10 @@
-import React,{useState} from 'react';
+import React from 'react';
 
 function Flybutton() {
-  const [isActive, setActive] = useState(false);
+  // const [isActive, setActive] = useState(false);
   return (
     <>
-    <div className={`bs-action-fly ${isActive ? 'active' :''}`}>
+    {/* <div className={`bs-action-fly ${isActive ? 'active' :''}`}>
       <div className="fly-icon-link-wrap">
         <a href="tel:7066457656" target="_blank" className="action-link">
           <span className="icon icon-phone"></span>
@@ -19,7 +19,18 @@ function Flybutton() {
       <button className='fly-trigger' onClick={() =>setActive(!isActive)}>
         {isActive ? <span className='icon icon-close'></span> : <span className='icon icon-chat'></span>}
       </button>
-    </div>
+    </div> */}
+      <div className="bs-action-fly type-phone">
+        <a
+          type="button"
+          href="tel:7066457656"
+          target="_blank"
+          className="fly-trigger type-phone"
+          rel="noreferrer"
+        >
+          <span className="icon icon icon-phone"></span>
+        </a>
+      </div>
     </>
 
   )

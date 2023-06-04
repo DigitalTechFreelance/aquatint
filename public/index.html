@@ -6,7 +6,7 @@
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
+  <!-- <meta name="description" content="Web site created using create-react-app" /> -->
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -63,11 +63,13 @@
         var x = 0;
         var myVar = setInterval(function () {
           if (x == 0) {
+            if(document.querySelectorAll('.bs-message-card')?.length>0){
             if (document.querySelectorAll('.bs-message-card')[0].innerText == 'Thank you for contecting Us!!!\n\nOur team will reach you shortly') {
               gtag('event', 'conversion', { 'send_to': 'AW-929250397/XrZJCJ6-2aQDEN34jLsD' });
               clearInterval(myVar);
               x = 1;
             }
+          }
           }
         }, 1000);
       }

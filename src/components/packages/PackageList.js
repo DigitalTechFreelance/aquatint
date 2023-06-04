@@ -7,8 +7,8 @@ function PackageList({ data }) {
             <ul className="list-wrap">
                 {data.map((item, index) => {
                     return (
-                        <Fade bottom distance="20px" delay={500} duration={800}>
-                            <li className="list-item" key={index}>
+                        <Fade bottom distance="20px" delay={500} duration={800} key={index}>
+                            <li className="list-item" >
                                 <div className="bs-service">
                                     <div className="img-wrap">
                                         <img src={item.image.url} alt={item.image.alternativeText} title={item.image.name} />

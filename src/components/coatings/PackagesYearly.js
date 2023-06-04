@@ -16,8 +16,8 @@ function PackagesYearly({ data }) {
                         {data.packagesWarrenty.map((item, index) => {
                             return (
                                 item.isActive && (
-                                    <Fade bottom distance="20px" delay={200 + (100 * (index + 1))} duration={800}>
-                                        <li className="info-item" key={index}>
+                                    <Fade bottom distance="20px" delay={200 + (100 * (index + 1))} duration={800} key={index}>
+                                        <li className="info-item" >
                                             <div className={`mod-info ${item.subtitle !== null && item.subtitle !== '' ? 'typ-bg' : ''}`}>
                                                 <div className="info-wrap">
                                                     <h3 className="title">{item.name}</h3>

@@ -24,7 +24,7 @@ function VideoPlayer(props) {
     seeking: false,
   });
 
-  const { playing, played, seeking } = state;
+  const { playing, played } = state;
   const playerRef = useRef(null);
   const playerWrapperRef = useRef(null);
   const currentTime = playerRef.current
@@ -108,7 +108,7 @@ function VideoPlayer(props) {
         }
       }
     };
-  }, []);
+  }, [playing]);
 
   return (
     <>

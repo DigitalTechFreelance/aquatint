@@ -13,8 +13,12 @@ import Fade from 'react-reveal/Fade';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 import Lottie from "lottie-react";
 import groovyWalkAnimation from "../data/desktop.json";
+import desktopAnimation from "../assets/animation/animation-desktop.json";
+import Header from '../components/common/Header';
+import Footer from '../components/common/Footer';
+import Flybutton from '../components/common/Flybutton';
 
-function PaintProtectionFilm() {
+function PaintProtectionFilm(props) {
     const [data, setData] = React.useState(null)
 
     const [playState, setPlayState] = React.useState({
@@ -44,12 +48,18 @@ function PaintProtectionFilm() {
     return (
         data !== null ? (
             <>
-                {data.seo !== null && <SEO data={data?.seo} />}
+      {props.globalData &&  <Header data={props.globalData} activeTab={props.activeTab} />} 
 
+        <SEO data={data?.seo!==null? data?.seo: props.globalData} />
                 <main>
                     <div className="lyt-content typ-home">
                     <Lottie animationData={groovyWalkAnimation} loop={true} />;
                         <VideoBanner data={data} />
+                        {/* <div className="bs-banner">
+                            <div className="lottie">
+                            <Lottie animationData={desktopAnimation} />
+                            </div>
+                        </div> */}
                         <About data={data} />
                         <div className="lyt-single-page typ-2">
                             <div className="sp-cont">
@@ -63,7 +73,11 @@ function PaintProtectionFilm() {
                     </div>
                 </main>
                 <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
-
+                {props.globalData && (
+          <> 
+            <Footer data={props.globalData} />
+            <Flybutton />
+          </>) }
             </>
 
         ) : <Loader />

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = React.lazy(() => import('./pages/Home'));
+// const Home = React.lazy(() => import('./pages/Home'));
 const AboutUs = React.lazy(() => import('./pages/AboutUs'));
 const Services = React.lazy(() => import('./pages/Services'));
 const WashingServices = React.lazy(() => import('./pages/WashingServices'));
@@ -20,16 +20,16 @@ const routes = [
   //   component: <IndexList />,
   //   exact: true,
   // },
-  {
-    path: '/',
-    component: <Home />,
-    exact: true,
-  },
-  {
-    path: '/home',
-    component: <Home />,
-    exact: true,
-  },
+  // {
+  //   path: '/',
+  //   component: <Home />,
+  //   exact: true,
+  // },
+  // {
+  //   path: '/home',
+  //   component: <Home />,
+  //   exact: true,
+  // },
   {
     path: '/about-us',
     component: <AboutUs />,

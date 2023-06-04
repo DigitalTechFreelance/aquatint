@@ -8,8 +8,11 @@ import Protection from '../components/packages/Protection';
 import SEO from '../components/common/Seo';
 import Loader from '../components/common/LoaderRounded';
 import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
+import Header from '../components/common/Header';
+import Footer from '../components/common/Footer';
+import Flybutton from '../components/common/Flybutton';
 
-function PackageDetail() {
+function PackageDetail(props) {
     const [data, setData] = React.useState(null)
     const { slug } = useParams();
     const [leadFormOpen, setLeadFormOpen] = React.useState(false);
@@ -26,12 +29,14 @@ function PackageDetail() {
             .catch((error) => {
                 // console.log("home error", error)
             })
-    }, [])
+    }, [slug])
     const packageName = data !== null && data.packageName.split(' ')
     return (
         data !== null ? (
             <>
-                {data.seo !== null && <SEO data={data?.seo} />}
+      {props.globalData &&  <Header data={props.globalData} activeTab={props.activeTab} />} 
+
+                 <SEO data={data?.seo!==null? data?.seo: props.globalData}  />
 
                 <main>
                     <div className="lyt-content">
@@ -49,7 +54,11 @@ function PackageDetail() {
                     </div>
                 </main>
                 <DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />
-
+                {props.globalData && (
+          <> 
+            <Footer data={props.globalData} />
+            <Flybutton />
+          </>) }
             </>
         ) : <Loader />
     )

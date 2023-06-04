@@ -8,8 +8,8 @@ function WashingServiceCompareList({ data }) {
                 {data.map((item, index) => {
                     return (
                         item.isActive && (
-                            <Fade bottom distance="20px" delay={200 + (300 * (index + 1))} duration={800}>
-                                <li className="item" key={index}>
+                            <Fade bottom distance="20px" delay={200 + (300 * (index + 1))} duration={800} key={index}>
+                                <li className="item">
                                     <h4 className="title">{item.serviceName}</h4>
                                     <div className="mod-list">
                                         <ul className="details-list">

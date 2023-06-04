@@ -15,8 +15,8 @@ function Process({ data }) {
                     <ul className="mod-list typ-number">
                         {data.features.map((item, index) => {
                             return (
-                                <Fade bottom distance="20px" delay={200 + (100 * (index + 1))} duration={800}>
-                                    <li className="list-item" key={index}>
+                                <Fade bottom distance="20px" delay={200 + (100 * (index + 1))} duration={800} key={index}>
+                                    <li className="list-item">
                                         <p>{item.point}</p>
                                         <ul className="mod-list typ-disc">
                                             {item.subPoints.map((ele, ind) => {

@@ -7,8 +7,8 @@ function Service({ data }) {
         <div className="sp-cont">
             {data.map((item, index) => {
                 return (
-                    <section>
-                        <div className={`bs-section ${item.subFeatures[0].description !== null && item.subFeatures[0].description?.length > 0 ? '' : 'cm-no-pad-top'}`} key={index}>
+                    <section key={index}>
+                        <div className={`bs-section ${item.subFeatures[0].description !== null && item.subFeatures[0].description?.length > 0 ? '' : 'cm-no-pad-top'}`}>
                             <div className="sec-cont">
                                 <div className="cm-container">
                                     <div className={`bs-infography typ-grid-left ${item.subFeatures[0]?.description !== null && item.subFeatures[0].description?.length > 0 ? 'typ-vertical-center' : ''}`}>

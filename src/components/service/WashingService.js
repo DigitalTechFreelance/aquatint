@@ -10,7 +10,7 @@ import ReactMarkdown from 'react-markdown';
 
 //thumb images
 
-import thumb1 from '../../assets/images/thumb/1.webp';
+// import thumb1 from '../../assets/images/thumb/1.webp';
 
 function chunkArray(arr, n) {
     var chunkLength = Math.max(arr.length / n, 1);

@@ -17,8 +17,8 @@ function PpfCompareList({ data }) {
                         <ul className="comapre-list-wrap">
                             {data.Type.map((item, index) => {
                                 return (
-                                    <Fade bottom distance="20px" delay={200 + (300 * (index + 1))} duration={800}>
-                                        <li className="item" key={index}>
+                                    <Fade bottom distance="20px" delay={200 + (300 * (index + 1))} duration={800} key={index}>
+                                        <li className="item">
                                             <div className="img-wrap">
                                                 <img src={item.image.url} alt={item.image.alternativeText} title={item.image.name} className="" />
                                             </div>

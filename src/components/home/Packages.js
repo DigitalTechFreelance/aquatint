@@ -25,8 +25,8 @@ function Packages({ data }) {
                             </h3>
                             <ul className="feature-list">
                                 {packages && packages.length > 0 && packages.map((item, index) => (
-                                    <LightSpeed right delay={500 + (150 * (index + 1))} duration={500} distance="20px">
-                                        <li key={index}>{item.packageName}</li>
+                                    <LightSpeed right delay={500 + (150 * (index + 1))} duration={500} distance="20px" key={index}>
+                                        <li >{item.packageName}</li>
                                     </LightSpeed>
                                 ))}
                             </ul>
