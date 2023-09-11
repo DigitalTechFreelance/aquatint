@@ -1,8 +1,8 @@
 import axios from 'axios'; 
 
 
-// export const baseURL = 'https://uat-aquatint-strapi.link/'
-export const baseURL = 'http://localhost:1337/'
+export const baseURL = 'https://uat-aquatint-strapi.link/'
+// export const baseURL = 'http://localhost:1337/'
 
 let defaultHeaders = {
         'Accept': 'application/json',
