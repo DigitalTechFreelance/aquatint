@@ -24,7 +24,6 @@ function Packages(props) {
 
         axios.get(`/package`)
             .then((res) => {
-                // console.log("home res", res)
                 setData(res.data)
                 // setLoader(false)
             })

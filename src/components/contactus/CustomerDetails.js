@@ -47,7 +47,7 @@ function CustomerDetails() {
             "Vehicle Name": values.vehicleName,
             "Message": values.message
         }
-        // console.log("data", data)
+        
         if (captchaSuccess) {
             axios.post(
                 'https://sheet.best/api/sheets/ca6fd7bd-056d-4c08-b61d-8a71e27f3a37',

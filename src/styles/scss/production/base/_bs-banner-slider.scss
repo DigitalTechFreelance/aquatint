@@ -1,0 +1,71 @@
+//bs-banner-slider
+.bs-banner-slider{
+    height: 100vh;
+    position: relative;
+    @include mq-below($xs){
+        height: 82vh;
+    }
+
+    .bsl-info-wrap{
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        z-index: 1;
+        @include mq-below($xs){
+            left: 0;
+            right: 0;
+            top: auto;
+            bottom: 1.5rem;
+            transform: translateY(0);
+            text-align: center;
+            padding: 0 1.6rem;
+        }
+    }
+
+    .bsl-title{
+        @include font-source-sans(5.6rem, 6rem, $font1, $font-medium, $clr-base, uppercase);
+
+        @include mq-below($xs) {
+            font-size: 1.6rem;
+            line-height: 2rem;
+            text-align: center;
+        }
+    }
+
+    .bsl-desc{
+        @include font-source-sans(3.4rem, 4rem, $font1, $font-medium, $clr-base, initial);
+        margin-bottom: 1rem;
+
+        @include mq-below($xs) {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            text-align: center;
+        }
+    }
+
+    .swiper-pagination{
+        position: absolute;
+        z-index: 1;
+        bottom: 1rem;
+        @include mq-below($xs){
+            display: none;
+        }
+
+        .swiper-pagination-bullet{
+            width: 0.6rem;
+            height: 0.6rem;
+            @include background-opacity($clr-primary, 0.8);
+            clip-path: polygon(15% 0, 100% 0, 85% 100%, 0% 100%);
+            transition: all 0.3s ease;
+            border-radius: 0;
+
+            &.swiper-pagination-bullet-active{
+                width: 3rem;
+                @include background-opacity($clr-primary, 1);
+            }
+        }
+    }
+
+
+}

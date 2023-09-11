@@ -22,7 +22,6 @@ function WashingServices(props) {
     }, 15000)
     axios.get(`/service-details?slug=${slug}`)
       .then((res) => {
-        // console.log("home res", res)
         setData(res.data[0])
         // setLoader(false)
       })

@@ -6,8 +6,6 @@ import Grid from '@mui/material/Grid';
 import Fade from 'react-reveal/Fade';
 
 function Service({ data, title, page }) {
-    // console.log("data", data)
-
     return (
         <section>
             <div className={`bs-section ${page === 'ppf' ? 'typ-center' : ''}`}>

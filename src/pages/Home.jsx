@@ -13,9 +13,11 @@ import DetailsCaptureModal from '../components/common/DetailsCaptureModal';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import Flybutton from '../components/common/Flybutton';
+import Lottie from "lottie-react";
 
 function Home(props) {
 	const [data, setData] = React.useState(null)
+	const [animData, setAnimData] = React.useState({});
 	const [leadFormOpen, setLeadFormOpen] = React.useState(false);
 	const handleLeadFormClose = () => setLeadFormOpen(false);
 
@@ -27,6 +29,14 @@ function Home(props) {
 		axios.get(`/home`)
 			.then((res) => {
 				setData(res.data)
+				if(res.data.lottieAnimationShow) {
+                    axios.get(`../data/desktop.json`)
+                    .then((response) => {
+                        setAnimData(response)
+                    }).catch((err) => {
+                        // console.log("err", err)
+                    })
+                }
 			})
 			.catch((error) => {
 				// console.log("home error", error)
@@ -40,9 +50,12 @@ function Home(props) {
 				 <SEO data={data?.seo!==null? data?.seo: props.globalData} />
 				<main>
 					<div className="lyt-content typ-home">
-
 						<>
-							<VideoBanner data={data} />
+							{data.lottieAnimationShow ? (
+								<Lottie animationData={animData} loop={true} />
+							) : (
+								<VideoBanner data={data} />
+							)}
 							<About data={data} />
 							{data.services.isActive && <Service data={data.services.services} title="Services We Offer" page="home" />}
 							{data.premiumPackages.isActive && <Packages data={data.premiumPackages} />}
@@ -50,7 +63,6 @@ function Home(props) {
 							{data.withUsSection.isActive && <Infogarphy data={data.withUsSection} />}
 							<TestimonialSlider data={data.testimonialsSection} />
 						</>
-
 					</div>
 				</main>
 				<DetailsCaptureModal handleClose={handleLeadFormClose} leadFormOpen={leadFormOpen} />

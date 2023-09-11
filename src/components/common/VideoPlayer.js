@@ -35,7 +35,6 @@ function VideoPlayer(props) {
     : '00:00';
   const initHandler = (e) => {
     //// console.log(e)
-    //   console.log(playerRef.current.getCurrentTime())
   };
   const playHandler = (e) => {
     setState({ ...state, playing: !state.playing });
@@ -63,23 +62,19 @@ function VideoPlayer(props) {
     }
   };
   const handelProgress = (stateChange) => {
-    //  console.log(stateChange)
     if (!state.seeking) {
       setState({ ...state, ...stateChange });
     }
   };
   const handelSeekChange = (e, newValue) => {
-    // console.log("newValue",{ newValue })
     const playBackControlValue = parseFloat(newValue) / 100;
     setState({ ...state, played: playBackControlValue });
   };
   const handelSeekMouseDown = (e) => {
-    // console.log(e)
     setState({ ...state, seeking: true });
   };
   const handelSeekMouseUp = (e, newValue) => {
     setState({ ...state, seeking: false });
-    // console.log(e)
     playerRef.current.seekTo(newValue / 100);
   };
   const handelPlayDone = () => {
