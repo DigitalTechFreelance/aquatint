@@ -2,6 +2,21 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 
 function ServiceList({ data }) {
+    function gtag_report_conversion(url) {
+        if (typeof(url) != 'undefined') {
+            window.location = url;
+        }
+    }
+    
+    const onClickEvent = (url)=>{
+        const isBrowser = typeof window !== "undefined"
+        if (isBrowser) {
+            window.gtag('event', 'conversion', {
+                'send_to': 'AW-929250397/VGh-CJma6OsYEN34jLsD',
+                'event_callback': gtag_report_conversion(url)
+            });
+      }
+    }
     return (
         <div className="lyt-service">
             <ul className="list-wrap">
@@ -21,7 +36,7 @@ function ServiceList({ data }) {
                                                     <li className="feature-item" key={i}>{ele.point}</li>
                                                 ))}
                                             </ul>
-                                            <a href={item.buttonUrl} className="btn btn-default"><span>{item.buttonText}</span></a>
+                                            <a href={item.buttonUrl} className="btn btn-default" onClick={()=> onClickEvent(item.buttonUrl)}><span>{item.buttonText}</span></a>
                                             <span className="water-mark">{item.backgroundWatemark}</span>
                                         </div>
                                     </div>

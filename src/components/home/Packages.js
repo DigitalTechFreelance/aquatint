@@ -5,7 +5,21 @@ import LightSpeed from 'react-reveal/LightSpeed';
 function Packages({ data }) {
 
     const { title1, title2, title3, image, packages, buttonText, buttonUrl } = data
-
+    function gtag_report_conversion(url) {
+        if (typeof(url) != 'undefined') {
+            window.location = url;
+        }
+    }
+    
+    const onClickEvent = (url)=>{
+        const isBrowser = typeof window !== "undefined"
+        if (isBrowser) {
+            window.gtag('event', 'conversion', {
+                'send_to': 'AW-929250397/VGh-CJma6OsYEN34jLsD',
+                'event_callback': gtag_report_conversion(url)
+            });
+      }
+    }
     return (
         <section>
             <div className="bs-section">
@@ -31,7 +45,7 @@ function Packages({ data }) {
                                 ))}
                             </ul>
                             <Fade duration={500} delay={1100}>
-                                <a href={buttonUrl} className="btn btn-default"><span>{buttonText}</span></a>
+                                <a href={buttonUrl} className="btn btn-default" onClick={()=> onClickEvent(buttonUrl)}><span>{buttonText}</span></a>
                             </Fade>
                         </div>
                         <Fade left distance="20px" duration={500} delay={100}>

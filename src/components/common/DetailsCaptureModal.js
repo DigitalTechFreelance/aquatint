@@ -56,6 +56,7 @@ function DetailsCaptureModal(props) {
         },
         onSubmit: (values, { resetForm }) => {
             submitToLead(values);
+            window.gtag('event', 'conversion', {'send_to': 'AW-929250397/UHvFCN3N3OsYEN34jLsD'});
             props.handleClose()
         },
         validate: values => {

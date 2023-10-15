@@ -10,7 +10,21 @@ function TileGrid({ data, index, dataLength, page }) {
     useEffect(() => {
         setAutoPlay(true)
     }, [autoPlay]);
-
+    function gtag_report_conversion(url) {
+        if (typeof(url) != 'undefined') {
+            window.location = url;
+        }
+    }
+    
+    const onClickEvent = (url)=>{
+        const isBrowser = typeof window !== "undefined"
+        if (isBrowser) {
+            window.gtag('event', 'conversion', {
+                'send_to': 'AW-929250397/VGh-CJma6OsYEN34jLsD',
+                'event_callback': gtag_report_conversion(url)
+            });
+      }
+    }
     return (
         <>
             <Grid item xs={12} md={dataLength % 2 === 0 ? 4 : index > 1 ? 4 : 6} className="grid-item" key={index}>
@@ -37,7 +51,7 @@ function TileGrid({ data, index, dataLength, page }) {
                     <div className="text-wrap">
                         <h3 className="title">{data.name}</h3>
                     </div>
-                    <a href={data?.redirectUrl?.includes('coat') ? `/coatings${data.redirectUrl}` : `/services${data.redirectUrl}`} className="link" rel="noreferrer" />
+                    <a href={data?.redirectUrl?.includes('coat') ? `/coatings${data.redirectUrl}` : `/services${data.redirectUrl}`} className="link" rel="noreferrer" onClick={()=> onClickEvent(data?.redirectUrl?.includes('coat') ? `/coatings${data.redirectUrl}` : `/services${data.redirectUrl}`)} />
                 </div>
             </Grid>
         </>

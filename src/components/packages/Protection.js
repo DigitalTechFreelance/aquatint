@@ -11,7 +11,21 @@ function Protection({ data }) {
         setPlayState({ ...playState, playing: videoPlayStatus.playing, buttonClose: videoPlayStatus.buttonClose })
     }
     const videoUrl = data?.videoUpload !== null ? data?.videoUpload?.url : JSON.parse(data?.youtubeLink)?.url
-
+    function gtag_report_conversion(url) {
+        if (typeof(url) != 'undefined') {
+            window.location = url;
+        }
+    }
+    
+    const onClickEvent = (url)=>{
+        const isBrowser = typeof window !== "undefined"
+        if (isBrowser) {
+            window.gtag('event', 'conversion', {
+                'send_to': 'AW-929250397/VGh-CJma6OsYEN34jLsD',
+                'event_callback': gtag_report_conversion(url)
+            });
+      }
+    }
     return (
         <section>
             <div className="bs-section">
@@ -27,7 +41,7 @@ function Protection({ data }) {
                         </div>
                         <div className="action-wrap">
                             <p>{data.catalogueInfo}</p>
-                            <a href={data.catalogue.url} className="btn btn-default">
+                            <a href={data.catalogue.url} className="btn btn-default" onClick={()=> onClickEvent(data.catalogue.url)}>
                                 <span className="icon icon-download"></span>
                                 <span>catalogue</span>
                             </a>

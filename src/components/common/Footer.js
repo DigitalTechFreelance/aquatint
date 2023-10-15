@@ -3,6 +3,21 @@ import _ from 'lodash';
 
 function Footer({data}) {
   const {footerMenus, socialLinks, contacts, email, phoneNo}= data
+  function gtag_report_conversion(url) {
+    if (typeof(url) != 'undefined') {
+        window.location = url;
+    }
+  }
+
+const onClickEvent = (url)=>{
+    const isBrowser = typeof window !== "undefined"
+    if (isBrowser) {
+        window.gtag('event', 'conversion', {
+            'send_to': 'AW-929250397/VGh-CJma6OsYEN34jLsD',
+            'event_callback': gtag_report_conversion(url)
+        });
+  }
+}
   return (
     <div className="bs-footer">
       <div className="cm-container">
@@ -15,7 +30,7 @@ function Footer({data}) {
                 <ul className="footer-list">
                   {item.submenus.map((ele, i)=>{
                     return (
-                    ele.isActive && <li className="footer-list-item" key={i}><a href={ele.link}>{ele.name}</a></li>
+                    ele.isActive && <li className="footer-list-item" key={i}><a href={ele.link} onClick={()=>onClickEvent(ele.link)}>{ele.name}</a></li>
                   )})}
                 </ul>
               </div>
@@ -68,8 +83,8 @@ function Footer({data}) {
                       return (
                         item.isActive && (
                           <div className="social-icon" key={index}>
-                            <a href={item.link} target="_blank" rel="noreferrer">
-                              <span className={`icon icon-${item.icon}`}></span>
+                            <a href={item.link} target="_blank" rel="noreferrer" >
+                              <span className={`icon icon-${item.icon}`} onClick={()=> onClickEvent(item.link)}></span>
                             </a>
                           </div>
                         )

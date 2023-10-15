@@ -3,7 +3,21 @@ import ReactMarkdown from 'react-markdown';
 import Slide from 'react-reveal/Slide';
 
 function Infogarphy({ data }) {
+  function gtag_report_conversion(url) {
+    if (typeof(url) != 'undefined') {
+        window.location = url;
+    }
+}
 
+const onClickEvent = (url)=>{
+    const isBrowser = typeof window !== "undefined"
+    if (isBrowser) {
+        window.gtag('event', 'conversion', {
+            'send_to': 'AW-929250397/VGh-CJma6OsYEN34jLsD',
+            'event_callback': gtag_report_conversion(url)
+        });
+  }
+}
   const { title, description, buttonLink, buttonText, image } = data
   return (
     <section>
@@ -15,7 +29,7 @@ function Infogarphy({ data }) {
                 <div className="info-wrap">
                   <h3 className="title">{title}</h3>
                   <ReactMarkdown className="desc rich-text" children={description} />
-                  <a href={buttonLink} className="btn btn-default"><span>{buttonText}</span></a>
+                  <a href={buttonLink} className="btn btn-default" onClick={()=> onClickEvent(buttonLink)}><span>{buttonText}</span></a>
                 </div>
               </Slide>
               <Slide right distance="20px" delay={500} duration={800}>

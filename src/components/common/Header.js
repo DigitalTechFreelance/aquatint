@@ -14,6 +14,23 @@ function Header({ data }) {
     const handleMenuClose = () => {
         setMenuOpen(false);
     }
+         
+    function gtag_report_conversion(url) {
+        if (typeof(url) != 'undefined') {
+            window.location = url;
+        }
+    }
+
+    const onClickEvent = (url)=>{
+        const isBrowser = typeof window !== "undefined"
+        if (isBrowser) {
+            window.gtag('event', 'conversion', {
+                'send_to': 'AW-929250397/VGh-CJma6OsYEN34jLsD',
+                'event_callback': gtag_report_conversion(url)
+            });
+      }
+  }
+
     const { logo, headerMenus } = data !== null && data
     return (
         <>
@@ -37,13 +54,15 @@ function Header({ data }) {
                             item.isActive && (
                                 <>
                                     <li className="menu-item" key={index}>
-                                        <a href={item.link} className={`menu-link ${window.location.pathname === item.link ? 'cm-highlight highlight-primary' : ''}`}>{item.name}</a>
+                                        <a href={item.link} className={`menu-link ${window.location.pathname === item.link ? 'cm-highlight highlight-primary' : ''}`} 
+                                        onClick={()=>onClickEvent(item.link)}
+                                        >{item.name}</a>
                                     </li>
                                     {item.submenus.map((ele, i) => {
                                         return (
                                             ele.isActive && (
                                                 <li className="menu-item" key={i}>
-                                                    <a href={ele.link} className={`menu-link typ-sm ${window.location.pathname === ele.link ? 'cm-highlight highlight-primary' : ''}`}>{ele.name}</a>
+                                                    <a href={ele.link} className={`menu-link typ-sm ${window.location.pathname === ele.link ? 'cm-highlight highlight-primary' : ''}`} onClick={()=>onClickEvent(ele.link)}>{ele.name}</a>
                                                 </li>
                                             )
                                         )
